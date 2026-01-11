@@ -1,0 +1,671 @@
+* {
+  cursor: url(https://cur.cursors-4u.net/nature/nat-11/nat1006.cur), auto;
+}
+
+/*Fonts*/
+
+@font-face {
+  font-family: Comic sans;
+  src: url("/archives/fonts/COMIC.TTF");
+}
+
+@font-face {
+  font-family: Cafeteria-Bold;
+  src: url("/archives/fonts/Cafeteria-Bold.otf");
+}
+
+@font-face {
+  font-family: DWARVESC;
+  src: url("/archives/fonts/DWARVESC.TTF");
+}
+
+@font-face {
+  font-family: Brianne;
+  src: url("/archives/fonts/Brianne_s_hand.ttf");
+}
+
+@font-face {
+  font-family: digital;
+  src: url("https://files.catbox.moe/hnx8z6.ttf");
+}
+
+@font-face {
+  font-family: burbank;
+  src: url("/archives/fonts/BurbankBigCondensed-Black.otf");
+}
+
+@font-face {
+  font-family: "bios";
+  src: url("/archives/fonts/BIOS.ttf");
+}
+
+@font-face {
+  font-family: "WINDOWS";
+  src: url("/archives/fonts/Windows.ttf");
+}
+
+/*Letra*/
+h1,
+h2,
+h3 {
+  font-family: "Cafeteria-Bold";
+  font-weight: bold;
+}
+
+h4 {
+  font-family: "Comic sans";
+  font-weight: bold;
+}
+p {
+  font-family: "Comic sans";
+  font-size: 14px;
+  font-weight: normal;
+}
+
+a:link {
+  color: inherit;
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-style: solid;
+}
+a:active {
+  color: lime;
+  text-shadow: 1px 1px 3px #298203;
+}
+
+html {
+  scrollbar-width: thin;
+}
+
+/*general body page*/
+body {
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  display: grid;
+  margin: auto;
+  width: 1400px;
+  justify-items: center;
+}
+
+header {
+  margin-top: 10px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+aside {
+  height: fit-content;
+  width: 220px;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrap {
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bigcontainer {
+  height: auto;
+  width: 100%;
+  margin: 2px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.smallcontainer {
+  height: auto;
+  width: 100%;
+  margin: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+:root {
+  --bgimg: url('/archives/images/bgs/day-frontyard.webp');
+  --text: #1d1510;
+  --border: #994008;
+  --bgocolor: #fce2a4;
+  --sidebord: medium outset #cc6530;
+  --sidebg: #b05325;
+  --minibox: #fceaa4;
+  --header:  url('/archives/images/mainpage/header.webp') ;
+}
+
+
+/* text or content box */
+.main {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  border: 5px ridge var(--border);
+  padding: 5px;
+  background-color: var(--bgocolor);
+  text-align: center;
+  color: var(--text);
+  overflow: auto;
+  margin: 5px;
+  align-content: center;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e8c054;
+  -webkit-border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d0a650;
+}
+
+.back {
+  background: transparent url("/archives/images/BackButton.png")
+    no-repeat;
+  border: none;
+  width: 108px;
+  height: 100px;
+  background-size: contain;
+  margin: 20px;
+}
+
+/* MAIN PAGE CSS STARTS HERE */
+
+/* FLOAT IMAGE */
+#junkrat {
+  position: fixed;
+  right: 10px;
+  bottom: 2px;
+}
+
+html#mainpage-html {
+  scrollbar-color: #e8c054 #ccdf9b05;
+}
+body#mainpage-body {
+  background-image: var(--bgimg);
+}
+#mainpage-head {
+  width: 800px;
+  height: 187px;
+  border-radius: 10px;
+}
+
+/* START OF SIDEBAR 1 */
+/* navbar */
+nav#mainpage-nav {
+  width: fit-content;
+  height: fit-content;
+  background: url("/archives/images/mainpage/grave_navbar.png") no-repeat;
+  background-size: 100% 100%;;
+}
+ul {
+  width: fit-content;
+  height: fit-content;
+  background-size: cover;
+  padding: 5px;
+  padding-top: 45px;
+  margin-top: 12px;
+  list-style-type: none;
+}
+.navbtn a {
+  color: #02030b;
+  padding: 5px;
+  display: block;
+  margin: 8px;
+  border-radius: 4px;
+  font-size: 25px;
+  box-shadow: 1px 2px 2px #353742;
+  border: 2px outset #9b9fc3;
+  font-family: "DWARVESC";
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: -2px;
+  width: 140px;
+}
+.navbtn :hover {
+  border: 2px inset #9b9fc3;
+  background-color: #43445d;
+  color: #ffe6ff;
+  text-shadow: 2px 2px 3px #d95dae;
+  box-shadow: -1px -2px 2px #00000036;
+}
+
+#suvenir-display {
+  background: url("/archives/images/mainpage/sidestone.png") no-repeat;
+  background-size: contain;
+  width: 178px;
+  height: 243px;
+  margin-top: 5px;
+  position: relative;
+  text-align: center;
+}
+#button88 {
+  position: absolute;
+  top: 18%;
+  right: 27%;
+}
+#guestbook {
+  position: absolute;
+  top: 43%;
+  right: 17%;
+}
+/* END OF SIDEBAR 1 */
+
+/* big containers */
+#info {
+  width: 94%;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+#otro {
+  width: 94%;
+}
+
+/* START OF WEBSITE INTRO AND BUTTONS */
+#intro {
+  width: 600px;
+  margin: 5px;
+}
+#mainindex {
+  width: 570px;
+  display: flex;
+}
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 175px;
+  margin-left: 15px;
+}
+#text {
+  width: 350px;
+}
+.belt-buttons {
+  max-width: 580px;
+  background-color: black;
+  border: 3px ridge #c6c6c6;
+  display: grid;
+  height: 45px;
+  align-items: center;
+  font-size: larger;
+  font-family: digital;
+  color: white;
+}
+/* belt buttons */
+.marquee {
+  width: 580px;
+  overflow: hidden;
+}
+.buttons {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 45s linear infinite;
+}
+.buttons:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-95%);
+  }
+}
+
+#socials{
+  display: flex;
+    margin: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 175px;
+}
+
+.social {
+      width: 59px;
+    }
+/* END OF WEBSITE INTRO AND BUTTONS */
+
+/* START OF WEBSITE LOGS AND ABOUT */
+#sideinfo {
+  width: 32%;
+  height: 373px;
+}
+#about-button {
+  background: url("/archives/images/mainpage/about-button.png") no-repeat;
+  width: 86px;
+  height: 28px;
+  border: transparent;
+}
+#logs-button {
+  background: url("/archives/images/mainpage/logs-button.png") no-repeat;
+  width: 86px;
+  height: 28px;
+  border: transparent;
+}
+#logs-tab {
+  width: 276px;
+  height: 330px;
+  background-image: url(/archives/images/mainpage/paper.png);
+  background-size: 275px 330px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#logs {
+  width: 233px;
+  overflow-y: scroll;
+  height: 316px;
+  position: absolute;
+  top: 9px;
+  right: 14px;
+  scrollbar-width: thin;
+  scrollbar-color: #e8c054 #ccdf9b05;
+}
+#aboutpage {
+  height: 309px;
+  max-height: 309px;
+  overflow-y: scroll;
+}
+/* END OF WEBSITE LOGS AND ABOUT */
+
+/* small containers despues de website info*/
+.small-otro {
+  height: auto;
+  width: 920px;
+  margin: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+
+/* START OF OTRO FIRST ROW*/
+#whatsnew {
+  background-image: url(/archives/images/mainpage/whatsnew.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 302px;
+  border: 3px solid #7a3713;
+  border-radius: 4px;
+  position: relative;
+}
+#thumbnail {
+  height: 87px;
+  background: url("/funniez/Screenshot%202025-10-30%20232344.png");
+  background-size: cover;
+  width: 113px;
+  position: absolute;
+  border-radius: 4px;
+  bottom: 52%;
+  left: 35.9%;
+}
+#newtitle {
+  font-family: DWARVESC;
+  color: #cb9d3f;
+  text-shadow: 0 0 2px #350400;
+  position: absolute;
+  bottom: 39.4%;
+  left: 36%;
+  text-align: center;
+}
+#description {
+  position: absolute;
+  bottom: 21.4%;
+  left: 122px;
+  text-align: center;
+  color: #003073;
+  font-family: Brianne;
+  width: 156px;
+  font-size: small;
+  height: 60px;
+}
+#visitbutton {
+  position: absolute;
+  top: 84.5%;
+  left: 36.7%;
+  width: 27%;
+}
+
+#otw {
+  width: 32%;
+  height: 303px;
+  padding: 0px;
+}
+#poll {
+  border: 5px outset #994008;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #9f5527;
+  width: 165px;
+  height: 292px;
+}
+
+/* END OF OTRO FIRST ROW*/
+
+/* START OF OTRO SECOND ROW*/
+
+/* cbox container display*/
+.cbox {
+  width: 237px;
+  background-image: url(/archives/images/mainpage/chatbox.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 380px;
+  position: relative;
+}
+/* cbox iframe*/
+#cbox {
+  position: absolute;
+  width: 93%;
+  top: 12%;
+  left: 3.2%;
+}
+
+/* gify pet + belt message - virus button + sunflower quotes*/
+#pet-message,
+#virus-quotes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* pet and second belt with text */
+#pet {
+  width: 310px;
+  height: 312px;
+  overflow-y: hidden;
+}
+#scrollmessage {
+  width: 325px;
+}
+
+/* virus and quotes */
+#virus {
+  height: 51px;
+  background-image: url(/archives/images/mainpage/virusbutton.png);
+  width: 98%;
+  background-size: cover;
+  background-repeat: repeat;
+  border: transparent;
+  background-color: transparent;
+}
+/* sunflower quotes */
+#quotestab {
+  width: 313px;
+  height: 313px;
+  background: url(/archives/images/mainpage/zengarden.png) no-repeat;
+  background-size: cover;
+  position: relative;
+  font-family: Brianne;
+  text-align: center;
+  color: black;
+  overflow: hidden;
+  border: 5px ridge #994008;
+}
+#speechbubble {
+  background: url(/archives/images/mainpage/speech_bubble.png) no-repeat;
+  background-size: cover;
+  width: 201px;
+  height: 128px;
+  max-width: 340px;
+  max-height: 150px;
+  position: relative;
+  left: 91px;
+  top: 5px;
+  padding: 5px;
+}
+#sunflower {
+  position: absolute;
+  bottom: 2px;
+  right: 145px;
+}
+/* END OF OTRO SECOND ROW*/
+
+/* START OF SECOND SIDEBAR */
+
+#counter-display {
+  background-image: url(/archives/images/mainpage/sun_count.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 135px;
+  height: 37px;
+  margin: 0px;
+}
+#fc2 {
+  left: 32%;
+  position: relative;
+  top: 22%;
+}
+
+/* second sidebar div*/
+
+.sidebar2 {
+  overflow: hidden;
+  width: 200px;
+  height: fit-content;
+  background-color: #b05325;
+  border: medium outset #cc6530;
+  border-radius: 10px;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tittlebox {
+  box-shadow: inset 0px 0px 3px 0px #271313;
+  display: inline-grid;
+  align-content: center;
+  background-color: #b05325;
+  border: 2px outset #b05325;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 5px;
+  max-width: 260px;
+  width: 150px;
+  height: 26px;
+  font-family: "Cafeteria-Bold";
+  font-size: 25px;
+  color: #ffe376;
+}
+.minibox {
+  width: 195px;
+  height: fit-content;
+  background: #fceaa4;
+  border-radius: 5px;
+  color: #783504;
+  text-shadow: 1px 1px #0000001a;
+  justify-items: center;
+  padding: 1px;
+}
+
+/* second sidebar contents */
+#statuscafe {
+  padding: 0.5em;
+  border-radius: 5px;
+  background-color: #fceaa4;
+  margin: 5px;
+  font-size: 11px;
+  color: black;
+  font-family: Comic sans;
+  width: 185px;
+  height: 45px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+#statuscafe-username {
+  margin-bottom: 0.5em;
+}
+#statuscafe-content {
+  margin: 0 1em 0.5em 1em;
+}
+#music-w {
+  width: 195px;
+}
+/* END OF SECOND SIDEBAR */
+
+/*FOOTER*/
+#mainpage-foot {
+  width: 910px;
+  height: 136px;
+  background: url(/archives/images/mainpage/footer.png) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#footer-text {
+  position: absolute;
+  top: 70px;
+  text-align: center;
+  width: inherit;
+  text-shadow: 1px 1px black;
+  color: #ffe376;
+  font-family: Comic sans;
+  font-size: 0.98em;
+}
+
+a.footerlink:link {
+  color: #ffe376;
+  text-decoration: none;
+}
+a.footerlink:hover {
+  text-shadow: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: #ffe376;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 1px;
+}
+a.footerlink:visited {
+  color: #ffe376;
+  text-decoration: none;
+}

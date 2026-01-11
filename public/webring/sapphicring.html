@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sapphic-Ring !</title>
+  <link rel="icon" type="image/x-icon" href="/webring/sapphic/star.webp">
+  <meta itemprop="name" content="Sapphic-ring!">
+  <meta itemprop="description" content="a webring for sapphics">
+  <meta itemprop="image" content="https://i.pinimg.com/736x/74/5b/41/745b41627fe1695bf500adfc44d73e74.jpg">
+  <link rel="canonical" href="https://sunnishinez.neocities.org/webring/sapphicring.html">
+
+  <style>
+    @font-face {
+      font-family: BIOS;
+      src: url("/archives/fonts/BIOS.ttf");
+    }
+
+    td {
+      border: 1px solid #49122a;
+    }
+
+    a {
+      color: #49122a;
+    }
+
+    body {
+      background-image: url(/webring/sapphic/flower_pattern.jpeg);
+      display: grid;
+      font-family: ms gothic;
+      justify-items: center;
+      color: #310a1b;
+    }
+
+
+    h2,
+    h3,
+    ul {
+      font-family: BIOS;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #header {
+      user-select: none;
+      background-image: url(/webring/sapphic/sapphingringheader.png);
+      background-size: cover;
+      width: 800px;
+      height: 180px;
+    }
+
+    ul {
+      font-size: 1.2em;
+      color: #49122a;
+      list-style-type: none;
+      display: flex;
+      text-align: left;
+      flex-direction: column;
+      padding: 0px;
+      line-height: 30px;
+    }
+
+    ul li a {
+      display: block;
+      color: #49122a;
+      font-family: BIOS;
+      text-decoration: none;
+      font-weight: bolder;
+      font-size: larger;
+      border: 2px white outset;
+    }
+
+    ul li a:hover {
+      text-shadow:
+        -1px -1px 0 #fcc8cc,
+        1px -1px 0 #fcc8cc,
+        -1px 1px 0 #fcc8cc,
+        1px 1px 0 #fcc8cc;
+      color: #921f51;
+      border: 2px white inset;
+    }
+
+    #box {
+      border: 2px outset white;
+      border-radius: 5px;
+      background-color: white;
+      width: 885px;
+      margin: 20px;
+      box-shadow: 0px 0px 20px 0px #00000073;
+      padding: 15px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      margin-left: 0px;
+    }
+
+    .text {
+      width: 608px;
+      margin: 35px;
+    }
+
+    #widgets {
+      border-collapse: collapse;
+      text-align: center;
+      margin: 25px;
+      border: 0px;
+      display: inline;
+    }
+
+    .webring-members {
+      border-collapse: collapse;
+      text-align: center;
+      margin: 10px;
+      border: 1px solid #49122a;
+      width: 100%;
+    }
+
+    #sapphiclist {
+      width: fit-content;
+    }
+
+    #wrapit {
+      display: flex;
+    }
+
+    aside {
+      margin-top: 20px;
+      width: 255px;
+      height: fit-content;
+      background-color: white;
+      border: 2px outset white;
+      border-radius: 5px;
+      position: sticky;
+      top: 2px;
+    }
+  </style>
+
+  <!-- site list-->
+  <script>
+    const members = [
+      {
+        url: "https://sunnishinez.neocities.org/",
+        title: "Sunnishinez",
+        description: ":3",
+        buttonUrl: "https://i.postimg.cc/cHSKCRJY/sunnishinezbutton.png",
+      },
+      {
+        url: "https://nomi.gay",
+        title: "nomi.gay",
+        description:
+          "It's a personal site for all of my opinions with some hidden easter eggs.",
+        buttonUrl: "https://file.garden/aMCkWckcsFdLNPpz/button.gif",
+      },
+      {
+        url: "https://luziekennel.nekoweb.org/",
+        title: "Luzie / Luzie's Kennel",
+        description: "just a personal website!",
+        buttonUrl: "https://luziekennel.nekoweb.org/graphics/link.gif",
+      },
+      {
+        url: "https://mavisdeluna.art/",
+        title: "The Moon Palace",
+        description:
+          "The Moon Palace is a website created by artist and streamer Mavis DeLuna, sharing art, hobbies, OC lore, and more!",
+        buttonUrl: "https://i.imgur.com/RDDAR3n.gif",
+      },
+      {
+        url: "https://bishoujopalace.neocities.org/",
+        title: "Bishoujo Palace",
+        description:
+          "me to pour out my love to the all the bishoujos I've fallen in love with (among other things)",
+        buttonUrl:
+          "https://bishoujopalace.neocities.org/WG/ezgif.com-animated-gif-maker1.gif",
+      },
+      {
+        url: "https://what-meworry.neocities.org/",
+        title: "What--Me Worry?",
+        description:
+          "A site forever stuck in the Mid-Twentieth Century, Here you'll find my personal musings and other fixations relating to the 60s and 70s.",
+        buttonUrl: "https://i.imgur.com/a3hePsI.png",
+      },
+      {
+        url: "https://mintywyvern.neocities.org/",
+        title: "MintyWyvern  18+",
+        description:
+          "Personal site full of my art, ramblings, and general things I like!!",
+        buttonUrl:
+          "https://mintywyvern.neocities.org/images/buttons/MintyWyvern_button.png",
+      },
+      {
+        url: "https://www.virtuagirl.net/",
+        title: "yuru<br>18+",
+        description: "dream city set in an endless night ☯︎",
+        buttonUrl: "https://i.imgur.com/yaA0mNF.gif",
+      },
+      {
+        url: "https://decahedron.neocities.org/",
+        title: "Decahedron",
+        description:
+          "Personal website with whatever I want on it! Shrines, OCs, art, links to everywhere I am",
+        buttonUrl: "https://decahedron.neocities.org/assets/button.gif",
+      },
+      {
+        url: "https://aoki553.nekoweb.org/",
+        title: "Alex",
+        description: "A personal website of a lesbian fujoshi",
+        buttonUrl:
+          "https://aoki553.neocities.org/nekoweb/deco/aoki553button.gif",
+      },
+      {
+        url: "https://daisybells.neocities.org/",
+        title: "daisybells central!",
+        description: "my art, films, and music all in one place :3",
+        buttonUrl:
+          "https://daisybells.neocities.org/_Assets/homepage/siteLinks/daisybellsCentral.png",
+      },
+      {
+        url: "https://sakuraducky.neocities.org/",
+        title: "Anvil",
+        description: "-",
+        buttonUrl:
+          "https://sakuraducky.neocities.org/stamps/b_sakuraducky.gif",
+      },
+      {
+        url: "https://maniacs.neocities.org/",
+        title: "lance",
+        description:
+          "a personal site ran by a raging lesbian who loves drawing <3",
+        buttonUrl: "https://files.catbox.moe/2bz9ce.png",
+      },
+      {
+        url: "http://nogginzmart.neocities.org/",
+        title: "nogginzmart<br>18+",
+        description:
+          "nogginzmart is a celebration of the old internet, specifically the early 2000s. Here I post my art, stuff about my OCs, comics, stories, & blog posts about what goes on in my life & site progress!!",
+        buttonUrl: "https://files.catbox.moe/4u56vg.gif",
+      },
+      {
+        url: "https://maybesomething.neocities.org/",
+        title: "Miao",
+        description:
+          "personal seallysite with a blog, art, and all sorts of logs !",
+        buttonUrl:
+          "https://maybesomething.neocities.org/sites/maybesomething.webp",
+      },
+      {
+        url: "https://ivorysroses.nekoweb.org/",
+        title: "Ivory Rose",
+        description: "-",
+        buttonUrl: "https://file.garden/aPJwjC1AFmgACLJC/unnamed.gif",
+      },
+      {
+        url: "https://dazaisfunpalace.nekoweb.org/",
+        tittle: "Dazai's fun palace",
+        description: "personal site of a raging genderfluid women lover",
+        buttonUrl:
+          "https://file.garden/aKAqAHLfCSXZFtPr/ezgif-54233c7d0f5166.gif",
+      },
+      {
+        url: "https://upsidedownhourglass.neocities.org/",
+        title: "lucas",
+        description:
+          "personal website, mostly for me to post about my interests and practice coding",
+        buttonUrl: "https://files.catbox.moe/hkrn5p.gif",
+      },
+      {
+        url: "https://april.nekoweb.org/",
+        title: "April's Meowtastic Website",
+        description:
+          "The personal page of a trans girl who's been using GNU/Linux since 2011. I like to share my thoughts, make tutorials, and more!",
+        buttonUrl: "https://april.nekoweb.org/buttons/amwlight.png",
+      },
+      {
+        url: "https://medkit.nekoweb.org/",
+        title: "em",
+        description: "lesbian website by a lesbian fish",
+        buttonUrl: "https://files.catbox.moe/ueh30w.gif",
+      },
+      {
+        url: "https://fr3akz0ne.com/",
+        title: "✿F r 3 a k z 0 n e✿",
+        description: "Just an artist and animator goofing around! :D",
+        buttonUrl: "https://fr3akz0ne.com/Links/88x31.gif",
+      },
+      {
+        url: "https://the-rat-room.neocities.org/",
+        title: "the rat room",
+        description:
+          "awesome personal site with epic things in my opinion. idk I think it's pretty cool",
+        buttonUrl: "https://files.catbox.moe/j9fser.png",
+      },
+      {
+        url: "https://trestrestr.es/",
+        title: "Mateo",
+        description:
+          "A butch woman's personal site. Art, small scripts and fun stuff.",
+        buttonUrl: "https://file.garden/aJEc8jydqnG0q15U/sitebutton-ttt.gif",
+      },
+      {
+        url: "https://calijori.nekoweb.org/",
+        title: "val",
+        description:
+          "val's online palace where she himejoshi's out among other thangs",
+        buttonUrl:
+          "https://file.garden/aQNtCESHqyYXcwhI/mygraphics/calibutton.jpg",
+      },
+      {
+        url: "https://hydromaniac.neocities.org/",
+        title: "heart shaped box",
+        description:
+          "Castiel's heart shaped box! Home to all things grunge, art, and general interests.",
+        buttonUrl:
+          "https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/heart%20shaped%20box.gif",
+      },
+      {
+        url: "https://candybling.nekoweb.org/",
+        title: "candybling zone",
+        description:
+          "a chill personal space for my media tastes, blogs, and anything that interests me :3",
+        buttonUrl:
+          "https://candybling.nekoweb.org/homepage/assets/candybling-button.gif",
+      },
+      {
+        url: "https://voidalyx.neocities.org/",
+        title: "mace’s abyssal sanctum",
+        description:
+          "my personal abyss where i display my creations, projects, thoughts, writings, unfinished ideas, and the scraps of things that one day might actually become something.",
+        buttonUrl:
+          "https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/void_button.gif",
+      },
+      {
+        url: "https://planetaryinfluence.neocities.org/",
+        title: "natalie",
+        description:
+          "goofy site for a goofy girl!",
+        buttonUrl:
+          "https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/planetaryinfluence.gif",
+      },
+      {
+        url: "https://waterlily.nekoweb.org/",
+        title: "Waterlily",
+        description:
+          "a collection of everything i love",
+        buttonUrl:
+          "https://waterlily.nekoweb.org/images/buttons/button.gif",
+      },
+      {
+        url: "https://sproutvale.nekoweb.org/",
+        title: "sproutvale",
+        description:
+          "my personal site to talk about my hobbies and interests, like my little pony! ok mostly my little pony.",
+        buttonUrl:
+          "https://file.garden/aS5RRl01RTh268AJ/images/my-resources/sproutvale-88x31-1.gif",
+      },
+      {
+        url: "https://cobie.nekoweb.org/",
+        title: "COBIESITE",
+        description:
+          "A personal site I made to house all my writing and my thoughts. I post gothic fiction and more.",
+        buttonUrl:
+          "https://cobie.nekoweb.org/button.gif",
+      },
+      {
+        url: "https://judelynn.neocities.org/",
+        title: "judelynn",
+        description:
+          "gayass site that i code on to share an obsession of mine which is a gayass band.",
+        buttonUrl:
+          "https://files.catbox.moe/ibqz9n.png",
+      },
+      {
+        url: "https://yumejoshi.nekoweb.org/",
+        title: "shu",
+        description:
+          "a dreaming girl with internet",
+        buttonUrl:
+          "https://yumejoshi.nekoweb.org/IMG_6566.jpeg",
+      },
+      {
+        url: "https://whirrfox.moe/",
+        title: "WhirrFox",
+        description:
+          "a cute personal website with a cute foxgirl oc",
+        buttonUrl:
+          "https://whirrfox.moe/assets/button.gif",
+      },
+      {
+        url: "https://spirit.nekoweb.org",
+        title: "spirit",
+        description:
+          "my awesome furry website",
+        buttonUrl:
+          "https://spirit.nekoweb.org/assets/button.gif",
+      },
+      {
+        url: "https://yuriplanet.neocities.org/",
+        title: "anh",
+        description:
+          "the most yuriful site on da net",
+        buttonUrl:
+          "https://yuriplanet.neocities.org/yuriplanet.jpg",
+      },
+      {
+        url: "https://babywormcore.baby/",
+        title: "babywormcore",
+        description:
+          "the personal site of Imogen Nocturne",
+        buttonUrl:
+          "/webring/placeh_button.png",
+      },
+      {
+        url: "https://kamingawan.nekoweb.org/",
+        title: "Kal",
+        description:
+          "Kamingawan is the fledgling digital forest of Kal, a space-ace warlock. It welcomes all friends to its hearth, but especially the dragon-shaped, the inkblots, and the silly little guys.",
+        buttonUrl:
+          "https://kamingawan.nekoweb.org/img/kamingawan.gif",
+      },
+      {
+        url: "https://tilde.club/~christa",
+        title: "the dumpster fire <br>18+",
+        description:
+          "",
+        buttonUrl:
+          "/webring/placeh_button.png",
+      },
+      {
+        url: "https://ryqrtz.nekoweb.org/",
+        title: "ryqrtz",
+        description:
+          "lesbian dog writing about misc interests",
+        buttonUrl:
+          "/webring/placeh_button.png",
+      },
+      {
+        url: "http://0ur4ng3lc4lls.neocities.org/",
+        title: "Our Angel Webpage<br>16+",
+        description:
+          "my site is dedicated to my personal creative endevors, specifically my current writing/original character project, Our Angel. The two main characters are sapphic as well :) and it is a horror, fantasy, religious cult, LGBTQ+ oriented project :D",
+        buttonUrl:
+          "https://files.catbox.moe/47stph.gif",
+      },
+      {
+        url: "https://bakartridges-site.neocities.org/",
+        title: "Baka's Site",
+        description:
+          "A site for me to post all my drawings, characters, ramble about stuff, and act as a central hub.",
+        buttonUrl:
+          "https://bakartridges-site.neocities.org/88x31.gif",
+      },
+      {
+        url: "https://petrapixel.neocities.org/",
+        title: "petrapixel",
+        description:
+          "-",
+        buttonUrl:
+          "https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/assets/img/linkback.gif",
+      },
+      {
+        url: "https://howdareyoubekind.neocities.org/",
+        title: "static!",
+        description:
+          "-",
+        buttonUrl:
+          "/webring/placeh_button.png",
+      },
+      {
+        url: "https://ars3n1ck.neocities.org/",
+        title: "ARS3N1CK<br>18+",
+        description:
+          "Personal site of an artist and general freak",
+        buttonUrl:
+          "https://file.garden/ZRXYTPKULjLI59yt/neocity/ars3n1ck%20button.gif",
+      },
+      {
+        url: "https://harriet.nekoweb.org/",
+        title: "Hattie's House",
+        description:
+          "the personal website of a random dyke on the internet",
+        buttonUrl:
+          "https://file.garden/aAUxCxm2KRQR_inV/hatties-button.gif",
+      },
+      {
+        url: "https://scrapsite.nekoweb.org/",
+        title: "BigBanana",
+        description:
+          "Personal & Writing Site",
+        buttonUrl:
+          "https://scrapsite.nekoweb.org/Buttons/scrapsitebutton.png",
+      },
+    ];
+
+  </script>
+  <script src="/webring/webringu.js"></script>
+</head>
+
+<body>
+
+  <header id="header"></header>
+
+  <div id="wrapit">
+    <aside>
+      <nav>
+        <ul id="navbar">
+          <li><a href="#info">Info</a></li>
+          <li><a href="#join">How to join</a></li>
+          <li><a href="#list">List</a></li>
+        </ul>
+      </nav>
+      <div id="update">
+        <p><b>Last member added in: January 8, 2026</b></p>
+
+        <p><span
+            style="color: rgb(255, 242, 0); text-shadow: -1px -1px 0 #bb9405, 1px -1px 0 #bb9405, -1px 1px 0 #bb9405, 1px 1px 0 #bb9405;"><b>NEW</span>
+          widget images</b></p>
+
+        <p><span
+            style="color: rgb(255, 48, 48); text-shadow: -1px -1px 0 #6d0528, 1px -1px 0 #6d0528, -1px 1px 0 #6d0528, 1px 1px 0 #6d0528;"><b>Note:</b></span>If
+          you are are a current member who is using the pink version of the widget please copy and
+          paste it again since i have changed the path to the images, ty :3</p>
+
+
+        <iframe width="180" height="180" style="border: none" src="https://evehibi.nekoweb.org/ringlink/"
+          name="ringlink" id="ringlink"></iframe>
+
+      </div>
+
+    </aside>
+    <main>
+      <div id="box">
+        <div class="text">
+          <h2 id="info">Info</h2>
+          <p>
+            welcome to <u>SapphicRing</u> a webring made for those who identify
+            as sapphics on the web, brought to you thanks to
+            <a href="https://petrapixel.neocities.org/coding/webringu">Webringu by Petrapixel</a>
+          </p>
+          <p>
+            Sapphic is an umbrella term for women (and recently women-aligned
+            and non-binary identities) who are attracted to women or in a
+            relationship with another woman, which includes lesbians, bisexuals,
+            queer, etc.<br /><br />The origin for the term <u>sapphic</u> comes
+            from the name of the Greek poetess <u>Sappho</u>, who expressed her
+            love for women in her works.
+            <i>The term <u>lesbian</u> shares a symilar origin, inspired by
+              Sappho's birth place, Lesbos.</i>
+          </p>
+          <br><img src="https://tomomi.neocities.org/divider/div10.png"><br>
+          <h3>Rules (0_0)"</h3>
+          <ol>
+            <li>You must be sapphic (obviously).</li>
+            <br />
+            <li>
+              No social media profiles or premade site builders, must be a site
+              where you can edit the html and stuff!
+            </li>
+            <br />
+            <li>Place the widget somewhere visible.</li>
+            <br />
+            <li>
+              I will not accept sites with hateful or discriminative content.
+            </li>
+            <br />
+            <li>If your site is 18+ it must have a visible warning</li>
+            <br />
+            <li>
+              Inactive sites with broken links and with almost no content in
+              them will be rejected :(
+            </li>
+          </ol>
+        </div>
+
+        <img src="https://tomomi.neocities.org/divider/div10.png">
+
+        <div class="text">
+          <h2 id="join">How to join</h2>
+
+          <h3>Add a widget :3</h3>
+
+          <table id="widgets">
+            <tr>
+              <th>Preview</th>
+              <th>Code</th>
+            </tr>
+            <tr>
+              <td>
+                <div id="sapphicring1">
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring"><img
+                      src="https://sunnishinez.neocities.org/webring/swindex.png" /></a><br />
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=previous"><img
+                      src="https://sunnishinez.neocities.org/webring/swleft.png" /></a>
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=random">random</a>
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=next"><img
+                      src="https://sunnishinez.neocities.org/webring/swright.png" /></a>
+                </div>
+              </td>
+              <td>
+                <textarea rows="4" cols="30">
+                <div id="sapphicring1">
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring"><img
+                    src="https://sunnishinez.neocities.org/webring/sapphic/swindex.png" /></a><br />
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=previous"><img
+                    src="https://sunnishinez.neocities.org/webring/sapphic/swleft.png" /></a>
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=random">random</a>
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=next"><img
+                    src="https://sunnishinez.neocities.org/webring/sapphic/swright.png" /></a>
+              </div>
+              </textarea>
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div id="sapphicring2">
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring"><b>SapphicRing !</b></a><br />
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=previous">prev</a>
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=random">random</a>
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=next">next</a>
+                </div>
+              </td>
+              <td>
+                <textarea rows="4" cols="30">
+              <div id="sapphicring2">
+              <a href="https://sunnishinez.neocities.org/webring/sapphicring"><b>SapphicRing !</b></a><br />
+              <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=previous">prev</a>
+              <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=random">random</a>
+              <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=next">next</a>
+            </div>
+            </textarea>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div id="sapphicring3">
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring"><img
+                      src="https://sunnishinez.neocities.org/webring/sapphic/sappho.png" /></a><br />
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=previous"><img
+                      src="https://sunnishinez.neocities.org/webring/sapphic/s_arright.png" /></a>
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=random">random</a>
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=next"><img
+                      src="https://sunnishinez.neocities.org/webring/sapphic/s_arleft.png" /></a>
+                </div>
+              </td>
+              <td>
+                <textarea rows="4" cols="30">
+                <div id="sapphicring3">
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring"><img
+                    src="https://sunnishinez.neocities.org/webring/sapphic/sappho.png" /></a><br />
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=previous"><img
+                    src="https://sunnishinez.neocities.org/webring/sapphic/s_arright.png" /></a>
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=random">random</a>
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=next"><img
+                    src="https://sunnishinez.neocities.org/webring/sapphic/s_arleft.png" /></a>
+              </div>
+              </textarea>
+
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <div id="sapphicring4">
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring"><img
+                      src="https://sunnishinez.neocities.org/webring/sapphic\violets.png" /></a><br />
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=previous"><img
+                      src="https://sunnishinez.neocities.org/webring/sapphic/p_left.png" /></a>
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=random">random</a>
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=next"><img
+                      src="https://sunnishinez.neocities.org/webring/sapphic/p_right.png" /></a>
+                </div>
+              </td>
+              <td>
+                <textarea rows="4" cols="30">
+                <div id="sapphicring4">
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring"><img
+                    src="https://sunnishinez.neocities.org/webring/sapphic\violets.png" /></a><br />
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=previous"><img
+                    src="https://sunnishinez.neocities.org/webring/sapphic/p_left.png" /></a>
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=random">random</a>
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=next"><img
+                    src="https://sunnishinez.neocities.org/webring/sapphic/p_right.png" /></a>
+              </div>
+              </textarea>
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div id="sapphicring5">
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring"><img
+                      src="https://sunnishinez.neocities.org/webring/sapphic/s_flags.gif" /></a><br>
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=previous">←</a>
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=random">random</a>
+                  <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=next">→</a>
+                </div>
+              </td>
+              <td>
+                <textarea rows="4" cols="30">
+                <div id="sapphicring5">
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring"><img
+                    src="https://sunnishinez.neocities.org/webring/sapphic/s_flags.gif" /></a><br>
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=previous">←</a>
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=random">random</a>
+                <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=next">→</a>
+              </div>
+              </textarea>
+
+              </td>
+
+            </tr>
+          </table>
+          <br>
+          <span style="font-size: 0.9em;">You can use images of your own too! it's practicaly full customizable</span>
+          <br>
+          <p>
+            <b>Then</b> send me an email at
+            <span style="color: purple">freaky.sun.angel@proton.me</span>
+            with <u>sapphic-ring</u> as the subject and this
+            information :
+          </p>
+
+          <textarea name="form" rows="5" cols="45">
+Website's URL:
+Your name or site's name:
+short description (optional):
+button image url (optional):
+is your site 18+ ?:</textarea>
+          <br>
+          <br>
+          <h3>Wanna update or remove your info?</h3>
+          <p>Just send me an email and specify if you want me to update or remove your info ^_^" </p>
+        </div>
+
+        <img src="https://tomomi.neocities.org/divider/div10.png" />
+
+        <div class="text" id="sapphiclist">
+          <h2 id="list">List</h2>
+          <p>We currently are <span id="webringucount"></span> members!</p>
+
+          <div id="webringulist"></div>
+          <noscript>Please enable JavaScript to view the member list.</noscript>
+        </div>
+
+        <a href="https://evehibi.nekoweb.org/ringlink/info.html" target="_blank">
+          <img src="https://evehibi.nekoweb.org/ringlink/button.gif" alt="ringlink - advertise your webring!" />
+        </a>
+
+        <a href="https://petrapixel.neocities.org/" target="_blank"><img
+            src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/assets/img/linkback.gif"
+            alt="petrapixel"></a>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

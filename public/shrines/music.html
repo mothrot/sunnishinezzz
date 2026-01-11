@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music</title>
+  <link rel="icon" type="image/x-icon" href="/archives/images/ico/music.gif">
+  <meta name="robots" content="noindex">
+
+  <style>
+    * {
+      cursor: url(https://cur.cursors-4u.net/others/oth-5/oth480.cur), auto !important;
+    }
+
+    body {
+      background-image: url('/archives/images/bgs/music.jpg');
+      position: relative;
+      width: 900px;
+      display: flex;
+      flex-wrap: wrap;
+      height: fit-content;
+      justify-content: center;
+      margin: auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: scroll;
+    }
+
+    p {
+      font-size: 23px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      margin: 5px;
+    }
+
+    .box {
+      background-color: white;
+      width: 600px;
+      height: fit-content;
+      border-radius: 5px;
+      padding: 8px;
+      margin: auto;
+    }
+
+    #vinyl-gallery * {
+      all: unset;
+    }
+
+    #vinyl-gallery {
+      all: initial;
+      width: 55%;
+      height: 120px;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      margin-left: -6px;
+    }
+
+    #vinyl-gallery .vinyl {
+      all: unset;
+      perspective: 255px;
+      width: 14px;
+      transition: width 0.5s;
+    }
+
+    #vinyl-gallery .vinyl:hover {
+      width: 79px;
+    }
+
+    #vinyl-gallery img {
+      all: unset;
+      transition: transform 0.5s, width 0.5s, height 0.5s, margin-top 0.5s;
+      width: 95px !;
+      height: 95px;
+      transform: rotateX(0deg) rotateY(25deg);
+      transform-style: preserve-3d;
+      border-radius: 9.5px;
+      border: 5px solid rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+    }
+
+    #vinyl-gallery .vinyl:hover img {
+      transform: rotateX(0deg) rotateY(10deg);
+      width: 99px;
+      height: 99px;
+      margin-top: -7px;
+    }
+
+    #vinyl-gallery .title {
+      color: black;
+      display: block;
+      visibility: hidden;
+      position: absolute;
+      bottom: -5px;
+      font-size: 11px;
+      text-align: center;
+      width: 150%;
+      padding-left: 4px;
+    }
+
+
+    #vinyl-gallery .vinyl:nth-child(n):hover+.title {
+      visibility: visible;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="content">
+    <img src="/archives/images/shrines_img/musiclogo.png" width="300px" style="pointer-events: none;">
+
+
+    <div class="box">
+
+      <center>
+
+        <p> Placeeeeeeeeeeee holderrrrrr</p>
+
+        <div id="vinyl-gallery">
+          <div class="vinyl">
+            <img src="https://i.postimg.cc/MTyvWWsw/Corazones.jpg" />
+          </div>
+          <div class="title">Los prisioneros - Corazones</div>
+
+          <div class="vinyl">
+            <img src="https://i.postimg.cc/8PkjSgL8/Gorillaz-2001.png" />
+          </div>
+          <div class="title">Gorillaz - Gorillaz</div>
+
+          <div class="vinyl">
+            <img src="https://i.postimg.cc/Xq4XqThC/fugitivo-teamo.jpg" />
+          </div>
+          <div class="title">Los Saicos - Fugutivo de Alcatraz/Te amo</div>
+
+          <div class="vinyl">
+            <img src="https://i.postimg.cc/wvK18tQF/Weezer-Blue.jpg" />
+          </div>
+          <div class="title">Weezer - The Blue Album</div>
+
+          <div class="vinyl">
+            <img src="https://i.postimg.cc/prCrFsb1/Wolf.jpg" />
+          </div>
+          <div class="title">Tyler the Creator - Wolf</div>
+
+          <div class="vinyl">
+            <img src="https://i.postimg.cc/MGfnF0Vv/The-red-means-i-love-you.jpg" />
+          </div>
+          <div class="title">Madds Buckley - The red means i love you</div>
+
+          <div class="vinyl">
+            <img src="https://i.postimg.cc/SKd063t4/Arca-KICK-ii.jpg" />
+          </div>
+          <div class="title">Arca - KickII</div>
+
+          <div class="vinyl">
+            <img src="https://i.postimg.cc/3rcTbMrJ/butch4butch.jpg" />
+          </div>
+          <div class="title">Rio Romeo - Butch4Butch</div>
+
+          <div class="vinyl">
+            <img src="https://i.postimg.cc/Kv3y6947/Demo.jpg" />
+          </div>
+          <div class="title">Prison Affair - Demo</div>
+
+          <div class="vinyl">
+            <img src="https://i.postimg.cc/bwXjpQ27/musica-de-fondo.jpg" />
+          </div>
+          <div class="title">Zoé - Música de fondo</div>
+
+          <div class="vinyl">
+            <img src="https://i.postimg.cc/2S4N6VQV/RARO.jpg" />
+          </div>
+          <div class="title"> El Cuarteto de nos - Raro</div>
+
+          <div class="vinyl">
+            <img src="https://i.postimg.cc/Y0ZB4FDm/Who-really-cares.jpg" />
+          </div>
+          <div class="title">TV Girl - Who really cares</div>
+
+          <div class="vinyl">
+            <img src="https://i.postimg.cc/sXBcjHqy/Love-For-Sale-1977.jpg" />
+          </div>
+          <div class="title">BoneyM - Love For Sale</div>
+
+          <div class="vinyl">
+            <img src="https://i.postimg.cc/s2Gmy0tz/An-unhealthy-obsession.jpg" />
+          </div>
+          <div class="title">The Blake Robinson Synthetic Orchestra - An unhealthy obsession</div>
+
+          <div class="vinyl">
+            <img src="https://i.postimg.cc/QtLbMJ3T/Friendsin-low-placess.jpg" />
+          </div>
+          <div class="title">WorthyKids - Friends in low places</div>
+        </div>
+      </center>
+
+    </div>
+
+  </div>
+</body>
+
+</html>

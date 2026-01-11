@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(Not) Wayback Machine</title>
+  <link rel="icon" type="image/x-icon" href="/funniez/old_site/flower.png">
+
+  <style>
+    body {
+      margin: 0px;
+      background: white;
+      display: grid;
+      justify-items: center;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    header {
+      background: #222;
+      margin: 0px;
+      width: 100%;
+      height: 50px;
+    }
+
+    #logo {
+      width: 145px;
+      margin: 8px;
+    }
+
+    nav {
+      width: 100%;
+      height: 33px;
+      background: #333;
+      color: #737373;
+      overflow: hidden;
+      margin: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 13px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: #737373;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: white;
+    }
+
+    #penny {
+      width: 425px;
+      position: fixed;
+      left: 80%;
+      bottom: -1%;
+    }
+
+    #speechbubble {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      width: 190px;
+      position: fixed;
+      left: 70%;
+      top: 460px;
+    }
+
+    #text {
+      position: fixed;
+      right: 300px;
+      bottom: 160px;
+    }
+
+    main {
+      margin: 80px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .pennycorner {
+      position: relative;
+    }
+
+    .box {
+      margin-right: 20px;
+      text-align: left;
+      color: #4b64ff;
+    }
+
+    #thumb {
+      filter: saturate(50%);
+      border: 1px solid black;
+    }
+
+    #thumb:hover {
+      filter: saturate(100%);
+      box-shadow: 1px 1px 1px black;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <img id="logo" src="/funniez/images/fa_logo.png">
+  </header>
+  <nav>
+    <p title="There is no about :3">About</p>
+    <a href="/funniez/menu.html">
+      <p>Back to menu</p>
+    </a>
+    <a href="/mainpage.html">
+      <p>Main Page</p>
+    </a>
+  </nav>
+  <main>
+    <h3>Visit my old layouts!</h3>
+    <div class="container">
+      <div class="box">
+        <a href="/funniez/old_site/oldsite.html"><img id="thumb" src="/funniez/old_site/oldsite.html.210x158.webp"></a>
+        <p><b>freakysunshine</b><br>August 2024</p>
+      </div>
+      <div class="box">
+        <a href="/funniez/old_site/oldsite2.html"><img id="thumb"
+            src="/funniez/old_site/oldsite2.html.210x158.webp"></a>
+        <p><b>freakysunshine</b><br>September 2024</p>
+      </div>
+      <div class="box">
+        <a href="/funniez/old_site/oldsite3.html"><img id="thumb"
+            src="/funniez/old_site/oldsite3.html.210x158.webp"></a>
+        <p><b>freakysunshine</b><br>January 2025</p>
+      </div>
+    </div>
+  </main>
+
+  <div class="pennycorner">
+    <img src="/archives/images/mainpage/speech_bubble.png" id="speechbubble">
+    <p id="text">I'm here too!</p>
+    <img src="/funniez/images/PvZ2-Penny(Full_Body).png" id="penny">
+  </div>
+
+</body>
+
+</html>

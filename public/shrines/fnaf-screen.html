@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="/archives/stylesheet.css">
+
+    <style>
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: "bios";
+        }
+
+        p,
+        h5 {
+            font-family: "WINDOWS";
+        }
+
+        * {
+            cursor: context-menu;
+        }
+
+        html {
+            scrollbar-color: white #0f2358;
+            scrollbar-width: thin;
+        }
+
+        body#screen {
+            image-rendering: pixelated;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2px;
+            background-color: #0f2358;
+            text-align: center;
+            color: white;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        .crt::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+                    rgba(0, 0, 0, 0.25) 50%),
+                linear-gradient(90deg,
+                    rgba(255, 0, 0, 0.06),
+                    rgba(0, 255, 0, 0.02),
+                    rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 0.27861;
+            }
+
+            5% {
+                opacity: 0.34769;
+            }
+
+            10% {
+                opacity: 0.23604;
+            }
+
+            15% {
+                opacity: 0.10626;
+            }
+
+            20% {
+                opacity: 0.18128;
+            }
+
+            25% {
+                opacity: 0.10626;
+            }
+
+            30% {
+                opacity: 0.18128;
+            }
+
+            35% {
+                opacity: 0.23604;
+            }
+        }
+
+        .crt::after {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(18, 16, 16, 0.1);
+            opacity: 0;
+            z-index: 2;
+            pointer-events: none;
+            animation: flicker 0.15s infinite;
+        }
+
+        li:link,
+        li {
+            list-style: none;
+            font-family: "WINDOWS";
+            cursor: pointer;
+            border: 1px solid white;
+            padding: 5px;
+            width: 20%;
+            margin: 5px;
+        }
+
+        li:hover,
+        a:hover {
+            text-decoration: underline;
+            background: #8EBCD6;
+            color: white;
+            text-shadow: 1px 1px 0px #000000;
+        }
+
+        nav {
+            width: 90%;
+        }
+
+        ul {
+            padding: 0px;
+            width: initial;
+            display: flex;
+            justify-content: center;
+            height: 35px;
+            align-items: center;
+        }
+
+        #leave:link {
+            text-decoration: none;
+            color: white;
+        }
+
+        main {
+            display: contents;
+        }
+
+        ::-webkit-scrollbar {
+            width: 2px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #0f2358;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.444);
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: white;
+        }
+    </style>
+
+
+    <script>
+
+        function homePage() {
+            document.getElementById("home").style.display = "block";
+            document.getElementById("what-we-know").style.display = "none";
+            document.getElementById("analysis").style.display = "none";
+            document.getElementById("extra").style.display = "none";
+        }
+
+        function whatWeKnowPage() {
+            document.getElementById("home").style.display = "none";
+            document.getElementById("what-we-know").style.display = "block";
+            document.getElementById("analysis").style.display = "none";
+            document.getElementById("extra").style.display = "none";
+        }
+
+        function analysisPage() {
+            document.getElementById("home").style.display = "none";
+            document.getElementById("what-we-know").style.display = "none";
+            document.getElementById("analysis").style.display = "block";
+            document.getElementById("extra").style.display = "none";
+        }
+
+        function extraPage() {
+            document.getElementById("home").style.display = "none";
+            document.getElementById("what-we-know").style.display = "none";
+            document.getElementById("analysis").style.display = "none";
+            document.getElementById("extra").style.display = "block";
+        }
+    </script>
+
+</head>
+
+<body id="screen">
+    <div class="crt"></div>
+    <header><img src="/archives/images/shrines_img/fnaf/fnaf-logo.png" width="35%"></header>
+    <nav>
+        <ul>
+            <li onclick="homePage()">HOME</li>
+            <li onclick="whatWeKnowPage()">LORE...?</li>
+            <li onclick="analysisPage()">ANALYSIS</li>
+            <li onclick="extraPage()">EXTRA</li>
+        </ul>
+    </nav>
+    <main>
+        <div id="home">
+            <article>
+                <h4>Welcome to the FNAF shrine!!</h4>
+                <p>Unfortunately this is still a W.I.P</p>
+                <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExemUwNWVuamVwbWtmYzE1amU4NGh6d3NlYnY2Y2FmNGFjdHphN3p3biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VHmenyqdCbn32/giphy.webp"
+                    width="50%" />
+            </article>
+        </div>
+        <div id="what-we-know" style="display: none;">
+            <article>
+                <h4>What we know</h4>
+                <h5>fnaf lore is a mess</h5>
+                <img src="https://i.pinimg.com/736x/fb/10/ce/fb10cee99ae7cfb2a0cfbf6f61edeea2.jpg" width="50%" />
+                <p>William and Henry co-worker divorce</p>
+            </article>
+        </div>
+        <div id="analysis" style="display: none;">
+            <article>
+                <h4>Analysis</h4>
+                <h5>mostly character analysis...!</h5>
+                <img src="https://i.pinimg.com/1200x/b4/fa/4f/b4fa4f9cf626fd0f3538b9ecf37e3874.jpg" width="50%" />
+                <p>yeah this is not done yet<br><i>art credits to: @Chloesimagination !</i></p>
+            </article>
+        </div>
+        <div id="extra" style="display: none;">
+            <article>
+                <h4>Extras!</h4>
+                <h5>i forgot what i was about to put here tbh</h5>
+                <img src="https://i.pinimg.com/1200x/bc/59/57/bc5957e750af9adc46613a392f8f205f.jpg" width="50%" />
+            </article>
+        </div>
+    </main>
+
+
+</body>
+
+</html>

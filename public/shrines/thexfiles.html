@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>The X files</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="robots" content="noindex" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://files.catbox.moe/xw7z5k.ico"
+    />
+
+    <style>
+      @font-face {
+        font-family: BIOS;
+        src: url("/archives/fonts/BIOS.ttf");
+      }
+
+      @font-face {
+        font-family: WINDOWS;
+        src: url("/archives/fonts/Windows%20Regular.ttf");
+      }
+
+      body {
+        background-image: url(https://www.famouspictures.org/wp-content/uploads/2013/05/Figu_picture.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-family: "BIOS";
+        width: 900px;
+        position: relative;
+      }
+
+      .bigcontainer {
+        width: 900px;
+        height: auto;
+        max-height: 100%;
+        background-color: #c0c0c0;
+        color: #000000;
+        border-radius: 5px;
+        border: thick outset #d1d1d1;
+        margin: 10px;
+        display: flex;
+        line-height: 1px;
+        text-align: left;
+        flex-wrap: wrap;
+        padding: 5px;
+      }
+
+      .main {
+        width: 900px;
+        height: auto;
+        max-height: 100%;
+        border: 3px inset;
+        padding: 2px;
+        background-color: #ffffff;
+        text-align: center;
+        color: black;
+        overflow: auto;
+        margin: 5px;
+        align-content: center;
+        line-height: normal;
+      }
+
+      #sepcon {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "BIOS";
+      }
+
+      h4,
+      p {
+        font-family: "WINDOWS";
+      }
+
+      .crt::before {
+        content: " ";
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(
+            rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.25) 50%
+          ),
+          linear-gradient(
+            90deg,
+            rgba(255, 0, 0, 0.06),
+            rgba(0, 255, 0, 0.02),
+            rgba(0, 0, 255, 0.06)
+          );
+        z-index: 2;
+        background-size: 100% 2px, 3px 100%;
+        pointer-events: none;
+      }
+
+      @keyframes flicker {
+        0% {
+          opacity: 0.27861;
+        }
+        5% {
+          opacity: 0.34769;
+        }
+        10% {
+          opacity: 0.23604;
+        }
+        15% {
+          opacity: 0.10626;
+        }
+        20% {
+          opacity: 0.18128;
+        }
+        25% {
+          opacity: 0.10626;
+        }
+        30% {
+          opacity: 0.18128;
+        }
+        35% {
+          opacity: 0.23604;
+        }
+      }
+
+      .crt::after {
+        content: " ";
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(18, 16, 16, 0.1);
+        opacity: 0;
+        z-index: 2;
+        pointer-events: none;
+        animation: flicker 0.15s infinite;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="sepcon" class="container">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/d/da/The_X-Files_title_logo.png"
+        align="center"
+        width="400"
+      />
+
+      <div class="bigcontainer">
+        <h1>The X-Files</h1>
+        <div class="main">
+          <h4>Descarga la primera temporada de The X-files</h4>
+          <p>
+            The X files o "Expedientes X" como me gusta llamarlo, es una serie
+            de TV transmitida en los 90's. Trata sobre dos agentes especiales
+            del FBI encargados de casos sin resolver.
+          </p>
+
+          <a
+            href="https://mega.nz/folder/FWRFjCLD#2nKflEuhNn7CfO9qyf9p6Q/folder/8XhxnCbR"
+            ><img src="https://files.catbox.moe/0xjc2e.jpg" width="500"
+          /></a>
+
+          <p>Clickea la imágen para descargar desde Mega</p>
+
+          <button><a href="/shrines/menu" class="button">Go back?</a></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="crt"></div>
+  </body>
+</html>

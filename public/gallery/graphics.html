@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>My Collection!</title>
+	<meta name="robots" content="noindex">
+	<link rel="icon" type="image/x-icon" href="/archives/images/ico/heartnote.gif">
+
+
+	<style>
+		html {
+			scrollbar-width: thin;
+		}
+
+		body {
+			margin: auto;
+			width: 1300px;
+			position: relative;
+			background-color: black;
+			overflow: hidden;
+		}
+
+		main {
+			position: absolute;
+		}
+
+		.van {
+			width: 1025px;
+			height: 702px;
+			background: url('/gallery/elements/socialeditionshop.webp') no-repeat;
+			background-size: 1025px 702px;
+			margin: 5px;
+			position: relative;
+			right: 97px;
+			top: -5px;
+		}
+
+		#display2 {
+			display: none;
+		}
+
+		.graphic {
+			position: absolute;
+		}
+
+		#blinkies {
+			top: 125px;
+			left: 358px;
+			width: 626px;
+			height: 120px;
+			overflow-y: scroll;
+			scrollbar-color: #6ce5d9 #182432;
+			scrollbar-width: thin;
+		}
+
+		#stamps {
+			top: 288px;
+			left: 359px;
+			width: 644px;
+			height: 130px;
+			overflow-y: scroll;
+			scrollbar-color: #6ce5d9 #182432;
+			scrollbar-width: thin;
+		}
+
+		#buttons {
+			top: 458px;
+			left: 371px;
+			width: 605px;
+			height: 127px;
+			overflow-y: scroll;
+			scrollbar-color: #D88B67 #220F06;
+			scrollbar-width: thin;
+		}
+
+		#bars {
+			top: 120px;
+			right: 41px;
+			width: 359px;
+			height: 125px;
+			overflow-y: scroll;
+			scrollbar-color: #6ce5d9 #182432;
+			scrollbar-width: thin;
+		}
+
+		#IMVU {
+			width: 260px;
+			height: 125px;
+			top: 119px;
+			left: 364px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			scrollbar-width: thin;
+		}
+
+		.shelf {
+			width: 460px;
+			height: 702px;
+			background: url(/gallery/elements/shelf.png) no-repeat;
+			background-size: contain;
+			left: 932px;
+			top: 0px;
+			position: absolute;
+			text-align: center;
+		}
+
+		#site {
+			top: 23px;
+			left: 75px;
+			width: 308px;
+			height: fit-content;
+			overflow: hidden;
+			text-align: center;
+		}
+
+		#pets {
+			width: 563px;
+			height: 116px;
+			top: 315px;
+			right: 55px;
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+		}
+
+		#picmix {
+			width: 437px;
+			height: 125px;
+			display: flex;
+			overflow-x: scroll;
+			scrollbar-width: thin;
+			scrollbar-color: #e89368 #753312;
+			overflow-y: hidden;
+			top: 140px;
+			left: 12px;
+		}
+
+		#byme-blinkies {
+			width: 436px;
+			height: 116px;
+			bottom: 306px;
+			left: 12px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			scrollbar-width: thin;
+			scrollbar-color: #e89368 #753312;
+		}
+
+		#byme-stamps {
+			width: 436px;
+			height: 116px;
+			bottom: 165px;
+			left: 12px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			scrollbar-width: thin;
+			scrollbar-color: #e89368 #753312;
+		}
+
+		#byme-buttons {
+			width: 436px;
+			height: 116px;
+			bottom: 25px;
+			left: 12px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			scrollbar-width: thin;
+			scrollbar-color: #e89368 #753312;
+		}
+
+
+		.button {
+			position: absolute;
+			width: 123px;
+			height: 80px;
+			border: none;
+		}
+
+		#right {
+			background: url('/gallery/elements/rightlight.png') no-repeat;
+			left: 365px;
+			bottom: 5px;
+			background-size: cover;
+		}
+
+		#right:hover {
+			filter: brightness(135%);
+		}
+
+		#left {
+			background: url('/gallery/elements/leftlight.png') no-repeat;
+			right: 23px;
+			bottom: 5px;
+			background-size: cover;
+		}
+
+		#left:hover {
+			filter: brightness(135%);
+		}
+
+		::-webkit-scrollbar {
+			width: 5px;
+		}
+
+		::-webkit-scrollbar-track {
+			background: transparent;
+		}
+
+		#bymesign {
+			width: 154px;
+			position: absolute;
+			left: -2px;
+			z-index: 99999;
+		}
+
+		#sign {
+			position: absolute;
+			width: 330px;
+		}
+
+		#banners {
+			top: 460px;
+			height: 120px;
+			width: 598px;
+			left: 373px;
+			overflow-x: hidden;
+			overflow-y: scroll;
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+	<main>
+
+		<div class="van" loading="lazy">
+
+			<button class="button" id="right" onclick="Vandisplay1()"></button>
+			<button class="button" id="left" onclick="Vandisplay2()"></button>
+			<img id="sign" src="/gallery/elements/collectionsign.png">
+
+			<script>
+				function Vandisplay1() {
+					document.getElementById('display1').style.display = 'block';
+					document.getElementById('display2').style.display = 'none';
+				}
+
+				function Vandisplay2() {
+					document.getElementById('display1').style.display = 'none';
+					document.getElementById('display2').style.display = 'block';
+				}
+			</script>
+
+			<div id="display1">
+				<div id="blinkies" class="graphic">
+					<img src="https://watermelon.crd.co/assets/images/gallery21/f5becac8.gif?v=ab2f6a73" title="SOAD"
+						loading="lazy">
+					<img src="https://tinyurl.com/ybndat2h" title="horror" loading="lazy">
+					<img src="https://tinyurl.com/3xkhfeuf" title="sleepy" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/blinkies/Autism.gif" title="autism" loading="lazy">
+					<img src="https://i.postimg.cc/G3zDhgBv/95022afe.gif" title="artist" loading="lazy">
+					<img src="https://tinyurl.com/24nh5ccs" title="blood" loading="lazy">
+					<img src="https://blinkies.neocities.org/b/display/0081-asexual.gif" title="ace" loading="lazy">
+					<img src="https://blinki.es/blinkies/animal/i-heart-cats.gif" title="cats" loading="lazy">
+					<img src="https://blinki.es/blinkies/animal/rats-are-a-bad-thing.gif" title="rats" loading="lazy">
+					<img src="https://i.postimg.cc/RZ3mcyVj/proud-wife-guy.gif" title="wifeguy" loading="lazy">
+					<img src="https://i.postimg.cc/g0D8nD95/clownnn.gif" title="clown" loading="lazy">
+					<img src="https://plasticdino.neocities.org/blinkie/bunny.gif" title="bunny" loading="lazy">
+					<img src="https://gifcity.carrd.co/assets/images/gallery15/a996e1c8.gif?v=d7271437"
+						title="get silly" loading="lazy">
+					<img src="https://tinyurl.com/2nftzyuw" title="kill you" loading="lazy">
+					<img src="https://gifs.crd.co/assets/images/gallery11/9785ad47_original.gif?v=ef433a6f"
+						title="YAYYY" loading="lazy">
+					<img src="https://i.postimg.cc/cHRc7MzX/blinkies-Cafe-wi.gif" title="kiss a clown" loading="lazy">
+					<img src="https://tinyurl.com/289dxvvf" title="i love welcome home" loading="lazy">
+					<img src="https://tinyurl.com/ynxzs5cn" title="I recognize you" loading="lazy">
+					<img src="https://tinyurl.com/2t4ryb7u" title="mute call" loading="lazy">
+					<img src="https://tinyurl.com/2f5s68ay" title="michael afton" loading="lazy">
+					<img src="https://tinyurl.com/mr2fy6ny" title="Uh-oh!" loading="lazy">
+					<img src="https://tinyurl.com/57fpn66z" title="It's me" loading="lazy">
+					<img src="https://tinyurl.com/yzm5a933" title="I always come back" loading="lazy">
+					<img src="https://tinyurl.com/2ptcpk93" title="eviltism" loading="lazy">
+					<img src="https://watermelon.crd.co/assets/images/gallery22/3becd7d9.gif?v=ab2f6a73" title="ghost"
+						loading="lazy">
+					<img src="https://blinkies.cafe/b/display/0185-pinkglow.gif" title="blushing" loading="lazy">
+					<img src="https://wilardo.crd.co/assets/images/gallery12/80dc8cb8.gif?v=3a39217c" title="frens"
+						loading="lazy">
+					<img src="https://tinyurl.com/3k6f663w" title="oh worm" loading="lazy">
+					<img src="https://plasticdino.neocities.org/blinkie/hormones.gif" title="hormones" loading="lazy">
+					<img src="https://graphic.neocities.org/f1795766-0f2a-4199-ae1c-5779a418f9f8.gif" title="only one"
+						loading="lazy">
+					<img src="https://graphic.neocities.org/stillyou.gif" title="still you" loading="lazy">
+					<img src="https://graphic.neocities.org/05e4efab-0358-4020-b537-95f680be6137.gif"
+						title="night dreamer" loading="lazy">
+					<img src="https://sabs-blinkies.carrd.co/assets/images/image07.gif?v=76d54936" title="Belive"
+						loading="lazy">
+					<img src="https://sabs-blinkies.carrd.co/assets/images/image37.gif?v=76d54936" title="BOO"
+						loading="lazy">
+					<img src="https://cass-tastrophe.carrd.co/assets/images/gallery05/659d8914.gif?v=dfff86c3"
+						title="fishie" loading="lazy">
+					<img src="https://ugleeblinkie.carrd.co/assets/images/image41.gif?v01485035087951" title="skulls"
+						loading="lazy">
+					<img src="https://ugleeblinkie.carrd.co/assets/images/image55.gif?v01485035087951"
+						title="bats are cute" loading="lazy">
+					<img src="https://supplies.ju.mp/assets/images/gallery07/f7c464d0.gif?v=602998d9" title="two trucks"
+						loading="lazy">
+					<img src="https://supplies.ju.mp/assets/images/gallery07/1e97254e.gif?v=602998d9" title="twinkle"
+						loading="lazy">
+					<img src="https://supplies.ju.mp/assets/images/gallery07/b72ec500.gif?v=602998d9" title="meow"
+						loading="lazy">
+					<img src="https://supplies.ju.mp/assets/images/gallery07/69172d4f.gif?v=602998d9" title="PINK"
+						loading="lazy">
+					<img src="https://supplies.ju.mp/assets/images/gallery07/168ef151.gif?v=602998d9" title="homo"
+						loading="lazy">
+					<img src="https://twigbranch.carrd.co/assets/images/gallery12/b56303ba.gif?v06786326821951"
+						title="Angel from heaven" loading="lazy">
+					<img src="https://twigbranch.carrd.co/assets/images/gallery12/7e6bb11a.gif?v06786326821951"
+						title="angel bf" loading="lazy">
+					<img src="https://twigbranch.carrd.co/assets/images/gallery03/a692cf2f.gif?v06786326821951"
+						title="miku rights" loading="lazy">
+					<img src="https://blinki.es/blinkies/women/princess-on-board.gif" title="princess board"
+						loading="lazy">
+					<img src="https://blinki.es/blinkies/mom/uh-oh-i'm-pregnant.gif" title="pregnant" loading="lazy">
+					<img src="https://blinki.es/blinkies/music/weird-al.gif" title="weird al rules" loading="lazy">
+					<img src="https://tinyurl.com/4cz6j643" title="girlz rules" loading="lazy">
+					<img src="https://tinyurl.com/mr3rxww" title="princess" loading="lazy">
+					<img src="https://tinyurl.com/muznffm5" title="proud to be trains" loading="lazy">
+					<img src="https://pix.crd.co/assets/images/gallery10/99c6ee18_original.gif?v=cf5fcef5"
+						title="bisexual" loading="lazy">
+					<img src="https://supplies.ju.mp/assets/images/gallery07/7a127ab8.gif?v=6a50b904" title="Angel">
+					<img src="https://i.ibb.co/mCxxgPv/garfield.gif" title="garfield" loading="lazy">
+					<img src="https://img1.picmix.com/output/stamp/normal/9/5/3/2/2542359_892c2.gif"
+						title="self made being" loading="lazy">
+					<img src="https://tinyurl.com/bd9kpvxy" title="I love my girl friend" height="20" width="150"
+						loading="lazy">
+					<img src="https://y2k.neocities.org/blinkiez/tumblr_p9ylutCElg1vmrb8ao1_r1_250.gif"
+						title="I love my wife" height="20" width="150" loading="lazy">
+					<img src="https://sabs-blinkies.carrd.co/assets/images/image30.gif?v=76d54936" title="ERROR"
+						height="20" width="150" loading="lazy">
+					<img src="https://watermelon.crd.co/assets/images/gallery21/021e7f76.gif?v=ab2f6a73" title="KORN"
+						width="150" height="20" loading="lazy">
+					<a
+						href="https://azuremist.tumblr.com/post/696295263374082048/you-know-i-had-to-do-it-to-em-via-blinkiescafe"><img
+							src="https://tinyurl.com/5xbs8bxf" title="autism girl autum" width="150" height="20"
+							loading="lazy"></a>
+					<a
+						href="https://www.tumblr.com/bl1nkiep0sting/713368111653519360/welcome-home-blinkies-because-i-am"><img
+							src="https://tinyurl.com/ru8jpywc" title="I LOVE BARNABY" width="150" height="20"
+							loading="lazy"></a>
+					<img src="https://gifcity.carrd.co/assets/images/gallery226/c45ad63c.gif?v=52814815"
+						title="Daft Punk" width="150" height="20" loading="lazy">
+					<img src="https://y2k.neocities.org/blinkiez/tumblr_ocv55xuQnQ1vybv3mo6_250.gif"
+						title="You are wonderful" width="150" height="20" loading="lazy">
+					<img src="https://tinyurl.com/2ab2aet7" title="perfect blue" loading="lazy">
+					<img src="https://y2k.neocities.org/blinkiez/newbatch/sunshine.gif" title="sunshine" loading="lazy">
+					<img src="https://splattacks.neocities.org/images/graphics/sapphic.gif" title="sapphic angel"
+						loading="lazy">
+					<img src="https://i.ibb.co/WKbmrVj/Transpride.gif" title="trans pride" loading="lazy">
+					<img src="https://julesneohome.neocities.org/blinkies/wotah.gif" title="water" loading="lazy">
+					<img src="https://plasticdino.neocities.org/blinkie/fishy.gif" title="fishy" loading="lazy">
+					<img src="https://gifcity.carrd.co/assets/images/gallery15/0e1b71af.gif?v=a5c82efa"
+						title="stu horse" loading="lazy">
+					<img src="https://koinuko.pink/mygraphics/blinkies/daynight.gif" title="daynight" loading="lazy">
+					<img src="https://tinyurl.com/ytbyu4fm" title="biohazard" loading="lazy">
+					<img src="https://i.ibb.co/mF3zx8q/knuckle.gif" title="knuckle sandwich" loading="lazy">
+					<img src="https://forums.terraria.org/index.php?attachments/tumblr_l_521287742768147-gif.378951/"
+						title="ouch" loading="lazy">
+					<img src="https://blinki.es/blinkies/music/he-was-a-punk.gif" title="punk and ballet"
+						loading="lazy">
+					<img src="https://plasticdino.neocities.org/blinkie/tumblr_dbdb9c28297408b0b2413795b61602e2_ab1b54e1_250.gif"
+						title="monster high" loading="lazy">
+					<img src="https://laboratory.neocities.org/blinkies/black/2.gif" title="backspace" loading="lazy">
+					<img src="https://plasticdino.neocities.org/blinkie/136.gif" title="fast" loading="lazy">
+					<img src="https://raining-starss.neocities.org/73119blinkies%20(6).gif" title="cuteness"
+						loading="lazy">
+					<img src="https://laboratory.neocities.org/blinkies/yellow/1.gif" title="Holy banana"
+						loading="lazy">
+					<img src="https://plasticdino.neocities.org/blinkie/43457925_m78.gif" title="kill me"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/blinkies/dontlikeit.gif" title="dont like it?"
+						loading="lazy">
+					<img src="https://blinki.es/blinkies/other/smart-ass.gif" title="smart ass" loading="lazy">
+					<img src="https://blinki.es/blinkies/other/oh-pleeeeeze.gif" title="pleeeezeee" loading="lazy">
+					<img src="http://blinki.es/blinkies/people/stargazer.gif" title="stargazer" loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/d10.gif" title="Godzilla" loading="lazy">
+					<img src="https://gifcity.carrd.co/assets/images/gallery15/c467216a.gif?v=5bf8fcf7"
+						title="sesame street" loading="lazy">
+					<img src="https://blinkies.cafe/b/display/0136-clock.gif" title="time blind" loading="lazy">
+					<img src="https://koinuko.pink/mygraphics/blinkies/possums.gif" title="opossum" loading="lazy">
+					<img src="https://gifcity.carrd.co/assets/images/gallery23/9659a785.gif?v=52814815"
+						title="prostetic" loading="lazy">
+					<img src="https://gifcity.carrd.co/assets/images/gallery23/40eb8953.gif?v=52814815"
+						title="ever dreamed with this man?" loading="lazy">
+					<img src="https://gifcity.carrd.co/assets/images/gallery220/63eaeb83.gif?v=52814815"
+						title="law and order" loading="lazy">
+					<img src="https://gifcity.carrd.co/assets/images/gallery21/1c493b1e.gif?v=52814815"
+						title="ctrl me del" loading="lazy">
+					<img src="https://tinyurl.com/5cch6umd" title="breaking bad" loading="lazy">
+					<img src="https://cobyzaby.neocities.org/img/blinky/byrnewalk.gif" title="byrnewalk" loading="lazy">
+					<img src="https://i10.glitter-graphics.org/pub/467/467800fdccn540q3.gif" title="bodesponja"
+						loading="lazy">
+					<img src="https://i7.glitter-graphics.org/pub/2574/2574367oud3zp7y6l.gif" title="what's sleep"
+						loading="lazy">
+					<img src="https://gifcity.carrd.co/assets/images/gallery16/ba3d382a.gif?v=dc8076d6" title="Fever"
+						loading="lazy">
+					<img src="https://gifcity.carrd.co/assets/images/gallery14/18d6f032.gif?v=dc8076d6"
+						title="love letters" loading="lazy">
+					<img src="https://i2.glitter-graphics.org/pub/2004/2004282bfzfcosfel.gif" title="fraggle rock"
+						loading="lazy">
+					<img src="https://i5.glitter-graphics.org/pub/1182/1182835sagawn4jzu.gif" title="THE BEATLES"
+						loading="lazy">
+					<img src="https://i2.glitter-graphics.org/pub/908/908742f5zpf7u6xq.gif" title="Muppets"
+						loading="lazy">
+					<img src="https://i1.glitter-graphics.org/pub/1182/1182441k1csg8cdls.gif" title="fire"
+						loading="lazy">
+					<img src="https://tinyurl.com/mr32p5mm" title="RATS" loading="lazy">
+					<img src="https://cur.glitter-graphics.net/pub/3244/3244832yp5f93bprd.png" title="smiley face"
+						loading="lazy">
+					<img src="https://i7.glitter-graphics.org/pub/1961/1961427el53g75d8e.gif" title="Ladybug"
+						loading="lazy">
+					<img src="https://i10.glitter-graphics.org/pub/1461/1461790avwdlgjv2l.gif" title="My Lucky star"
+						loading="lazy">
+					<img src="https://i8.glitter-graphics.org/pub/1677/1677948csjobzptkm.gif" title="dirty mind"
+						loading="lazy">
+					<img src="https://i9.glitter-graphics.org/pub/1220/1220499vczsnxkckj.gif" title="Music my life"
+						loading="lazy">
+					<img src="https://tinyurl.com/5x6renke" title="equality" loading="lazy">
+					<img src="https://oudkee.neocities.org/blinkies/scully.gif" title="Scully" loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/x36.gif"
+						title="not such a thing as fake tits" loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/x28.gif" title="dreamcast" loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/x43.gif" title="bjork" loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/x13.gif" title="women want me fish fear me"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/b/athf.gif" title="aqua-teen hunger force"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/x6.gif" title="da blinkie" loading="lazy">
+					<img src="https://blob.gifcities.org/gifcities/EBUKNMS5TPEGCURSVPEGEA4QOXM4YRPW.gif"
+						title="some bunny love" loading="lazy">
+					<img src="https://tinyurl.com/p7tec3pk" title="traditional artist" loading="lazy" width="150"
+						height="20">
+					<img src="https://tinyurl.com/anuhj67a" title="digital artist" loading="lazy" width="150"
+						height="20">
+					<img src="https://tinyurl.com/mukws4ah" title="pixel artist" loading="lazy" width="150" height="20">
+					<img src="https://tinyurl.com/584rd9ru" title="mixed media" loading="lazy" width="150" height="20">
+					<img src="https://tinyurl.com/azjm9csb" title="animator" loading="lazy" width="150" height="20">
+					<img src="https://tinyurl.com/kjwdphv6" title="freelance artist" loading="lazy">
+
+				</div>
+
+				<div id="stamps" class="graphic">
+					<img src="https://y2k.neocities.org/stamps2/tumblr_pofep92i1H1y8ua8do8_100.png" title="Im weird"
+						loading="lazy">
+					<img src="https://y2k.neocities.org/stamps/tumblr_inline_p0x8glfCRf1uzqajc_500.jpg" title="EAT YOU"
+						loading="lazy">
+					<img src="https://gatorfruitstamps.carrd.co/assets/images/gallery02/906dedc1_original.gif?v=46a0ba2b"
+						title="Gorillaz" loading="lazy">
+					<img src="/archives/images/graphics/gorillaz_ddays.gif" title="Gorillaz" loading="lazy">
+					<img src="/archives/images/graphics/gorillaz_logo.gif" title="Gorillaz logo" loading="lazy">
+					<img src="/archives/images/graphics/gbaker_gayflag.png" title="gay flag, Gilbert Baker"
+						loading="lazy">
+					<img src="https://tinyurl.com/4ppze5u7" title="Mana-Sama" loading="lazy">
+					<img src="https://tinyurl.com/3m3tma44" title="GIR" loading="lazy">
+					<img src="https://y2k.neocities.org/stamps/tumblr_oggg3t8awD1vdiwg8o3_100.gif" title="Ouija"
+						loading="lazy">
+					<img src="https://img1.picmix.com/output/stamp/thumb/9/5/8/6/2306859_cb98a.gif" title="Rusty spoons"
+						loading="lazy">
+					<img src="/archives/images/graphics/saladfingers_support.png" title="salad fingers" loading="lazy">
+					<img src="/archives/images/graphics/heart_saladfingers.png" title="salad fingers" loading="lazy">
+					<img src="https://tinyurl.com/5n8mb9hp" title="salad fingers" loading="lazy">
+					<img src="/archives/images/graphics/sapphic-stamp.png" title="sapphic" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery12/a834ddfe.png?v26071698921061"
+						title="support trans youth" loading="lazy">
+					<img src="https://y2k.neocities.org/stamps/fjidjcnhjrkjfvi.png" title="trans" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery03/197fdcea.gif?v26071698921061"
+						title="GNC Trans people" loading="lazy">
+					<img src="https://tinyurl.com/52xnrpa2" title="Rats" loading="lazy">
+					<img src="https://kittymanya.neocities.org/graphics/stamps/rat%20club.jpg" title="rat club"
+						loading="lazy">
+					<img src="https://y2k.neocities.org/stamps/tumblr_pbl4whs7Xl1wlxvjlo4_100.png" title="rat plague"
+						loading="lazy">
+					<img src="https://supplies.ju.mp/assets/images/gallery01/54e03b1f_original.png?v=9163b103"
+						title="Miku">
+					<img src="https://supplies.ju.mp/assets/images/gallery01/12326321_original.jpg?v=9163b103"
+						title="Penis" loading="lazy">
+					<img src="https://supplies.ju.mp/assets/images/gallery01/dcd0451a_original.png?v=9163b103"
+						title="opossum" loading="lazy">
+					<img src="https://web.archive.org/web/20251012010408im_/https://i.postimg.cc/BvHNJFrv/anotheropossum.png"
+						title="i love opossums" loading="lazy">
+					<img src="https://i.postimg.cc/8kZcTc3y/opossum1.png" title="opossum 1" loading="lazy">
+					<img src="https://i.postimg.cc/brVwgVkX/opossum2.png" title="opossum 2" loading="lazy">
+					<img src="https://i.postimg.cc/QxVtCsZj/opossum3.png" title="opossum 3" loading="lazy">
+					<img src="https://i.postimg.cc/yY5NS57c/opossum4.png" title="opossum 4" loading="lazy">
+					<img src="https://i.postimg.cc/FHLHbZKq/opossum5.png" title="opossum 5" loading="lazy">
+					<img src="https://i.postimg.cc/SKbNgM2K/opossum6.png" title="opossum 6" loading="lazy">
+					<img src="https://i.postimg.cc/8Cdk9zMm/opossum7.png" title="opossum 7" loading="lazy">
+					<img src="https://i.postimg.cc/fLwWNQvn/opossum8.png" title="opossum 8" loading="lazy">
+					<img src="https://i.postimg.cc/50n49KPH/opossum9.png" title="opossum 9" loading="lazy">
+					<img src="https://i.postimg.cc/5yyxX5Gs/opossum10.png" title="opossum 10" loading="lazy">
+					<img src="https://i.postimg.cc/XqPndG64/opossum11.png" title="opossum 11" loading="lazy">
+					<img src="https://i.postimg.cc/1R7mLTn2/opossum12.png" title="opossum 12" loading="lazy">
+					<img src="https://i.postimg.cc/WbDNjn03/opossum13.png" title="opossum 13" loading="lazy">
+					<img src="https://i.postimg.cc/3rXyQQ0t/opossum14.png" title="opossum 14" loading="lazy">
+					<img src="https://web.archive.org/web/20251012010408im_/https://i.postimg.cc/fRVBZSsS/by-iceofwaterflock.png"
+						title="shut it phobo" loading="lazy">
+					<img src="https://web.archive.org/web/20251012010408im_/https://i.postimg.cc/JhJxHwG1/kitty.png"
+						title="kitty" loading="lazy">
+					<img src="https://web.archive.org/web/20251012010408im_/https://i.postimg.cc/zvX3m583/silly.png"
+						title="im silly" loading="lazy">
+					<img src="https://web.archive.org/web/20251012010409im_/https://i.postimg.cc/pr4v0tdw/He-him.jpg"
+						title="i use he/him" loading="lazy">
+					<img src="https://web.archive.org/web/20251012010409im_/https://i.postimg.cc/cL4qQHTv/maria-juana.gif"
+						title="marihuana" loading="lazy">
+					<img src="https://tinyurl.com/2hsk556b" title="sob" loading="lazy">
+					<img src="https://y2k.neocities.org/stamps/i_love_anything_paranormal_by_ladykatrianna.gif"
+						title="I love anything paranormal" loading="lazy">
+					<img src="https://uncannyvalley.neocities.org/gloomybear.png" title="gloomybear" loading="lazy">
+					<img src="https://y2k.neocities.org/stamps/poly.gif" title="Polybius" loading="lazy">
+					<img src="https://kittymanya.neocities.org/graphics/stamps/st-crush.gif" title="crush me"
+						loading="lazy">
+					<img src="https://tinyurl.com/43xc7a98" title="Max sex" loading="lazy">
+					<img src="https://gligar.neocities.org/gfgay.png" title="Gay" loading="lazy">
+					<img src="https://popteamepic.carrd.co/assets/images/gallery06/ef37d84a.gif?v10408301085951"
+						title="teeth" loading="lazy">
+					<img src="https://y2k.neocities.org/stamps/tumblr_inline_pe6lz45uoI1v11djx_1280.png"
+						title="RUN RUN RUN" loading="lazy">
+					<img src="https://y2k.neocities.org/stamps2/db13uc6-4f53ae41-d0a0-4447-a790-b1540ce55359.png"
+						title="uzumaki" loading="lazy">
+					<img src="https://y2k.neocities.org/stamps/tumblr_pfzsge92vJ1xzybrpo2_100.png" title="Undertale"
+						loading="lazy">
+					<img src="https://lallys.carrd.co/assets/images/gallery06/2d02caeb.gif?v=292bc4ff" title="cat"
+						loading="lazy">
+					<img src="https://lallys.carrd.co/assets/images/gallery06/5aaac760.png?v=292bc4ff" title="cats!"
+						loading="lazy">
+					<img src="https://y2k.neocities.org/stamps2/cats_louis_wayne_1_stamp_by_chuchucolate-d6duath.png"
+						title="louis_wayne" loading="lazy">
+					<img src="https://i.ibb.co/ZxXyQXf/d11z47s-2ef1bd7f-4a57-4e9d-9498-7951775b51f4.gif"
+						title="smoky cats" loading="lazy">
+					<img src="https://i.ibb.co/XC1FPZK/F4cwB4u.gif" title="Peter" loading="lazy">
+					<img src="https://files.catbox.moe/n4355u.png" title="yes i play minecraft" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery16/2bba0415.png?v26071698921061"
+						title="PIZZA" loading="lazy">
+					<img src="https://raining-starss.neocities.org/12.png" title="GAAAAAAAAAY">
+					<img src="https://paleking.carrd.co/assets/images/gallery16/8f89c345.gif?v26071698921061"
+						title="fnaf FAN" loading="lazy">
+					<img src="https://tinyurl.com/39xvaztd" title="fnaf" loading="lazy">
+					<img src="https://i.ibb.co/r4QKNSt/c7b3fd35-original.png" title="fnaf static" loading="lazy">
+					<img src="https://i.ibb.co/6v0P1kB/d81j9pv-fea765e0-a402-405c-afe0-68d656b2f8e8.gif"
+						title="fnaf animated" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery08/799dfda2.png?v26071698921061"
+						title="cochinilla" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery16/58b4c49f.jpg?v26071698921061"
+						title="petazzzzzzz" loading="lazy">
+					<img src="https://i.postimg.cc/MZNqNL4K/tbh-creature-stamp-by-magicalduck64-df6b5o7-fullview.png"
+						title="tism" loading="lazy">
+					<img src="https://tinyurl.com/4ctvysjw" title="Marble hornets" loading="lazy">
+					<img src="https://tinyurl.com/4rdn4amn" title="sob" loading="lazy">
+					<img src="https://linksontheshore.carrd.co/assets/images/image34.gif?v=8e81e347" title="magic stars"
+						loading="lazy">
+					<img src="https://web.archive.org/web/20251012010409im_/https://i.postimg.cc/NfJpW73w/ceiling-stars.png"
+						title="ceiling stars" loading="lazy">
+					<img src="https://web.archive.org/web/20251012010409im_/https://i.postimg.cc/9Qs1fXX8/glitter-stars.gif"
+						title="glitter stars" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery07/e576fe25.gif?v26071698921061"
+						title="pronounss" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery09/f9d360b0.jpg?v26071698921061"
+						title="dino loverz" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery09/ee003f9e.png?v26071698921061"
+						title="puppy" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery10/e3e69a2d.png?v26071698921061"
+						title="Local 58" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery11/ab2919c8.png?v26071698921061"
+						title="Neurodiverse otherkin" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery11/7efe2c6d.gif?v26071698921061"
+						title="S.A survivor" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery04/fcddfb12.png?v26071698921061"
+						title="pan is not phobic" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery13/c6be03fc.png?v26071698921061"
+						title="fictionkin" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery13/05d58a7d.png?v26071698921061"
+						title="otherkin" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery13/62349ebf.png?v26071698921061"
+						title="autists vs autisms speakzzzz" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery02/b23bc936.png?v26071698921061"
+						title="religious" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery19/5818199b.png?v26071698921061"
+						title="fictives" loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery19/3f2e90d3.png?v26071698921061"
+						title="they are people" loading="lazy">
+					<img src="https://y2k.neocities.org/stamps/tumblr_inline_pgraffnuNe1v11djx_1280.png" title="Gay">
+					<img src="https://tinyurl.com/3f6vvxvj" title="the eeper" loading="lazy">
+					<img src="https://files.catbox.moe/06khx4.gif" title="eat meat" loading="lazy">
+					<img src="https://linksontheshore.carrd.co/assets/images/image52.png?v=8e81e347" title="Self insert"
+						loading="lazy">
+					<img src="https://linksontheshore.carrd.co/assets/images/image42.png?v=8e81e347" title="oc x canon"
+						loading="lazy">
+					<img src="https://linksontheshore.carrd.co/assets/images/image08.png?v=8e81e347" title="pan"
+						loading="lazy">
+					<img src="https://linksontheshore.carrd.co/assets/images/image09.gif?v=8e81e347" title="Jellyfish"
+						loading="lazy">
+					<img src="https://i.ibb.co/prQ4PcP/d700c78-716f6dcf-fbff-4c17-8b46-287e20954b3b.png" title="soad"
+						loading="lazy">
+					<img src="https://y2k.neocities.org/stamps2/red_rose___stamp_2_by_kas7ia-d900som.png" title="roses"
+						loading="lazy">
+					<img src="https://paleking.carrd.co/assets/images/gallery04/7c398b14.png?v26071698921061"
+						title="achilean" loading="lazy">
+					<img src="https://stampcollectco.neocities.org/ddqfp3h-5e5da59b-d3c9-4848-959b-9dd21e87e08c.png"
+						title="text" loading="lazy">
+					<img src="https://betsybugaboo.neocities.org/buttons/aros_and_aces_are_queer_by_desdraws-dcmkx9y.png"
+						title="aroace is queer" loading="lazy">
+					<img
+						src="https://64.media.tumblr.com/22b3cf13744350bd433cd824205cfbed/tumblr_ps6ixaU1d41xzybrpo4_100.gifv">
+					<img src="https://cass-tastrophe.carrd.co/assets/images/gallery06/f5b6bc9f.gif?v=dfff86c3"
+						title="echo" loading="lazy">
+					<img src="https://tinyurl.com/rd7hwmjs" title="Devious" loading="lazy">
+					<img src="https://tinyurl.com/ym7t4brh" title="Zomburger" loading="lazy">
+					<img
+						src="https://64.media.tumblr.com/693089a5800eb6c51041c2c93b94d4a1/tumblr_pg8kynKWQM1xzybrpo1_100.png">
+					<img src="https://tinyurl.com/3m27shcs" title="crazy frog" loading="lazy">
+					<img src="https://i.postimg.cc/nV3kxF9f/rainbowheart.gif" title="rainbowheart" loading="lazy">
+					<img src="https://tinyurl.com/ycya3ux2" title="clown" loading="lazy">
+					<img src="https://tinyurl.com/3yknt8hz" title="smiling friends" loading="lazy">
+					<img src="https://i.postimg.cc/GpMD3KH4/ena-stamp-by-nzmk99.png" title="Ena" loading="lazy">
+					<img src="https://tinyurl.com/mj74nb8" title="i support cannibalism" loading="lazy">
+					<img src="https://koinuko.pink/mygraphics/stamps/wiggly.gif" title="wiggly stamp" loading="lazy">
+					<img src="https://tinyurl.com/24cdctsw" title="collar" loading="lazy">
+					<img src="https://web.archive.org/web/20251012010411if_/https://i.postimg.cc/2yhvLqRS/Coraje.png"
+						title="Coraje" loading="lazy">
+					<img src="https://web.archive.org/web/20251012010411if_/https://i.postimg.cc/y6Z0bGgC/i-love-chocolate-by-daintyberry.png"
+						title="chocolate" loading="lazy">
+					<img src="https://web.archive.org/web/20251012010411if_/https://i.postimg.cc/k4kK5QHH/starry-skies.gif"
+						title="starry skies" loading="lazy">
+					<img src="https://web.archive.org/web/20251012010412if_/https://i.postimg.cc/c4SSw6vk/sharp.gif"
+						title="sharp" loading="lazy">
+					<img src="https://tinyurl.com/4ueb7dca" title="Mesmerizer" loading="lazy">
+					<img src="https://popteamepic.carrd.co/assets/images/gallery06/e26b0e0d.gif?v10408301085951"
+						title="System 32" loading="lazy">
+					<img src="https://web.archive.org/web/20251012010412if_/https://i.postimg.cc/Wb7gKMHw/paint-fan.jpg"
+						title="paint fan" loading="lazy">
+					<img src="https://animaljamtips.neocities.org/MAXDESIGNPROSTAMP.gif" title="MAX DESIGN PRO"
+						loading="lazy">
+					<img src="https://tinyurl.com/3a2k5a8v" loading="lazy">
+					<img src="https://tinyurl.com/4nj37xx8" loading="lazy">
+					<img src="https://tinyurl.com/3j3zjv9a" loading="lazy">
+					<img src="https://tinyurl.com/mryfe7et" loading="lazy">
+					<img src="https://tinyurl.com/dfx6hvvh" loading="lazy">
+					<img src="https://laboratory.neocities.org/stamps/silly/4.png" title="squid" loading="lazy">
+					<img src="https://tinyurl.com/3u6s6xy7" title="bisexual" loading="lazy">
+					<img src="https://files.catbox.moe/l1q31c.gif" title="skeletons" loading="lazy">
+					<img src="https://files.catbox.moe/pge6ay.gif" title="NO SCHOOL!!" loading="lazy">
+					<img src="https://files.catbox.moe/91eb15.gif" title="gravity falls" loading="lazy">
+					<img src="https://files.catbox.moe/oondg9.gif" title="Wirt my boyfriend" loading="lazy">
+					<img src="https://files.catbox.moe/w6hee2.gif" title="Bill cipher" loading="lazy">
+					<img src="https://methdeatal.neocities.org/s/clown.png" title="Clown" loading="lazy">
+					<img src="https://tinyurl.com/yhb2swzd" title="clown love" loading="lazy">
+					<img src="https://tinyurl.com/y36me74a" title="Welcome Home" loading="lazy">
+					<img src="https://files.catbox.moe/ae80k3.jpg" title=":3" loading="lazy">
+					<img src="https://files.catbox.moe/q7elm6.png" title=":3 2" loading="lazy">
+					<img src="https://files.catbox.moe/upojk8.png" title="queer poc" loading="lazy">
+					<img src="https://files.catbox.moe/sax7u9.png" title="God doesn't hate you" loading="lazy">
+					<img src="https://files.catbox.moe/m4r1gz.gif" title="support non binary people" loading="lazy">
+					<img src="https://files.catbox.moe/dehbu2.png" title="non binary" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/neo-metal-sonic.png" title="Neo metal sonic"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/Louis-Wain-Kitty.png" title="Louis Wain kitty"
+						loading="lazy">
+					<img src="https://tinyurl.com/ufjbpzk5" title="I love moths" loading="lazy">
+					<img src="https://tinyurl.com/4x7rjz87" title="i love drawing" loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/b/stamps/piracyisCOOL.gif"
+						title="piracy is cool" loading="lazy">
+					<img src="https://tinyurl.com/mu7aau4h" title="Happy new year 2026" loading="lazy">
+					<img src="https://tinyurl.com/fpnbb5j3" title="fucj off" loading="lazy">
+					<img src="https://tinyurl.com/453ma6x5" title="how i feel" loading="lazy">
+					<img src="https://tinyurl.com/2xauzxmb" title="preppy" loading="lazy" width="99">
+					<img src="https://tinyurl.com/ykuucw2m" title="2014 tumblr" loading="lazy" width="99">
+					<img src="https://tinyurl.com/ycy3kb96" title="bimbocore" loading="lazy" width="99">
+					<img src="https://tinyurl.com/23h2x6su" title="cotagecore" loading="lazy" width="99">
+					<img src="https://tinyurl.com/4d6u8fjf" title="doku kawaii" loading="lazy" width="99">
+					<img src="https://tinyurl.com/3vndjeyc" title="emo" loading="lazy" width="99">
+					<img src="https://tinyurl.com/bdfudva5" title="scene" loading="lazy" width="99">
+					<img src="https://tinyurl.com/37jz38p8" title="frutiger" loading="lazy" width="99">
+					<img src="https://tinyurl.com/4skh9z5x" title="glitchcore" loading="lazy" width="99">
+					<img src="https://tinyurl.com/4sa8b7b6" title="trad goth" loading="lazy" width="99">
+					<img src="https://tinyurl.com/mwpf36ap" title="gothic lolita" loading="lazy" width="99">
+					<img src="https://tinyurl.com/mudv59hj" title="grunge" loading="lazy" width="99">
+					<img src="https://tinyurl.com/ymshchbs" title="gurokawa" loading="lazy" width="99">
+					<img src="https://tinyurl.com/njh25z2a" title="hime lolita" loading="lazy" width="99">
+					<img src="https://tinyurl.com/yse2hj7m" title="kidcore" loading="lazy" width="99">
+					<img src="https://tinyurl.com/4btx79ph" title="lovecore" loading="lazy" width="99">
+					<img src="https://tinyurl.com/333uxhvf" title="metal" loading="lazy" width="99">
+					<img src="https://tinyurl.com/hnkwm3wz" title="pastel goth" loading="lazy" width="99">
+					<img src="https://tinyurl.com/4dsxnpnm" title="punk" loading="lazy" width="99">
+					<img src="https://tinyurl.com/bdc375bv" title="rockabilly" loading="lazy" width="99">
+					<img src="https://tinyurl.com/bm4w6247" title="slime punk" loading="lazy" width="99">
+					<img src="https://tinyurl.com/2mnt87xh" title="tweencore" loading="lazy" width="99">
+					<img src="https://tinyurl.com/335fpw9b" title="weirdcore" loading="lazy" width="99">
+					<img src="https://tinyurl.com/2j962jd3" title="welwitschia" loading="lazy" width="99">
+					<img src="https://tinyurl.com/mtt56r4n" title="whimsigoth" loading="lazy" width="99">
+					<img src="https://tinyurl.com/mvxnezxy" title="gyaru" loading="lazy" width="99">
+					<img src="https://tinyurl.com/2uksb6nn" title="yume kawaii" loading="lazy" width="99">
+					<img src="https://tinyurl.com/mpv7eh3z" title="bubblegum coquette" loading="lazy" width="99">
+					<img src="https://tinyurl.com/5n89m5ep" title="coquette" loading="lazy" width="99">
+					<img src="https://tinyurl.com/4usseewj" title="vecorflourish" loading="lazy" width="99">
+					<img src="https://tinyurl.com/mry7h9sv" title="narcho punk" loading="lazy">
+					<img src="https://tinyurl.com/2nc8ffap" title="celtic punk" loading="lazy">
+					<img src="https://tinyurl.com/28v32kkm" title="chain punk" loading="lazy">
+					<img src="https://tinyurl.com/y3w8bdjp" title="crust punk" loading="lazy">
+					<img src="https://tinyurl.com/2sf5wwaa" title="d-beat" loading="lazy">
+					<img src="https://tinyurl.com/46e7kftt" title="egg punk" loading="lazy">
+					<img src="https://tinyurl.com/45ufd5c2" title="emotional harcore" loading="lazy">
+					<img src="https://tinyurl.com/3hjrz2rd" title="folk punk" loading="lazy">
+					<img src="https://tinyurl.com/76wrzp8p" title="grind core" loading="lazy">
+					<img src="https://tinyurl.com/wtau84fy" title="digital hardcore" loading="lazy">
+					<img src="https://tinyurl.com/2tc9nhb9" title="hardcore punk" loading="lazy">
+					<img src="https://tinyurl.com/2rhtxf94" title="horror punk" loading="lazy">
+					<img src="https://tinyurl.com/muz7nxy5" title="oi!" loading="lazy">
+					<img src="https://tinyurl.com/ysxrbz4r" title="punk rock" loading="lazy">
+					<img src="https://tinyurl.com/ypn6zs4a" title="ska punk" loading="lazy">
+					<img src="https://tinyurl.com/4nwna2z9" title="skate punk" loading="lazy">
+					<img src="https://tinyurl.com/4ehvntn6" title="street punk" loading="lazy">
+					<img src="https://tinyurl.com/yhuzf9b7" title="synth punk" loading="lazy">
+					<img src="https://tinyurl.com/2enzmms5" title="all i got is this stamp" loading="lazy">
+					<img src="https://tinyurl.com/yvbx4n9w" title="stamp on fire" loading="lazy">
+					<img src="https://tinyurl.com/4w3p6zah" title="romantic yume" loading="lazy">
+					<img src="https://tinyurl.com/yc5zr352" title="queerplatonic yume" loading="lazy">
+					<img src="https://tinyurl.com/2ax42w85" title="platonic yume" loading="lazy">
+					<img src="https://tinyurl.com/474bu5za" title="familial yume" loading="lazy">
+					<img src="https://tinyurl.com/ufxzf4sf" title="i love my fictional one" loading="lazy">
+					<img src="https://tinyurl.com/yc2tb237" title="non-sharing" loading="lazy">
+					<img src="https://tinyurl.com/ybe4unyf" title="selective sharing" loading="lazy">
+					<img src="https://tinyurl.com/5eex8chu" title="mirror sharing" loading="lazy">
+					<img src="https://tinyurl.com/ybjhtdej" title="sharing" loading="lazy">
+					<img
+						src="https://orig03.deviantart.net/627e/f/2011/245/9/f/i_want_this_butterfly_by_l3xil3in-d48nf7q.gif" />
+					<img
+						src="https://64.media.tumblr.com/d6f4d1691aaecbbd9b73fdb232d6fe22/tumblr_inline_ont4mw6Ssw1u5rvwj_500.gif" />
+					<img src="https://orig00.deviantart.net/51d2/f/2018/183/d/0/stamp_027_by_call9ii-dcg4kyk.png" />
+					<img
+						src="https://64.media.tumblr.com/6e0b329b9ada177daa140f9888ce0e0d/tumblr_pbb59fPz581xz2nuuo1_100.png" />
+					<img
+						src="https://64.media.tumblr.com/7258ee018983f655b99af084ebce3744/tumblr_inline_paun8mAkMv1v11djx_100.gif" />
+					<img
+						src="https://64.media.tumblr.com/6e4e1bdd664295bef07e470df27f2040/tumblr_inline_paunuiiAK71v11djx_100.gif" />
+					<img
+						src="https://64.media.tumblr.com/d6446fe2314ac1fdb2668842b9a50144/tumblr_inline_pcdyx39ny11v11djx_500.png" />
+					<img
+						src="https://64.media.tumblr.com/c465e6d6e0938c28a6760c36a87d5616/tumblr_inline_oqcbg3f6wm1uvsq5e_500.gif" />
+					<img
+						src="https://64.media.tumblr.com/3877d89b8ee99f3b2f9dc3a23088304a/tumblr_pbb8boDMGJ1xz2nuuo4_100.png" />
+					<img
+						src="https://64.media.tumblr.com/d49612e52a137f718b203fe684c61b7e/tumblr_pbb8boDMGJ1xz2nuuo2_100.gif" />
+					<img
+						src="https://64.media.tumblr.com/a423c0e77b51dd726175b1db7e216294/tumblr_pc7o7lGme71xsk4lxo2_250.png" />
+					<img
+						src="https://64.media.tumblr.com/8ce5868b66d085d97edfce644888b508/tumblr_pc7o7lGme71xsk4lxo3_100.png" />
+					<img
+						src="https://64.media.tumblr.com/43b3b9264274d122dfac7f8682e6bb5e/tumblr_inline_pgawu3kGZi1v11djx_500.gif" />
+					<img
+						src="https://64.media.tumblr.com/1284693b26e62b3e6b1f2d1b862431d8/tumblr_inline_pgcwod78081v11djx_500.gif" />
+					<img
+						src="https://64.media.tumblr.com/a233877571602fdc52bbf3d2d75385db/tumblr_pgef2uZbKY1xzybrpo2_100.png" />
+					<img
+						src="https://64.media.tumblr.com/eb8c66e1ac55e27f12c0fba73f8c85ee/tumblr_inline_pe6lvyKkO11v11djx_540.gif" />
+					<img
+						src="https://64.media.tumblr.com/4582bf5b0ceef9bd7c9555edd4358f1c/tumblr_inline_pe6lz4NvoG1v11djx_540.png" />
+					<img
+						src="https://64.media.tumblr.com/693089a5800eb6c51041c2c93b94d4a1/tumblr_pg8kynKWQM1xzybrpo1_100.png" />
+					<img
+						src="https://64.media.tumblr.com/6cc4a035ade6d4df815a3f9058b7c597/tumblr_pfzsge92vJ1xzybrpo3_100.png" />
+					<img src="https://tinyurl.com/ywxzt63v" />
+					<img src="https://tinyurl.com/y2vhfjka" />
+					<img src="https://tinyurl.com/3hrfrdk7" />
+					<img
+						src="https://64.media.tumblr.com/0af1d86105eb19783860a4fdd921d3e2/tumblr_inline_owugtmzuK81u5rvwj_500.png" />
+					<img
+						src="https://64.media.tumblr.com/52721538097596ead79fd8da101f9f71/tumblr_inline_owuh74ahH71u5rvwj_500.jpg" />
+				</div>
+
+				<div id="buttons" class="graphic">
+					<img src="https://tinyurl.com/2wd9c8wv" title="NFT? NO FUCKING THANKS" loading="lazy">
+					<img src="https://88by31.neocities.org/sanrio/cinnamon.gif" title="Cinnamon approved"
+						loading="lazy">
+					<img src="https://koinuko.pink/mygraphics/buttons/miku.gif" title="Miku approved" loading="lazy">
+					<img src="https://cyber.dabamos.de/88x31/bu12.gif" title="This website is gay" loading="lazy">
+					<img src="https://gifcity.carrd.co/assets/images/gallery29/64e0d9ad.jpg?v=d7271437"
+						title="eyes open! 👀" loading="lazy">
+					<img src="https://koinuko.pink/mygraphics/buttons/madewithlove.png" title="Made with love"
+						loading="lazy">
+					<img src="https://plasticdino.neocities.org/buttons/void.gif" title="void" loading="lazy">
+					<img src="https://graphic.neocities.org/button_2.gif" title="Bookmark this page" loading="lazy">
+					<img src="https://plasticdino.neocities.org/buttons/ab-trn.png" title="trans rights now!"
+						loading="lazy">
+					<img src="https://lallys.carrd.co/assets/images/gallery09/bbaaa780.gif?v=292bc4ff"
+						title="Despacito now!" loading="lazy">
+					<img src="https://graphic.neocities.org/button_10.gif" title="Anarchy now!" loading="lazy">
+					<img src="https://graphic.neocities.org/button_13.gif" title="Alien exchange now!" loading="lazy">
+					<img src="https://graphic.neocities.org/button_22.jpg" title="Death now!" loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/e13.gif" title="Join discord now!"
+						loading="lazy">
+					<img src="https://plasticdino.neocities.org/buttons/button253.gif" title="trans your gender"
+						loading="lazy">
+					<img src="https://combatbaby.neocities.org/mygraphics/high.gif" title="I'm high" loading="lazy">
+					<img src="https://graphic.neocities.org/goodnight_stamp_by_kicked_in_teeth-daewerw.gif"
+						title="Goodnight" loading="lazy">
+					<img src="https://i.ibb.co/dGygvvp/e8.jpg" title="Spacehey" loading="lazy">
+					<img src="https://supplies.ju.mp/assets/images/gallery14/7797d080_original.gif?v=9163b103"
+						title="we love hello kitty" loading="lazy">
+					<img src="https://capstasher.neocities.org/88x31Buttons/alliens.gif" title="Aliens!" loading="lazy">
+					<img src="https://i.ibb.co/Sfcc3Zw/wheretfarewe.png" title="Where are we?!" loading="lazy">
+					<img src="https://i.postimg.cc/cLMhx9k2/minecraft.gif" title="Minecraft" loading="lazy">
+					<img src="https://plasticdino.neocities.org/buttons/rainbow%20flag.png" title="Baker"
+						loading="lazy">
+					<img src="https://tinyurl.com/mwsj6z5t" title="RATS" loading="lazy">
+					<img src="https://graphic.neocities.org/button_1.gif" title="neocities" loading="lazy">
+					<img src="https://graphic.neocities.org/button_27.gif" title="email!" loading="lazy">
+					<img src="https://graphic.neocities.org/button_4.gif" title="800×600" loading="lazy">
+					<img src="https://graphic.neocities.org/button_16.gif" title="no blink" loading="lazy">
+					<img src="https://graphic.neocities.org/button_30.gif" title="get the gospel" loading="lazy">
+					<img src="https://anlucas.neocities.org/crystals.gif" title="cristal now!" loading="lazy">
+					<img src="https://gifcity.carrd.co/assets/images/gallery26/abe9ad27.gif?v=dc8076d6"
+						title="neocitiess" loading="lazy">
+					<img src="https://anlucas.neocities.org/html_learn_it_today.gif" title="learn html" loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/e5.gif" title="delete twt"
+						loading="lazy">
+					<img src="https://y2k.neocities.org/buttons/got_html.gif" title="got html?" loading="lazy">
+					<img src="https://anlucas.neocities.org/hfg_now.jpg" title="get hacked now!" loading="lazy">
+					<img src="https://anlucas.neocities.org/rarnow.gif" title="i love rar :3" loading="lazy">
+					<img src="https://anlucas.neocities.org/eclipse.gif" title="eclipse" loading="lazy">
+					<img src="https://y2k.neocities.org/buttons/tumblr_oczskf7zXq1v9twgko3_250.jpg"
+						title="happy go lucky" width="88px" height="31" loading="lazy">
+					<img src="https://allium.house/resources/imgs/ubxetc/other_88x31/AOInow_88x31.png"
+						title="another Internet now!" loading="lazy">
+					<img src="https://pizzalair.neocities.org/radbuttons/spacelink.gif" title="spaceamp" loading="lazy">
+					<img src="https://pixelsafari.neocities.org/buttons/1notepad.png" title="made with notepad++"
+						loading="lazy">
+					<img src="https://pixelsafari.neocities.org/buttons/2childlibrary.gif"
+						title="visited the child library" loading="lazy">
+					<img src="https://pixelsafari.neocities.org/buttons/signguest.gif" title="sign my guestbook"
+						loading="lazy">
+					<img src="https://pixelsafari.neocities.org/buttons/1rss.gif" title="RSS feed" loading="lazy">
+					<img src="https://capstasher.neocities.org/88x31Buttons/154.png" title="clown" loading="lazy">
+					<img src="https://capstasher.neocities.org/88x31Buttons/56.gif" title="myspace" loading="lazy">
+					<img src="https://capstasher.neocities.org/88x31Buttons/22yk01.png" title="22yk01" loading="lazy">
+					<img src="https://capstasher.neocities.org/88x31Buttons/7zip.gif" title="7-zip" loading="lazy">
+					<img src="https://files.catbox.moe/nrt9jz.gif" title="chrome" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/linuxberg.gif" title="free linux"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/geocitiesbutton.gif" title="geocities"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/winmedia.gif" title="windows media player"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/gettf.gif" title="get team fortress"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/sitebutton.gif" title="a sites button"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/brattiest.gif" title="brattiest"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/dannarchy.gif" title="dannarchy"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/dawa.gif" title="dawa" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/get_a_computer.jpg" title="get a computer"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/geocities2.gif" title="geocities 2"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/nuke-e-exp.gif"
+						title="nuke internet explorer" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/internetarchive.gif" title="internet archive"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/internet-roadkill.gif"
+						title="internet roadkill" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/get_java.gif" title="get java"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/linuxnow.gif" title="linux now"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/anythingbutchrome.gif"
+						title="anything but chrome" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/github.gif" title="github" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/homepagesnow.gif" title="homepages now"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/geocube.gif" title="geocube" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/geocitiesstart.gif"
+						title="start with geocities" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/geocitiessplash.gif" title="geocities splash"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/gcwell.gif" title="geocities wellesley"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/rainbow.gif" title="rainbow" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/firefox.gif" title="get firefox"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/firefox2.gif" title="firefox" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/firefox3.gif" title="firefox again"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/free-sozai.gif" title="free sozai"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/spectrum.gif" title="spectrum"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/linux2-0.gif" title="linux 2.0"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/neocitiesorg.gif" title="neocities.org"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/notepadppplus.gif" title="notepad++"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/notepadw.gif" title="notepad" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/pokemon.gif" title="pokemon" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/scottgames.gif" title="scottgames.com"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/yumenikki.gif" title="yumenikki"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/yanknow.gif" title="Yankovic now!"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/worldwidewebtwo_88x31_www2.gif"
+						title="world wide web 2" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/wolfzirkus.gif" title="wolfzirkus"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/fingerofgod.gif" title="finger of God"
+						loading="lazy">
+					<img src="https://hellnet.work/8831/img/buttons/Colosseum_Track_5408_latina.gif"
+						title="Liga latina">
+					<img src="http://www.deadnet.se/88x31/winamp-miniban.gif" title="built listening to winamp"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/a82.jpg" title="Powered by blood"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/g2.gif" title="bitmap world"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/a83.gif" title="powered by testo"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/a84.gif" title="powered by estro"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/a3.gif" title="neocities"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/a57.png" title="keyboard"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/j3.jpg" title="gameboy advance"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/e19.gif" title="club penguin"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/f14.png" title="power alpaca"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/2.gif" title="future corpse"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/a91.gif" title="1920 better 1080"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/a21.gif" title="free and cool"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/a97.png" title="furry yay"
+						loading="lazy">
+					<img src="https://adriansblinkiecollection.neocities.org/buttons/f15.gif" title="devils.exe"
+						loading="lazy">
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Bowgart.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Clamble.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Congle.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Cybop.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Dandidoo.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Deedge.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Drumpler.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Entbrat.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Furcorn.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Fwog.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Mammott.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Maw.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Mimic.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Noggin.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Oaktopus.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Pango.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/PomPom.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Potbelly.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Pummel.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Quarrister.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Quibble.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Reedling.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Riff.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Scups.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Shellbeat.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Shrubb.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Spunge.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/T-Rox.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Thumpies.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Toe_Jammer.png"
+						loading="lazy"></a>
+					<img src="https://theenderdraco.neocities.org/shrines/img/MSM_Buttons/Naturals/Tweedle.png"
+						loading="lazy"></a>
+				</div>
+			</div>
+
+			<div id="display2">
+
+				<div id="IMVU" class="graphic">
+					<!--brown and red-->
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/writer.gif" loading="lazy" title="writer">
+					<img src="https://files.catbox.moe/vhk6nj.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/brunette.gif" loading="lazy">
+					<img src="https://i.postimg.cc/KcPTMw4j/blooodthirsty.gif" loading="lazy">
+					<img src="https://i.postimg.cc/3NYd1rWR/deranged-angel.gif" loading="lazy">
+					<img src="https://i.postimg.cc/DwZ4Rz64/my-wife.gif" loading="lazy">
+					<img src="https://i.postimg.cc/Kj0v5ndq/loved.gif" loading="lazy">
+					<img src="https://i.postimg.cc/Sx2NWYVd/passionate.gif" loading="lazy">
+					<img src="https://i.postimg.cc/zXMqXX5g/silly-goose.gif" loading="lazy">
+					<img src="https://i.postimg.cc/Gpj0Yc0z/darling.gif" loading="lazy">
+					<img src="https://i.postimg.cc/WbqQ8mLd/blood.gif" loading="lazy">
+					<img src="https://i.postimg.cc/0QHBdjVG/gladiator.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/succubus.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/horny.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/cs0q1r.gif" loading="lazy">
+
+					<!--pink-->
+					<img src="https://i.postimg.cc/RZL911Kc/in-love.gif" loading="lazy">
+					<img src="https://i.postimg.cc/4ycRYpXH/punky.gif" loading="lazy">
+					<img src="https://i.postimg.cc/TYjBBd1x/girlfriend.gif" loading="lazy">
+					<img src="https://i.postimg.cc/wBMPtDVx/lover.gif" loading="lazy">
+					<img src="https://i.postimg.cc/pTn6Cx4g/lovely.gif" loading="lazy">
+					<img src="https://i.postimg.cc/0jRHHFqr/beautiful.gif" loading="lazy">
+					<img src="https://i.postimg.cc/mkY6xjbj/adorable.gif" loading="lazy">
+					<img src="https://i.postimg.cc/nr2YYPFy/doll.gif" loading="lazy">
+					<img src="https://i.postimg.cc/JzcsxKWN/sweet.webp" loading="lazy">
+					<img src="https://files.catbox.moe/luh1kd.gif" loading="lazy">
+					<img src="https://files.catbox.moe/r0ho3i.gif" loading="lazy">
+					<img src="https://files.catbox.moe/7g8yb1.gif" loading="lazy">
+
+					<!--yellow-->
+					<img src="https://files.catbox.moe/wtpnx6.gif" loading="lazy">
+					<img src="https://i.postimg.cc/NMvqDKWZ/monster.gif" loading="lazy">
+					<img src="https://i.postimg.cc/2S1sfdYP/crazy.gif" loading="lazy">
+					<img src="https://i.postimg.cc/ydy5TvhS/amazing.gif" loading="lazy">
+					<img src="https://i.postimg.cc/bYLWDVN7/happy.gif" loading="lazy">
+					<img src="https://i.postimg.cc/HnShqnhY/cat.gif" loading="lazy">
+					<img src="https://i.postimg.cc/G3NP5vMB/dedicated.gif" loading="lazy">
+					<img src="https://i.postimg.cc/bNt0cdMm/mother.gif" loading="lazy">
+					<img src="https://i.postimg.cc/G2tYMpGJ/married.gif" loading="lazy">
+					<img src="https://i.postimg.cc/TwsbBXc8/dangerous.gif" loading="lazy">
+					<img src="https://i.postimg.cc/GtYjQ2ng/gentleman.gif" loading="lazy">
+					<img src="https://i.postimg.cc/0yCcFbML/bimbo.gif" loading="lazy">
+					<img src="https://i.postimg.cc/gJ1D8hQ6/native.gif" loading="lazy">
+					<img src="https://i.postimg.cc/FF2WLtXn/fool.gif" loading="lazy">
+					<img src="https://i.postimg.cc/9Fdpwrpr/lady.gif" loading="lazy">
+					<img src="https://i.postimg.cc/HsDzLQbq/adhd.gif" loading="lazy">
+					<img src="https://i.postimg.cc/MGTbLt8Q/honeypie.gif" loading="lazy">
+
+					<!--green-->
+					<img src="https://files.catbox.moe/604hrj.gif" loading="lazy">
+					<img src="https://i.postimg.cc/MKVTFq5y/muse.gif" loading="lazy">
+					<img src="https://i.postimg.cc/K8bzXwpC/fairy.gif" loading="lazy">
+					<img src="https://i.postimg.cc/K85Ymfdj/noob.gif" loading="lazy">
+					<img src="https://i.postimg.cc/DzjyXZfK/addictive.gif" loading="lazy">
+					<img src="https://i.postimg.cc/pr824Jf2/jealous.gif" loading="lazy">
+					<img src="https://i.postimg.cc/GhCr9YPy/rawr.gif" loading="lazy">
+					<img src="https://i.postimg.cc/x1sSs4wv/poison.gif" loading="lazy">
+					<img src="https://i.postimg.cc/W3ZL1bh8/prodigy.gif" loading="lazy">
+					<img src="https://i.postimg.cc/tgwGbVC7/naughty.gif" loading="lazy">
+					<img src="https://i.postimg.cc/cCNqgy3S/dinosaur.gif" loading="lazy">
+					<img src="https://i.postimg.cc/gkFcR1pr/hazardous.gif" loading="lazy">
+					<img src="https://i.postimg.cc/SKXHgN74/missed.gif" loading="lazy">
+					<img src="https://i.postimg.cc/0QDFqWBH/creative.gif" loading="lazy">
+					<img src="https://i.postimg.cc/XNKmHPFr/enchanting.gif" loading="lazy">
+					<img src="https://i.postimg.cc/8zcYCPYv/owned.gif" loading="lazy">
+					<img src="https://i.postimg.cc/sXY6LBMk/nerd.gif" loading="lazy">
+					<img src="https://i.postimg.cc/mkTXWbMt/geek.gif" loading="lazy">
+
+					<!--blue-->
+					<img src="https://i.postimg.cc/gJW43YgN/puppy.gif" loading="lazy">
+					<img src="https://i.postimg.cc/xC35RW7Y/butterfly.gif" loading="lazy">
+					<img src="https://files.catbox.moe/7npxpr.gif" loading="lazy">
+					<img src="https://files.catbox.moe/bphyme.gif" loading="lazy">
+					<img src="https://files.catbox.moe/e0blb8.gif" loading="lazy">
+					<img src="https://files.catbox.moe/puz5wr.gif" loading="lazy">
+					<img src="https://files.catbox.moe/iizehv.gif" loading="lazy">
+					<img src="https://files.catbox.moe/2pcvdc.gif" loading="lazy">
+					<img src="https://files.catbox.moe/qb7w29.gif" loading="lazy">
+					<img src="https://files.catbox.moe/p4cb6p.gif" loading="lazy">
+					<img src="https://files.catbox.moe/vdr25k.gif" loading="lazy">
+					<img src="https://files.catbox.moe/ng7g51.gif" loading="lazy">
+					<img src="https://files.catbox.moe/pu1y5m.gif" loading="lazy">
+					<img src="https://files.catbox.moe/w9b2ih.gif" loading="lazy">
+					<img src="https://files.catbox.moe/hfldye.gif" loading="lazy">
+
+					<!--purple-->
+					<img src="https://files.catbox.moe/wuob04.gif" loading="lazy">
+					<img src="https://files.catbox.moe/ip3ly6.gif" loading="lazy">
+					<img src="https://files.catbox.moe/8wjh7x.gif" loading="lazy">
+					<img src="https://files.catbox.moe/yyphbj.gif" loading="lazy">
+					<img src="https://files.catbox.moe/0c31vq.gif" loading="lazy">
+					<img src="https://files.catbox.moe/4ukmeo.gif" loading="lazy">
+					<img src="https://i.postimg.cc/PJjNsFYr/angel.gif" loading="lazy">
+					<img src="https://files.catbox.moe/gy1qim.gifv" loading="lazy">
+					<img src="https://files.catbox.moe/948k6x.gif" loading="lazy">
+					<img src="https://files.catbox.moe/cy6m0m.gif" loading="lazy">
+
+					<!--white-->
+					<img src="https://i.postimg.cc/WbbW91Ty/holy.gif" loading="lazy">
+					<img src="https://i.postimg.cc/QCPTkmXh/boy.gif" loading="lazy">
+					<img src="https://i.postimg.cc/x1Xs2pky/saint.gif" loading="lazy">
+					<img src="https://files.catbox.moe/cvju04.gif" loading="lazy">
+					<img src="https://files.catbox.moe/jxkkf5.gif" loading="lazy">
+					<img src="https://files.catbox.moe/ai4m8d.gif" loading="lazy">
+					<img src="https://files.catbox.moe/p57sce.gif" loading="lazy">
+					<img src="https://files.catbox.moe/ugq8ee.gif" loading="lazy">
+					<img src="https://files.catbox.moe/kzi493.gif" loading="lazy">
+					<img src="https://files.catbox.moe/gvqkio.gif" loading="lazy">
+					<img src="https://files.catbox.moe/ljiez1.gif" loading="lazy">
+					<img src="https://files.catbox.moe/8nyd4c.gif" loading="lazy">
+					<img src="https://files.catbox.moe/gn14y6.gif" loading="lazy">
+					<img src="https://i.postimg.cc/0NTx4WJW/optimist.gif" loading="lazy">
+					<img src="https://files.catbox.moe/5s8x1a.gif" loading="lazy">
+					<img src="https://files.catbox.moe/fdjwqy.gif" loading="lazy">
+
+					<!--grey-->
+					<img src="https://files.catbox.moe/ws2faf.gif" loading="lazy">
+					<img src="https://files.catbox.moe/dyoe18.gif" loading="lazy">
+					<img src="https://files.catbox.moe/2whasm.gif" loading="lazy">
+					<img src="https://files.catbox.moe/nsimqp.gif" loading="lazy">
+					<img src="https://files.catbox.moe/91zyd2.gif" loading="lazy">
+					<img src="https://files.catbox.moe/ntby4n.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/creepy.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/robot.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/zombie.gif" loading="lazy">
+
+					<!--black-->
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/ninja.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/homeboy.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/homie.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/gothic.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/depressed.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/pierced.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/emo.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/vampire.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/censored.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/jiraike.webp" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/imvu/pirate.gif" loading="lazy">
+					<img src="https://i.postimg.cc/pdcZ37KR/bitten.gif" loading="lazy">
+					<img src="https://i.postimg.cc/wvtVzVkJ/dead.gif" loading="lazy">
+					<img src="https://i.postimg.cc/NMWxjHNn/lovesick.webp" loading="lazy">
+				</div>
+
+				<div id="bars" class="graphic">
+					<a href="https://spacehey.com/newtzrcool"><img src="https://files.catbox.moe/c95zuz.png"
+							loading="lazy"></a>
+					<a href="https://spacehey.com/newtzrcool"><img src="https://files.catbox.moe/eautmt.png"
+							loading="lazy"></a>
+					<a href="https://spacehey.com/newtzrcool"><img src="https://files.catbox.moe/opbutq.png"
+							loading="lazy"></a>
+					<img
+						src="https://adriansblinkiecollection.neocities.org/dividers/tumblr_49f9843abf8d99b19e4b466aa58d83c1_9c8222d9_400.png" />
+					<img src="https://i.postimg.cc/cCpYLdnX/moinnncfarrrr1.png" loading="lazy">
+					<img src="https://i.postimg.cc/5yVdfCDC/2555282d1y1n0qhg4.gif" loading="lazy">
+					<img src="https://i.ibb.co/9479hHZ/del3fyh-f617c876-224c-409a-8a60-39f54607c8ec.gif" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/banners/tobyfox.png" loading="lazy">
+					<a href="https://spacehey.com/shimejisimulationyuri"><img
+							src="https://i.postimg.cc/TPrKxyTy/animatic-battle-lover.jpg" loading="lazy"></a>
+					<a href="https://spacehey.com/shimejisimulationyuri"><img
+							src="https://i.postimg.cc/zXhDfdf4/old-internet-era-fan.jpg" loading="lazy"></a>
+					<a href="https://spacehey.com/shimejisimulationyuri"><img
+							src="https://i.postimg.cc/xTKZ1Zwk/kaomoji.jpg" loading="lazy"></a>
+					<a href="https://spacehey.com/shimejisimulationyuri"><img
+							src="https://i.postimg.cc/HLBDsN70/os-tan-lover.jpg" loading="lazy"></a>
+					<a href="https://spacehey.com/shimejisimulationyuri"><img
+							src="https://i.postimg.cc/15DJ0Yrp/flash.jpg" loading="lazy"></a>
+					<img src='https://i.postimg.cc/S28RDn4T/wubzillauserbar-jane.png'>
+					<img src="https://tinyurl.com/47kpd89c" loading="lazy">
+					<img src="https://tinyurl.com/5387jtwr" width="350" height="19" loading="lazy">
+					<img src="https://tinyurl.com/4eju7bb9" width="350" height="19" loading="lazy">
+					<img src="https://tinyurl.com/2w5tm93j" width="350" height="19" loading="lazy">
+					<img src="https://tinyurl.com/3x8ukytp" width="350" height="19" loading="lazy">
+					<img src="https://tinyurl.com/2cd6z87z" loading="lazy">
+					<img src="https://tinyurl.com/2f5v84d5" loading="lazy">
+					<img src="https://tinyurl.com/ud2jdzdw" loading="lazy">
+					<img src="https://tinyurl.com/3ddy8ekb" loading="lazy">
+					<img src="https://tinyurl.com/5dzayh8a" loading="lazy">
+					<img src="https://tinyurl.com/3f79uwfm" loading="lazy">
+					<img src="https://tinyurl.com/576pu9p9" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/banners/nature_lover.png" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/banners/frutiger_aero_fan.png"
+						title="frutiger aero fan" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/banners/sonicfan.gif" title="Sonic userbar"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/banners/xbox360owner.png" title="xbox 360 owner"
+						loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/banners/hl2pplayer.jpg" title="Half life 2 player"
+						loading="lazy">
+					<img src="https://tinyurl.com/27c3ab2s" title="Hatsune Miku" loading="lazy">
+					<img src="https://tinyurl.com/4efyan8u" loading="lazy">
+					<img src="https://tinyurl.com/cecv88z2" loading="lazy">
+					<img src="https://tinyurl.com/47dma9wk" loading="lazy">
+					<img src="https://tinyurl.com/yc3ercpj" loading="lazy">
+				</div>
+
+				<div id="pets" class="graphic">
+					<a href="https://spiders.neocities.org"> <img src="/archives/images/graphics/heart_spiderscat.png"
+							title="cat adopt from spiders.neocities.org" loading="lazy"></a>
+					<a href="https://spiders.neocities.org"> <img src="/archives/images/graphics/odd_spiderscat.png"
+							title="cat adopt from spiders.neocities.org" loading="lazy"></a>
+					<a href="https://clownfred.zone/webpets"> <img
+							src="https://clownfred.zone/!Media/WebPetImg/NBO-autumn.png"
+							title="adoptable from clownfred.zone" width="70" loading="lazy"></a>
+					<a href="https://clownfred.zone/webpets"> <img src="/archives/images/graphics/sapphic_clown.png"
+							title="prideclown from clownfred.zone" loading="lazy"></a>
+					<a href="https://clownfred.zone/webpets"><img
+							src="https://clownfred.zone/!Media/WebPetImg/MIM-inception.png" loading="lazy"
+							loading="lazy" width="100"></a>
+					<a href="https://goblincat.neocities.org/unicornfield"> <img
+							src="/archives/images/graphics/pony.png" title="pony adopt from goblincat.neocities.org"
+							width="75" loading="lazy"></a>
+					<a href="https://linwood.neocities.org"><img src="https://linwood.neocities.org/possums/black.png"
+							title="black opossum adopt from Linwood.neocities.org" loading="lazy"></a>
+
+				</div>
+
+				<div id="banners" class="graphic">
+					<img src="https://magneticdogz.neocities.org/media/graphics/banners/invaderzim.jpg"
+						title="invader zim" loading="lazy">
+					<img src="https://magneticdogz.neocities.org/media/graphics/banners/lain2.gif" title="lain"
+						loading="lazy">
+					<img src="https://magneticdogz.neocities.org/media/graphics/banners/lain.gif" title="lain 2"
+						loading="lazy">
+					<img src="https://magneticdogz.neocities.org/media/graphics/banners/barbie.gif" title="barbie"
+						loading="lazy">
+					<img src="https://magneticdogz.neocities.org/media/graphics/banners/anime3.gif" title="anime"
+						loading="lazy">
+					<img src="https://magneticdogz.neocities.org/media/graphics/banners/net1.gif" title="the net"
+						loading="lazy">
+					<img src="https://magneticdogz.neocities.org/media/graphics/banners/games3.gif" title="playstation"
+						loading="lazy">
+					<img src="https://magneticdogz.neocities.org/media/graphics/banners/emoticons.gif"
+						title="emoticons for email" loading="lazy">
+					<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/banners/welcomehomebanner.png" loading="lazy">
+				</div>
+			</div>
+		</div>
+
+		<div class="shelf" loading="lazy">
+			<img id="bymesign" src="/gallery/elements/madebyme.png">
+
+			<div id="site" class="graphic">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/site/sunflowerstamp.gif" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/site/ratstamp.gif" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/site/heyy.gif" loading="lazy">
+				<br>
+				<img src="/archives/images/graphics/sunflower.png" title="old site button" loading="lazy">
+				<img src="/archives/images/graphics/alt-freakysunshine-button.png" title="old site button - alt"
+					loading="lazy">
+			</div>
+
+			<div id="picmix" class="graphic">
+				<a href="https://www.picmix.com/pic/Good-morning-from-Kanae-12512321?uc=1"><img
+						src="https://img1.picmix.com/output/pic/thumb/1/2/3/2/12512321_76057.gif"
+						title="kanae good morning" width="116px" loading="lazy"></a>
+				<a href="https://www.picmix.com/pic/good-night-from-Kanae-12512365?uc=1"><img
+						src="https://img1.picmix.com/output/pic/thumb/5/6/3/2/12512365_efbb3.gif"
+						title="kanae good night" width="116px" loading="lazy"></a>
+				<a href="https://www.picmix.com/pic/black-forest-cookie-13139674?uc=1"><img
+						src="https://img1.picmix.com/output/pic/thumb/4/7/6/9/13139674_e8412.gif"
+						title="black forest cookie" width="116px" loading="lazy"></a>
+				<a href="https://www.picmix.com/pic/rwqfsfasxc-13139973?uc=1"><img
+						src="https://img1.picmix.com/output/pic/thumb/3/7/9/9/13139973_c684c.gif" title="rwqfsfasxc"
+						width="116px" loading="lazy"></a>
+
+				<a href="https://www.picmix.com/pic/Kanae-12448598?uc=1"><img
+						src="https://img1.picmix.com/output/pic/thumb/8/9/5/8/12448598_f0686.gif" title="kanae banner"
+						loading="lazy"></a>
+				<a href="https://www.picmix.com/pic/sigma-genya-12469987?uc=1"><img
+						src="https://img1.picmix.com/output/pic/thumb/7/8/9/9/12469987_60d03.gif" title="genya banner"
+						loading="lazy"></a>
+			</div>
+
+			<div id="byme-blinkies" class="graphic">
+
+				<!-- blinkies -->
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/blinkies/succubus.gif" title="succubi" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/blinkies/queerplatonic.gif" title="queerplatonic"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/blinkies/neighbor.gif" title="gayass" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/blinkies/naive.gif" title="naive" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/blinkies/I-love-my-gf.gif" title="I love my gf"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/blinkies/actuallydead.gif" title="actually DEAD"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/blinkies/Ilovedilfs.gif" title="I heart DILFS"
+					loading="lazy">
+			</div>
+
+			<div id="byme-stamps" class="graphic">
+				<!-- stamps-->
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/WHORE.png" title="WHORE" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/panaroace.png" title="Pan aroce" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/Bi4Pan.png" title="Bi4Pan" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/Soft-sucubic.png" title="Soft sucubic"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/I-love-wally.png" title="i love wally"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/Ilovebarnaby.png" title="I love barnaby">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/Welcome-Home.gif" title="Welcome Home"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/Wallys-eyes.gif" title="WALLY EYES"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/ilovecassie.gif" title="I love Cassie"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/Cassie-and-Roxy.png" title="Roxy and Cassie"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/SPOOKYMONTH.gif" title="Spooky dance"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/kirie.gif" title="kirie" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/Puvlo.png" title="Puvlo" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/Springtrap.png" title="springtrap" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/wallyandbarnaby.png" title="wally and barnaby"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/wutitant.png" title="give me what i want"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/who-am-i.gif" title="who am i?" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/wallyplush.png" title="wally plush"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/bnwplushies.png"
+					title="barnaby and wally plushies" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/claridryl.png" title="claridryl" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/roxica.png"
+					title="Roxy x Chica - by fourkinz on twitter" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/Perfect-Blue.gif" title="perfect blue"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/spjnj-kitties.png" title="art by my gf Maxkartt_"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/Los-prisioneros.png" title="Los Prisioneros"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/baby.png" title="Baby" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/31minutos.png" title="31 Minutos" loading="lazy">
+			</div>
+
+			<div id="byme-buttons" class="graphic">
+				<!--buttons-->
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/HELPY.png" title="Helpy now!" loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/wally-button.gif" title="Wally Darling now!"
+					loading="lazy">
+				<img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/Sally.png" title="Sally" loading="lazy">
+			</div>
+
+		</div>
+
+	</main>
+
+	<script>alert("This section has bright colors and animated effects");</script>
+
+</body>
+
+</html>

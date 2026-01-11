@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>404!</title>
+  <meta name="robots" content="noindex">
+  <link rel="shortcut icon" href="/archives/images/ico/warn.ico" type="image/x-icon">
+
+  <style>
+    body {
+      background-image: url('/archives/images/bgs/grass.webp');
+      position: relative;
+      display: grid;
+      justify-items: center;
+      margin-top: 40px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .note {
+      background: url('archives/images/index/error_note.webp') no-repeat;
+      background-size: cover;
+      width: 819px;
+      height: 532px;
+      position: relative;
+    }
+
+    .text {
+      width: 525px;
+      position: absolute;
+      top: 270px;
+      left: 410px;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: x-large;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+
+    #back {
+      margin: 15px;
+      width: 195px;
+    }
+
+    #back:hover {
+      filter: brightness(130%);
+    }
+  </style>
+
+</head>
+
+<body>
+  <main>
+    <div class="note">
+      <div class="text">
+        <h2>This is an ERROR!! <br> The page you have requested has not been found.</h2>
+      </div>
+    </div>
+
+    <img src="/archives/images/index/goback_error.webp" id="back" onclick="window.location.href = '/mainpage';">
+  </main>
+</body>
+
+</html>

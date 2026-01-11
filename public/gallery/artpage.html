@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>My art! :3</title>
+    <meta name="robots" content="noindex">
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="/archives/images/ico/night-star.gif">
+
+    <style>
+        html {
+            scrollbar-color: #cbcbcb black;
+            scrollbar-width: thin;
+        }
+
+        body {
+            background: url('/archives/images/bgs/menu-selector-by-Cautious_Peanut.webp') center no-repeat fixed;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 1300px;
+            font-family: 'Comic sans';
+        }
+
+        main {
+            width: 1300px;
+            height: auto;
+            overflow: hidden;
+        }
+
+        #rat {
+            position: absolute;
+            width: 180px;
+            left: 83px;
+            top: 446px;
+        }
+
+        .menu {
+            position: absolute;
+            background-image: url(/gallery/elements/artpagemenu.png);
+            background-size: cover;
+            width: 335px;
+            height: 407px;
+            right: 634px;
+            top: 0px;
+        }
+
+        .digital {
+            width: 268px;
+            top: 152px;
+            right: 26px;
+            height: 41px;
+            position: absolute;
+            background: none;
+            border: none;
+        }
+
+        .traditional {
+            width: 268px;
+            top: 216px;
+            right: 23px;
+            height: 49px;
+            position: absolute;
+            background: none;
+            border: none;
+        }
+
+        .display {
+            border: 5px #8c9aa7 ridge;
+            width: 668px;
+            height: 622px;
+            position: absolute;
+            right: -62px;
+            top: 32px;
+            background-color: #6e6e72;
+        }
+
+        #dig-display,
+        #trad-display {
+            width: 667px;
+            height: 620px;
+            overflow-y: scroll;
+            scrollbar-width: thin;
+            scrollbar-color: #b7b7b7 #6e6e72;
+        }
+
+        #note {
+            position: absolute;
+            top: 85px;
+            left: 25px;
+        }
+
+        #trad-display img {
+            border: 1px solid black;
+            border-radius: 4px;
+            width: 125px;
+        }
+
+        #dig-display img {
+            border: 1px solid black;
+            border-radius: 4px;
+            width: 125px;
+        }
+
+        #dig-display img:hover {
+            box-shadow: 0 0 2px 1px black;
+        }
+
+        #trad-display img:hover {
+            box-shadow: 0 0 2px 1px black;
+        }
+
+        @media (orientation: portrait) {
+            body {
+                rotate: 90deg;
+                overflow: scroll;
+            }
+        }
+    </style>
+
+
+    <!--Lytebox - picture first, thumbnail last -->
+    <script type="text/javascript" language="javascript" src="/archives/scripts/lytebox.js"></script>
+    <link rel="stylesheet" href="/archives/scripts/lytebox.css" type="text/css" media="screen" />
+
+    <script>
+        function showDigi() {
+            document.getElementById('dig-display').style.display = 'block';
+            document.getElementById('trad-display').style.display = 'none';
+            document.getElementById('note').style.display = 'none';
+        }
+
+        function showTrad() {
+            document.getElementById('dig-display').style.display = 'none';
+            document.getElementById('trad-display').style.display = 'block';
+            document.getElementById('note').style.display = 'none';
+        }
+    </script>
+
+</head>
+
+<body>
+    <main>
+
+        <div class="box">
+            <img id="rat" src="/gallery/elements/rat.png">
+            <div class="menu">
+                <button class="digital" onclick="showDigi()"></button>
+                <button class="traditional" onclick="showTrad()"></button>
+            </div>
+
+            <div class="display">
+                <img id="note" src="/gallery/elements/expnote.png"
+                    title="click on the wooden planks to display the galleries!">
+
+                <div id="dig-display" style="display:none;">
+
+                    <a href="/gallery/digital/tamayo.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="The couple" data-description="Oct 14, 2025<br>more kny ocs"><img
+                            src="/gallery/digital/thumbnail/t_tamayo.webp"></a>
+
+                    <a href="/gallery/digital/kanae.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="The couple" data-description="Oct 14, 2025<br>more kny ocs"><img
+                            src="/gallery/digital/thumbnail/t_kanae.webp"></a>
+
+                    <a href="/gallery/digital/knyocs.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="The couple" data-description="Sep 23, 2025<br>more kny ocs"><img
+                            src="/gallery/digital/thumbnail/t_knyocs.webp"></a>
+
+                    <a href="/gallery/digital/genmuiweek2.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="GenMui week 2" data-description="August 19, 2025<br>lunch"><img
+                            src="/gallery/digital/thumbnail/t_genmuiweek2.webp"></a>
+
+                    <a href="/gallery/digital/genmuiweek1.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="GenMui week 1" data-description="August 18, 2025<br>cloud gazing"><img
+                            src="/gallery/digital/thumbnail/t_genmuiweek1.webp"></a>
+
+                    <a href="/gallery/digital/yan!genmui.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Yandere genmui" data-description="Jun 15, 2025<br>silly au for fun"><img
+                            src="/gallery/digital/thumbnail/t_yan_genmui.webp"></a>
+
+                    <a href="/gallery/digital/Muichiro!.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Muichiro!" data-description="Jun 3, 2025"><img
+                            src="/gallery/digital/thumbnail/t_muichiro.webp"></a>
+
+                    <a href="/gallery/digital/kanao.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Kanao" data-description="March 19, 2025<br>unfinished"><img
+                            src="/gallery/digital/thumbnail/t_kanao.webp"></a>
+
+                    <a href="/gallery/digital/Elphelt.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Elphelt"
+                        data-description="March 2, 2025<br> also drawn in discord's whiteboard"><img
+                            src="/gallery/digital/thumbnail/t_elphelt.webp"></a>
+
+                    <a href="/gallery/digital/A.B.A.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="A.B.A"
+                        data-description="Jan 29, 2025<br>A.B.A and Paracelsus - drawn in discord's whiteboard"><img
+                            src="/gallery/digital/thumbnail/t_ABA.webp"></a>
+
+                    <a href="/gallery/digital/sua.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Sua" data-description="Jan 27, 2025<br>drawn in discord's whiteboard"><img
+                            src="/gallery/digital/thumbnail/t_sua.webp"></a>
+
+                    <a href="/gallery/digital/genmui2.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Duo" data-description="Jan 17, 2025"><img
+                            src="/gallery/digital/thumbnail/t_genmui4.webp"></a>
+
+                    <a href="/gallery/digital/Nezuko!.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Nezuko !" data-description="Jan 17, 2025"><img
+                            src="/gallery/digital/thumbnail/t_nezuko.webp"></a>
+
+                    <a href="/gallery/digital/genmui%20is%20mid.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="More Genmui" data-description="Jan 17, 2025<br>kissing his boyfriend's hand"><img
+                            src="/gallery/digital/thumbnail/t_genmui3.webp"></a>
+
+                    <a href="/gallery/digital/new%20magic%20wand.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="New magic wand" data-description="Jan 6, 2025<br>Muichiro listening to peak"><img
+                            src="/gallery/digital/thumbnail/t_newmagicwand.webp"></a>
+
+                    <a href="/gallery/digital/genmui3.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Boyfriends" data-description="Dec 28, 2024"><img
+                            src="/gallery/digital/thumbnail/t_genmui2.webp"></a>
+
+                    <a href="/gallery/digital/genmui.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Genmui" data-description="Dec 28, 2024<br>my fav ship at the time"><img
+                            src="/gallery/digital/thumbnail/t_genmui1.webp"></a>
+
+                    <a href="/gallery/digital/Genya%20&%20Nezuko.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="GenNezu" data-description="Dec 2, 2024<br>hc: they love fnaf"><img
+                            src="/gallery/digital/thumbnail/t_gennezu.webp"></a>
+
+                    <a href="/gallery/digital/rat.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="My fursona's full ref" data-description="Nov 30, 2024"><img
+                            src="/gallery/digital/thumbnail/t_rat.webp"></a>
+
+                    <a href="/gallery/digital/knyoc.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Tenshi" data-description="Nov 3, 2024<br>she ate her boyfriend"><img
+                            src="/gallery/digital/thumbnail/t_knyoc.webp"></a>
+
+                    <a href="/gallery/digital/tilinxlilithkiss.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="CHAT THEY KISSED"
+                        data-description="Oct 10, 2024<br>Lilith belongs to mt bro @INCENDIOZER0  in twt"><img
+                            src="/gallery/digital/thumbnail/t_tilinxlilithkiss.webp"></a>
+
+                    <a href="/gallery/digital/tilinxlilith.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Chat im rizzing up the spider"
+                        data-description="Oct 10, 2024<br>Lilith belongs to my bro @INCENDIOZER0  in twt"><img
+                            src="/gallery/digital/thumbnail/t_tilinxlilith.webp"></a>
+
+                    <a href="/gallery/digital/hoes.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Hoes" data-description="Oct 10, 2024"><img
+                            src="/gallery/digital/thumbnail/t_hoes.webp"></a>
+
+                    <a href="/gallery/digital/fursona.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="My fursona" data-description="Oct 10, 2024"><img
+                            src="/gallery/digital/thumbnail/t_fursona.webp"></a>
+
+                    <a href="/gallery/digital/Loquendovinera.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Vineria" data-description="Oct 10, 2024"><img
+                            src="/gallery/digital/thumbnail/t_vinera.webp"></a>
+
+                    <a href="/gallery/digital/spookymonth.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Spooky Month ocs" data-description="Oct 4, 2024"><img
+                            src="/gallery/digital/thumbnail/t_spookymonth.webp"></a>
+
+                    <a href="/gallery/digital/halloween2.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Grim reaper" data-description="Oct 2, 2024"><img
+                            src="/gallery/digital/thumbnail/t_halloween2.webp"></a>
+
+                    <a href="/gallery/digital/Sallypose.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Sally" data-description="Sep 27, 2024"><img
+                            src="/gallery/digital/thumbnail/t_sallypose.webp"></a>
+
+                    <a href="/gallery/digital/cook.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Cook" data-description="Aug 23, 2024<br>AU Poppy holding a knife"><img
+                            src="/gallery/digital/thumbnail/t_cook.webp"></a>
+
+                    <a href="/gallery/digital/apple.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Apples" data-description="Jul 26, 2024"><img
+                            src="/gallery/digital/thumbnail/t_apple.webp"></a>
+
+                    <a href="/gallery/digital/Juliephone.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="On the Phone" data-description="Jul 24, 2024"><img
+                            src="/gallery/digital/thumbnail/t_juliephone.webp"></a>
+
+                    <a href="/gallery/digital/goodboy2.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Good boy 2"
+                        data-description="July 23, 2024<br>The selfship version :P ft my oc"><img
+                            src="/gallery/digital/thumbnail/t_goodboy2.webp"></a>
+
+                    <a href="/gallery/digital/Goodboy1.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Good boy" data-description="July 23, 2024<br>I love applebite bro"><img
+                            src="/gallery/digital/thumbnail/t_goodboy1.webp"></a>
+
+                    <a href="/gallery/digital/Oyeuri.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Oye urigod👀"
+                        data-description="July 23, 2024<br>This is a reference to ElUrielk"><img
+                            src="/gallery/digital/thumbnail/t_verga.webp"></a>
+
+                    <a href="/gallery/digital/lyou.jpg" class="lytebox" data-lyte-options="group:digital" data-title="L"
+                        data-description="July 11, 2024"><img src="/gallery/digital/thumbnail/t_lyou.webp"></a>
+
+                    <a href="/gallery/digital/zomb.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="ZOMB" data-description="June 15, 2024<br>concept of my sona as a zombie"><img
+                            src="/gallery/digital/thumbnail/t_zomb.webp"></a>
+
+                    <a href="/gallery/digital/youngsumi.jpg" class="lytebox" data-lyte-options="group:ocs"
+                        data-title="Young Sumi"
+                        data-description="May 7, 2024<br>Spookymonth oc belongs to LDRY1706 on twitter"><img
+                            src="/gallery/digital/thumbnail/t_youngsumi.webp"></a>
+
+                    <a href="/gallery/digital/frog.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Frog" data-description="April 14, 2024"><img
+                            src="/gallery/digital/thumbnail/t_frog.webp"></a>
+
+                    <a href="/gallery/digital/Pattydress.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Patty in THAT dress" data-description="Mar 18, 2024"><img
+                            src="/gallery/digital/thumbnail/t_dresspatty.webp"></a>
+
+                    <a href="/gallery/digital/gm_meri.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Commission for my friend Meri" data-description="Mar 17, 2024"><img
+                            src="/gallery/digital/thumbnail/t_gm_meri.webp"></a>
+
+                    <a href="/gallery/digital/finalformsyuri.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="doomed yuri" data-description="Feb 8, 2024 <br>final form of my ocs"><img
+                            src="/gallery/digital/thumbnail/t_finalformsyuri.webp"></a>
+
+                    <a href="/gallery/digital/whaugng.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="WH aus" data-description="Jan 20, 2024"><img
+                            src="/gallery/digital/thumbnail/t_augng.webp"></a>
+
+                    <a href="/gallery/digital/gfnoc.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Them" data-description="Jan 15, 2024 <br> My girlfriend holding my WH oc"><img
+                            src="/gallery/digital/thumbnail/t_gfnoc.webp"></a>
+
+                    <a href="/gallery/digital/tilin3.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Pilin" data-description="Jan 14, 2024"><img
+                            src="/gallery/digital/thumbnail/t_tilin3.webp"></a>
+
+                    <a href="/gallery/digital/wallyhold.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Wally" data-description="Jan 7, 2024"><img
+                            src="/gallery/digital/thumbnail/t_wallyhold.webp"></a>
+
+                    <a href="/gallery/digital/barnabyhold.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Barnaby" data-description="Jan 7, 2024"><img
+                            src="/gallery/digital/thumbnail/t_barnabyhold.webp"></a>
+
+                    <a href="/gallery/digital/tilin2.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Tilin" data-description="Dec 15, 2023 <br> My welcome home oc"><img
+                            src="/gallery/digital/thumbnail/t_tilin2.webp"></a>
+
+                    <a href="/gallery/digital/ohno.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Oh no" data-description="Dec 15, 2023 <br> a sketch with some filters"><img
+                            src="/gallery/digital/thumbnail/t_ohno.webp"></a>
+
+                    <a href="/gallery/digital/couple.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Girl x Girl" data-description="Nov 26, 2023"><img
+                            src="/gallery/digital/thumbnail/t_couple.webp"></a>
+
+                    <a href="/gallery/digital/DIGITAL-YURI.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="DIGITAL YURI" data-description="Dec 11, 2023 & Oct 17, 2023"><img
+                            src="/gallery/digital/thumbnail/t_digitalyuri.webp"></a>
+
+                    <a href="/gallery/digital/FAGGOT.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Halloween boy" data-description="Oct 15, 2023"><img
+                            src="/gallery/digital/thumbnail/t_fag.webp"></a>
+
+                    <a href="/gallery/digital/dummy.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Dumb bastard (au ver)"
+                        data-description="Oct 14, 2023<br>mimicking one of Clown's old doodles of Wally"><img
+                            src="/gallery/digital/thumbnail/t_evawally2.webp"></a>
+
+                    <a href="/gallery/digital/tilin_sketches.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Tilin doodles" data-description="Oct 14, 2023"><img
+                            src="/gallery/digital/thumbnail/t_tilinsketches.webp"></a>
+
+                    <a href="/gallery/digital/evilclown.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Evil Clown"
+                        data-description="Oct 13, 2023<br>robux commission for my friend @aletheunfunny :3"><img
+                            src="/gallery/digital/thumbnail/t_evilclown.webp"></a>
+
+                    <a href="/gallery/digital/monochromaticpuppet.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="@lifepuppetyt 's mantis oc" data-description=" Oct 07, 2023"><img
+                            src="/gallery/digital/thumbnail/t_monochromaticpuppet.webp"></a>
+
+                    <a href="/gallery/digital/leofoquita.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="️ @Leo_ElFoquita's oc " data-description=" OCt 07, 2023"><img
+                            src="/gallery/digital/thumbnail/t_leofoquita.webp"></a>
+
+                    <a href="/gallery/digital/spidercaussa.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title=" @spid3rcausa 's fursona" data-description=" Oct 06, 2023"><img
+                            src="/gallery/digital/thumbnail/t_spidercausa.webp"></a>
+
+                    <a href="/gallery/digital/basilxomori_com.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Omori commission" data-description="Sep 28, 2023"><img
+                            src="/gallery/digital/thumbnail/t_basilxsunny.webp"></a>
+
+                    <a href="/gallery/digital/cutopen.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Cut open" data-description="Sep 27, 2023"><img
+                            src="/gallery/digital/thumbnail/t_cutopen.webp"></a>
+
+                    <a href="/gallery/digital/Perfect-Blue.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Perfect Blue cosplay" data-description="Sep 26, 2023"><img
+                            src="/gallery/digital/thumbnail/t_perfectblue.webp"></a>
+
+                    <a href="/gallery/digital/xjulie2.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="XFiles!Julie" data-description="Sep 14, 2023"><img
+                            src="/gallery/digital/thumbnail/t_xjulie2.webp"></a>
+
+                    <a href="/gallery/digital/huntresspoppy2.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Huntress!Poppy" data-description="Sep 13, 2023<br>she's holding a chicken"><img
+                            src="/gallery/digital/thumbnail/t_huntresspoppy2.webp"></a>
+
+                    <a href="/gallery/digital/tilin_c.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Pilin" data-description="Aug 23, 2023"><img
+                            src="/gallery/digital/thumbnail/t_tilin.webp"></a>
+
+                    <a href="/gallery/digital/killerpants.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Killer pants" data-description="Aug 9, 2023"><img
+                            src="/gallery/digital/thumbnail/t_killerpants.webp"></a>
+
+                    <a href="/gallery/digital/wallynoc.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Goodnight" data-description="Jul 19, 2023<br>Wally ft my oc"><img
+                            src="/gallery/digital/thumbnail/t_wallynoc.webp"></a>
+
+                    <a href="/gallery/digital/RedJuls.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Red Julie"
+                        data-description="Jul 16, 2023<br>Julie from the red!wally au belongs to licoricecookie1 on tiktok"><img
+                            src="/gallery/digital/thumbnail/t_redjulie.webp"></a>
+
+                    <a href="/gallery/digital/huntress-poppy.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Huntrees!Poppy" data-description="Jul 14, 2023"><img
+                            src="/gallery/digital/thumbnail/t_huntresspoppy.webp"></a>
+
+                    <a href="/gallery/digital/Huntressmiau.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Huntress!Poppy"
+                        data-description="Jul 14, 2023<br>Human ver -I love this au of mine"><img
+                            src="/gallery/digital/thumbnail/t_poppyhuman.webp"></a>
+
+                    <a href="/gallery/digital/Poppy.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Poppy" data-description="Jul 14, 2023"><img
+                            src="/gallery/digital/thumbnail/t_poppy.webp"></a>
+
+                    <a href="/gallery/digital/Xjulie.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Card" data-description="Jun 12, 2023<br>Julie Joyful XFiles AU"><img
+                            src="/gallery/digital/thumbnail/t_xfilesjulie1.webp"></a>
+
+                    <a href="/gallery/digital/WHDOODLES.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Welcome Home Doodles" data-description="Jun 9, 2023"><img
+                            src="/gallery/digital/thumbnail/t_whdoodles.webp"></a>
+
+                    <a href="/gallery/digital/Eva-Wally-1.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Wally EVA au" data-description="unkown date"><img
+                            src="/gallery/digital/thumbnail/t_evawally1.webp"></a>
+
+                    <a href="/gallery/digital/WallynHome.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Home and Wally" data-description="April 20, 2023"><img
+                            src="/gallery/digital/thumbnail/t_wallynhome.webp"></a>
+
+                    <a href="/gallery/digital/ccau.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="You are not my friend"
+                        data-description="April 18, 2023<br>C.C Afton Au concept"><img
+                            src="/gallery/digital/thumbnail/t_cc.webp"></a>
+
+                    <a href="/gallery/digital/wallyy.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Wally Darling" data-description="April 8, 2023<br>My first wally fanart"><img
+                            src="/gallery/digital/thumbnail/t_wally.webp"></a>
+
+                    <a href="/gallery/digital/Aten.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Aten" data-description="Feb 22, 2023"><img
+                            src="/gallery/digital/thumbnail/t_Aten.webp"></a>
+
+                    <a href="/gallery/digital/Grace-Mc-Nally.png" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Grace" data-description="Feb 14, 2023<br>OC belongs to @troublerats on twt"><img
+                            src="/gallery/digital/thumbnail/t_grace.webp"></a>
+
+                    <a href="/gallery/digital/Anni.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Anni" data-description="Jan 28, 2023"><img
+                            src="/gallery/digital/thumbnail/t_Anni.webp"></a>
+
+                    <a href="/gallery/digital/elizabethdes.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Elizabeth Afton design"
+                        data-description="Jan 22, 2023<br> originally for a comic project"><img
+                            src="/gallery/digital/thumbnail/t_elizabethdes.webp"></a>
+
+                    <a href="/gallery/digital/anninnelly.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="Anni and Nelly old designs" data-description="Jan 14, 2023"><img
+                            src="/gallery/digital/thumbnail/t_anniandnelly.webp"></a>
+
+                    <a href="/gallery/digital/fuckass-drawing.jpg" class="lytebox" data-lyte-options="group:digital"
+                        data-title="..." data-description="Nov 13, 2022"><img
+                            src="/gallery/digital/thumbnail/t_fuckassdrawing.webp"></a>
+                </div>
+
+                <div id="trad-display" style="display:none;">
+
+                    <a href="/gallery/traditional/peopleeater.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="People emjoyner"
+                        data-description="Sep 5, 2024<br> my oc Anni thinking about eating someone....mmmmm"><img
+                            src="/gallery/traditional/thumbnail/t_peopleeater.webp"></a>
+
+                    <a href="/gallery/traditional/tilin.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="namnamnam" data-description="Oct 3, 2024"><img
+                            src="/gallery/traditional/thumbnail/t_tilin.webp"></a>
+
+                    <a href="/gallery/traditional/Sumi.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="Sumi"
+                        data-description="April 17, 2024<br>Spookymonth oc belongs to LDRY1706 on twitter"><img
+                            src="/gallery/traditional/thumbnail/t_sumi.webp"></a>
+
+                    <a href="/gallery/traditional/eyes.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="Eyes chalk"
+                        data-description="April 19, 2024<br>Drawing of Eyes from Spooky in chalk"><img
+                            src="/gallery/traditional/thumbnail/t_eyes.webp"></a>
+
+                    <a href="/gallery/traditional/possesedpatty.jpg" class="lytebox"
+                        data-lyte-options="group:traditional" data-title="Chalk possesed Patty"
+                        data-description="April 19, 2024<br>Drawing of Patty Azure from Spooky Month in chalk"><img
+                            src="/gallery/traditional/thumbnail/t_possesedpatty.webp"></a>
+
+                    <a href="/gallery/traditional/chalkjulie.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="Chalk Julie"
+                        data-description="April 19, 2024<br>Re-draw of original illustration of Julie Joyful from Welcome Home in chalk"><img
+                            src="/gallery/traditional/thumbnail/t_chalkjulie.webp"></a>
+
+                    <a href="/gallery/traditional/Jesus%20Christ.jpg" class="lytebox"
+                        data-lyte-options="group:traditional" data-title="Jesus Christ"
+                        data-description="Mar 21, 2024<br>Church activity. Couldn't decide how to draw his eyes :("><img
+                            src="/gallery/traditional/thumbnail/t_jesus.webp"></a>
+
+                    <a href="/gallery/traditional/home.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="Home" data-description="Mar 7, 2024"><img
+                            src="/gallery/traditional/thumbnail/t_home.webp"></a>
+
+                    <a href="/gallery/traditional/patty.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="Patty" data-description="Mar 4, 2024"><img
+                            src="/gallery/traditional/thumbnail/t_patty.webp"></a>
+
+                    <a href="/gallery/traditional/creepywally.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="Creepy Wally" data-description="Dec 06, 2023"><img
+                            src="/gallery/traditional/thumbnail/t_creepywally.webp"></a>
+
+                    <a href="/gallery/traditional/femwally.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="Fem!Wally" data-description="Dec 06, 2023"><img
+                            src="/gallery/traditional/thumbnail/t_femwally.webp"></a>
+
+                    <a href="/gallery/traditional/juliemylove.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="Human Julie" data-description="Dec 06, 2023"><img
+                            src="/gallery/traditional/thumbnail/t_humanjuliee.webp"></a>
+
+                    <a href="/gallery/traditional/sally.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="Clay Sally" data-description="Oct 6, 2023<br>made in school"><img
+                            src="/gallery/traditional/thumbnail/t_claysally.webp"></a>
+
+                    <a href="/gallery/traditional/Crying-child.jpg" class="lytebox"
+                        data-lyte-options="group:traditional" data-title="C.C Afton"
+                        data-description="Sep 25, 2023<br>Design idea"><img
+                            src="/gallery/traditional/thumbnail/t_ccd.webp"></a>
+
+                    <a href="/gallery/traditional/zomb.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="Zomb" data-description="Sep 5, 2023<br>school project"><img
+                            src="/gallery/traditional/thumbnail/t_zomb.webp"></a>
+
+                    <a href="/gallery/traditional/shoe.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="Wally's shoe"
+                        data-description="September 2023<br>Water color painting of Wally's shoe (Welcome Home)"><img
+                            src="/gallery/traditional/thumbnail/t_shoe.webp"></a>
+
+                    <a href="/gallery/traditional/Aurorameow.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="Aurora"
+                        data-description="<Aug 24, 2023<br>OC belongs to my friend @pastelglitterrr"><img
+                            src="/gallery/traditional/thumbnail/t_aurora.webp"></a>
+
+                    <a href="/gallery/traditional/scrapbaby.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="Scrapbaby" data-description="Feb 23, 2023<br>this was drawn in a bench"><img
+                            src="/gallery/traditional/thumbnail/t_scrapbaby.webp"></a>
+
+                    <a href="/gallery/traditional/williiam.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="Afton" data-description="Feb 23, 2023<br>little school doodle"><img
+                            src="/gallery/traditional/thumbnail/t_william.webp"></a>
+
+                    <a href="/gallery/traditional/pendejo.jpg" class="lytebox" data-lyte-options="group:traditional"
+                        data-title="Pendejo" data-description="Sep 20, 2022"><img
+                            src="/gallery/traditional/thumbnail/t_pendejo.webp"></a>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

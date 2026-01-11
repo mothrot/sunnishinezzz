@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html id="sunniez">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About me!</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/x-icon" href="/archives/images/ico/blue_b.gif" />
+  <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
+  <link rel="stylesheet" href="/archives/weamp-skin.css" />
+  <style>
+    html#sunniez {
+      scrollbar-width: thin;
+      scrollbar-color: #cff1b8 #bdd3a747;
+    }
+
+    #page-effects:before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0) 50%,
+          rgba(0, 0, 0, 0.16) 50%);
+      z-index: 2;
+      background-size: 100% 2px, 3px 100%;
+      pointer-events: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
+    }
+
+    body#sunniez-bg {
+      background: url("https://file.garden/aPcdyx6-Eg7wI_Wb/flowersbg.gif") repeat;
+      display: grid;
+      justify-items: center;
+      font-family: monospace;
+      font-size: 1.1em;
+      position: relative;
+    }
+
+    #sunniez-head {
+      width: 770px;
+      background: #738066;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+      font-size: 1em;
+      padding: 5px;
+      height: 12px;
+      background-image: linear-gradient(to top, #738066, #e3ffd3);
+      box-shadow: 2px 2px 4px 4px #00000047;
+    }
+
+    #about-me {
+      background: #f7fff0;
+      border-radius: 5px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      width: 780px;
+      height: 1100px;
+      position: relative;
+      box-shadow: 2px 2px 4px 4px #00000047;
+    }
+
+    #me {
+      width: 282px;
+      height: 370px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    #mystatus {
+      height: fit-content;
+      width: 188px;
+      line-height: 1px;
+      margin: 15px;
+    }
+
+    #sunniez-info {
+      width: 425px;
+      height: fit-content;
+      text-align: left;
+      padding: 5px;
+    }
+
+    #main {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    #second {
+      position: relative;
+    }
+
+    #fixated {
+      width: 220px;
+      height: 160px;
+      position: absolute;
+      rotate: -2deg;
+      top: 25px;
+      left: 12px;
+    }
+
+    .sunniez-textbox {
+      background: #fefff0;
+      border: inset #d1d2c1;
+      padding: 5px;
+      scrollbar-width: thin;
+      scrollbar-color: #cff1b8 #bdd3a747;
+    }
+
+    #fandoms {
+      width: 228px;
+      height: 205px;
+      position: absolute;
+      top: 20px;
+      left: 275px;
+      overflow-y: scroll;
+    }
+
+    #favs {
+      margin-bottom: 5px;
+      width: 220px;
+      border: 3px ridge #bdc9a8;
+    }
+
+    #hates {
+      border: 3px ridge #bdc9a8;
+      width: 220px;
+    }
+
+    #music {
+      width: 210px;
+      height: 205px;
+      position: absolute;
+      top: 35px;
+      right: 5px;
+      overflow-y: scroll;
+    }
+
+    #quizzes {
+      position: absolute;
+      width: 225px;
+      height: 175px;
+      overflow-y: scroll;
+      text-align: center;
+      top: 300px;
+      left: 250px;
+      overflow-x: hidden;
+    }
+
+    .tittle {
+      background-image: linear-gradient(to top, #738066, #e3ffd3);
+      width: fit-content;
+    }
+
+    #kins {
+      position: absolute;
+      width: 170px;
+      height: 150px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      left: 20px;
+      top: 275px;
+    }
+
+    #effects-button {
+      background-image: linear-gradient(to top, #738066, #e3ffd3);
+      border: 2px outset #445e2f;
+      margin: 5px;
+    }
+
+    #labels {
+      position: absolute;
+      top: 316px;
+      width: 181px;
+      height: fit-content;
+      right: 45px;
+    }
+
+    #webamp {
+      top: 100px;
+    }
+
+    #goback {
+      position: absolute;
+      left: 15px;
+      top: 15px;
+    }
+
+    .sunniez-deco {
+      position: absolute;
+    }
+
+    #sunniez-wrap {
+      display: flex;
+    }
+
+    aside#sunniez-sidebar {
+      order: 2;
+      margin: 5px;
+      padding-top: 100px;
+      margin-left: 20px;
+    }
+
+    main#sunniez-main {
+      order: 1;
+      margin-left: 180px;
+    }
+
+    #portrait {
+      border-width: 7px;
+      border-style: solid;
+      border-image: url("/archives/images/mine/border.png") 7 fill round;
+      transition: opacity 0.5s ease;
+      opacity: 1;
+    }
+
+    #stamp1,
+    #stamp2,
+    #stamp3 {
+      transition: opacity 0.5s ease;
+      opacity: 1;
+    }
+
+    #wife {
+      animation-name: floating;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.51)) drop-shadow(-1px 1px 0 rgba(0, 0, 0, 0.51)) drop-shadow(0 2px 0 rgba(0, 0, 0, 0.51)) drop-shadow(0 -1px 0 rgba(0, 0, 0, 0.51)) drop-shadow(0 1px 1.5px rgba(0, 0, 0, 0.51)) drop-shadow(0 -1px 1.5px rgba(0, 0, 0, 0.51)) drop-shadow(1px -1px 1.5px rgba(0, 0, 0, 0.51)) drop-shadow(-1px -1px 1.5px rgba(0, 0, 0, 0.51));
+
+    }
+
+    @keyframes floating {
+      0% {
+        transform: translate(0, 0px);
+      }
+
+      50% {
+        transform: translate(0, 15px);
+      }
+
+      100% {
+        transform: translate(0, -0px);
+      }
+    }
+
+    #charlie {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5px;
+
+    }
+
+    .thing {
+      background-image: linear-gradient(to top, #738066, #e3ffd3);
+      padding: 4px;
+      border: 1px #ddf0d0 outset;
+      user-select: none;
+    }
+
+    .thing:active {
+      background-image: linear-gradient(to top, #5d6752, #a1b695);
+      border: 1px #ddf0d0 inset;
+
+    }
+  </style>
+</head>
+
+<body id="sunniez-bg">
+  <a id="goback" href="/mainpage.html"><img src="/archives/images/mine/goback.gif" title="go back button" /></a>
+  <div id="page-effects"></div>
+
+  <div class="flex-wrap" id="sunniez-wrap">
+    <main id="sunniez-main">
+      <header>
+        <div id="sunniez-head"><span style="margin-right: 590px;">About Sunniez
+            !</span><span class="thing">—</span><span class="thing">□</span><span class="thing">X</span></div>
+      </header>
+      <div id="about-me">
+        <img class="sunniez-deco" src="/archives/images/mine/bow.gif" style="top: -8px; left: 242px; rotate: -29deg" />
+        <img class="sunniez-deco" src="/archives/images/mine/roses.gif" style="top: 350px; right: 5px" />
+        <img class="sunniez-deco" src="/archives/images/mine/heart-0508.gif" style="top: 388px; right: 225px;"
+          onclick="count=window.open('/awhellnah/killcount.html','count','width=400,height=400'); return false;">
+        <button id="effects-button" onclick="effects()">
+          Toggle effects
+        </button>
+        <div id="main">
+          <div id="me">
+            <img id="portrait" src="/archives/images/mine/s_1.png" alt="me" width="183">
+            <div id="stamps">
+              <img id="stamp1" src="https://y2k.neocities.org/stamps/tumblr_pbbaqrNazy1xz2nuuo8_100.jpg" width="75" />
+              <img id="stamp2" src="https://i.postimg.cc/NGVHvfQ2/Gay-gay-homosexual-gay.png" width="75" />
+              <img id="stamp3" src="https://file.garden/aPcdyx6-Eg7wI_Wb/stamps/Perfect-Blue.gif" width="75" />
+            </div>
+            <div id="mystatus" class="sunniez-textbox">
+              <p>genderless | <b>he/him</b></p>
+              <p>20 years old!</p>
+              <p>Ecuadorian</p>
+              <p>Christian</p>
+              <p>College student</p>
+            </div>
+          </div>
+          <div id="sunniez-info" class="sunniez-textbox">
+            <div>
+              <p>
+                <b>Woaah this is not pvz...</b>
+              </p>
+              <p>Hallo! As you may know by now I'm Samy/Sunniez, the webmaster of the site! Just another autistic
+                internet
+                hobbist, but from Ecuador this time :3</p>
+              <p>
+                I like drawing, gaming and coding... I enjoy anything with computers and technology overall, but I'm
+                also into reading, writing, photography and crafts.
+              </p>
+              <p>
+                I'm overall just nice and friendly, I enjoy company! but i get tired easily and come out as off
+                or dull, I also forget tons of stuff lol, so I'm sorry beforehand.
+              </p>
+              <p>
+                fun fact: Sunniez is pronounced "Su-ni-ez"
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="second">
+
+          <div id="fixated" class="sunniez-textbox">
+            <h3 class="tittle">Current fixated<img src="/archives/images/mine/wa.gif" /></h3>
+            <ul>
+              <li>Dandy's World</li>
+              <li>FNaF lore</li>
+              <li>game theories</li>
+              <li>He's my man - Luvcat</li>
+            </ul>
+
+          </div>
+
+          <div id="fandoms" class="sunniez-textbox">
+            <h3 class="tittle">
+              Fandoms <img src="/archives/images/mine/heart.gif" />
+            </h3>
+            <dt>Demon Slayer</dt>
+            <dt>Five Nights at Freddy's</dt>
+            <dt>Welcome Home</dt>
+            <dt>Spooky Month</dt>
+            <dt>My singing Monsters</dt>
+            <dt>Plants vs Zombies</dt>
+            <dt>Max Design Pro</dt>
+            <br />
+            <br />
+            <details>
+              <summary>Others</summary>
+              <dt>S.C.P foundation</dt>
+              <dt>BigTop Burger</dt>
+              <dt>The Walten Files</dt>
+              <dt>Gemini Home Entertainment</dt>
+              <dt>Don't hug me i'm scared</dt>
+              <dt>Happy Meat Farms</dt>
+              <dt>Popee the performer</dt>
+            </details>
+          </div>
+          <div id="music" class="sunniez-textbox">
+            <h3 class="tittle">Music stuff <img src="/archives/images/mine/yay.gif" /></h3>
+            <b>Bands and artists</b>
+            <dt>Gorillaz</dt>
+            <dt>Los Prisioneros</dt>
+            <dt>Tyler the Creator</dt>
+            <dt>Walking intrusive thought</dt>
+            <dt>ARCA</dt>
+            <dt>Kendrick Lamar</dt>
+            <dt>Weezer</dt>
+            <dt>Los Saicos</dt>
+            <dt>Levalith</dt>
+            <dt>Romeo Santos</dt>
+          </div>
+          <img src="/archives/images/mine/daisydiv.gif" class="sunniez-deco" style="top: 218px; left: 45px;"
+            width="200">
+          <img src="/archives/images/mine/alphatext.gif" class="sunniez-deco" style="top: 252px; right: 70px;"
+            width="170">
+          <div id="kins" class="sunniez-textbox">
+            <h3 class="tittle">
+              Kins<img src="/archives/images/mine/aww.gif" />
+            </h3>
+            <img src="/archives/images/mine/Sunny-Fictkin.gif" title="Sunny Afton"
+              onClick="Dears=window.open('/awhellnah/dears.html','Dears','width=300,height=370'); return false;">
+            <img src="/archives/images/mine/angel.gif" title="angel-kin" />
+            <img src="/archives/images/mine/Shadowkin.gif" title="shadow-kin" />
+            <img src="/archives/images/mine/Zombiekin.gif" title="zombie-kin" />
+            <img src="/archives/images/mine/Ghost.gif" title="ghost-kin" />
+            <br />
+            <img src="/archives/images/mine/foxmulderb.gif" title="Fox Mulder" />
+            <img src="/archives/images/mine/shadowbonnieb.gif" title="shadow bonnie" />
+            <img src="/archives/images/mine/wallydarlingb.gif" title="Wally Darling" />
+            <img src="/archives/images/mine/mangleblinkie.gif" title="Mangle" />
+          </div>
+          <div id="quizzes" class="sunniez-textbox">
+            <h3 class="tittle">
+              Quizzes <img src="/archives/images/mine/meow.gif" />
+            </h3>
+            <a href="https://casiopea.neocities.org/isopod/isopodquiz.html">
+              <img src="/archives/images/mine/isopod_quizz.png" width="200" />
+            </a>
+            <a href="https://pennylovespandas.neocities.org/quiz/creature">
+              <img src="https://pennylovespandas.neocities.org/quizresults/kelpie.png" alt="Kelpie" width="200"
+                title="You are a mysterious kelpie!" />
+            </a>
+            <a href="https://inkposting.neocities.org/quiz.html">
+              <img src="/archives/images/mine/marie_quizz.png" width="200" alt="Marie"
+                title="You got Marie! She has an air of refinement, and seems as cool as a cucumber. However, she's not afraid to make cutting remarks when necessary. Despite her stoic attitude, she would do anything for her close friends and family." />
+            </a>
+            <a href="https://swiftyshq.neocities.org/fun/quiz/eon">
+              <img src="https://swiftyshq.neocities.org/img/quiz/eon/vee4.png" width="200" alt="umbreon"
+                title="timid and introverted, you tend to keep to yourself" />
+            </a>
+            <a href="https://www.theotaku.com/quizzes/view/3096/which_madoka_magica_girl_are_you%3F">
+              <img src="http://www.theotaku.com/guru_results/3096_Mami_Tomoe.jpg" width="200"
+                alt="Which Madoka Magica Girl are You?" />
+              <br />
+            </a>
+            <a href="https://www.theotaku.com/quizzes/view/4097/what_dere_type_are_you%3F">
+              <img src="http://www.theotaku.com/guru_results/4097_Yandere.jpg" width="200"
+                alt="What Dere Type are You?" />
+              <br />
+            </a>
+            <a href="https://www.theotaku.com/quizzes/view/3913/which_hatsune_miku_nendoroid_model_are_you%3F">
+              <img src="http://www.theotaku.com/guru_results/3913_Racer_Miku.jpg" width="200"
+                alt="Which Hatsune Miku Nendoroid Model are You?" />
+              <br />
+            </a>
+            <a href="https://www.theotaku.com/quizzes/view/247/what_guilty_gear_girl_are_you%3F">
+              <img src="http://www.theotaku.com/guru_results/247_ABA.jpg" width="200"
+                alt="What Guilty Gear Girl Are You?" />
+              <br />
+            </a>
+            <a href="https://www.nerdtests.com/mq/uttake.php?id=48859">
+              <img src="https://www.nerdtests.com/mq/badge/19315a66b9e32d4e.jpg" width="200"
+                alt="The Bimbo Test -- Make and Take a Fun Test @ NerdTests.com's User Tests!"
+                title="The Bimbo Test Test -- Create and Take a Fun Test @ NerdTests.com's User Tests!" />
+            </a>
+            <a href="https://theotaku.com/quizzes/view/2957/my_little_pony_personality_test%21">
+              <img src="http://www.theotaku.com/guru_results/2957_Flutterhsy.jpg" width="200"
+                alt="My Little Pony Personality Test!" />
+              <br />
+            </a>
+            <a href="http://suppi.net/slg">
+              <img src="https://suppi.net/slg/fun/images/mallet.jpg" width="200" alt="Take the anime accessory quiz" />
+            </a>
+            <a href="http://suppi.net/slg"></a>
+            <a href="http://www.allaboutfrogs.org/funstuff/frogtest.php3">
+              <img src="http://www.allaboutfrogs.org/funstuff/frogtest/result6.jpg" width="215" height="100"
+                alt="I'm a White's Tree Frog!" />
+            </a>
+            <a href="https://linwood.neocities.org/quiz">
+              <img src="https://file.garden/ZA_UJlkUN2HXHENQ/images/resultsfairyring.png" width="200"
+                alt="Cursed forest object quiz!" />
+            </a>
+            <a href="https://andou.gay/quiz/donutquiz"><img src="https://andou.gay/quiz/glazed donut.png"
+                width="215"></a>
+          </div>
+          <img src="/archives/images/mine/puter.gif" class="sunniez-deco" width="55" style="top: 255px; left: 296px;">
+          <div id="labels" class="sunniez-textbox">
+            <h3 class="tittle">
+              Labels<img src="/archives/images/mine/emoji_11.gif" width="40px" />
+            </h3>
+            <img src="/archives/images/mine/agender.png" />
+            <img src="/archives/images/mine/sapphic.png" />
+            <img src="/archives/images/mine/transmasc.png" />
+            <img src="/archives/images/mine/NON-binary.png" />
+            <img src="/archives/images/mine/pan_!.png" />
+            <img src="/archives/images/mine/aro-ace.png" />
+            <img src="/archives/images/mine/gnc_!.png" />
+            <img src="/archives/images/mine/queerplatonic.png" />
+            <img src="/archives/images/mine/Christian.png" alt="christian badge" />
+            <img src="/archives/images/mine/fction.png" alt="fictionkin badge" />
+          </div>
+          <img src="/archives/images/mine/book.gif" class="sunniez-deco" alt="link to my diary/journal"
+            title="my diary/journal"
+            onclick="Dears=window.open('/awhellnah/diary.html','Diary','width=815,height=655'); return false;"
+            style="top: 445px;left: 110px;">
+          <div id="game" class="sunniez-textbox" style="width: 425px;position: absolute;top: 510px;right: 32px;">
+            <a href="https://www.exophase.com/user/sunniez/"><img
+                src="https://card.exophase.com/2/0/309403.png?1766877938"></a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside id="sunniez-sidebar">
+
+      <div id="charlie" class="sunniez-textbox">
+        <h3 class="tittle"> WIFE CORNER <img src="https://graphic.neocities.org/emoji_12.gif" /> </h3>
+        <img id="wife" src="/archives/images/mine/wife.gif">
+        <span style="font-size: smaller;">My girlfriend Charlie!</span>
+      </div>
+
+      <div id="favs" class="sunniez-textbox">
+        <h3 class="tittle">
+          Favorites! <img src="/archives/images/mine/aah.gif" />
+        </h3>
+        <ul>
+          <li>
+            <p><b>Colors:</b> Purple, red, blue, yellow and green!!</p>
+          </li>
+          <li>
+            <p><b>Plant:</b>Rafflesia and roses!</p>
+          </li>
+          <li>
+            <p><b>Animals:</b> rodents, moths and marsupials!</p>
+          </li>
+          <li>
+            <p><b>Genres:</b> Thriller, romance & horror</p>
+          </li>
+          <li>
+            <p><b>Music genres:</b> rock, hiphop, indie, metal and bachata</p>
+          </li>
+          <li>
+            <p><b>Food:</b> Tigrillo and sopa de queso</p>
+          </li>
+        </ul>
+      </div>
+      <div id="hates" class="sunniez-textbox">
+        <h3 class="tittle">
+          Hates... <img src="/archives/images/mine/huh.gif" />
+        </h3>
+        <ul>
+          <li>William Afton</li>
+          <li>William Afton</li>
+          <li><span
+              onclick="Hell=window.open('/awhellnah/hell.html','Hell','width=815,height=655'); return false;">William
+              Afton</span></li>
+          <li>mean people</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    function effects() {
+
+      var x = document.getElementById("page-effects");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    const images = [
+      '/archives/images/mine/s_1.png',
+      '/archives/images/mine/s_2.png',
+    ];
+
+    let currentIndex = 0;
+
+    function changeImage() {
+      const img = document.getElementById("portrait");
+      img.style.opacity = 0;
+
+      setTimeout(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        img.src = images[currentIndex];
+        img.style.opacity = 1;
+      }, 500);
+    }
+    setInterval(changeImage, 10000);
+  </script>
+
+  <!-- musica-->
+  <div id="winamp-container" style="width: 30px; height: 30px; position: absolute; top: 0%; left: 0%">
+    <script>
+      const Winamp = window.Webamp;
+      // All configuration options are optional.
+      const webamp = new Webamp({
+        // Optional.
+        initialTracks: [
+          {
+            metaData: {
+              artist: "Saraunholy",
+              title: "Wutiwant",
+            },
+            url: "https://files.catbox.moe/uw13pa.mp3",
+          },
+          {
+            metaData: {
+              artist: "Blake Robinson Synthetic Orchestra",
+              title: "An Unhealthy Obsession ft. Gloom Darkheart",
+            },
+            url: "https://files.catbox.moe/mghmz9.mp3",
+          },
+          {
+            metaData: {
+              artist: "Gorillaz",
+              title: "Saturnz Barz ft. Popcaan",
+            },
+            url: "https://files.catbox.moe/lvkjei.mp3",
+          },
+          {
+            metaData: {
+              artist: "Stephanie Mabey",
+              title: "The Zombie song",
+            },
+            url: "https://files.catbox.moe/bgam8l.mp3",
+          },
+          {
+            metaData: {
+              artist: "La Bouche",
+              title: "Be my lover",
+            },
+            url: "https://files.catbox.moe/l91tg9.mp3",
+          },
+          {
+            metaData: {
+              artist: "Los Prisioneros",
+              title: "Con Suavidad",
+            },
+            url: "https://files.catbox.moe/v00a3i.mp3",
+          },
+          {
+            metaData: {
+              artist: "quierememuxo",
+              title: "Diversión Sonora - Ya Hay Verano",
+            },
+            url: "https://files.catbox.moe/yix4g3.mp3",
+          },
+          {
+            metaData: {
+              artist: "The Cardigans",
+              title: "Step on me",
+            },
+            url: "https://files.catbox.moe/w3ca81.mp3",
+          },
+          {
+            metaData: {
+              artist: "Ellise",
+              title: "911",
+            },
+            url: "https://files.catbox.moe/sqpx3w.mp3",
+          },
+          {
+            metaData: {
+              artist: "George Michael",
+              title: "Careless Whisper",
+            },
+            url: "https://files.catbox.moe/ff1s31.mp3",
+          },
+          {
+            metaData: {
+              artist: "KryFuZe",
+              title: "Afton Family",
+            },
+            url: "https://files.catbox.moe/r6mupf.mp3",
+          },
+          {
+            metaData: {
+              artist: "aldn",
+              title: "Ican'tbeliveIletyougetaway",
+            },
+            url: "https://files.catbox.moe/kpuk3q.mp3",
+          },
+          {
+            metaData: {
+              artist: "Mitski",
+              title: "Crack Baby",
+            },
+            url: "https://files.catbox.moe/kpuk3q.mp3",
+          },
+          {
+            metaData: {
+              artist: "AC/DC",
+              title: "Highway to hell",
+            },
+            url: "https://files.catbox.moe/6ec1r1.mp3",
+          },
+          {
+            metaData: {
+              artist: "Flex",
+              title: "Dejala ft. Duende",
+            },
+            url: "https://files.catbox.moe/rpsvmk.mp3",
+          },
+          {
+            metaData: {
+              artist: "The cardigans",
+              title: "Step on me",
+            },
+            url: "https://files.catbox.moe/w3ca81.mp3",
+          },
+          {
+            metaData: {
+              artist: "Freddie Dredd",
+              title: "Five nights ft. Danny Brown",
+            },
+            url: "https://files.catbox.moe/rr68pq.mp3",
+          },
+          {
+            metaData: {
+              artist: "Lay Bankz",
+              title: "Sloppy Seconds",
+            },
+            url: "https://files.catbox.moe/37yjsw.mp3",
+          },
+          {
+            metaData: {
+              artist: "Zoé",
+              title: "Labios Rotos",
+            },
+            url: "https://files.catbox.moe/izz2hz.mp3",
+          },
+          {
+            metaData: {
+              artist: "Sevdaliza",
+              title: "Ride or die ft. Villano",
+            },
+            url: "https://files.catbox.moe/c5gb48.mp3",
+          },
+          {
+            metaData: {
+              artist: "Los Prisioneros",
+              title: "We are Sudamerican rockers",
+            },
+            url: "https://files.catbox.moe/r1z3lc.mp3",
+          },
+          {
+            metaData: {
+              artist: "Los Prisioneros",
+              title: "SEXO",
+            },
+            url: "https://files.catbox.moe/piolr5.mp3",
+          },
+          {
+            metaData: {
+              artist: "Rio Romeo",
+              title: "Butch 4 Butch",
+            },
+            url: "https://files.catbox.moe/phs3k3.mp3",
+          },
+          {
+            metaData: {
+              artist: "Julio Jaramillo",
+              title: "Cuando llora mi guitarra",
+            },
+            url: "https://files.catbox.moe/42g7cp.mp3",
+          },
+          {
+            metaData: {
+              artist: "Luis Miguel",
+              title: "Ahora te puedes marchar",
+            },
+            url: "https://files.catbox.moe/z9u9jx.mp3",
+          },
+          {
+            metaData: {
+              artist: "NBSPLV",
+              title: "The lost soul down",
+            },
+            url: "https://files.catbox.moe/ackth6.mp3",
+          },
+          {
+            metaData: {
+              artist: "Mc Bushpig",
+              title: "Eat my rotten meat",
+            },
+            url: "https://files.catbox.moe/qxcth0.mp3",
+          },
+          {
+            metaData: {
+              artist: "Friend",
+              title: "Braces",
+            },
+            url: "https://files.catbox.moe/qwccif.mp3",
+          },
+          {
+            metaData: {
+              artist: "Teddy Hyde",
+              title: "Sex with a ghost",
+            },
+            url: "https://files.catbox.moe/5jovr0.mp3",
+          },
+          {
+            metaData: {
+              artist: "Ghost and pals",
+              title: "Housewife Radio",
+            },
+            url: "https://files.catbox.moe/d5kzbc.mp3",
+          },
+          {
+            metaData: {
+              artist: "Tiffany Garcia",
+              title: "Notice me Senpai",
+            },
+            url: "https://files.catbox.moe/b3zg0r.mp3",
+          },
+          {
+            metaData: {
+              artist: "Miranda",
+              title: "Traición",
+            },
+            url: "https://files.catbox.moe/pqeiw7.mp3",
+          },
+          {
+            metaData: {
+              artist: "Siouxxie Sixxsta",
+              title: "Succubus",
+            },
+            url: "https://files.catbox.moe/ar44qn.mp3",
+          },
+          {
+            metaData: {
+              artist: "Jawny",
+              title: "Trigger or love",
+            },
+            url: "https://files.catbox.moe/m4di53.mp3",
+          },
+          {
+            metaData: {
+              artist: "The plot in you",
+              title: "Don't look away",
+            },
+            url: "https://files.catbox.moe/5ssp9x.mp3",
+          },
+          {
+            metaData: {
+              artist: "Knocked Loose",
+              title: "Blinding Faith",
+            },
+            url: "https://files.catbox.moe/nhxqw1.mp3",
+          },
+          {
+            metaData: {
+              artist: "Tyler, The Creator",
+              title: "St. Chroma",
+            },
+            url: "https://files.catbox.moe/1ltn0o.mp3",
+          },
+          {
+            metaData: {
+              artist: "JAK3",
+              title: "My blood, my soul",
+            },
+            url: "https://files.catbox.moe/bml61o.mp3",
+          },
+          {
+            metaData: {
+              artist: "Oscar",
+              title: "Homero me divierte",
+            },
+            url: "https://file.garden/aPcdyx6-Eg7wI_Wb/misc/homero%20me%20divierte.mp3",
+          },
+        ],
+      });
+      webamp.renderWhenReady(document.getElementById("winamp-container"));
+    </script>
+  </div>
+</body>
+
+</html>

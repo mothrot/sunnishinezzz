@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunniez Diary</title>
+  <meta name="robots" content="noindex" />
+
+  <style>
+    body {
+      background-color: black;
+      display: grid;
+      justify-items: center;
+      position: relative;
+      width: 805px;
+      height: 645px;
+      overflow: hidden;
+    }
+
+    main {
+      margin: 5px;
+    }
+
+    #diary {
+      background-image: url(/archives/images/awhellnah/journal-cover.png);
+      width: 700px;
+      height: 635px;
+      background-size: cover;
+      position: relative;
+      display: block;
+    }
+
+    #diary-display {
+      width: 635px;
+      height: 523px;
+      position: absolute;
+      top: 10px;
+      left: 28px;
+      display: none;
+    }
+
+    #open-button {
+      position: absolute;
+      top: 75%;
+      left: 47%;
+    }
+
+    #prevButton {
+      position: absolute;
+      top: 42%;
+      left: -8%;
+      display: none;
+      background: none;
+      border: none;
+    }
+
+    #nextButton {
+      position: absolute;
+      top: 42%;
+      right: -8%;
+      display: none;
+      background: none;
+      border: none;
+    }
+
+    .entry-display {
+      position: relative;
+      display: none;
+      font-family: monospace;
+    }
+
+    #page1 {
+      display: block;
+    }
+
+    .text-box {
+      padding: 20px;
+      width: 285px;
+    }
+  </style>
+
+  <script>
+    function openDiary() {
+      document.getElementById("diary").style.backgroundImage =
+        "url('/archives/images/awhellnah/journal-open.png')";
+      document.getElementById("open-button").style.display = "none";
+      document.getElementById("diary-display").style.display = "block";
+      document.getElementById("prevButton").style.display = "block";
+      document.getElementById("nextButton").style.display = "block";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const contentDivs = document.querySelectorAll(".entry-display");
+      const prevButton = document.getElementById("prevButton");
+      const nextButton = document.getElementById("nextButton");
+      let currentIndex = 0;
+
+      function showDiv(index) {
+        contentDivs.forEach((div, i) => {
+          div.style.display = i === index ? "block" : "none";
+        });
+
+        prevButton.disabled = index === 0;
+        nextButton.disabled = index === contentDivs.length - 1;
+      }
+
+      showDiv(currentIndex);
+
+      prevButton.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          showDiv(currentIndex);
+        }
+      });
+
+      nextButton.addEventListener("click", () => {
+        if (currentIndex < contentDivs.length - 1) {
+          currentIndex++;
+          showDiv(currentIndex);
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <main>
+    <div id="diary">
+      <button id="open-button" onclick="openDiary()">open diary</button>
+      <div id="diary-display">
+        <div class="entry-display" id="page1">
+          <div class="text-box" id="Nov11">
+            <p>
+              <b>5, Nov, 2025</b><br />
+              First entry!! I think i have been neglecting some stuff lately,
+              I should get back to work on that.<br /><br />
+              I wonder if he would think of me but that sounds too self
+              centered, I kinda hate it, I love other people anyway.
+              <img src="https://file.garden/aPcdyx6-Eg7wI_Wb/misc/bunny.gif" width="100" />
+            </p>
+          </div>
+          <div class="text-box" id="Nov11-6">
+            <p>
+              <b>6, Nov, 2025</b><br />
+              Today was alright, I'm tired tho.
+            </p>
+          </div>
+          <div class="text-box" id="Nov11-6">
+            <p>
+              <b>18, Nov, 2025</b><br />
+              he's starting to piss me off but I understand
+            </p>
+          </div>
+          <div class="text-box" id="Dec-3">
+            <p>
+              <b>03, Dec, 2025</b><br />
+              Not my best birthday.
+            </p>
+          </div>
+        </div>
+        <div class="entry-display" id="page2">
+          <div class="text-box" id="no-date">
+            Looks like this page is still empty.
+          </div>
+        </div>
+      </div>
+      <button id="prevButton">
+        <img src="/archives/images/awhellnah/prev.gif" alt="previous page button" />
+      </button>
+      <button id="nextButton">
+        <img src="/archives/images/awhellnah/next.gif" alt="next page button" />
+      </button>
+    </div>
+  </main>
+</body>
+
+</html>

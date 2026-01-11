@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hell</title>
+  <meta name="robots" content="noindex">
+
+  <style>
+    body {
+      background-color: black;
+      justify-content: center;
+      margin-top: 120px;
+      display: grid;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      color: white;
+    }
+
+    #love {
+      background: url(/archives/images/awhellnah/springtrap.webp) no-repeat;
+      width: 260px;
+      height: 470px;
+      background-size: contain;
+
+    }
+
+    footer {
+      margin-top: 30px;
+    }
+
+    #hell {
+      background: url('/archives/images/awhellnah/hellfire.gif') no-repeat;
+      background-size: contain;
+      width: 305px;
+      height: fit-content;
+      margin: 20px;
+      filter: opacity(20%);
+    }
+  </style>
+
+  <script>
+
+    function hateHim() {
+      alert('this page could be disturbing for some.');
+      document.getElementById('him').style.display = "block";
+      document.getElementById('love').style.display = "none";
+
+    }
+
+    function lover() {
+      document.getElementById("love").style.filter = "invert(100%)";
+      document.getElementById("love").style.backgroundImage = "url('/archives/images/awhellnah/him.webp')";
+      setTimeout(hateHim, 1000);
+    }
+
+    // anti inspect
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    function ctrlShiftKey(e, keyCode) {
+      return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+    }
+
+    document.onkeydown = (e) => {
+      // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+      if (
+        event.keyCode === 123 ||
+        ctrlShiftKey(e, 'I') ||
+        ctrlShiftKey(e, 'J') ||
+        ctrlShiftKey(e, 'C') ||
+        (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+      )
+        return false;
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <div id="him" style="display: none;">
+
+    <img src="/archives/images/awhellnah/hell.gif" width="305.2">
+    <p>whenever i think of him
+      <br>
+      i don't know if what i feel is
+      <br> <b>fear</b> or <u>love</u>
+      <br>I don't want to love him anymore
+      <br> that's foolish
+      <br> he would call me foolish
+      <br> maybe
+    </p>
+    <div id="him2" style="margin-top: 200px;">
+
+    </div>
+  </div>
+  <div id="love" onclick="lover();"></div>
+</body>
+
+</html>

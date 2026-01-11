@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tree of wisdom</title>
+  <link rel="icon" type="image/x-icon" href="/archives//images/ico/sprout.gif">
+  <meta name="robots" content="noindex">
+
+
+  <style>
+    body {
+      background: url('/funniez/images/treeofwisdom_bg.png') no-repeat;
+      background-size: cover;
+      position: relative;
+      display: flex;
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 1300px;
+      overflow: hidden;
+    }
+
+    #tree {
+      height: 745px;
+    }
+
+    main {
+      position: relative;
+    }
+
+    .speechbubble {
+      background: url('/archives/images/mainpage/speech_bubble.png') no-repeat;
+      background-size: cover;
+      position: absolute;
+      width: 220px;
+      height: 140px;
+      left: 670px;
+      top: 120px;
+      padding: 5px;
+      text-align: center;
+    }
+
+    #outputDiv {
+      margin: 36px;
+    }
+
+    #questionBox {
+      position: absolute;
+      bottom: 200px;
+      right: 510px;
+      width: 360px;
+      height: 30px;
+      max-height: 50px;
+    }
+
+    #button {
+      position: absolute;
+      top: 580px;
+      right: 590px;
+    }
+  </style>
+
+  <script>
+    function GenerateAnswer() {
+      responses = [
+        'It is certain',
+        'It is decidedly so',
+        'Without a doubt',
+        'Yes definitely',
+        'You may rely on it',
+        'As I see it, yes',
+        'Most likely',
+        'Outlook good',
+        'Yes',
+        'Ask again later',
+        'My reply is no',
+        'No',
+        'Very doubtful',
+        'Not sure',
+        'Dont ask me that',
+        'Well...',
+        'Maybe not',
+      ];
+      response = responses[Math.floor(Math.random() * responses.length)];
+      document.getElementById('outputDiv').innerHTML = response;
+    }
+
+
+  </script>
+
+</head>
+
+<body>
+
+  <main>
+    <div class="speechbubble">
+      <div id="outputDiv"> Ask me a question, and I will answer </div>
+    </div>
+    <img id="tree" src="/funniez/images/treeofwisdom_.png">
+
+    <img id="button" src="/funniez/images/att_b.png" onclick="GenerateAnswer()">
+
+    <input type="text" id="questionBox" size=100 value=''>
+
+  </main>
+</body>
+
+</html>

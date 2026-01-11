@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Plants VS Zombies!</title>
+  <meta name="robots" content="noindex" />
+
+  <!--Stylesheet-->
+  <link rel="stylesheet" href="/archives/stylesheet.css" />
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/archives/images/ico/betasun.webp" type="image/x-icon" />
+
+  <style>
+    body#pvz-s {
+      background-image: url(https://plantsvszombiez.neocities.org/fontsandstuff/yardpool.jpg);
+    }
+
+    #peashooter {
+      position: fixed;
+      left: 206px;
+      bottom: 15px;
+      width: 116px;
+    }
+
+    #pvz-head {
+      background: url("/archives/images/shrines_img/pvz/pvzbanner.png") no-repeat;
+      background-position-x: 0%;
+      background-position-y: 0%;
+      background-size: cover;
+      background-position: center;
+      width: 900px;
+      height: 160px;
+      margin: 5px;
+      margin-bottom: 0px;
+      text-align: center;
+      align-content: center;
+      font-family: "burbank";
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+      border: 5px ridge #93451c;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      -webkit-text-stroke-width: 2.8px;
+      -webkit-text-stroke-color: #000;
+      font-size: 9em;
+    }
+
+    #plants {
+      background: linear-gradient(#52ff3a, #05c223);
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #vs {
+      background: linear-gradient(#fefffe, #d0d0d0);
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #zombies {
+      background: linear-gradient(#d2d2d2, #454545);
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav#pvz-nav {
+      background: #813f1d;
+      height: 53px;
+      align-items: center;
+      align-content: center;
+      border: 5px ridge #93451c;
+      width: 900px;
+      border-top: none;
+      display: flex;
+    }
+
+    .navb {
+      width: 225px;
+      margin: 0px;
+      height: 50px;
+      font-family: "DWARVESC";
+      font-size: 1.7em;
+      letter-spacing: -3px;
+      border: 5px outset #93451c;
+      border-radius: 3px;
+      background: #93451c;
+      color: #e7b347;
+      box-shadow: inset 3px 1px 2px 0px #bc6437;
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: #733110;
+    }
+
+    .navb:hover {
+      border: 5px inset #813f1d;
+      background: #813f1d;
+      box-shadow: inset -2px -3px 2px 0px #552e1a;
+    }
+
+    .main {
+      height: fit-content;
+      width: 880px;
+      margin: 0px;
+      border-top: none;
+      padding: 10px;
+      overflow-x: hidden;
+    }
+
+    main#pvz-m {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .text-box {
+      text-align: left;
+      margin: 5px;
+      padding: 5px;
+    }
+
+    .bigcontainer {
+      flex-wrap: nowrap;
+      justify-content: space-around;
+    }
+
+    .smallcontainer {
+      width: 50%;
+      overflow-y: scroll;
+      height: 360px;
+      scrollbar-width: thin;
+
+      scrollbar-color: #D48348 #FCE2A4;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      border: 3px inset #D48348;
+    }
+
+    .contents {
+      display: block;
+    }
+
+    .text-box2 {
+      width: 80%;
+    }
+  </style>
+
+  <script>
+    function showHome() {
+      document.getElementById('home').style.display = 'block';
+      document.getElementById('dev').style.display = 'none';
+      document.getElementById('game').style.display = 'none';
+      document.getElementById('extra').style.display = 'none';
+    }
+
+    function showDev() {
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('dev').style.display = 'block';
+      document.getElementById('game').style.display = 'none';
+      document.getElementById('extra').style.display = 'none';
+    }
+
+    function showGame() {
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('dev').style.display = 'none';
+      document.getElementById('game').style.display = 'block';
+      document.getElementById('extra').style.display = 'none';
+    }
+
+    function showEx() {
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('dev').style.display = 'none';
+      document.getElementById('game').style.display = 'none';
+      document.getElementById('extra').style.display = 'block';
+    }
+
+  </script>
+
+</head>
+
+<body id="pvz-s">
+  <header>
+    <div id="pvz-head">
+      <span id="plants">Plants</span><span id="vs">vs</span><span id="zombies">Zombies</span>
+    </div>
+  </header>
+  <nav id="pvz-nav">
+    <button class="navb" onclick="showHome()">Home</button>
+    <button class="navb" onclick="showDev()">Development</button>
+    <button class="navb" onclick="showGame()">Gameplay</button>
+    <button class="navb" onclick="showEx()">Extra</button>
+  </nav>
+
+  <img id="peashooter" src="/archives/images/shrines_img/pvz/PeashooterAnimatedDS.webp" width="40" />
+
+  <main id="pvz-m">
+    <div class="main" id="home">
+      <h1>Welcome to my Plants vs Zombies Shrine</h1>
+      <h3>PvZ 1 exclusive, I don't really like PvZ 2 GWF IS FIRE THO</h3>
+      <br />
+      <!-- Girasol -->
+      <img src="/archives/images/shrines_img/pvz/doomandbloom.webp" width="250" alt="Bloom &amp; Doom"
+        style="float: left; padding: 40px" />
+      <br />
+      <!-- Mucho sexo digo texto-->
+      <div class="text-box">
+        <p>
+          Plants vs Zombies (abbreviated pvz), is a tower defense/strategy type
+          of game first published by Popcan in 2009! The game takes place in the zombie apocalypse and those zombies
+          want
+          to invade your house and eat your brains (yummy) What do you do?
+          defend your home... with plans...! Weird looking plants manufactured by <i>Bloom & Doom</i>, but it
+          doesn't matter, they're defending your home so be grateful!
+          <br />
+        </p>
+      </div>
+      <div class="text-box">
+        <p>
+          PVZ has been part of my
+          childhood from as far as I can remember, I first played the original
+          version on PC though i have very vague memories of it, I miss the
+          Michael Jackson zombie.
+        </p>
+      </div>
+    </div>
+
+    <div class="main" id="dev" style="display: none;">
+      <h2>Dev is not done yet, here is my zombatar lol</h2>
+      <img src="/archives/images/shrines_img/pvz/Zombatar_1.jpg" alt="zombatar">
+    </div>
+
+    <div class="main" id="game" style="display: none;">
+
+      <!--GAMEPLAY-->
+      <h1>Gameplay</h1>
+      <br>
+      <img src="/archives/images/shrines_img/pvz/crazy-dave.gif" alt="PvZ gameplay gif" width="315"
+        style="float: right; padding: 40px" />
+      <br>
+      <div class="text-box">
+        <p>
+          You will be given seed packets during the game, each one with a
+          price in <i>sun</i>, the game's main currency which falls from the
+          sky, you can also get them with the sunflower of course! You can't just bring all the plants with you tho
+          there's a slot limit for now.
+          <br>Many plants have different abilities and stats that will
+          help you through the 5 game areas. Zombies aren't left behind, the hordes will include tougher zombies with
+          other abilities, but that's what makes it an strategy game.<br>Zombies will appear in different lanes on your
+          yard, if they get you... you still have your
+          lawnmower to run them over but from then... start planting.
+          <br><br>
+          PvZ also includes minigames, Crazy Dave's Twiddydinkies (aka Dave's shop) and game
+          modes, but those come while you are playing.
+        </p>
+      </div>
+
+
+      <!--AREAS-->
+      <div class="container">
+        <h2>Game areas</h2>
+        <p>You are introduced to each one during adventure mode, with a conveyor belt
+          level at the end of it, in which you will not be able to choose your own plants.</p>
+        <div class="bigcontainer">
+          <div id="day" class="smallcontainer">
+            <h3>Front yard / day </h3>
+            <img src="/archives/images/shrines_img/pvz/Adventure.webp" alt="front yard" width="200">
+            <p>You start here! This area has the easiest levels.</p>
+            <div class="contents" id="day-plants">
+              <h4>Plants</h4>
+
+              <img src="/archives/images/shrines_img/pvz/seedpackets/PeashooterSeedPacket.webp" width="35"
+                alt="Peashooter">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/SunflowerSeedPacket.webp" width="35"
+                alt="Sunflower">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/CherryBombSeedPacket.webp" width="35"
+                alt="Wall nut">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/Wall-nutSeedPacket.webp" width="35" alt="Wall nut">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/PotatoMineSeedPacket.webp" width="35"
+                alt="Potatomine">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/SnowPeaSeedPacket.webp" width="35" alt="Snowpea">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/ChomperSeedPacket.webp" width="35" alt="Chomper">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/RepeaterSeedPacket.webp" width="35" alt="Repeater">
+            </div>
+            <div class="contents" id="Zombies">
+              <h4>Zombies</h4>
+              <img src="/archives/images/shrines_img/pvz/zombies/0_Zombie.webp" alt="zombie" title="zombie">
+              <img src="/archives/images/shrines_img/pvz/zombies/1_flag.webp" alt="flag zombie" title="flag zombie">
+              <img src="/archives/images/shrines_img/pvz/zombies/03_conehead.webp" alt="Cone head zombie"
+                title="Cone head zombie">
+              <img src="/archives/images/shrines_img/pvz/zombies/04_pole.webp" alt="pole jumping zombie"
+                title="pole jumping zombie">
+              <img src="/archives/images/shrines_img/pvz/zombies/05_buckethead.webp" alt="bucket head zombie"
+                title="bucket head zombie">
+            </div>
+            <div class="contents" id="minigames">
+              <h4>Minigames</h4>
+              <dl>
+                <dt>Wall-nut bowling</dt>
+              </dl>
+            </div>
+          </div>
+
+          <div id="night" class="smallcontainer">
+            <h3>Night </h3>
+            <img src="\shrines\images\night.webp" alt="front yard at night" width="200">
+            <div class="text-box2">
+              <p>Sun don't fall from the sky anymore and sunflowers don't produce as much sun, also there's
+                graves where zombies can spawn! So know you will be given fungi with cheaper prices instead, and for the
+                graves? A log of some sorts.<br>Here you are also introduced to coins!</p>
+            </div>
+            <div class="contents" id="night-plants">
+              <h4>Plants</h4>
+              <img src="/archives/images/shrines_img/pvz/seedpackets/Puff-shroomSeedPacket.webp" width="35"
+                alt="Puff-shroom">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/Sun-shroomSeedPacket.webp" width="35"
+                alt="Sun-shroom">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/Fume-shroomSeedPacket.webp" width="35"
+                alt="Fume-shroom">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/GraveBusterSeedPacket.png" width="35"
+                alt="Grave Buster">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/\Hypno-shroomSeedPacket.webp" width="35"
+                alt="Hypno-shroom">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/Scaredy-shroomSeedPacket.webp" width="35"
+                alt="Scaredy-shroom">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/Ice-shroomSeedPacket.webp" width="35"
+                alt="Ice-shroom">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/Doom-shroomSeedPacket.png" width="35"
+                alt="Doom-shroom">
+            </div>
+
+            <div class="contents" id="night-zombies">
+              <h4>Zombies</h4>
+              <img src="/archives/images/shrines_img/pvz/zombies/06_news.webp" alt="newspaper zombie"
+                title="newspaper zombie">
+              <img src="/archives/images/shrines_img/pvz/zombies/07_door.webp" alt="door screen zombie"
+                title="door screen zombie">
+              <img src="/archives/images/shrines_img/pvz/zombies/08_allstar.webp" alt="all star or football zombie"
+                title="all star/football zombie">
+              <img src="/archives/images/shrines_img/pvz/zombies/09_disco.webp" alt="dancing zombie"
+                title="dancing zombie">
+              <img src="/archives/images/shrines_img/pvz/zombies/10_backup.webp" alt="backup dancer zombie"
+                title="backup dancer zombie">
+            </div>
+
+            <div class="contents">
+              <h4>Minigames</h4>
+              <dl>
+                <dt>Whack a Zombie</dt>
+              </dl>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="bigcontainer">
+          <div id="pool" class="smallcontainer">
+            <h3>Pool</h3>
+            <img src="/archives/images/shrines_img/pvz/pool.webp" alt="Pool area" width="200">
+            <div class="text-box2">
+              <p>You can't no longer use your fungi since they sleep in daytime. You now use lily pads to plant on top
+                of
+                the pool water, pool levels also give you an extra row.<br>
+                After the fourth level (3-4) you are finally introduced to Crazy Dave's Twiddydinkies, you can buy pool
+                cleaners here which are the equivalent to lawnmowers but in water.</p>
+            </div>
+            <div class="contents" id="pool-plants">
+              <h4>Plants</h4>
+              <img src="/archives/images/shrines_img/pvz/seedpackets/lilypad.webp" width="35" alt="Lily pad">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/squash.webp" width="35" alt="Squash">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/threepeater.webp" width="35" alt="Threepeater">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/tanglekelp.webp" width="35" alt="Tangle-kelp">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/jalapeño.png" width="35" alt="Jalapeño">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/spikeweed.png" width="35" alt="Spikeweed">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/torchwood.webp" width="35" alt="Torchwood">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/tallnut.webp" width="35" alt="Tall-nut">
+            </div>
+
+            <div class="contents" id="pool-zombies">
+              <h4>Zombies</h4>
+              <img src="/archives/images/shrines_img/pvz/zombies/11_ducky.gif" alt="ducky tube zombie and variables"
+                title="ducky tube zombie">
+              <img src="/archives/images/shrines_img/pvz/zombies/12_snorkel.webp" alt="snorkel zombie"
+                title="snorkel zombie">
+              <img src="/archives/images/shrines_img/pvz/zombies/13_zomboni.webp" alt="zomboni" title="zomboni">
+              <img src="/archives/images/shrines_img/pvz/zombies/14_bobsled.webp" alt="bobsled zombie"
+                title="bobsled zombie">
+              <img src="/archives/images/shrines_img/pvz/zombies/15_dolphin.webp" alt="dolphin rider zombie"
+                title="dolphin rider zombie">
+            </div>
+
+            <div class="contents" id="pool-minigames">
+              <h4>Minigames</h4>
+              <dt>Big Trouble Little Zombie</dt>
+            </div>
+          </div>
+
+          <div id="fog" class="smallcontainer">
+            <h3>Fog</h3>
+            <img src="\shrines\images\fog.webp" alt="Fog area screenshot" width="200">
+            <div class="text-box2">
+              <p>Back to night again and it's pretty foggy, so you can't really see the zombies coming but you are given
+                plants to clear the area.<br>I personally consider this area the most difficult, it's also my
+                favorite.<br>You can replay the last level of this area to meet the zombie yeti and get the
+                <i>Zombologist</i> achievement
+              </p>
+            </div>
+            <div class="contents" id="fog-plants">
+              <h4>Plants</h4>
+              <img src="/archives/images/shrines_img/pvz/seedpackets/seashroom.webp" width="35" alt="Sea-shroom"
+                title="Sea-shroom">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/plantern.webp" width="35" alt="Plantern"
+                title="Plantern">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/cactus.png" width="35" alt="Cactus" title="Cactus">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/blover.webp" width="35" alt="Blover"
+                title="Blover">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/splitpea.webp" width="35" alt="Splitpea"
+                title="Splitpea">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/starfruit.webp" width="35" alt="Starfruit"
+                title="Starfruit">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/pumpkin.webp" width="35" alt="Pumpkin"
+                title="Pumpkin">
+              <img src="/archives/images/shrines_img/pvz/seedpackets/magnet-shroom.png" width="35" alt="Magnet-shroom"
+                title="Magnet-shroom">
+            </div>
+
+            <div class="contents" id="fog-zombies">
+              <h4>Zombies</h4>
+              <img src="/archives/images/shrines_img/pvz/zombies/16_box.webp" alt="jack in the box zombie"
+                title="jack in the box zombie">
+              <img src="/archives/images/shrines_img/pvz/zombies/17_balloon.webp" alt="balloon zombie"
+                title="balloon zombie">
+              <img src="/archives/images/shrines_img/pvz/zombies/18_dig.webp" alt="digger zombie" title="digger zombie">
+              <img src="/archives/images/shrines_img/pvz/zombies/19_pogo.webp" alt="pogo zombie" title="pogo zombie">
+              <img src="/archives/images/shrines_img/pvz/zombies/20_yeti.webp" alt="zombie yeti" title="zombie yeti">
+            </div>
+
+            <div class="contents" id="pool-minigames">
+              <h4>Minigames</h4>
+              <dl>
+                <dt>Vase-breaker</dt>
+                <dd>practically night level but you get introduced to it here</dd>
+              </dl>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="roof" class="smallcontainer">
+          <h3>Roof</h3>
+          <div>
+            <img src="/archives/images/shrines_img/pvz/roof.webp" alt="roof area screenshot" width="180">
+            <img src="/archives/images/shrines_img/pvz/boos-fight.gif" alt="Zomboss fight screenshot" width="180">
+          </div>
+          <div class="text-box2">
+            <p><i>How in the hell these fuckass zombies got in the damn roof bro.</i><br>You are given pots and
+              <i>catapult</i> plants in here, since you are on the roof and it's of course uneven.<br><br>At the final
+              level you fight Dr Zomboss, leader of the zombies in a conveyor belt level at night.
+            </p>
+          </div>
+          <div class="contents" id="roof-plants">
+            <h4>Plants</h4>
+            <img src="/archives/images/shrines_img/pvz/seedpackets/40_cabbage-pult.png" width="35" alt="Cabbage-pult">
+            <img src="/archives/images/shrines_img/pvz/seedpackets/41_flower_pot.webp" width="35" alt="Flower pot">
+            <img src="/archives/images/shrines_img/pvz/seedpackets/42_kernel_pult.png" width="35" alt="Kernel-pult">
+            <img src="/archives/images/shrines_img/pvz/seedpackets/43_CoffeeBean.webp" width="35" alt="Coffee bean">
+            <img src="/archives/images/shrines_img/pvz/seedpackets/44_garlic.webp" width="35" alt="Garlic">
+            <img src="/archives/images/shrines_img/pvz/seedpackets/45_Umbrella_Leaf.webp" width="35"
+              alt="Umbrella leaf">
+            <img src="/archives/images/shrines_img/pvz/seedpackets/46_Marigold.png" width="35" alt="Marigold">
+            <img src="/archives/images/shrines_img/pvz/seedpackets/47_Melon-pult.webp" width="35" alt="Melon-pult">
+          </div>
+
+          <div class="contents" id="roof-zombies">
+            <h4>Zombies</h4>
+            <img src="/archives/images/shrines_img/pvz/zombies/21_bungee.webp" alt="bungee zombie"
+              title="bungee zombie">
+            <img src="/archives/images/shrines_img/pvz/zombies/22_ladder.webp" alt="ladder zombie"
+              title="ladder zombie">
+            <img src="/archives/images/shrines_img/pvz/zombies/23_catapult.webp" alt="catapult zombie"
+              title="catapult zombie">
+            <img src="/archives/images/shrines_img/pvz/zombies/24_gargantuar.webp" alt="Gargantuar and imp"
+              title="Gargantuar and imp">
+            <img src="/archives/images/shrines_img/pvz/zombies/25_zomboss.webp" alt="Zomboss" title="Zomboss">
+          </div>
+        </div>
+      </div>
+
+      <!--SHOP-->
+      <div class="container"></div>
+
+      <!--Minigames-->
+      <div class="container"></div>
+
+      <!--Achievements-->
+      <div class="container"></div>
+
+    </div>
+
+    <div class="main" id="extra" style="display: none;">
+      <img src="https://pbs.twimg.com/media/GtyI8bvXYAA1lda.jpg" alt="momazos laura" width="500">
+      <h1>Momazos Laura</h1>
+    </div>
+
+    <a class="back" href="/shrines/menu.html"></a>
+  </main>
+</body>
+
+</html>

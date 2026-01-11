@@ -1,0 +1,625 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Samy's Epic site!</title>
+
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/funniez/old_site/imgs/alarm-clock-0003.gif" type="image/x-icon">
+
+  <style>
+    * {
+      cursor: url(https://cur.cursors-4u.net/nature/nat-11/nat1006.cur), auto !important;
+    }
+
+    #mainindex {
+      width: 1000px;
+    }
+
+    #minicons {
+      width: 47%;
+      overflow-y: scroll;
+      height: 320px;
+    }
+
+    #log {
+      border: 2px inset #FFDBA0;
+      width: 93%;
+      overflow-y: scroll;
+      height: 240px;
+      text-align: left;
+    }
+
+    #belt {
+      width: 100%;
+      background-color: black;
+      border: 3px ridge #C6C6C6;
+      height: 44px;
+    }
+
+    /*old css*/
+
+
+    @font-face {
+      font-family: Comic sans;
+      src: url('/archives/fonts/COMIC.TTF');
+    }
+
+    @font-face {
+      font-family: Cafeteria-Bold;
+      src: url('/archives/fonts/Cafeteria-Bold.otf');
+    }
+
+    @font-face {
+      font-family: SamdanEvil;
+      src: url('/archives/fonts/SamdanEvil.ttf');
+    }
+
+    @font-face {
+      font-family: Samdan;
+      src: url('/archives/fonts/Samdan.ttf');
+    }
+
+    @font-face {
+      font-family: Brianne_s_hand;
+      src: url('/archives/fonts/Brianne_s_hand.ttf');
+    }
+
+    @font-face {
+      font-family: DWARVESC;
+      src: url('/archives/fonts/DWARVESC.TTF');
+    }
+
+    /*Letra*/
+    h1 {
+      font-family: 'Samdan';
+      font-size: 200%;
+    }
+
+    h2 {
+      font-family: 'DWARVESC';
+      font-size: 35px;
+    }
+
+    h3 {
+      font-family: 'Cafeteria-Bold';
+      font-size: 35px;
+    }
+
+    h4 {
+      font-family: 'Comic sans';
+      font-weight: bold;
+    }
+
+    p {
+      font-family: 'Comic sans';
+      font-size: 12px;
+      font-weight: normal;
+    }
+
+    a:link {
+      color: #000019;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:visited {
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: lime;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:active {
+      color: lime;
+      background-color: transparent;
+      text-shadow: 1px 1px 3px #298203;
+    }
+
+
+
+    /*body*/
+    body {
+      background-image: url(/archives/images/bgs/menu-selector-by-Cautious_Peanut.webp);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      display: flex;
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /*containers*/
+    .header {
+      width: 55%;
+      height: 180px;
+      border-radius: 10px;
+      background-image: url(/funniez/old_site/imgs/Pvzbanner.webp);
+      background-size: cover;
+      margin: 8px;
+      display: flex;
+      color: white;
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: 50px;
+      text-shadow: 1px 1px 3px #000000;
+      background-position: center;
+    }
+
+    .container {
+      display: flex;
+      width: 77%;
+      height: auto;
+      max-height: fit-content;
+      background-color: transparent;
+      margin: auto;
+      justify-content: center;
+      align-items: flex-start
+    }
+
+    .smallcontainer {
+      width: fit-content;
+      height: fit-content;
+      max-height: 100%;
+      margin: 5px;
+      background-image: url(/funniez/old_site/imgs/menugrave.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      order: 1;
+      display: flex;
+    }
+
+    .bigcontainer {
+      width: 80%;
+      height: auto;
+      max-height: 100%;
+      margin: 2px;
+      align-content: center;
+      order: 2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .smallcontainer2 {
+      height: fit-content;
+      width: fit-content;
+      margin: 5px;
+      background-color: transparent;
+      flex: 1;
+      order: 3;
+      text-align: center;
+    }
+
+    /*contenido*/
+    .sidebar {
+      width: fit-content;
+      height: fit-content;
+      padding: 0px;
+      overflow: auto;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      border: 5px ridge #994008;
+      padding: 2px;
+      background-color: #FFDBA0;
+      text-align: center;
+      color: black;
+      overflow: auto;
+      margin: 2px;
+      align-content: center;
+    }
+
+    .sidebar2 {
+      width: 90%;
+      border: medium outset #CC6530;
+      border-radius: 10px;
+      background-color: #B05325;
+      height: auto;
+      padding: 2px;
+      overflow: auto;
+      line-height: 90%;
+      text-align: center;
+      color: #ffe376;
+      margin: 5px;
+      align-content: center;
+    }
+
+    .banner {
+      width: 730px;
+      height: 80px;
+      background-color: #994007;
+      color: #ffe376;
+      align-content: center;
+      margin-bottom: 0px;
+    }
+
+    .centered {
+      position: absolute;
+      top: 80%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+    }
+
+    .tittle {
+      background-color: #9B9DAC;
+      border: 3px outset #9B9DAC;
+      color: #DCDCDC;
+      font-family: 'DWARVESC';
+      font-size: larger;
+      line-height: 5px;
+      letter-spacing: 3px;
+      text-shadow: 1px 1px 0px #292929;
+      height: fit-content;
+      width: 50%;
+      text-align: center;
+    }
+
+    .btittle {
+      background-color: #994008;
+      border: 3px outset #994008;
+      color: #FFE376;
+      font-family: 'DWARVESC';
+      font-size: larger;
+      line-height: 1px;
+      text-shadow: 1px 1px 0px #000000;
+      height: fit-content;
+      width: fit-content;
+      text-align: center;
+      display: ruby-text;
+    }
+
+    /*botones*/
+    .button {
+      color: #02030B;
+      padding: 5px;
+      display: inline-block;
+      margin: 8px;
+      border-radius: 4px;
+      font-size: 25px;
+      box-shadow: 1px 2px 2px #353742;
+      border: 2px outset #9b9fc3;
+      font-family: 'DWARVESC';
+      text-align: center;
+    }
+
+    .button:hover {
+      border: 2px inset #9b9fc3;
+      background-color: #3F4348;
+      color: #FFE6FF;
+      text-shadow: 2px 2px 3px #D95DAE;
+      box-shadow: -1px -2px 2px #00000036;
+    }
+
+    /*scrollbar*/
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #e8c054;
+    }
+
+    /*floats*/
+    .float1 {
+      width: 95px;
+      height: 95px;
+      max-height: 100%;
+      padding: 1px;
+      line-height: 100%;
+      background-image: url('/funniez/old_site/Sun.gif');
+      background-size: 100px;
+      text-align: center;
+      overflow: auto;
+      margin: 5px;
+      align-content: center;
+    }
+
+    .float2 {
+      width: 200px;
+      height: 200px;
+      max-height: 100%;
+      padding: 5px;
+      line-height: 100%;
+      background: url("/funniez/old_site/PvZC_P_Sunshine@3x.png") no-repeat center;
+      background-size: 150px;
+      text-align: center;
+      overflow: auto;
+      margin: 5px;
+      align-content: center;
+    }
+
+    /*specific containers*/
+    #sepcon {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #colum {
+      flex-direction: column;
+    }
+  </style>
+
+
+</head>
+
+<body cz-shortcut-listen="true">
+
+  <!-- Mobile-->
+  <style>
+    @media only screen and (max-width: 640px) {
+      body {
+        flex-direction: column;
+        align-content: center;
+      }
+
+      #minicons {
+        width: 95%;
+      }
+
+      #log {
+        width: 95%;
+      }
+
+      .header {
+        width: 99%;
+        font-size: 25px;
+        height: 50%;
+      }
+
+      .container {
+        margin: 2px;
+        flex-direction: column;
+        align-items: center;
+        width: 99%;
+        justify-content: space-between;
+        background-size: 70% 30%
+      }
+
+      .smallcontainer {
+        width: 99%;
+        flex-wrap: nowrap;
+        justify-content: center;
+        flex-direction: row;
+        background-size: 500px 400px;
+      }
+
+      .bigcontainer {
+        width: 99%;
+      }
+
+      .main {
+        width: 97%
+      }
+
+      .sidebar {
+        width: 99%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .smallcontainer2 {
+        display: flex;
+        width: 99%;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .sidebar2 {
+        width: 95%;
+      }
+
+      .button {
+        font-size: 15px;
+      }
+    }
+  </style>
+
+  <!-- sol float-->
+  <div class="header">
+    <div class="float1" style="float:left"></div>
+    <h1>FREAKYSUNSHINE</h1>
+  </div>
+
+  <div class="container">
+
+    <div class="smallcontainer">
+      <div class="sidebar">
+        <a href="/" class="button">About</a>
+        <a href="/" class="button">People</a>
+        <a href="/" class="button">Blog</a>
+        <a href="/" class="button">Selfship</a>
+        <a href="/" class="button">Gallery</a>
+        <a href="/" class="button">Shrines</a>
+        <a href="/" class="button">Funniez</a>
+        <a href="/" class="button">Guestbook</a>
+      </div>
+    </div>
+
+    <div class="bigcontainer">
+
+      <div id="mainindex" class="main">
+        <h3>Welcome to Samy's Epic Site!!</h3>
+
+        <a href="https://web.archive.org/web/20240928142234/https://www.cutercounter.com/"><img
+            src="/funniez/old_site/oldcounter.gif"></a>
+        <br>
+        <!-- Girasol -->
+        <div class="float2" style="float:left; padding: 0px 25px 0px 25px"></div>
+        <br>
+        <!-- Mucho sexo digo texto-->
+        <p style="text-align: left;">Welcome to <i>freakysunshine</i> aka MY (Samy's) EPIC SITE! <br> I'm still working
+          on it tho, there will be erros.<br><br>This site will be used to show my interests, host my art, experiment
+          with coding and <i>and maybe a fourth secret thing</i> <br><br> Este sitio no tiene traduccion al español pero
+          el google traductor funcionda bastante bien!!!</p>
+
+        <br>
+        <img src="/archives/images/listncliq/wing1.png"> I am <a href="https://macaque.neocities.org/trickyfox/">
+          angelic ♥</a><img src="/archives/images/listncliq/wing2.png">
+        -
+        <a href="https://macaque.neocities.org/trickyfox/">LINKED !</a><img src="/archives/images/listncliq/linked.png">
+        Mima Kirigoe
+        -
+        Gorillaz<a href="http://cliqued.wings.nu/"><img src="/archives/images/listncliq/green.png"></a>
+        -
+        <a href="http://cliqued.wings.nu/">Rock me!</a>
+        <img src="/archives/images/listncliq/rockme.png">Los Prisioneros🔥
+        <br>
+
+        <!-- s buttons -->
+        <a href="/"><img src="/archives/images/graphics/alt-freakysunshine-button.png" alt="freakysunshine buttom"></a>
+        <a href="https://neocities.org/"><img src="/funniez/old_site/neocities.png" width="88" height="31"
+            alt="Neocities"></a>
+        <a href="https://www.mabsland.com/"><img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/web14.gif" width="88"
+            height="31" alt="Censor Panda"></a>
+        <a href="https://www.w3schools.com/"><img src="https://files.catbox.moe/h2ll8g.gif" alt="W3schools"></a>
+      </div>
+
+      <!--stufff-->
+      <div id="minicons" class="main">
+        <h4> Webrings</h4>
+      </div>
+
+      <!-- chatbox -->
+      <div id="minicons" class="main">
+        <iframe src="https://www3.cbox.ws/box/?boxid=3540613&boxtag=DliOqF" width="100%" height="300"
+          allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0"
+          scrolling="auto"></iframe>
+      </div>
+
+      <!--sitios que me gustaron-->
+      <div id="belt" class="main">
+        <iframe src="/stuff/website-buttons.html" width="875px" style="border:none;"></iframe>
+      </div>
+
+    </div>
+
+    <div class="smallcontainer2">
+
+      <div class="sidebar2">
+        <img src="/archives/images/graphics/beibitueremala.png" width="150">
+        <br>
+        <a href="https://www.imood.com/users/mothrot">
+          <img src="https://moods.imood.com/display/uname-mothrot/trans-1/imood.gif"
+            alt="The current mood of mothrot at www.imood.com" border="0">
+        </a>
+      </div>
+
+      <div class="sidebar2">
+        <iframe src="https://descent.live/Mothrarot" width="200" data-ruffle-polyfilled=""></iframe>
+      </div>
+
+      <!-- Updates -->
+      <div class="sidebar2">
+        <h2>Changelog</h2>
+        <div id="log" class="main">
+
+          <h4 style="text-align: center;">Working on: Spanish translation, shrines and blogs and a lightbox for my art
+            and photos</h4>
+
+          <p> 26/09/24<br></p>
+          <p>&gt; Display and banner changes. </p>
+          <p> &gt;Wip of The X files shrine
+          </p>
+          <p> 25/09/24<br></p>
+          <p>&gt; Shrine page added!!! Some are still in the making but pvz is there. </p>
+          <p> &gt;Changes on Error page. </p>
+          <p> &gt;Gify pet removed... It will come back, im making a Zen Garden
+          </p>
+          <p> 24/09/24<br></p>
+          <p>&gt; Changes in navigation, Gallery &amp; Funniez is its own button (only gallery is completed) </p>
+          <p> &gt;New background
+          </p>
+          <p> 23/09/24<br></p>
+          <p>&gt; More display changes :P + pvz font replaced with comic sans 'cause is easier to read.
+          </p>
+          <p> 22/09/24<br></p>
+          <p>&gt; phone display removed until i fix it.
+          </p>
+          <p> 17/09/24<br></p>
+          <p>&gt; Display changes in the rest of pages.
+          </p>
+          <p> 18/09/24<br></p>
+          <p>&gt; PHONE DISPLAY IN DEMO!!!!
+          </p>
+          <p> 17/09/24<br></p>
+          <p>&gt; Display update! it may not look good on phone... also, "About me" page will look a little weird 'cause
+            I'm configuring the flexbox.
+          </p>
+          <p> 16/09/24<br></p>
+          <p>&gt; I don't know how to place the text to the side please help<br>
+            &gt; nvm i fixed it.... kinda</p>
+          <p> 15/09/24<br></p>
+          <p>&gt; Font and layout modifications.
+          </p>
+          <p> &gt; Sidebars removed from the rest of sections, replaced with a "Go back?" button.
+          </p>
+          <p> &gt; Alt theme added :3
+          </p>
+          <p> 14/09/24<br></p>
+          <p>&gt; Demo for lytebox
+          </p>
+          <p> &gt; Updates and "funny stuff" changed places.
+          </p>
+          <p> 13/09/24<br></p>
+          <p>&gt; New songs added!
+          </p>
+          <p> &gt;"Funny stuff" now rebranded as "Funniez" and placed below gallery, more stuff coming soon.
+          </p>
+          <p> 12/09/24<br></p>
+          <p>&gt; Funny stuff added
+          </p>
+          <p>&gt; Friends section demo now added.</p>
+          <p>&gt; Charlie section still a wip.</p>
+          <p>&gt; PVZ added ?!?! doesn't work on phone ppipii
+          </p>
+          <p>&gt; Made buttons for the art section
+          </p>
+          <p> 11/09/24<br>&gt;social media links moved to "about me".
+          </p>
+          <p> 10/09/24<br>&gt;Changed padding and button hover
+          </p>
+          <p> 09/09/24<br>&gt;webamp added! can't be moved around in mobile though. Also new pet added!
+          </p>
+          <p> 08/09/24<br>&gt;About and Collection section - completed, may add more things
+          </p>
+          <p> 07/09/24<br>&gt; Float image changed :3
+          </p>
+          <p> 06/09/24<br>&gt;Selfship shrine completed
+          </p>
+          <p> 03/09/24<br>&gt;Removed mask on float, aligned text
+          </p>
+          <p> 01/09/24<br>&gt; Moved Art and collection to their own navigation section
+          </p>
+          <p> 30/08/24<br>&gt;Layout changed to look PVZ themed
+          </p>
+          <p> Collection and art section created!
+          </p>
+          <p> 24/08/24<br>&gt;Site created!</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

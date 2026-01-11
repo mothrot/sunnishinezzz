@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Five Nights at Freddys</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="robots" content="noindex" />
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="/archives/images/ico/cryingchild.webp" />
+  <!--Stylesheet-->
+  <link rel="stylesheet" href="/archives/stylesheet.css" />
+
+  <style>
+    * {
+      cursor: context-menu;
+    }
+
+    body {
+      background: black repeat;
+      display: flex;
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      width: fit-content;
+      overflow: hidden;
+    }
+
+    main {
+      background: url('/archives/images/shrines_img/FFPS-Office.webp') no-repeat;
+      background-size: contain;
+      width: 1280px;
+      height: 720px;
+    }
+
+    #power-button {
+      position: absolute;
+      bottom: 53px;
+      left: 532px;
+      background: #ac1111;
+      border: 2px outset #ac1111;
+    }
+
+    #power-button:active {
+      background: #19ac11;
+      border: 2px outset #19ac11;
+
+    }
+
+    #left_button,
+    #return_left {
+      left: 8px;
+      position: absolute;
+      width: 30px;
+      height: 70px;
+      top: 320px;
+      border: none;
+      background-color: #ffffff30;
+      cursor: pointer;
+    }
+
+    #right_button,
+    #return_right {
+      right: 8px;
+      position: absolute;
+      width: 30px;
+      height: 70px;
+      top: 320px;
+      border: none;
+      background-color: #ffffff30;
+      cursor: pointer;
+    }
+
+    #right_button:hover,
+    #left_button:hover,
+    #return_right:hover,
+    #return_left:hover {
+      background-color: #ffffff73;
+      cursor: pointer;
+    }
+
+    #return_right,
+    #return_left {
+      display: none;
+    }
+
+    #mini-screen {
+      width: 438px;
+      height: 370px;
+      align-content: center;
+      position: absolute;
+      right: 296px;
+      top: 270px;
+      display: none;
+    }
+
+    #pc-screen {
+      border: none;
+    }
+
+    #end {
+      position: absolute;
+      width: 80px;
+      height: 20px;
+      top: 80px;
+      border: none;
+      background-color: #ffffff30;
+      cursor: pointer;
+      padding: 5px;
+      color: white;
+      font-family: WINDOWS;
+      text-align: center;
+      box-shadow: 2px 2px #ffffffba;
+      font-size: 1.17em;
+    }
+  </style>
+  <script>
+
+    function turn_on() {
+      if (document.getElementById("mini-screen").style.display === "none" || document.getElementById("mini-screen").style.display === "") {
+        document.getElementById("mini-screen").style.display = "block";
+      } else {
+        document.getElementById("mini-screen").style.display = "none";
+      }
+    }
+
+    function returnOffice() {
+      document.getElementById("office").style.backgroundImage = "url('/archives/images/shrines_img/FFPS-Office.webp')";
+      document.getElementById("power-button").style.display = "block";
+      document.getElementById("right_button").style.display = "block";
+      document.getElementById("left_button").style.display = "block";
+      document.getElementById("return_left").style.display = "none";
+      document.getElementById("return_right").style.display = "none";
+      document.getElementById("end").style.display = "block";
+    }
+
+    function turnLeft() {
+      document.getElementById("mini-screen").style.display = "none";
+      document.getElementById("power-button").style.display = "none";
+      document.getElementById("office").style.backgroundImage = "url('/archives/images/shrines_img/fnaf/officeleft.webp')";
+      document.getElementById("return_right").style.display = "block";
+      document.getElementById("left_button").style.display = "none";
+      document.getElementById("right_button").style.display = "none";
+      document.getElementById("end").style.display = "none";
+
+    }
+
+    function turnRight() {
+      document.getElementById("mini-screen").style.display = "none";
+      document.getElementById("power-button").style.display = "none";
+      document.getElementById("office").style.backgroundImage = "url('/archives/images/shrines_img/fnaf/officeright.webp')";
+      document.getElementById("return_left").style.display = "block";
+      document.getElementById("right_button").style.display = "none";
+      document.getElementById("left_button").style.display = "none";
+      document.getElementById("end").style.display = "none";
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <main id="office">
+
+    <audio src="https://static.wikia.nocookie.net/freddy-fazbears-pizzeria-simulator/images/b/b3/Amb_env.ogg"
+      preload></audio>
+
+    <div>
+      <button id="left_button" onclick="turnLeft()"><svg viewBox="0 0 256 512" width="20" title="angle-left">
+          <path
+            d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+        </svg></button>
+      <button id="return_left" onclick="returnOffice()"><svg viewBox="0 0 256 512" width="20" title="angle-left">
+          <path
+            d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+        </svg></button>
+      <button id="return_right" onclick="returnOffice()"><svg viewBox=" 0 0 256 512" width="20" title="angle-right">
+          <path
+            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+        </svg></button>
+      <button id="right_button" onclick="turnRight()"><svg viewBox=" 0 0 256 512" width="20" title="angle-right">
+          <path
+            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+        </svg>
+      </button>
+      <a href="/shrines/menu.html" id="end" target="_top">END SHIFT</a>
+    </div>
+
+    <button id="power-button" onclick="turn_on()"></button>
+
+    <div id="mini-screen">
+      <iframe src="/shrines/fnaf-screen.html" width="100%" height="100%" id="pc-screen"></iframe>
+    </div>
+  </main>
+</body>
+
+</html>

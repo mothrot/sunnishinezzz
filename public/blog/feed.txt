@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Rss feed blog :)</title>
+  <description>Sunniez's feed fot the blog</description>
+  <link>https://sunnishinez.neocities.org</link>
+  <lastBuildDate>
+    Tue, 14 Oct 2025 5:18 MDT
+  </lastBuildDate>
+  <ttl>20000</ttl>
+</channel>
+
+<item>
+  <title>RAGHHH</title>
+  <description>
+    About page yeye
+  </description>
+  <link>https://sunnishinez.neocities.org/blog/about</link>
+  <pubDate>
+    Tue, 14 Oct 2025 5:18 MDT
+  </pubDate>
+</item>
+
+</rss>

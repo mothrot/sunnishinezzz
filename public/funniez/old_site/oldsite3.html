@@ -1,0 +1,665 @@
+<html lang="en" style="--wm-toolbar-height: 67px;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="main page">
+
+    <title>Samy's Epic site!</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/funniez/old_site/imgs/clock-0139.gif" type="image/x-icon">
+
+    <!--Stylesheet-->
+
+    <style>
+        * {
+            cursor: url(https://cur.cursors-4u.net/nature/nat-11/nat1006.cur), auto !important;
+        }
+
+        @font-face {
+            font-family: Comic sans;
+            src: url('/archives/fonts/COMIC.TTF');
+        }
+
+        @font-face {
+            font-family: Cafeteria-Bold;
+            src: url('/archives/fonts/Cafeteria-Bold.otf');
+        }
+
+        @font-face {
+            font-family: DWARVESC;
+            src: url('/archives/fonts/DWARVESC.TTF');
+        }
+
+        @font-face {
+            font-family: Brianne_s_hand;
+            src: url('/archives/fonts/Brianne_s_hand.ttf');
+        }
+
+
+        /*Letra*/
+        h1,
+        h2,
+        h3 {
+            font-family: 'Cafeteria-Bold';
+            font-weight: bold;
+        }
+
+        h4 {
+            font-family: 'Comic sans';
+            font-weight: bold;
+        }
+
+        p {
+            font-family: 'Comic sans';
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        a:link,
+        a {
+            text-decoration-style: wavy;
+        }
+
+        a:visited {
+            text-decoration-style: wavy;
+        }
+
+        a:hover,
+        a:active {
+            color: lime;
+            text-shadow: 1px 1px 3px #298203;
+            text-decoration: none;
+        }
+
+        /*body*/
+        body {
+            background-image: url(/funniez/old_site/imgs/pokemon.webp);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            display: flex;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 1300px;
+            position: relative;
+        }
+
+        /*containers*/
+        .header {
+            width: 63%;
+            height: 188px;
+            border-radius: 10px;
+            background-image: url(/funniez/old_site/imgs/Header.webp);
+            background-size: cover;
+            margin: 1px;
+            background-position: center;
+        }
+
+        .tbody {
+            display: flex;
+            margin: 5px;
+            justify-content: center;
+            width: fit-content;
+            flex-direction: row;
+            background-image: url(/funniez/old_site/imgs/clouds.gif);
+        }
+
+        .wrap {
+            display: flex;
+            margin: 5px;
+            justify-content: center;
+            width: fit-content;
+            flex-direction: row;
+        }
+
+        .smallcontainer {
+            width: fit-content;
+            height: fit-content;
+            margin: 5px;
+            order: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: sticky;
+        }
+
+        .sidebar {
+            width: fit-content;
+            height: 100%;
+            padding: 0px;
+            overflow: auto;
+            margin-top: 20px;
+            display: flex;
+            background-image: url(/funniez/old_site/imgs/menugrave.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top: 45px;
+            letter-spacing: -2px;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: auto;
+            max-height: fit-content;
+            background-color: transparent;
+            margin: 5px;
+            order: 2;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bigcontainer {
+            width: 80%;
+            height: auto;
+            max-height: 100%;
+            margin: 2px;
+            order: 2;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            border: 5px ridge #994008;
+            padding: 5px;
+            background-color: #FFDBA0;
+            text-align: center;
+            color: black;
+            overflow: auto;
+            margin: 5px;
+            align-content: center;
+        }
+
+        .smallcontainer2 {
+            height: fit-content;
+            width: fit-content;
+            margin: 5px;
+            background-color: transparent;
+            order: 3;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: sticky;
+        }
+
+        .sidebar2 {
+            width: 100%;
+            border: medium outset #CC6530;
+            border-radius: 10px;
+            background-color: #B05325;
+            height: auto;
+            padding: 2px;
+            overflow: auto;
+            text-align: center;
+            color: #ffe376;
+            margin: 5px;
+            align-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /*scrollbar*/
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 2px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #e8c054;
+        }
+
+        #status {
+            width: 100%;
+            height: fit-content;
+        }
+
+        #chucha {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding: 3px;
+            justify-content: space-evenly;
+        }
+
+        #webdev {
+            display: flex;
+            width: 50%;
+            margin: 5px;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        #otro {
+            width: 100%;
+            align-content: normal;
+            display: flex;
+        }
+
+        #tabs {
+            width: 95%;
+            overflow-y: scroll;
+            max-height: 390px;
+            min-height: 390px;
+            text-align: left;
+        }
+
+        #belt {
+            width: 70%;
+            background-color: black;
+            border: 3px ridge #C6C6C6;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        #otw {
+            width: 40%;
+            height: 350px;
+        }
+
+        #winamp {
+            width: 44%;
+            height: fit-content;
+        }
+
+        #chatbox {
+            width: 56%;
+        }
+
+        #webrings {
+            width: 37%;
+            height: 300px;
+        }
+
+        .statuscafe {
+            width: 180px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        /*botones*/
+        .button {
+            color: #02030B;
+            padding: 5px;
+            display: inline-block;
+            margin: 8px;
+            border-radius: 4px;
+            font-size: 25px;
+            box-shadow: 1px 2px 2px #353742;
+            border: 2px outset #9b9fc3;
+            font-family: 'DWARVESC';
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            border: 2px inset #9b9fc3;
+            background-color: #3F4348;
+            color: #FFE6FF;
+            text-shadow: 2px 2px 3px #D95DAE;
+            box-shadow: -1px -2px 2px #00000036;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body cz-shortcut-listen="true">
+
+    <div class="header"></div>
+
+    <!--The div that holds everything-->
+    <div class="tbody">
+
+        <!--barra izquierda-->
+        <div class="smallcontainer">
+            <!--Navbar-->
+            <div class="sidebar">
+                <a href="/" class="button">Webmaster</a>
+                <a href="/" class="button"><s>Friends</s></a>
+                <a href="/" class="button">Gallery</a>
+                <a href="/" class="button">Collection</a>
+                <a href="/" class="button"><s>Funniez</s></a>
+                <a href="/" class="button"><s>Shrines</s></a>
+                <a href="/" class="button">Credits</a>
+                <a href="/" class="button"><s>Sitemap</s></a>
+            </div>
+
+            <a href="https://sunnishinez.atabook.org">
+                <img id="guestbook" src="/archives/images/mainpage/guestbook-button.png" alt="Guestbook button"
+                    width="120">
+            </a>
+
+            <!--Button-->
+            <div class="sidebar2">
+                <img src="/archives/images/graphics/alt-freakysunshine-button.png" alt="freakysunshine button"></a>
+                <input type="text" style="display:none;" value=":3" id="myInput">
+                <br>
+                <button onclick="myFunction()">Copy button</button>
+
+                <script>
+                    function myFunction() {
+                        // Get the text field
+                        var copyText = document.getElementById("myInput");
+
+                        // Select the text field
+                        copyText.select();
+                        copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                        // Copy the text inside the text field
+                        navigator.clipboard.writeText(copyText.value);
+
+                        // Alert the copied text
+                        alert("No button copied! just :3");
+                    }
+                </script>
+            </div>
+        </div>
+
+        <!--Pagebody-->
+        <div class="container">
+
+            <div id="chucha" class="bigcontainer">
+                <div id="pucha" class="bigcontainer">
+                    <div id="mainindex" class="main">
+                        <h1>Welcome to Samy's Epic Site!!</h1>
+
+                        <img src="/archives/images/mainpage/menufloat.png" width=" 200" alt=" " style="float:left;">
+
+                        <!-- Mucho sexo digo texto-->
+                        <p style="text-align: left;">Welcome to <i>freakysunshine</i> aka MY (Samy's) EPIC SITE! <br>
+                            I'm still working on it tho, there will be erros.<br><br>This site will be used to show my
+                            interests, host my art, experiment with coding and <i>and maybe a fourth secret thing</i>
+                            <br><br> Este sitio no tiene traduccion al español pero el google traductor funcionda
+                            bastante bien!!!
+                        </p>
+                        <br>
+                        <a href="https://decembergirl.net/xfiles/index.php">
+                            <img src="/archives/images/listncliq/xfiles.png">
+                        </a>
+                        <img src="/funniez/old_site/imgs/plants.gif" alt="">
+
+                        <a href="https://162candles.com/fnaf/index.php">
+                            <img src="/archives/images/listncliq/fnaf.png">
+                        </a>
+                    </div>
+                    <div id="belt" class="main">
+                        <iframe src="/stuff/website-buttons.html" width="580px" style="border:none;"></iframe>
+                    </div>
+                    <audio controls="" loop="" style="width: 137px">
+                        <source src="https://files.catbox.moe/50gn12.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div id="webdev" class="container">
+
+                    <button onclick="changelog(); hide_todo(); hide_announce();">Changelog</button>
+                    <button onclick="todo(); hide_changelog(); hide_announce();">To-do</button>
+
+                    <div id="tabs" class="main">
+                        <div id="announced" style="display: none;">
+                            <h4>HEY CHATTTT this is a test......</h4>
+                        </div>
+                        <div id="log" style="display: none;">
+                            <p>04/02/25<br> › Fixed the gallery menu (finally)</p>
+                            <p>14/11/24<br> › Credits/sources page now avaible (is not styled though).</p>
+                            <p>14/11/24<br> › Combined the changelog and to-do list in a single div :).</p>
+                            <p>13/11/24<br> › Fixed landing page and moved the webrings back to the main menu<br>› Added
+                                a fake ad bar. <br> › Upcoming things in the navbar<br> › Made the new button easier to
+                                copy.<br> › Changed the visitor counter<br> › New ghestbook button :3<br>› Fixed files
+                                from the gallery.</p>
+                            <p>4/11/24<br> › Deleted the "friends" and "Charlie" buttons to add them to the about me
+                                page later! Although I'm thinking about making a shrine for my gf :3<br> › I'm doing
+                                more changes tomorrow.</p>
+                            <p>30/10/24<br> › The "about me" name has been changed to "webmaster" and it's finally done!
+                                <br> › Moving "selfship" to the shrine section!
+                            </p>
+                            <p>22/10/24<br>› New menu style in art page! Go check the gallery!</p>
+                            <p>21/10/24<br>› New banner and changed the sunflower image!<br> › Little display changes.
+                            </p>
+                            <p>16/10/24<br>› New about me page. <br>› Changes on the landing page.<br>› Art gallery
+                                finally fixed</p>
+                            <p>02/10/24<br>› Another index update on the main page... <br>›Phone view removed again.</p>
+                            <p>08/10/24<br>› added more things to my art gallery <br> ›Moved collection to the sidebar
+                            </p>
+                            <p>02/10/24<br>› BIG index changes, includes: a "to do" list, pausable autplay, "of the
+                                week" thingy</p>
+                            <p>Nov 27 to Oct 1<br> › More display changes, in index and about me. <br>› Guestbook added.
+                            </p>
+                            <p> 26/09/24<br> › Display and banner changes.<br>›Wip of The X files shrine</p>
+                            <p> 25/09/24<br>› Shrine page added!!! Some are still in the making but pvz is there. <br>›
+                                Changes on Error page. <br> ›Gify pet removed... It will come back, im making a Zen
+                                Garden. </p>
+                            <p> 24/09/24<br>› Changes in navigation, Gallery and Funniez is its own button (only gallery
+                                is completed)<br>› New background</p>
+                            <p> 23/09/24<br>› More display changes :P + pvz font replaced with comic sans 'cause is
+                                easier to read.</p>
+                            <p> 22/09/24<br>› phone display removed until i fix it.</p>
+                            <p> 17/09/24<br>› Display changes in the rest of pages.</p>
+                            <p> 18/09/24<br>› PHONE DISPLAY IN DEMO!!!!</p>
+                            <p> 17/09/24<br>› Display update! it may not look good on phone... also, "About me" page
+                                will look a little weird 'cause I'm configuring the flexbox.</p>
+                            <p> 16/09/24<br>› I don't know how to place the text to the side please help<br>› nvm i
+                                fixed it.... kinda</p>
+                            <p> 15/09/24<br>› Font and layout modifications.<br>› Sidebars removed from the rest of
+                                sections, replaced with a "Go back?" button.<br>› Alt theme added :3</p>
+                            <p> 14/09/24<br>› Demo for lytebox<br>› Updates and "funny stuff" changed places.</p>
+                            <p> 13/09/24<br>› New songs added!<br>› "Funny stuff" now rebranded as "Funniez" and placed
+                                below gallery, more stuff coming soon.</p>
+                            <p> 12/09/24<br>› Funny stuff added<br>› Friends section demo now added.<br>› Charlie
+                                section still a wip.<br>› PVZ added ?!?! doesn't work on phone ppipii.<br>› Made buttons
+                                for the art section</p>
+                            <p> 11/09/24<br>› social media links moved to "about me".</p>
+                            <p> 10/09/24<br>› Changed padding and button hover</p>
+                            <p> 09/09/24<br>› webamp added! can't be moved around in mobile though. Also new pet added!
+                            </p>
+                            <p> 08/09/24<br>› About and Collection section - completed, may add more things</p>
+                            <p> 07/09/24<br>› Float image changed :3</p>
+                            <p> 06/09/24<br>› Selfship shrine completed</p>
+                            <p> 03/09/24<br>› Removed mask on float, aligned text</p>
+                            <p> 01/09/24<br>› Moved Art and collection to their own navigation section</p>
+                            <p> 30/08/24<br>› Layout changed to look PVZ themed<br>› Collection and art section created!
+                            </p>
+                            <p> 24/08/24<br>› Site created!</p>
+                        </div>
+                        <div id="to-do" style="display: none;">
+                            <p><s>Add a: whatever... Of the week!</s></p>
+                            <p><s>fix art section</s></p>
+                            <p><s>Add blog thingy</s></p>
+                            <p>Finish shrines.</p>
+                            <p>Ocs page</p>
+                            <p>"Charlie" and "friends" page</p>
+                            <p>Credits page</p>
+                            <p>"Funniez"</p>
+                            <p>Make quiz on Pvz shrine</p>
+                        </div>
+                    </div>
+                    <script>
+                        function announce() {
+
+                            var x = document.getElementById("announced")
+
+                            if (x.style.display === "none") {
+
+                                x.style.display = "block"
+
+                            } else {
+
+                                x.style.display = "none"
+
+                            }
+
+                        }
+
+                        function hide_todo() {
+
+                            var x = document.getElementById("to-do")
+
+                            if (x.style.display === "block") {
+
+                                x.style.display = "none"
+
+                            } else {
+
+                                x.style.display = "none"
+
+                            }
+
+                        }
+
+                        function todo() {
+
+                            var x = document.getElementById("to-do")
+
+                            if (x.style.display === "none") {
+
+                                x.style.display = "block"
+
+                            } else {
+
+                                x.style.display = "none"
+
+                            }
+
+                        }
+
+                        function hide_announce() {
+
+                            var x = document.getElementById("announce")
+
+                            if (x.style.display === "block") {
+
+                                x.style.display = "none"
+
+                            } else {
+
+                                x.style.display = "none"
+
+                            }
+
+                        }
+
+                        function changelog() {
+
+                            var x = document.getElementById("log")
+
+                            if (x.style.display === "none") {
+
+                                x.style.display = "block"
+
+                            } else {
+
+                                x.style.display = "none"
+
+                            }
+
+                        }
+
+                        function hide_changelog() {
+
+                            var x = document.getElementById("log")
+
+                            if (x.style.display === "block") {
+
+                                x.style.display = "none"
+
+                            } else {
+
+                                x.style.display = "none"
+
+                            }
+
+                        }
+                    </script>
+                </div>
+            </div>
+
+            <div id="otro" class="bigcontainer">
+
+                <div id="otw" class="main">
+                    <h2>Whatever of the week!!</h2>
+                    <h4>Song</h4>
+                    <iframe style="border-radius:12px"
+                        src="https://web.archive.org/web/20250414224016if_/https://open.spotify.com/embed/track/6IZvVAP7VPPnsGX6bvgkqg?utm_source=generator"
+                        width="100%" height="152" frameborder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy" data-ruffle-polyfilled=""></iframe>
+                </div>
+
+                <img src="/funniez/old_site/imgs/basil_by_king_lulu_deer-dc5sdlv.gif"
+                    style="width: 73px; bottom: -121px; position: relative;" alt="">
+
+                <div id="winamp" class="main">
+                    <iframe
+                        src="https://web.archive.org/web/20250414224016if_/https://freakysunshine.neocities.org/stuff/Winamp"
+                        width="100%" height="350" allowtransparency="yes" scrolling="auto" style="border: none;"
+                        data-ruffle-polyfilled=""></iframe>
+                </div>
+
+                <img src="/funniez/old_site/imgs/fakeads.gif" width="80%" alt="fake banner ad"><img
+                    src="https://web.archive.org/web/20250414224016im_/https://graphic.neocities.org/mix_645.gif"
+                    height="60px" alt=" ">
+
+                <div id="chatbox" class="main">
+                    <iframe src="https://www3.cbox.ws/box/?boxid=3540613&boxtag=DliOqF" width="220" height="300"
+                        allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0"
+                        scrolling="auto"></iframe>
+                </div>
+
+                <div id="webrings" class="main">
+                    <h4>Webrings used to be here</h4>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--barra derecha-->
+        <div class="smallcontainer2">
+            <!--stats-->
+            <div class="sidebar2">
+                <script language="javascript" type="text/javascript"
+                    src="//counter1.fc2.com/counter.php?id=40026971&main=1"></script>
+                <noscript>
+                    <img src="//counter1.fc2.com/counter_img.php?id=40026971&main=1" />
+                </noscript>
+            </div>
+            <!--status cafe-->
+            <div class="statuscafe">
+                status cafe used to be here!
+            </div>
+            <!--guardian quiz-->
+            <div class="sidebar2">
+                <div class="results"
+                    style="width: 160px;background-color: #fff;color: #000;display: block;padding: 10px;border: 1px solid;margin: 0 auto;font-family: 'times';font-size: 15px;line-height: normal;">
+                    <p style="margin: 0">This page is protected by a</p>
+                    <h1 class="title" style="margin: 0">PARROT</h1>
+                    <img class="image" style="max-width: 160px;border: 1px solid" alt="PARROT"
+                        src="https://i.ibb.co/g442S02/parrot.jpg">
+                    <p class="description">Parrots taste with the roofs of their mouths.</p>
+                    <small><a href="https://hekate.neocities.org/">Want your own? Visit
+                            hekate.neocities.org!</a></small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
