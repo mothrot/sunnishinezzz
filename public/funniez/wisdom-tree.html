@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tree of wisdom</title>
-  <link rel="icon" type="image/x-icon" href="/archives//images/ico/sprout.gif">
+  <link rel="icon" type="image/x-icon" href="/archives/ico/sprout.gif">
   <meta name="robots" content="noindex">
 
 
   <style>
     body {
-      background: url('/funniez/images/treeofwisdom_bg.png') no-repeat;
+      background: url('/archives/assets/treeofwisdom_bg.webp') no-repeat;
       background-size: cover;
       position: relative;
       display: flex;
@@ -32,7 +32,7 @@
     }
 
     .speechbubble {
-      background: url('/archives/images/mainpage/speech_bubble.png') no-repeat;
+      background: url('/archives/assets/speech_bubble.png') no-repeat;
       background-size: cover;
       position: absolute;
       width: 220px;
@@ -60,6 +60,11 @@
       position: absolute;
       top: 580px;
       right: 590px;
+    }
+
+    #button:hover {
+      cursor: pointer;
+      filter: brightness(120%);
     }
   </style>
 
@@ -99,9 +104,9 @@
     <div class="speechbubble">
       <div id="outputDiv"> Ask me a question, and I will answer </div>
     </div>
-    <img id="tree" src="/funniez/images/treeofwisdom_.png">
+    <img id="tree" src="/archives/assets/treeofwisdom_.png">
 
-    <img id="button" src="/funniez/images/att_b.png" onclick="GenerateAnswer()">
+    <img id="button" src="/archives/assets/att_b.png" onclick="GenerateAnswer()">
 
     <input type="text" id="questionBox" size=100 value=''>
 

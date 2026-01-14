@@ -11,14 +11,14 @@
   <meta name="robots" content="noindex">
 
   <!--Favicon-->
-  <link rel="shortcut icon" href="/archives/images/ico/SunDS.webp" type="image/x-icon" />
+  <link rel="shortcut icon" href="/archives/ico/SunDS.webp" type="image/x-icon" />
 
   <!--Stylesheet-->
   <link rel="stylesheet" href="/archives/stylesheet.css" />
 
   <script>
-    function myFunction() {
-      var copyText = document.getElementById("myInput");
+    function copyButton() {
+      var copyText = document.getElementById("sunniezButton");
       copyText.select();
       copyText.setSelectionRange(0, 99999);
       navigator.clipboard.writeText(copyText.value);
@@ -26,13 +26,13 @@
     }
 
     function logsDisplay() {
-      document.getElementById("logs-tab").style.display = "block";
-      document.getElementById("aboutpage").style.display = "none";
+      document.getElementById("logs").style.display = "block";
+      document.getElementById("to-do").style.display = "none";
     }
 
-    function aboutDisplay() {
-      document.getElementById("logs-tab").style.display = "none";
-      document.getElementById("aboutpage").style.display = "block";
+    function todoDisplay() {
+      document.getElementById("logs").style.display = "none";
+      document.getElementById("to-do").style.display = "block";
     }
   </script>
 
@@ -44,12 +44,11 @@
 <body id="mainpage-body">
 
   <a href="/stuff/roadunk">
-    <img id="junkrat" src="https://files.catbox.moe/v7jvhw.webp" width="90"
-      alt="float image of Junkrat from overwatch" />
+    <img id="junkrat" src="/archives/graphics/junkrat.webp" width="90" alt="float image of Junkrat from overwatch" />
   </a>
 
   <header>
-    <img id="mainpage-head" src="/archives/images/mainpage/header.webp" alt=" sunnishinez header" />
+    <img id="mainpage-head" src="/archives/assets/header.webp" alt=" sunnishinez header" />
   </header>
 
   <div class="wrap">
@@ -94,12 +93,12 @@
           <img src="https://sunnishinez.neocities.org/button.png" alt="sunnishinez button" />
           <input type="text" style="display: none"
             value="<a href='https://sunnishinez.neocities.org'><img src='https://sunnishinez.neocities.org/button.png' alt='sunnishinez button'></a>"
-            id="myInput" />
+            id="sunniezButton" />
           <br />
-          <button onclick="myFunction()">Copy button</button>
+          <button onclick="copyButton()">Copy button</button>
         </div>
         <a href="https://sunnishinez.atabook.org">
-          <img id="guestbook" src="/archives/images/mainpage/guestbook-button.png" alt="Guestbook button" width="120" />
+          <img id="guestbook" src="/archives/assets/guestbook-button.png" alt="Guestbook button" width="120" />
         </a>
       </div>
       <br />
@@ -108,7 +107,7 @@
         name="sidelink" loading="lazy"></iframe>
       <br />
       <a href="https://en.wikipedia.org/wiki/Ophiocordyceps_unilateralis"><img
-          src="/archives/images/mainpage/shrom-guardian.png" height="250" width="200"
+          src="/archives/graphics/shrom-guardian.png" height="250" width="200"
           alt="Sunnishinez is guarded by a Ophiocordyceps unilateralis." loading="lazy"></a>
     </aside>
 
@@ -121,22 +120,21 @@
             <div id="mainindex" class="main">
               <!-- float thing-->
               <div id="profile">
-                <img src="/archives/images/mainpage/menufloat.png" width="200" alt="My oc holding a PvZ sunflower" />
+                <img src="/archives/graphics/menufloat.png" width="200" alt="My oc holding a PvZ sunflower" />
                 <div id="socials">
                   <a href="https://bsky.app/profile/sunnishinez.bsky.social">
-                    <img src="/archives/images/mainpage/Bluesky.png" width="65" alt="Link to my Bluesky profile"
-                      class="social">
+                    <img src="/archives/assets/Bluesky.png" width="65" alt="Link to my Bluesky profile" class="social">
                   </a>
                   <a href="https://spacehey.com/sunnishinez">
-                    <img src="/archives/images/mainpage/Spacehey.png" width="65" alt="Link to my Spacehey profile"
+                    <img src="/archives/assets/Spacehey.png" width="65" alt="Link to my Spacehey profile"
                       class="social">
                   </a>
                   <a href="https://forum.melonland.net/index.php?action=profile;u=3136">
-                    <img src="/archives/images/mainpage/mlf.png" width="65" alt="Link to my Meloland Forum profile"
+                    <img src="/archives/assets/mlf.png" width="65" alt="Link to my Meloland Forum profile"
                       class="social">
                   </a>
                   <a href="https://sunnishinez.tumblr.com/">
-                    <img src="/archives/images/mainpage/tumblr.png" width="65" alt="Link to my Tumblr" class="social">
+                    <img src="/archives/assets/tumblr.png" width="65" alt="Link to my Tumblr" class="social">
                   </a>
                 </div>
               </div>
@@ -158,145 +156,159 @@
             <div class="belt-buttons">
               <div class="marquee">
                 <div class="buttons">
-                  <a href="https://ocpdzim.neocities.org/"><img
+                  <a href="https://ocpdzim.neocities.org/">
+                    <img
                       src="https://64.media.tumblr.com/39344dc99c6fae05a9aecf40cad12105/5e0f128ff52d87e8-f5/s100x200/bdef71b2dbccd7916720ff3b541d6937c2c0dce0.pnj"
-                      alt="Zim button" /></a>
-                  <a href="https://confettiguts.gay/"><img src="https://confettiguts.gay/siteImg/confettiguts.gif"
-                      alt="Confetti guts web button" /></a>
+                      alt="Zim button" loading="lazy">
+                  </a>
+                  <a href="https://confettiguts.gay/">
+                    <img src="https://confettiguts.gay/siteImg/confettiguts.gif" alt="Confetti guts web button"
+                      loading="lazy"></a>
                   <a href="https://evehibi.nekoweb.org/doodlering/"><img
-                      src="https://evehibi.nekoweb.org/doodlering/button2.gif" alt="doodlering" /></a>
+                      src="https://evehibi.nekoweb.org/doodlering/button2.gif" alt="doodlering" loading="lazy"></a>
                   <a href="https://roboticoperatingbuddy.neocities.org/"><img
                       src="https://roboticoperatingbuddy.neocities.org/images/mybutton.png"
-                      alt="robotic operating buddy button" /></a>
+                      alt="robotic operating buddy button" loading="lazy"></a>
                   <a href="https://petyou.neocities.org/">
                     <img
                       src="https://64.media.tumblr.com/735a50f7a6ac42fb17ca446610281b66/62b2544cad7da2ec-67/s100x200/369fe017c71bc544c426fc6b0b7b65c6c842ed2d.pnj"
-                      alt="pet-you web button" /></a>
+                      alt="pet-you web button" loading="lazy"></a>
                   <a href="https://raining-starss.neocities.org/index.html"><img
                       src="https://raining-starss.neocities.org/raining-starss-button%20(1).gif"
-                      alt="Raining starts button" /></a>
+                      alt="Raining starts button" loading="lazy"></a>
                   <a href="https://gifypet.neocities.org"><img src="https://gifypet.neocities.org/images/badge.gif"
-                      alt="Gifypets" /></a>
+                      alt="Gifypets" loading="lazy"></a>
                   <a href="https://clownfred.zone"><img src="https://clownfred.zone/!Media/cfredzonebutton2-green.gif"
-                      alt="clownfred.zone button" /></a>
+                      alt="clownfred.zone button" loading="lazy"></a>
                   <a href="https://zombiigutz.neocities.org/"><img src="https://i.imgur.com/2SyzQCR.gif"
-                      alt="Zombiigutz" /></a>
+                      alt="Zombiigutz" loading="lazy"></a>
                   <a href="https://zappu.neocities.org/"><img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/zap.gif"
-                      alt="zappu web button" /></a>
+                      alt="zappu web button" loading="lazy"></a>
                   <a href="https://beaus-silly-folder.nekoweb.org/"><img
-                      src="https://file.garden/ZqzaaX6Iv3i3b03H/BSF_button.gif" alt="Beaus silly web button" /></a>
-                  <a href="https://mxbo.neocities.org"><img src="https://i.imgur.com/6tHd1Mx.gif"
-                      alt="MXBO web button" /></a>
-                  <a href="https://googol.neocities.org/"><img src="https://googol.neocities.org/googol_thumb.gif"
-                      alt="google web button" /></a>
+                      src="https://file.garden/ZqzaaX6Iv3i3b03H/BSF_button.gif" alt="Beaus silly web button"
+                      loading="lazy"></a>
+                  <a href="https://mxbo.neocities.org"><img src="https://i.imgur.com/6tHd1Mx.gif" alt="MXBO web button"
+                      loading="lazy"></a>
                   <iframe src="https://lavender-but-bread.neocities.org/buttons/piano-button.html" style="border: none"
                     width="88" height="31"></iframe>
                   <a href="https://pysgodyn3.neocities.org/"><img src="https://pysgodyn3.neocities.org/button.gif"
-                      alt="pysgodyn3 on neocities" /></a>
+                      alt="pysgodyn3 on neocities" loading="lazy"></a>
                   <a href="https://feelingmachine.moe/"><img src="https://feelingmachine.moe/FMbutton.gif"
-                      alt="pysgodyn3 on neocities" /></a>
-                  <a href="https://status.cafe"><img src="https://status.cafe/assets/button.png"
-                      alt="Status Cafe" /></a>
+                      alt="pysgodyn3 on neocities" loading="lazy"></a>
+                  <a href="https://status.cafe"><img src="https://status.cafe/assets/button.png" alt="Status Cafe"
+                      loading="lazy"></a>
                   <a href="https://datoxicwaltz.neocities.org"><img src="https://files.catbox.moe/4lmva0.gif"
-                      width="88px" height="31px" /></a>
+                      width="88px" height="31px" loading="lazy"></a>
                   <a href="https://maddoxxing.neocities.org/" target="_blank"><img
-                      src="https://files.catbox.moe/xpvvok.png" /></a>
+                      src="https://files.catbox.moe/xpvvok.png" loading="lazy"></a>
                   <a href="https://connorthevgfan78.neocities.org/" target="_blank"
                     title="ConnorTheVGFan78's Website!!"><img alt="ConnorTheVGFan78"
-                      src="https://connorthevgfan78.neocities.org/stuff/buttons/CTVGF78-ButtonVer1.gif" /></a>
+                      src="https://connorthevgfan78.neocities.org/stuff/buttons/CTVGF78-ButtonVer1.gif"
+                      loading="lazy"></a>
                   <a href="https://flarom.neocities.org" target="_blank"><img
-                      src="https://flarom.neocities.org/resources/buttons/lala.png"
+                      src="https://flarom.neocities.org/resources/buttons/lala.png" loading="lazy"
                       style="border-radius: 5px; transition: all 0.2s"
                       onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0px 4px 0px #2A2229';"
                       onmouseout="this.style.transform='initial'; this.style.boxShadow='initial';" /></a>
                   <a href="https://underkat.neocities.org/"><img
                       src="https://underkat.neocities.org/underkat.png" /></a>
                   <a href="https://cowboy.nekoweb.org"><img src="https://cowboy.nekoweb.org/BUTTON.gif"
-                      alt="Michael's Cowboy Heaven." width="88" height="31" />
+                      alt="Michael's Cowboy Heaven." width="88" height="31" loading="lazy">
                   </a>
-                  <a href="https://pinchimundo.neocities.org/"><img src="https://files.catbox.moe/66jtcl.png" />
+                  <a href="https://pinchimundo.neocities.org/"><img src="https://files.catbox.moe/66jtcl.png"
+                      loading="lazy">
                   </a>
-                  <a href="https://juneberry.neocities.org/"><img src="https://files.catbox.moe/31wnyw.png" />
+                  <a href="https://juneberry.neocities.org/"><img src="https://files.catbox.moe/31wnyw.png"
+                      loading="lazy">
                   </a>
-                  <a href="https://cult-master-status.neocities.org/"><img src="https://files.catbox.moe/vpsu99.gif" />
+                  <a href="https://cult-master-status.neocities.org/"><img src="https://files.catbox.moe/vpsu99.gif"
+                      loading="lazy">
                   </a>
-                  <a href="https://ninacti0n.art/"><img src="https://ninacti0n.art/assets/buttons/New%20button.gif" />
+                  <a href="https://ninacti0n.art/"><img src="https://ninacti0n.art/assets/buttons/New%20button.gif"
+                      loading="lazy">
                   </a>
-                  <a href="https://dears.nekoweb.org"><img src="https://dears.nekoweb.org/sitebuttonv2b.gif"
-                      alt="dears" /></a>
+                  <a href="https://dears.nekoweb.org"><img src="https://dears.nekoweb.org/sitebuttonv2b.gif" alt="dears"
+                      loading="lazy"></a>
                   <a href="https://huroncelestial.neocities.org"><img
-                      src="https://huroncelestial.neocities.org/BUTTON.gif" /></a>
+                      src="https://huroncelestial.neocities.org/BUTTON.gif" loading="lazy"></a>
                   <a href="https://petrapixel.neocities.org/" target="_blank"><img
                       src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/assets/img/linkback.gif"
-                      alt="petrapixel" /></a>
+                      alt="petrapixel" loading="lazy"></a>
                   <a href="https://what-meworry.neocities.org/" target="_blank"><img
-                      src="https://i.imgur.com/m3NkvKq.png" alt="what-meworry" /></a>
+                      src="https://i.imgur.com/m3NkvKq.png" alt="what-meworry" loading="lazy"></a>
                   <a href="https://daisybells.neocities.org/"><img
                       src="https://daisybells.neocities.org/_Assets/homepage/siteLinks/daisybellsCentral.png"
-                      alt="daisy bells button" /></a>
+                      alt="daisy bells button" loading="lazy"></a>
                   <a href="https://aoki553.nekoweb.org/" target="_blank"><img
-                      src="https://aoki553.neocities.org/nekoweb/deco/aoki553button.gif" alt="aoki553" /></a>
+                      src="https://aoki553.neocities.org/nekoweb/deco/aoki553button.gif" alt="aoki553"
+                      loading="lazy"></a>
                   <a href="https://decahedron.neocities.org/" target="_blank"><img
-                      src="https://decahedron.neocities.org/assets/button.gif" alt="decahedron" /></a>
-                  <a href="https://www.virtuagirl.net"><img src="https://i.imgur.com/yaA0mNF.gif" /></a>
+                      src="https://decahedron.neocities.org/assets/button.gif" alt="decahedron" loading="lazy"></a>
+                  <a href="https://www.virtuagirl.net"><img src="https://i.imgur.com/yaA0mNF.gif" loading="lazy"></a>
                   <a href="https://mintywyvern.neocities.org" target="_blank"><img
-                      src="https://files.catbox.moe/2sao4q.png" /></a>
+                      src="https://files.catbox.moe/2sao4q.png" loading="lazy"></a>
                   <a href="https://bishoujopalace.neocities.org/"><img
-                      src="https://bishoujopalace.neocities.org/WG/ezgif.com-animated-gif-maker1.gif" /></a>
+                      src="https://bishoujopalace.neocities.org/WG/ezgif.com-animated-gif-maker1.gif"
+                      loading="lazy"></a>
                   <a href="https://mavisdeluna.art/" target="_blank"><img src="https://i.imgur.com/RDDAR3n.gif"
-                      alt="The Moon Palace" /></a>
+                      alt="The Moon Palace" loading="lazy"></a>
                   <a href="https://luziekennel.nekoweb.org/"><img
-                      src="https://luziekennel.nekoweb.org/graphics/link.gif" /></a>
+                      src="https://luziekennel.nekoweb.org/graphics/link.gif" loading="lazy"></a>
                   <a href="https://nomi.gay/" target="_blank"><img src="https://file.garden/aMCkWckcsFdLNPpz/button.gif"
-                      alt="Nomi.gay" /></a>
+                      alt="Nomi.gay" loading="lazy"></a>
                   <a href="https://goooby.neocities.org/"><img
-                      src="https://goooby.neocities.org/buttons/goobbutton3.gif" alt="Nomi.gay" /></a>
+                      src="https://goooby.neocities.org/buttons/goobbutton3.gif" alt="Nomi.gay" loading="lazy"></a>
                   <a href="https://kirbydogs.neocities.org/"><img
                       src="https://kirbydogs.neocities.org/location-img/buttons/KDP%20and%20Inflect%20Now!.png"
-                      title="Visit KDP, today!" width="88" /></a>
+                      title="Visit KDP, today!" width="88" loading="lazy"></a>
                   <a href="https://the-game-hoard.neocities.org/" target="_blank"><img
                       src="https://the-game-hoard.neocities.org/Button/PersonalButton/button-FINAL-UM_0001.png"
-                      alt="TheHoardsButton" /></a>
+                      alt="TheHoardsButton" loading="lazy"></a>
                   <a href="https://paz01997.neocities.org/"><img
-                      src="https://paz01997.neocities.org/pictures/buttonsads/pazbutton.gif" /></a>
+                      src="https://paz01997.neocities.org/pictures/buttonsads/pazbutton.gif" loading="lazy"></a>
                   <a href="https://ruralrose.neocities.org/"><img
-                      src="https://ruralrose.neocities.org/marshmellow%20theme/buttonnew.gif" /></a>
-                  <a href="https://melody-nomas.neocities.org/"><img src="https://files.catbox.moe/znsxfv.png" /></a>
+                      src="https://ruralrose.neocities.org/marshmellow%20theme/buttonnew.gif" loading="lazy"></a>
+                  <a href="https://melody-nomas.neocities.org/"><img src="https://files.catbox.moe/znsxfv.png"
+                      loading="lazy"></a>
                   <a href="https://vanillamilkshake.neocities.org"><img src="https://files.catbox.moe/ij4w4u.png"
-                      width="88" height="31" /></a>
+                      width="88" height="31" loading="lazy"></a>
                   <a href="https://valentines-archive.neocities.org" target="_blank"><img
-                      src="https://files.catbox.moe/8utnwr.jpg" width="88" height="31" /></a>
+                      src="https://files.catbox.moe/8utnwr.jpg" width="88" height="31" loading="lazy"></a>
                   <a href="https://kanandraw.neocities.org/"><img
-                      src="https://kanandraw.neocities.org/stampimg/kananbutton.gif" /></a>
-                  <a href="https://bennizone.net/"><img src="https://bennizone.net/graphix/sharpiebanner.gif" /></a>
+                      src="https://kanandraw.neocities.org/stampimg/kananbutton.gif" loading="lazy"></a>
+                  <a href="https://bennizone.net/"><img src="https://bennizone.net/graphix/sharpiebanner.gif"
+                      loading="lazy"></a>
                   <a href="https://davemiller.neocities.org/" target="_blank"><img
                       src="https://file.garden/ZUFS5P2dI3BS8SLG/imgs/davemiller_button.gif"
-                      alt="button to davemiller's neocities page" /></a>
+                      alt="button to davemiller's neocities page" loading="lazy"></a>
                   <a href="https://yume-ring.neocities.org/" target="_blank"><img
-                      src="https://i.ibb.co/KjBRBPy/yumering-88x31.png" alt="button to yume-ring" /></a>
+                      src="https://i.ibb.co/KjBRBPy/yumering-88x31.png" alt="button to yume-ring" loading="lazy"></a>
                   <a href="https://testtubesterone.nekoweb.org/" target="_blank"><img
-                      src="https://testtubesterone.nekoweb.org/testtubesterone.png"
-                      alt="button to testtubesterone" /></a>
+                      src="https://testtubesterone.nekoweb.org/testtubesterone.png" alt="button to testtubesterone"
+                      loading="lazy"></a>
                   <a href="https://solaria.neocities.org/" target="_blank"><img
-                      src="https://solaria.neocities.org/buttons/sites/solaria.png" alt="button to solaria" /></a>
+                      src="https://solaria.neocities.org/buttons/sites/solaria.png" alt="button to solaria"
+                      loading="lazy"></a>
                   <a href="https://jackisnotbright.neocities.org/" target="_blank"><img
-                      src="https://jackisnotbright.neocities.org/revamp/NEWLINKBACK.gif" /></a>
+                      src="https://jackisnotbright.neocities.org/revamp/NEWLINKBACK.gif" loading="lazy"></a>
                   <a href="https://web.archive.org/web/20250403224848/https://sekibanki.neocities.org/"><img
-                      src="https://i.imgur.com/JGfPEnM.jpeg" /></a>
-                  <a href="https://novalite.rest/"><img src="https://novalite.rest/siteImage/siteBtn.png" /></a>
-                  <a href="https://alliedalmond.nekoweb.org/index.html/"><img
-                      src="https://i.ibb.co/f3tdLH2/almond.gif" /></a>
+                      src="https://i.imgur.com/JGfPEnM.jpeg" loading="lazy"></a>
+                  <a href="https://novalite.rest/"><img src="https://novalite.rest/siteImage/siteBtn.png"
+                      loading="lazy"></a>
+                  <a href="https://alliedalmond.nekoweb.org/index.html/"><img src="https://i.ibb.co/f3tdLH2/almond.gif"
+                      loading="lazy"></a>
                   <a href="https://jigsaw.w3.org/css-validator/check/referer"><img
                       style="border: 0; width: 88px; height: 31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
-                      alt="Valid CSS!" /></a>
+                      alt="Valid CSS!" loading="lazy"></a>
                   <a href="https://welcometowelcomehome.wiki/"><IMG
-                      SRC="https://welcometowelcomehome.neocities.org/WHwikibutton.png"></a>
+                      SRC="https://welcometowelcomehome.neocities.org/WHwikibutton.png" loading="lazy"></a>
                   <a href="https://sites.google.com/view/cantopenpage/"><img
-                      src="https://scmnews5.wordpress.com/wp-content/uploads/2025/06/img_0745.gif?w=88"></a>
+                      src="https://scmnews5.wordpress.com/wp-content/uploads/2025/06/img_0745.gif?w=88"
+                      loading="lazy"></a>
                   <a href="https://websitelink.neocities.org/"><img
-                      src="https://websitelink.neocities.org/imgs/button58.gif"></a>
+                      src="https://websitelink.neocities.org/imgs/button58.gif" loading="lazy"></a>
                   <a href="https://cherrysplat.neocities.org/"><img
-                      src="https://cherrysplat.neocities.org/buttons/cherrysplat-btn.gif"></a>
+                      src="https://cherrysplat.neocities.org/buttons/cherrysplat-btn.gif" loading="lazy"></a>
                 </div>
               </div>
             </div>
@@ -304,40 +316,22 @@
           <div id="sideinfo" class="smallcontainer">
             <div id="info-buttons">
               <button id="logs-button" onclick="logsDisplay()"></button>
-              <button id="about-button" onclick="aboutDisplay()"></button>
+              <button id="to-do-button" onclick="aboutDisplay()"></button>
             </div>
-            <div class="main" id="aboutpage" style="display: none">
-              <div class="tittlebox">About Sunnishinez</div>
-              <p>
-                As put in the introduction... This is an eternal w.i.p! I
-                first started in neocities with the idea of making something
-                for my beautiful girlfriend Charlie, but I didn't have the
-                knowledge for it so I left it behind.<br /><br />Time later I
-                would try to retake the project for something bigger after
-                while exploring to SpaceHey I found a template for
-                Neocities!<br />
-                I did NOT have any idea of what I was doing and struggling
-                HARD, so (as many) I had to actually LEARN (shout out to
-                w3schools), and at the same time (I think) the popularity of
-                Plants vs Zombies from the fusion mods RAISED so it
-                <b>clearly</b> influenced on the theme of the site.<br /><br /><i>Fun-fact: the site was first named
-                  'freakysunshine', not
-                  because of the PvZ Sunflower or something, but because I use
-                  the name Sunny and I'm a FREAK 👅</i><br /><br />Now I just hope my site becomes a fun place to
-                interact with! I want to include mini-games, art, interactive
-                stuff and some<s>really obscure and definetely not crazy</s>
-                easter egg!!<br />
-                And I'm really glad how is coming out ^^ <br /><br /><b>
-                  ALSO SHOUT OUT TO MY VISITORS HELL YEAHHHHHHHHHHHHHHHHH</b>
-              </p>
-            </div>
-            <div id="logs-tab">
+            <div class="paper-note">
+              <div id="to-do">
+                <h2>To-Do:</h2>
+                <ul>
+                  <li>Finish shrines layouts: X-files, selfship, ships and music</li>
+                  <li>My gf's page</li>
+                  <li>Friends page</li>
+                  <li>Style resources page</li>
+                  <li>Style photobook</li>
+                  <li>Style blog</li>
+                </ul>
+              </div>
               <div id="logs">
                 <h2>Updates :</h2>
-                <details>
-                  <summary>Working on:</summary>
-                  <p>Fixing shrines and display</p>
-                </details>
                 <p>12/30/2025<br>› Fixes on the fnaf shrine<br>› New widgets for the sapphic webring and new menu<br>›
                   slight changes to "about me"<br>› Fixes on the fnaf shrine<br>› New art added to the gallery<br>› New
                   stuff added to graphics</p>
@@ -583,11 +577,11 @@
               <div id="description">finally...</div>
               <p id="newtitle">PvZ webring!</p>
               <a href="https://plantsvszombiez.neocities.org/">
-                <img src="/archives/images/mainpage/govisit.png" id="visitbutton" alt="visit new page button">
+                <img src="/archives/assets/govisit.png" id="visitbutton" alt="visit new page button">
               </a>
             </div>
             <div id="otw" class="main">
-              <div class="tittlebox">video of the week</div>
+              <div class="tittlebox">Pic of the week</div>
               <img src="https://i.pinimg.com/1200x/bb/1a/3f/bb1a3f77bb137414503336d29a497ef0.jpg"
                 alt="Charlie from the fnaf 2 movie asking for help but the adults say 'MINORS DNI'" width="220">
               <br>
@@ -672,7 +666,7 @@
                 <div id="speechbubble">
                   <p id="quote-display">Click on me to get a quote !</p>
                 </div>
-                <img id="sunflower" src="/archives/images/mainpage/sunflowerr.png" width="200px" loading="lazy">
+                <img id="sunflower" src="/archives/graphics/sunflowerr.png" width="200px" loading="lazy">
                 <audio id="sun-sound" src="https://files.catbox.moe/wz1g09.mp3" preload="auto"></audio>
                 <script src="/archives/scripts/sunquotes.js"></script>
               </div>
@@ -717,7 +711,7 @@
         <!--music-->
         <div class="minibox" style="height: 85px">
           <p>
-            Now playing <img src="https://files.catbox.moe/mst708.gif" /> :
+            Now playing <img src="/archives/graphics/icon_speaker.png" width="20"> :
           </p>
           <iframe id="music-w"
             src="https://petrapixel.neocities.org/widgets/lastfm?center=1&marquee=1&font-family=Comic Sans MS, Comic Sans, fantasy&font-size=14px&color=#00000&username=Mothrarot&swapPositions=0&delimiter=by&underline=0"
@@ -726,37 +720,37 @@
         <!--cliques-->
         <div class="tittlebox">Cliques</div>
         <div class="minibox">
-          <a href="https://pkmn.aquarels.net/">
-            <img src="/archives/images/listncliq/Keldeo.png" title="Keldeo <3" loading="lazy">
+          <a href="https://pkmn.aquarel.nu/">
+            <img src="/archives/graphics/Keldeo.png" title="Keldeo <3" loading="lazy">
           </a>
           <a href="https://lovesick.cafe/esoterica/angelnumbers">
             <img src="https://i.ibb.co/sWFXS7s/tiny-999.png" title="Release" loading="lazy">
           </a>
           <a href="https://bungle.online/clique">
-            <img src="/archives/images/listncliq/angel.png" alt="Angel resting upon a computer" loading="lazy">
+            <img src="/archives/graphics/angel.png" alt="Angel resting upon a computer" loading="lazy">
           </a>
           <div id="text-cliques" style="font-size: 12px">
-            <img src="/archives/images/listncliq/wing1.png" loading="lazy"> I am
+            <img src="/archives/graphics/wing1.png" loading="lazy"> I am
             <a href="https://macaque.neocities.org/trickyfox/"> angelic ♥</a>
-            <img src="/archives/images/listncliq/wing2.png" loading="lazy">
+            <img src="/archives/graphics/wing2.png" loading="lazy">
             <br />
             <a href="https://macaque.neocities.org/trickyfox/">LINKED !</a>
-            <img src="/archives/images/listncliq/linked.png" loading="lazy"> Mima Kirigoe
+            <img src="/archives/graphics/linked.png" loading="lazy"> Mima Kirigoe
             <br />
-            <a href="http://cliqued.wings.nu/">OTF <img src="/archives/images/listncliq/red.png" loading="lazy">
+            <a href="http://cliqued.wings.nu/">OTF <img src="/archives/graphics/red.png" loading="lazy">
             </a>
             Welcome Home! <br />
             Gorillaz
             <a href="http://cliqued.wings.nu/">
-              <img src="/archives/images/listncliq/green.png" loading="lazy">
+              <img src="/archives/graphics/green.png" loading="lazy">
             </a>
             <a href="https://www.youtube.com/watch?v=5qJp6xlKEug">Saturnz Barz</a>
             <br />
             <a href="http://cliqued.wings.nu/">Rock me!</a>
-            <img src="/archives/images/listncliq/rockme.png" loading="lazy">Los Prisioneros
+            <img src="/archives/graphics/rockme.png" loading="lazy">Los Prisioneros
             <br />
             <a href="https://lazer-bunny.neocities.org/Cliques">My OTP</a>
-            <img src="/archives/images/listncliq/genmui.png" alt="My OTP" loading="lazy">Genmui
+            <img src="/archives/graphics/genmui.png" alt="My OTP" loading="lazy">Genmui
             <br />
             <a href="https://petrapixel.neocities.org/cliques">gore</a> //
             BLOOD
@@ -771,54 +765,54 @@
             𝄞 Five More Nights
           </div>
           <a href="https://dust.kuchiki.net/" target="_blank">
-            <img src="/archives/images/listncliq/sagi.gif" title="celestial divine // Sagittarius" loading="lazy">
+            <img src="/archives/graphics/sagi.gif" title="celestial divine // Sagittarius" loading="lazy">
           </a>
           <a href="https://dust.kuchiki.net/" target="_blank">
-            <img src="/archives/images/listncliq/yuri.gif" title="i love anime // YURI" loading="lazy">
+            <img src="/archives/graphics/yuri.gif" title="i love anime // YURI" loading="lazy">
           </a>
           <a href="https://dust.kuchiki.net/" target="_blank">
-            <img src="/archives/images/listncliq/yaoi.gif" title="i love anime // YAOI" loading="lazy">
+            <img src="/archives/graphics/yaoi.gif" title="i love anime // YAOI" loading="lazy">
           </a>
           <a href="https://dust.kuchiki.net/" target="_blank">
-            <img src="/archives/images/listncliq/cats.gif" title="catastic!!" loading="lazy">
+            <img src="/archives/graphics/cats.gif" title="catastic!!" loading="lazy">
           </a>
           <a href="http://deathbusters.org/romantic/" target="_blank">
-            <img src="/archives/images/listncliq/hopeless.gif" title="I am a Hopeless Romantic ♥" loading="lazy">
+            <img src="/archives/graphics/hopeless.gif" title="I am a Hopeless Romantic ♥" loading="lazy">
           </a>
           <br />
           <div id="YumeRing">
-            <script src="archives/scripts/yume.js"></script>
+            <script src="/archives/scripts/yume.js"></script>
           </div>
           <br />
         </div>
         <div class="tittlebox">Fanlisting!</div>
         <div class="minibox" id="fanlists">
           <a href="https://162candles.com/fnaf/index.php">
-            <img src="/archives/images/listncliq/fnaf.png" loading="lazy">
+            <img src="/archives/graphics/fnaf.png" loading="lazy">
           </a>
           <a href="https://decembergirl.net/xfiles/index.php">
-            <img src="/archives/images/listncliq/xfiles.png" loading="lazy">
+            <img src="/archives/graphics/xfiles.png" loading="lazy">
           </a>
           <a href="https://fan.after-death.org/slayer">
-            <img src="/archives/images/listncliq/mui.png" loading="lazy">
+            <img src="/archives/graphics/mui.png" loading="lazy">
           </a>
           <a href="https://fans.thislove.nu/mozilla">
-            <img src="/archives/images/listncliq/Mozilla_fanlisting.png" loading="lazy">
+            <img src="/archives/graphics/Mozilla_fanlisting.png" loading="lazy">
           </a>
           <a href="https://mikh.net/rats/index.php">
-            <img src="/archives/images/listncliq/rat.png" loading="lazy">
+            <img src="/archives/graphics/rat.png" loading="lazy">
           </a>
           <a href="https://www.ladyrose.buruma.net/gorillaz/index.php">
-            <img src="/archives/images/listncliq/gorillaz.png" loading="lazy">
+            <img src="/archives/graphics/gorillaz.png" loading="lazy">
           </a>
           <a href="https://precious-memory.net/nature/flowers/">
-            <img src="/archives/images/listncliq/roses.gif" loading="lazy">
+            <img src="/archives/graphics/roses.gif" loading="lazy">
           </a>
           <a href="https://theatregirl.net/christianity/index.php">
-            <img src="/archives/images/listncliq/christianity.png" loading="lazy">
+            <img src="/archives/graphics/christianity.png" loading="lazy">
           </a>
           <a href="https://theatregirl.net/fanfics/index.php">
-            <img src="/archives/images/listncliq/fanfiction.png" loading="lazy">
+            <img src="/archives/graphics/fanfiction.png" loading="lazy">
           </a>
         </div>
       </div>

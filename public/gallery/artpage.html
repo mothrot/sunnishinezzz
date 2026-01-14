@@ -8,7 +8,7 @@
     <title>My art! :3</title>
     <meta name="robots" content="noindex">
     <!--Favicon-->
-    <link rel="icon" type="image/x-icon" href="/archives/images/ico/night-star.gif">
+    <link rel="icon" type="image/x-icon" href="/archives/ico/night-star.gif">
 
     <style>
         html {
@@ -17,7 +17,7 @@
         }
 
         body {
-            background: url('/archives/images/bgs/menu-selector-by-Cautious_Peanut.webp') center no-repeat fixed;
+            background: url('/archives/assets/menu-selector-by-Cautious_Peanut.webp') center no-repeat fixed;
             background-size: cover;
             position: relative;
             display: flex;
@@ -44,7 +44,7 @@
 
         .menu {
             position: absolute;
-            background-image: url(/gallery/elements/artpagemenu.png);
+            background-image: url('/archives/assets/artpagemenu.png');
             background-size: cover;
             width: 335px;
             height: 407px;
@@ -62,6 +62,10 @@
             border: none;
         }
 
+        .digital:hover {
+            cursor: pointer;
+        }
+
         .traditional {
             width: 268px;
             top: 216px;
@@ -70,6 +74,10 @@
             position: absolute;
             background: none;
             border: none;
+        }
+
+        .traditional:hover {
+            cursor: pointer;
         }
 
         .display {
@@ -150,14 +158,14 @@
     <main>
 
         <div class="box">
-            <img id="rat" src="/gallery/elements/rat.png">
+            <img id="rat" src="/archives/graphics/the_rat.png" title="my fursona... the rat! :3">
             <div class="menu">
                 <button class="digital" onclick="showDigi()"></button>
                 <button class="traditional" onclick="showTrad()"></button>
             </div>
 
             <div class="display">
-                <img id="note" src="/gallery/elements/expnote.png"
+                <img id="note" src="/archives/assets/expnote.png"
                     title="click on the wooden planks to display the galleries!">
 
                 <div id="dig-display" style="display:none;">

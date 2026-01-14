@@ -35,7 +35,7 @@ this webmaster is a <b></b> <b>Wally Darling</b> <b>yume!</b><br>
 
 .yumering #img {
     width: 100%; height: 72px;
-    background-image: url('/archives/images/listncliq/wally.gif');
+    background-image: url('/archives/graphics/wally.gif');
     border:1px solid black;
     border-radius: 2px;
     background-size:cover;

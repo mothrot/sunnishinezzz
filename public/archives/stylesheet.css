@@ -146,14 +146,14 @@ aside {
 }
 
 :root {
-  --bgimg: url('/archives/images/bgs/day-frontyard.webp');
+  --bgimg: url('/archives/assets/day-frontyard.webp');
   --text: #1d1510;
   --border: #994008;
   --bgocolor: #fce2a4;
   --sidebord: medium outset #cc6530;
   --sidebg: #b05325;
   --minibox: #fceaa4;
-  --header:  url('/archives/images/mainpage/header.webp') ;
+  --header:  url('/archives/assets/header.webp') ;
 }
 
 
@@ -188,7 +188,7 @@ aside {
 }
 
 .back {
-  background: transparent url("/archives/images/BackButton.png")
+  background: transparent url("/archives/assets/BackButton.png")
     no-repeat;
   border: none;
   width: 108px;
@@ -223,7 +223,7 @@ body#mainpage-body {
 nav#mainpage-nav {
   width: fit-content;
   height: fit-content;
-  background: url("/archives/images/mainpage/grave_navbar.png") no-repeat;
+  background: url("/archives/assets/grave_navbar.png") no-repeat;
   background-size: 100% 100%;;
 }
 ul {
@@ -259,7 +259,7 @@ ul {
 }
 
 #suvenir-display {
-  background: url("/archives/images/mainpage/sidestone.png") no-repeat;
+  background: url("/archives/assets/sidestone.png") no-repeat;
   background-size: contain;
   width: 178px;
   height: 243px;
@@ -359,22 +359,30 @@ ul {
   width: 32%;
   height: 373px;
 }
-#about-button {
-  background: url("/archives/images/mainpage/about-button.png") no-repeat;
+#to-do-button {
+  background: url("/archives/assets/to-do.png") no-repeat;
   width: 86px;
   height: 28px;
   border: transparent;
+}
+
+#to-do-button:hover {
+  filter: brightness(120%);
 }
 #logs-button {
-  background: url("/archives/images/mainpage/logs-button.png") no-repeat;
+  background: url("/archives/assets/logs-button.png") no-repeat;
   width: 86px;
   height: 28px;
   border: transparent;
 }
-#logs-tab {
+#logs-button:hover {
+  filter: brightness(120%);
+}
+
+.paper-note {
   width: 276px;
   height: 330px;
-  background-image: url(/archives/images/mainpage/paper.png);
+  background-image: url('/archives/assets/paper.png');
   background-size: 275px 330px;
   background-repeat: no-repeat;
   position: relative;
@@ -389,10 +397,11 @@ ul {
   scrollbar-width: thin;
   scrollbar-color: #e8c054 #ccdf9b05;
 }
-#aboutpage {
+#to-do {
   height: 309px;
   max-height: 309px;
   overflow-y: scroll;
+  display: none;
 }
 /* END OF WEBSITE LOGS AND ABOUT */
 
@@ -409,7 +418,7 @@ ul {
 
 /* START OF OTRO FIRST ROW*/
 #whatsnew {
-  background-image: url(/archives/images/mainpage/whatsnew.png);
+  background-image: url('/archives/assets/whatsnew.png');
   background-size: cover;
   background-repeat: no-repeat;
   width: 400px;
@@ -418,6 +427,10 @@ ul {
   border-radius: 4px;
   position: relative;
 }
+#whatsnew:hover {
+  filter: brightness(120%);
+}
+
 #thumbnail {
   height: 87px;
   background: url("/funniez/Screenshot%202025-10-30%20232344.png");
@@ -476,7 +489,7 @@ ul {
 /* cbox container display*/
 .cbox {
   width: 237px;
-  background-image: url(/archives/images/mainpage/chatbox.png);
+  background-image: url('/archives/assets/chatbox.png');
   background-repeat: no-repeat;
   background-size: contain;
   height: 380px;
@@ -511,7 +524,7 @@ ul {
 /* virus and quotes */
 #virus {
   height: 51px;
-  background-image: url(/archives/images/mainpage/virusbutton.png);
+  background-image: url('/archives/assets/virusbutton.png');
   width: 98%;
   background-size: cover;
   background-repeat: repeat;
@@ -522,7 +535,7 @@ ul {
 #quotestab {
   width: 313px;
   height: 313px;
-  background: url(/archives/images/mainpage/zengarden.png) no-repeat;
+  background: url('/archives/assets/zengarden.png') no-repeat;
   background-size: cover;
   position: relative;
   font-family: Brianne;
@@ -532,7 +545,7 @@ ul {
   border: 5px ridge #994008;
 }
 #speechbubble {
-  background: url(/archives/images/mainpage/speech_bubble.png) no-repeat;
+  background: url('/archives/assets/speech_bubble.png') no-repeat;
   background-size: cover;
   width: 201px;
   height: 128px;
@@ -553,7 +566,7 @@ ul {
 /* START OF SECOND SIDEBAR */
 
 #counter-display {
-  background-image: url(/archives/images/mainpage/sun_count.png);
+  background-image: url('/archives/assets/sun_count.png');
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -639,7 +652,7 @@ ul {
 #mainpage-foot {
   width: 910px;
   height: 136px;
-  background: url(/archives/images/mainpage/footer.png) no-repeat;
+  background: url('/archives/assets/footer.png') no-repeat;
   background-size: cover;
   position: relative;
 }
