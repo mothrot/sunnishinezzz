@@ -397,10 +397,13 @@ ul {
   scrollbar-width: thin;
   scrollbar-color: #e8c054 #ccdf9b05;
 }
-#to-do {
+#todo-list {
   height: 309px;
   max-height: 309px;
   overflow-y: scroll;
+  padding-left: 30px;
+   scrollbar-width: thin;
+  scrollbar-color: #e8c054 #ccdf9b05;
   display: none;
 }
 /* END OF WEBSITE LOGS AND ABOUT */

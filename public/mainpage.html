@@ -27,12 +27,12 @@
 
     function logsDisplay() {
       document.getElementById("logs").style.display = "block";
-      document.getElementById("to-do").style.display = "none";
+      document.getElementById("todo-list").style.display = "none";
     }
 
     function todoDisplay() {
       document.getElementById("logs").style.display = "none";
-      document.getElementById("to-do").style.display = "block";
+      document.getElementById("todo-list").style.display = "block";
     }
   </script>
 
@@ -316,10 +316,10 @@
           <div id="sideinfo" class="smallcontainer">
             <div id="info-buttons">
               <button id="logs-button" onclick="logsDisplay()"></button>
-              <button id="to-do-button" onclick="aboutDisplay()"></button>
+              <button id="to-do-button" onclick="todoDisplay()"></button>
             </div>
             <div class="paper-note">
-              <div id="to-do">
+              <div id="todo-list">
                 <h2>To-Do:</h2>
                 <ul>
                   <li>Finish shrines layouts: X-files, selfship, ships and music</li>
