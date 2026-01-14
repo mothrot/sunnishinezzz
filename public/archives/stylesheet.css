@@ -430,9 +430,6 @@ ul {
   border-radius: 4px;
   position: relative;
 }
-#whatsnew:hover {
-  filter: brightness(120%);
-}
 
 #thumbnail {
   height: 87px;
@@ -470,6 +467,10 @@ ul {
   left: 36.7%;
   width: 27%;
 }
+#visitbutton:hover {
+  filter: brightness(120%);
+}
+
 
 #otw {
   width: 32%;
