@@ -272,10 +272,18 @@ ul {
   top: 18%;
   right: 27%;
 }
+#button88:hover{
+  filter: brightness(120%);
+}
+
 #guestbook {
   position: absolute;
   top: 43%;
   right: 17%;
+}
+
+#guestbook:hover{
+  filter: brightness(120%);
 }
 /* END OF SIDEBAR 1 */
 
