@@ -257,6 +257,7 @@ ul {
   color: #ffe6ff;
   text-shadow: 2px 2px 3px #d95dae;
   box-shadow: -1px -2px 2px #00000036;
+  transition-duration: 0.1s;
 }
 
 #suvenir-display {
@@ -275,22 +276,28 @@ ul {
 }
 #button88:hover{
   filter: brightness(120%);
+  cursor: pointer;
+  transition: rotate 0.2s;
+  rotate: -3deg;
 }
 
 #guestbook {
-  position: absolute;
-  top: 43%;
-  right: 17%;
+ position: absolute;
+  top: 38%;
+  right: 15%;
 }
+
 
 #guestbook:hover{
   filter: brightness(120%);
+  rotate: 3deg;
+  transition: rotate 0.2s;
 }
 /* END OF SIDEBAR 1 */
 
 /* big containers */
 #info {
-  width: 94%;
+  width: 92%;
   flex-wrap: nowrap;
   justify-content: center;
 }
@@ -301,21 +308,15 @@ ul {
 /* START OF WEBSITE INTRO AND BUTTONS */
 #intro {
   width: 600px;
-  margin: 5px;
 }
 #mainindex {
   width: 570px;
   display: flex;
-}
-#profile {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 175px;
-  margin-left: 15px;
 }
+
 #text {
-  width: 350px;
+     width: 365px;
 }
 .belt-buttons {
   max-width: 580px;
@@ -330,13 +331,12 @@ ul {
 }
 /* belt buttons */
 .marquee {
-  width: 580px;
   overflow: hidden;
 }
 .buttons {
   display: inline-flex;
   white-space: nowrap;
-  animation: marquee 45s linear infinite;
+  animation: marquee 50s linear infinite;
 }
 .buttons:hover {
   animation-play-state: paused;
@@ -351,16 +351,15 @@ ul {
 }
 
 #socials{
-  display: flex;
-    margin: 5px;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 175px;
+  display: inline-flex;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+    width: 325px;
+    align-items: center;
 }
-
-.social {
-      width: 59px;
-    }
+#socials:hover {
+  animation-play-state: paused;
+}
 /* END OF WEBSITE INTRO AND BUTTONS */
 
 /* START OF WEBSITE LOGS AND ABOUT */
@@ -442,7 +441,7 @@ ul {
 
 #thumbnail {
   height: 87px;
-  background: url("/funniez/Screenshot%202025-10-30%20232344.png");
+  background: url("/archives/graphics/boongie_zombie.gif");
   background-size: cover;
   width: 113px;
   position: absolute;
@@ -634,6 +633,12 @@ ul {
   text-shadow: 1px 1px #0000001a;
   justify-items: center;
   padding: 1px;
+}
+
+#cliques{
+  height: 200px;
+  overflow: scroll;
+  scrollbar-width: thin;
 }
 
 /* second sidebar contents */
