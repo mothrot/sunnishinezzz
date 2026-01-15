@@ -134,6 +134,7 @@ aside {
   margin: 2px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .smallcontainer {
