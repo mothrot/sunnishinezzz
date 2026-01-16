@@ -198,6 +198,11 @@ aside {
   margin: 20px;
 }
 
+.back:hover {
+  filter: brightness(120%);
+  cursor: pointer;
+}
+
 /* MAIN PAGE CSS STARTS HERE */
 
 /* FLOAT IMAGE */
