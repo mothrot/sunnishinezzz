@@ -9,13 +9,53 @@
   <title>Photobook!!!</title>
   <meta name="robots" content="noindex">
   <!--Favicon-->
-  <link rel="icon" type="image/x-icon" href="/archives/images/ico/photos.gif">
+  <link rel="icon" type="image/x-icon" href="/archives/ico/photos.gif">
+
 
   <!--Lytebox-->
   <script type="text/javascript" language="javascript" src="/archives/scripts/lytebox.js"></script>
   <link rel="stylesheet" href="/archives/scripts/lytebox.css" type="text/css" media="screen" />
 
   <style>
+    * {
+      cursor: url(https://cur.cursors-4u.net/cursors/cur-8/cur762.cur), auto !important;
+    }
+
+    body {
+      background: url('/archives/assets/corck-board.jpg') no-repeat;
+      background-size: 100vw 49vw;
+      overflow: hidden;
+    }
+
+    .board {
+      margin: 20px;
+      overflow: scroll;
+      overflow-x: hidden;
+      height: 712px;
+      width: 78%;
+      position: absolute;
+      left: 312px;
+      top: 15px;
+      scrollbar-width: thin;
+      scrollbar-color: #ffffff #EAAF5F;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #stickynote {
+      background: url('/archives/assets/stickynote.png') no-repeat;
+      width: 330px;
+      height: 325px;
+      background-size: contain;
+    }
+
+    #goback {
+      position: absolute;
+      top: 268px;
+      left: 140px;
+    }
+
     img {
       border-top: 3px solid white;
       border-right: 3px solid white;
@@ -36,7 +76,11 @@
 
 <body>
 
-  <div class="main">
+  <div id="stickynote">
+    <a href="/mainpage.html" id="goback">Go back?</a>
+  </div>
+
+  <div class="board">
 
     <a href="https://i.postimg.cc/L6VqP2tw/20240911-143530.jpg" class="lytebox" data-lyte-options="group:photos"
       data-title="big ass sweet potatoes!!!!" data-description="September 11, 2024"><img
@@ -196,8 +240,6 @@
 
 
   </div>
-
-  <a href="/mainpage">Go back?</a>
 
 </body>
 
