@@ -1,5 +1,6 @@
 * {
   cursor: url(https://cur.cursors-4u.net/nature/nat-11/nat1006.cur), auto;
+  scrollbar-width: thin;
 }
 
 /*Fonts*/
@@ -78,10 +79,6 @@ a:hover {
 a:active {
   color: lime;
   text-shadow: 1px 1px 3px #298203;
-}
-
-html {
-  scrollbar-width: thin;
 }
 
 /*general body page*/
@@ -407,7 +404,6 @@ ul {
   position: absolute;
   top: 9px;
   right: 14px;
-  scrollbar-width: thin;
   scrollbar-color: #e8c054 #ccdf9b05;
 }
 #todo-list {
@@ -415,7 +411,6 @@ ul {
   max-height: 309px;
   overflow-y: scroll;
   padding-left: 30px;
-   scrollbar-width: thin;
   scrollbar-color: #e8c054 #ccdf9b05;
   display: none;
 }
