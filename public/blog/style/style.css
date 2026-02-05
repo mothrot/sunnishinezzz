@@ -2,10 +2,15 @@
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
    
-* {cursor: url(https://cur.cursors-4u.net/nature/nat-6/nat598.cur), auto !important;} /* End https://www.cursors-4u.com */
+* {
+  cursor: url(https://cdn.cursors-4u.net/css-previews/bobblehead-bunny-005ae02f-css.webp), auto !important;
+  scrollbar-width: thin;
+  
+} /* End https://www.cursors-4u.com */
+
 
 body {
-  background-color: #436a7b;
+  background-color: #000000;
   background-image: url('/archives/assets/stars.gif');
   font-size: 16px;
   font-family: ms gothic, 'MS PGothic', sans-serif;
@@ -36,7 +41,7 @@ header{
 
 main{
   width: 90%;
-  margin: 5px;
+  margin: 10px;
 }
 section{
   border: 2px inset rgb(214, 214, 214);
@@ -45,11 +50,15 @@ section{
 }
 
 aside{
-  margin: 5px;
+  margin: 10px;
+  text-align: center;
 }
 
 p {
   line-height: 1.6em;
+}
+*::selection {
+  background-color: #9e76fc6b;
 }
 
 hr {
@@ -90,12 +99,12 @@ img {
 }
 
 a:hover { 
-  background-color: #1f78ff8f;
+  background-color: #b99cff8f;
 }
 
 h1, h2, h3, h4, h5 {
   font-family:  ms gothic, 'MS PGothic', sans-serif;
-  color: #34436f;
+  color: #463879;
 }
 
 /*#CONTAINER is the rectangle that contains everything but the background!*/
@@ -114,10 +123,11 @@ h1, h2, h3, h4, h5 {
 
 /*HEADER STYLE*/
 #header {
-  background-color: #384879;
+  background-color: #463879;
   padding: 0 5%;
   border-width: 0 0 4px 0;
   text-align: center;
+  background: linear-gradient(#ebe6fd, #8264b6);
 }
 #header ul {
   list-style-type: none;

@@ -3,10 +3,50 @@
 
 <head>
   <title>Sunniez's blog</title>
-  <link rel="icon" href="/blog/images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="https://bettysgraphics.neocities.org/images/animals/bunny%2073.gif" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <link href="./style/style.css" rel="stylesheet" type="text/css" media="all">
+  <style>
+    .cal_calendar {
+      border: 1px solid #69658f;
+      padding: 1px;
+      background: linear-gradient(#f4f1ff, #e9dcff);
+      width: 100%;
+      margin: 0.6rem auto 0 auto;
+      height: 191px;
+      color: #586683;
+      border-radius: 5px;
+    }
+
+    .cal_calendar th {
+      border: 1px solid #69658f;
+      background: linear-gradient(50deg, #f4f1ff, #e9dcff);
+      width: 36px;
+      font-size: 0.69em;
+      border-radius: 3px;
+      color: #586683;
+      box-shadow: inset #fbceff 0 0 4px 1px;
+    }
+
+    .cal_calendar td {
+      border: 1px solid #69658f;
+      background: linear-gradient(#f4f1ff, #e9dcff);
+      text-align: center;
+      font-size: 0.8em;
+      border-radius: 3px;
+      box-shadow: inset white 0 3px 3px, inset #7c9fff45 0 0 2px 1px;
+    }
+
+    .cal_today {
+      color: #7e7cff;
+      font-weight: bold;
+    }
+
+    .cal_days_bef_aft {
+      color: #5a779e;
+    }
+  </style>
 </head>
 
 <body>
@@ -18,15 +58,20 @@
     <div id="header">This site requires JavaScript!</div>
     <div id="content" style="display: flex;">
       <aside>
-        <img src="https://bettysgraphics.neocities.org/images/animals/bunny%2073.gif">
+        <img src="https://bettysgraphics.neocities.org/images/animals/bunny%2073.gif"
+          style="image-rendering: pixelated;">
         <section>
-          Last update: uhhhhhhhhhhhhhhh
-          <img src="https://file.garden/aPcdyx6-Eg7wI_Wb/flower-0075.gif">
+          <b>Last update:</b> uhhhhhhhhhhhhhhh
+          <hr>
         </section>
-        <section>
-          <a href='https://sunnishinez.atabook.org/'><img src='https://88x31.nl/gifs/viewbook.gif'
-              alt='guestbook button'></a>
-        </section>
+        <script type="text/javascript" src="https://file.garden/ZRW6VPKULjLI59VM/500gift/cal.js"></script>
+        <script type="text/javascript">
+          calendar();
+        </script>
+        <div class="calendar"></div>
+        <a href='https://sunnishinez.atabook.org/'><img src='https://88x31.nl/gifs/viewbook.gif'
+            alt='guestbook button'></a>
+
 
       </aside>
       <main>
@@ -36,8 +81,7 @@
           a
           diary too)!<br>I used to have a mini blog in the main page but it was too tiny for me to display all I want to
           say :) So I decided to make a bigger one, I like writing!</p>
-
-
+        <hr>
         <div id="recentpostlistdiv"></div>
       </main>
     </div> <!-- end of div id="content" -->
