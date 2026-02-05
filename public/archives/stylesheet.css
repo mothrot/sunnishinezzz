@@ -446,7 +446,7 @@ ul {
 
 #thumbnail {
   height: 87px;
-  background: url("/archives/graphics/boongie_zombie.gif");
+  background: url("/archives/assets/thumbnail_g.jpg");
   background-size: cover;
   width: 113px;
   position: absolute;
@@ -640,13 +640,12 @@ ul {
   padding: 1px;
 }
 
-#cliques{
-  height: 200px;
-  overflow: scroll;
-  scrollbar-width: thin;
+/* second sidebar contents */
+
+.statuscafe{
+  position:relative;
 }
 
-/* second sidebar contents */
 #statuscafe {
   padding: 0.5em;
   border-radius: 5px;
@@ -666,6 +665,17 @@ ul {
 #statuscafe-content {
   margin: 0 1em 0.5em 1em;
 }
+
+#statuscafe::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 56px 2px 10px 10px;
+  border-color: transparent transparent #fceaa4 transparent;
+  bottom: 61px;
+  left: 70px;
+}
+
 #music-w {
   width: 195px;
 }
