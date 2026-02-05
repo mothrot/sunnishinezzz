@@ -6,14 +6,46 @@
 
 body {
   background-color: #436a7b;
-  background-image: url('/archives/assets/nightlawn.webp');
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-  font-size: 18px;
+  background-image: url('/archives/assets/stars.gif');
+  font-size: 16px;
   font-family: ms gothic, 'MS PGothic', sans-serif;
   background-attachment: fixed;
   margin: 0;
+}
+
+header{
+  background: transparent;
+   margin: 3em auto;
+  width: 90%;
+	max-width: 800px;
+  position: relative;
+}
+#bun{
+  position: absolute;
+  image-rendering: pixelated;
+  width: 110px;
+  right: 90px;
+}
+
+#title{
+  color: white;
+  image-rendering: pixelated;
+  font-size: 2.5em;
+  margin-left: 62px;
+}
+
+main{
+  width: 90%;
+  margin: 5px;
+}
+section{
+  border: 2px inset rgb(214, 214, 214);
+  padding: 5px;
+  margin-top: 10px;
+}
+
+aside{
+  margin: 5px;
 }
 
 p {
@@ -21,7 +53,7 @@ p {
 }
 
 hr {
-  border: solid #c7b591;
+  border: solid #cfcfcf;
   border-width: 2px 0 0 0;
 }
 
@@ -58,11 +90,11 @@ img {
 }
 
 a:hover { 
-  background-color: #fff6e6;
+  background-color: #1f78ff8f;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: Tahoma, Geneva, sans-serif;
+  font-family:  ms gothic, 'MS PGothic', sans-serif;
   color: #34436f;
 }
 
@@ -70,17 +102,13 @@ h1, h2, h3, h4, h5 {
 #container {
   margin: 3em auto;
   width: 90%;
-	max-width: 700px;
-	background-color: #f1e3c9;
+	max-width: 800px;
+	background-color: #ffffff;
   color: #151515; 
-  outline-color: #a9a9a9;
-  outline-style: ridge;
-  outline-width: 4px;
-  outline-offset: 0;
 }
 
 #content {
-  padding: 10px 5% 20px 5%;
+  padding: 10px 3% 20px 3%;
 }
 
 
@@ -88,9 +116,8 @@ h1, h2, h3, h4, h5 {
 #header {
   background-color: #384879;
   padding: 0 5%;
-  border-color: #a9a9a9;
-  border-style: ridge;
   border-width: 0 0 4px 0;
+  text-align: center;
 }
 #header ul {
   list-style-type: none;
@@ -144,4 +171,5 @@ h1, h2, h3, h4, h5 {
 #footer {
   font-size: 0.8em;
   padding: 0 5% 10px 5%;
+  text-align: center;
 }
