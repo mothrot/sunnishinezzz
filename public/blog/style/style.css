@@ -30,6 +30,9 @@ header{
   image-rendering: pixelated;
   width: 110px;
   right: 90px;
+  background: url('/archives/graphics/bun.png') no-repeat;
+  background-size: cover;
+  height: 130px;
 }
 
 #title{
@@ -52,6 +55,7 @@ section{
 aside{
   margin: 10px;
   text-align: center;
+  width: 40%;
 }
 
 p {
@@ -164,6 +168,10 @@ h1, h2, h3, h4, h5 {
 .moreposts {
   font-size: 0.8em;
   margin-top: 0.2em;
+}
+
+#recentpostlistdiv li{
+  margin-top: 10px;
 }
 
 /*NEXT AND PREVIOUS LINKS STYLE*/

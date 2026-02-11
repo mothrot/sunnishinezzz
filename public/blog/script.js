@@ -33,6 +33,7 @@ let authorLink = "https://sunnishinez.neocities.org/aboutme.html";
 let postsArray = [
 //[ "posts/2020-11-10-Special-Characters-Example.html", encodeURI( 'Spéci@l "Character\'s" Examp|e' ) ],
   ["posts/2025-11-01-How-to-export-on-IbisPaintX.html"],
+  ["posts/2026-02-06-My-site-ideas.html"],
 ];
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -61,7 +62,9 @@ if ( url.includes("posts/") ) {
 //Generate the Header HTML, a series of list items containing links.
 let headerHTML = '<ul> <li><a href="' + relativePath + '/index.html">Home</a></li>' + 
 '<li><a href="' + relativePath + '/archive.html">Archive</a></li>' +
-'<li><a href="/mainpage.html">Go back?</a></li> </ul>';
+  '<li><a href="/mainpage.html">Go back?</a></li> </ul>';
+
+let bannerHTML = '<div id="bun"></div> <span id="title">SUNNIEZ´S BLOG</span>';
 
 //Generate the Footer HTML, which uses the variables defined in the BASIC INFO section above to list info about the site.
 //Note: feel free to remove the references to Zonelets and Neocities! Just be careful not to delete any necessary HTML closing tags or other syntax.
@@ -177,14 +180,14 @@ if ( postsArray.length < 2 ) {
   nextprevHTML = '<a href="' + relativePath + '/index.html">Home</a>';
 } else if ( currentIndex === 0 ) {
   prevlink = postsArray[currentIndex + 1][0];
-  nextprevHTML = '<a href="' + relativePath + '/index.html">Home</a> | <a href="'+ relativePath + '/' + prevlink +'">Previous Post \u00BB</a>';
+  nextprevHTML = '<a href="' + relativePath + '/index.html">Home</a> | <a href="'+ relativePath + '/' + prevlink +'">Next Post \u00BB</a>';
 } else if ( currentIndex === postsArray.length - 1 ) {
   nextlink = postsArray[currentIndex - 1][0];
-  nextprevHTML = '<a href="' + relativePath + '/' + nextlink +'">\u00AB Next Post</a> | <a href="' + relativePath + '/index.html">Home</a>';
+  nextprevHTML = '<a href="' + relativePath + '/' + nextlink +'">\u00AB Prev Post</a> | <a href="' + relativePath + '/index.html">Home</a>';
 } else if ( 0 < currentIndex && currentIndex < postsArray.length - 1 ) {
   nextlink = postsArray[currentIndex - 1][0];
   prevlink = postsArray[currentIndex + 1][0];
-  nextprevHTML = '<a href="' + relativePath + '/'+ nextlink +'">\u00AB Next Post</a> | <a href="' + relativePath + '/index.html">Home</a> | <a href="' + relativePath + '/'+ prevlink +'">Previous Post \u00BB</a>';
+  nextprevHTML = '<a href="' + relativePath + '/'+ nextlink +'">\u00AB Prev Post</a> | <a href="' + relativePath + '/index.html">Home</a> | <a href="' + relativePath + '/'+ prevlink +'">Next Post \u00BB</a>';
 }
 
 //-----------------------------
@@ -219,6 +222,9 @@ if (document.getElementById("postDate")) {
 }
 if (document.getElementById("footer")) {
   document.getElementById("footer").innerHTML = footerHTML;
+}
+if (document.getElementById("banner")) {
+  document.getElementById("banner").innerHTML = bannerHTML;
 }
 
 //Dynamically set the HTML <title> tag from the postTitle variable we created earlier

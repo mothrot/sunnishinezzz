@@ -1,0 +1,255 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawbox !</title>
+    <link rel="icon" type="image/x-icon" href="/archives/assets/pcx.ico">
+    <style>
+        body {
+            background-color: #008083;
+            overflow: hidden;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: MS Gothic;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        canvas {
+            border: 2px inset #a6a6a6;
+            cursor: crosshair;
+        }
+
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .image-container {
+            border: 1px solid #ccc;
+            padding: 5px;
+            max-width: 200px;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #editbar {
+            list-style-type: none;
+            margin: 2 0 0 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #BDBDBD;
+            height: 20px;
+        }
+
+        #editbar li {
+            float: left;
+            font-size: 0.9em;
+            line-height: 1;
+            padding: 2px 5px;
+            outline: 0;
+        }
+
+        #editbar li:hover {
+            box-shadow: 1px 1px white inset, -1px -1px black inset;
+        }
+
+        #editbar li:active {
+            box-shadow: -1px -1px #ffffff inset, 1px 1px #000000 inset;
+            background-color: #adadad;
+        }
+
+        .window {
+            width: 585px;
+            background-color: #BDBDBD;
+            height: 600px;
+            border: #FFF 2px outset;
+            border-right: black 2px outset;
+            padding: 4px;
+        }
+
+        main {
+            float: right;
+        }
+
+        #gallery-dis {
+            position: absolute;
+            right: 65px;
+            top: 50px;
+        }
+
+        .name {
+            width: 100%;
+            background-color: #01017D;
+            height: 20px;
+            font-size: small;
+            font-weight: bold;
+            color: white;
+            padding: 2px;
+            display: flex;
+        }
+
+        .wbutton {
+            background-color: #BDBDBD;
+            width: 20px;
+            text-align: center;
+            font-size: 0.8em;
+            height: 15px;
+            margin: 0px;
+            border: none;
+            box-shadow: 1px 1px white inset, -1px -1px black inset;
+        }
+
+        .wbutton:active {
+            box-shadow: -1px -1px #ffffff inset, 1px 1px #000000 inset;
+            background-color: #adadad;
+        }
+
+        img {
+            image-rendering: pixelated;
+        }
+
+        #tools img {
+            pointer-events: none;
+        }
+
+        button {
+            border-radius: 0px;
+            border: none;
+            background-color: #BDBDBD;
+            box-shadow: 1px 1px white inset, -1px -1px black inset;
+        }
+
+        button:active {
+            box-shadow: -1px -1px #ffffff inset, 1px 1px #000000 inset;
+            background-color: #adadad;
+        }
+
+        #tools {
+            display: flex;
+            flex-direction: column;
+            margin: 2px;
+        }
+
+        #colorinput {
+            border: none;
+            background: transparent;
+            box-shadow: 1px 1px black inset, -1px -1px white inset;
+        }
+
+        #slider::-webkit-slider-thumb,
+        #slider::-moz-range-thumb {
+            width: 10px;
+            height: 15px;
+            background: #cecece;
+            cursor: pointer;
+            border-radius: 0px;
+            border: none;
+            box-shadow: 1px 1px white inset, -1px -1px black inset;
+        }
+
+        #slider {
+            background: #ececec;
+            box-shadow: -1px -1px #ffffff inset, 1px 1px #000000 inset;
+        }
+
+        #slider::-webkit-slider-thumb,
+        #slider::-moz-range-thumb:active {
+            box-shadow: -1px -1px #ffffff inset, 1px 1px #000000 inset;
+            background-color: #adadad;
+        }
+
+        #draw {
+            margin-left: 100px;
+        }
+
+        .name img {
+            margin-right: 4px;
+        }
+
+        #gallery img {
+            box-shadow: 1px 1px white inset, -1px -1px black inset;
+        }
+
+        #back {
+            position: absolute;
+            color: white;
+            text-align: center;
+        }
+
+        #back:hover {
+            background-color: #0017e29f;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="back">
+        <a href="/funniez/menu.html"> <img src="/archives/assets/pc.ico"></a>
+        <br>
+        Go back?
+    </div>
+
+    <div class="window" id="draw">
+        <div class="name">
+            <img src="/archives/assets/pcx.ico" width="15px"><span style="margin-right: 64%;">Untiltled -
+                Paint</span><button class="wbutton">_</button><button class="wbutton">☐</button><button
+                class="wbutton">X</button>
+        </div>
+        <ul id="editbar">
+            <li><u>F</u>ile</li>
+            <li><u>E</u>dit</li>
+            <li><u>V</u>iew</li>
+            <li><u>I</u>mage</li>
+            <li><u>O</u>ptions</li>
+            <li><u>H</u>elp</li>
+        </ul>
+        <div style="display: flex;flex-direction: column;">
+            <div style="display: flex;">
+                <aside id="tools">
+                    <img src="/archives/assets/tools_select.webp" width="60"
+                        style="margin-right: 5px; margin-bottom: 5px;">
+                    <br>
+                    <button onclick="Restore()">Undo</button>
+                    <button onclick="Clear()">Clear</button>
+                </aside>
+                <main>
+                    <canvas id="drawboxcanvas" width="500" height="500"></canvas>
+                    <br>
+                    <div onclick="change_color(this)" style="background:red" class="stroke-color"></div>
+                    <div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
+                </main>
+            </div>
+            <div>
+                <input type="color" oninput="stroke_color = this.value" id="colorinput">
+                <input type="range" min="1" max="100" oninput="stroke_width = this.value" id="slider">
+
+                <button id="submit">Submit</button>
+                <p id="status"></p>
+            </div>
+        </div>
+    </div>
+    <div class="window" id="gallery-dis">
+        <div class="name">
+            <img src="/archives/assets/picts.ico" width="15px"><span style="margin-right: 73%;">Gallery
+                :3</span><button class="wbutton">_</button><button class="wbutton">☐</button><button
+                class="wbutton">X</button>
+        </div>
+        <span>Welcome to the drawbox! her you can draw something for me and it will be dipslayed here :3</span>
+        <div id="gallery">Loading images...</div>
+    </div>
+    <script src="/archives/scripts/drawbox.js"></script>
+
+</body>
+
+</html>
