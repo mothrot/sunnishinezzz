@@ -9,9 +9,9 @@
 				 `·.¸ `·  ¸.·´\`·¸)
 				     `\\´´\¸.·´
 */
-const GOOGLE_FORM_ID = "1FAIpQLSfzgsyqy--oGC8WFie-MkqUU8s-EtbalS1ohWmL7dRMiKHLug";
-const ENTRY_ID = "entry.513006698";
-const GOOGLE_SHEET_ID = "1H9NtpHg8utrctBrMKfvBqD7Hjr-pj256lnqaZX942Ss";
+const GOOGLE_FORM_ID = "1FAIpQLSeECaIiEcYcRrP3BkzJo4pdyyvCZzpoqUvnRcwzpO1WqFQB9g";
+const ENTRY_ID = "entry.1169362820";
+const GOOGLE_SHEET_ID = "1C_OISB5PgtB56sQSU5-vOdp4qjavxrgHOwGioAdTarA";
 const DISPLAY_IMAGES = true;
 
 /*
