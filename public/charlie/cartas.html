@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartas!</title>
+  <meta name="robots" content="noindex" />
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="/charlie/imgs/kitty.gif">
+  <link rel="stylesheet" href="/charlie/style.css" />
+</head>
+
+<body>
+  <script>
+    let ldisplay;
+    let templates;
+    let carta;
+    let closeButtons;
+    let twentythree;
+    let twentyfour;
+    let twentyfive;
+    let tt_letter;
+    let tf_letter;
+    let tfv_letter;
+
+    document.addEventListener("DOMContentLoaded", function () {
+      ldisplay = document.getElementById("letter-display");
+      templates = document.querySelectorAll(".letter-temp");
+      carta = document.querySelectorAll(".carta");
+      closeButtons = document.querySelectorAll(".close");
+      twentythree = document.getElementById("twentythree");
+      twentyfour = document.getElementById("twentyfour");
+      twentyfive = document.getElementById("twentyfive");
+      tt_letter = document.getElementById("tt_letter");
+      tf_letter = document.getElementById("tf_letter");
+      tfv_letter = document.getElementById("tfv_letter");
+
+      // Add close button listeners
+      closeButtons.forEach((btn) => {
+        btn.addEventListener("click", closeDisplay);
+      });
+    });
+
+    function openDisplay() {
+      ldisplay.style.display = "block";
+      templates.style.display = "block";
+    }
+
+    function closeDisplay() {
+      ldisplay.style.display = "none";
+      templates.forEach((template) => {
+        template.style.display = "none";
+      });
+    }
+
+    function ttCarta() {
+      tt_letter.style.display = "block";
+      openDisplay();
+    }
+
+    function tfCarta() {
+      tf_letter.style.display = "block";
+      openDisplay();
+    }
+
+    function tfvCarta() {
+      tfv_letter.style.display = "block";
+      openDisplay();
+    }
+  </script>
+  <div id="letter-display">
+    <div class="letter-temp" id="tt_letter" style="display: none;">
+      <p>Hola Char!</p>
+      <img src="/charlie/imgs/jack.png" width="135" />
+      <audio controls>
+        <source src="https://file.garden/aPcdyx6-Eg7wI_Wb/music/Careless%20Whisper.mp3" type="audio/mpeg" />
+      </audio>
+      <p>Char quiero que sepas que eres de las mejores personitas que
+        he conocido.</p>
+      <p>Eres linda, graciosa y talentosa, amo hablar y bromear contigo! Me haces reír, sentirme feliz y sentirme
+        comodo, hasta aveces un alivio jsjsj</p>
+      <p>Incluso si hablamos solo por whasap de tanto en tanto, aprecic y amo mucho tu presencia, preocupación,
+        atención, palabras y demás.</p>
+      <p>Quiero que sepas que te quiero mucho, que eres importante para mí, que me preocupas y que siempre estaré para
+        ti cuando lo necesites!!</p>
+      <i>si ya era era feliz antes teniendote como amiga... Ahora teniendo una relación queerplatonica contigo se
+        siente se siente aún mejorjsjsjs</i>
+      <img src="/charlie/imgs/abrazo.png" width="125" />
+      <p><b>BTW hice este comic hace tiempo pero se me olvido enseñartelo:3</b></p>
+      <img src="/charlie/imgs/gotputdown.png" width="175" />
+      <img
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.tenor.com%2Fimages%2Fa0261a72251486e2168dfdbde1f1cc27%2Ftenor.gif%3Fitemid%3D17473499&f=1&nofb=1&ipt=f0e86db7037e4e60206814a0397c5e7d8d380d094b4cee3ba0d1d6e63031eac2"
+        width="145">
+      <br>
+      <button class="close">Cerrar</button>
+    </div>
+
+    <div class="letter-temp" id="tf_letter" style="display: none;">
+      <audio controls>
+        <source src="https://file.garden/aPcdyx6-Eg7wI_Wb/music/Labiosrotos.mp3" type="audio/mpeg" />
+      </audio>
+      <img src="/charlie/imgs/letter2024.png" />
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <img src="/charlie/imgs/gift.png">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <video controls width="400">
+        <source src="https://file.garden/aPcdyx6-Eg7wI_Wb/site/powerpoint.mp4" type="video/mp4" />
+      </video>
+      <br>
+      <button class="close">Cerrar</button>
+    </div>
+
+    <div class="letter-temp" id="tfv_letter" style="display: none;">
+      <br>
+      <button class="close">Cerrar</button>
+
+    </div>
+  </div>
+
+  <div class="border">
+    <div class="wrap">
+      <header class="banner"></header>
+
+      <aside>
+        <nav>
+          <ul>
+            <li><a href="/charlie/index.html">Menu</a><img src="/charlie/imgs/spiral.gif"></li>
+            <li><a href="/charlie/cartas.html">Cartas</a><img src="/charlie/imgs/carta.gif"></li>
+            <li><a href="/charlie/galeria.html">Galeria</a><img src="/charlie/imgs/phone.gif"></li>
+            <li><a href="/charlie/random.html">Random</a><img src="/charlie/imgs/gift.gif"></li>
+          </ul>
+        </nav>
+      </aside>
+      <main style="flex-direction: column;">
+        <h2>Cartas!</h2>
+        <br>
+        <div id="mail">
+          <div class="carta" id="twentythree" onclick="ttCarta()">
+            <img src="/charlie/imgs/letter.png" /><span class="tooltip">2023</span>
+          </div>
+
+          <div class="carta" id="twentyfour" onclick="tfCarta()">
+            <img src="/charlie/imgs/letter.png" /><span class="tooltip">2024</span>
+          </div>
+          <div class="carta" id="twentyfive" onclick="tfvCarta()">
+            <img src="/charlie/imgs/letter.png" /><span class="tooltip">2025</span>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+</html>
