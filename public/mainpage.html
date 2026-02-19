@@ -1,815 +1,1328 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en" id="mainpage-html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="author" content="Samy Sunniez" />
+    <meta name="description" content="main page" />
+    <title>Sunnishinez !!</title>
+    <meta name="robots" content="noindex" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="author" content="Samy Sunniez">
-  <meta name="description" content="main page">
-  <title>Sunnishinez !!</title>
-  <meta name="robots" content="noindex">
+    <!--Favicon-->
+    <link
+      rel="shortcut icon"
+      href="/archives/ico/SunDS.webp"
+      type="image/x-icon"
+    />
 
-  <!--Favicon-->
-  <link rel="shortcut icon" href="/archives/ico/SunDS.webp" type="image/x-icon" />
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="/archives/stylesheet.css" />
 
-  <!--Stylesheet-->
-  <link rel="stylesheet" href="/archives/stylesheet.css" />
+    <script>
+      function copyButton() {
+        var copyText = document.getElementById("sunniezButton");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+        alert("Copied successfully!");
+      }
 
-  <script>
-    function copyButton() {
-      var copyText = document.getElementById("sunniezButton");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      navigator.clipboard.writeText(copyText.value);
-      alert("Copied successfully!");
-    }
+      function logsDisplay() {
+        document.getElementById("logs").style.display = "block";
+        document.getElementById("todo-list").style.display = "none";
+      }
 
-    function logsDisplay() {
-      document.getElementById("logs").style.display = "block";
-      document.getElementById("todo-list").style.display = "none";
-    }
+      function todoDisplay() {
+        document.getElementById("logs").style.display = "none";
+        document.getElementById("todo-list").style.display = "block";
+      }
+    </script>
 
-    function todoDisplay() {
-      document.getElementById("logs").style.display = "none";
-      document.getElementById("todo-list").style.display = "block";
-    }
-  </script>
+    <style>
+      @media (orientation: portrait) {
+      }
+    </style>
+  </head>
 
-  <style>
-    @media (orientation: portrait) {}
-  </style>
-</head>
+  <body id="mainpage-body">
+    <a href="/stuff/roadunk">
+      <img
+        id="junkrat"
+        src="/archives/graphics/junkrat.webp"
+        width="90"
+        alt="float image of Junkrat from overwatch"
+      />
+    </a>
 
-<body id="mainpage-body">
+    <header>
+      <img
+        id="mainpage-head"
+        src="/archives/assets/header.webp"
+        alt=" sunnishinez header"
+      />
+    </header>
 
-  <a href="/stuff/roadunk">
-    <img id="junkrat" src="/archives/graphics/junkrat.webp" width="90" alt="float image of Junkrat from overwatch" />
-  </a>
-
-  <header>
-    <img id="mainpage-head" src="/archives/assets/header.webp" alt=" sunnishinez header" />
-  </header>
-
-  <div class="wrap">
-    <!--barra izquierda-->
-    <aside id="sidebar1">
-      <!--Navbar-->
-      <nav id="mainpage-nav">
-        <audio id="graveSound" src="https://file.garden/aPcdyx6-Eg7wI_Wb/music/gravebutton.ogg" preload="auto"></audio>
-        <ul id="navbar">
-          <li class="navbtn"><a href="/aboutme.html">About me</a></li>
-          <li class="navbtn" title="Gf shrine"><a href="/charlie/index.html">Charlie</a></li>
-          <li class="navbtn"><a href="/gallery/menu.html">Gallery</a></li>
-          <li class="navbtn"><a href="/blog/index.html">Blog</a></li>
-          <li class="navbtn"><a href="/shrines/menu.html">Shrines</a></li>
-          <li class="navbtn"><a href="/funniez/menu.html">Funniez</a></li>
-          <li class="navbtn" title="Friends | W.I.P"><a href="/friends.html">Friends</a></li>
-          <li class="navbtn" title="Resources"><a href="/resources.html">Resources</a></li>
-          <script>
-            const btnHover = document.querySelectorAll(".navbtn");
-            const hoverSound = document.getElementById("graveSound");
-            btnHover.forEach((item) => {
-              item.addEventListener("mouseenter", () => {
-                hoverSound.currentTime = 0; //
-                hoverSound.play();
+    <div class="wrap">
+      <!--barra izquierda-->
+      <aside id="sidebar1">
+        <!--Navbar-->
+        <nav id="mainpage-nav">
+          <audio
+            id="graveSound"
+            src="https://file.garden/aPcdyx6-Eg7wI_Wb/music/gravebutton.ogg"
+            preload="auto"
+          ></audio>
+          <ul id="navbar">
+            <li class="navbtn"><a href="/aboutme.html">About me</a></li>
+            <li class="navbtn" title="Gf shrine">
+              <a href="/charlie/index.html">Charlie</a>
+            </li>
+            <li class="navbtn"><a href="/gallery/menu.html">Gallery</a></li>
+            <li class="navbtn"><a href="/blog/index.html">Blog</a></li>
+            <li class="navbtn"><a href="/shrines/menu.html">Shrines</a></li>
+            <li class="navbtn"><a href="/funniez/menu.html">Funniez</a></li>
+            <li class="navbtn" title="Friends | W.I.P">
+              <a href="/friends.html">Friends</a>
+            </li>
+            <li class="navbtn" title="Resources">
+              <a href="/resources.html">Resources</a>
+            </li>
+            <script>
+              const btnHover = document.querySelectorAll(".navbtn");
+              const hoverSound = document.getElementById("graveSound");
+              btnHover.forEach((item) => {
+                item.addEventListener("mouseenter", () => {
+                  hoverSound.currentTime = 0; //
+                  hoverSound.play();
+                });
+                item.addEventListener("mouseleave", () => {
+                  hoverSound.pause();
+                  hoverSound.currentTime = 0;
+                });
               });
-              item.addEventListener("mouseleave", () => {
-                hoverSound.pause();
-                hoverSound.currentTime = 0;
-              });
-            });
-          </script>
-        </ul>
-      </nav>
-      <div id="suvenir-display">
-        <div id="button88">
-          <!--button-->
-          <img src="https://sunnishinez.neocities.org/button.png" alt="sunnishinez button" onclick="copyButton()"
-            title="Click to copy!">
-          <input type="text" style="display: none"
-            value="<a href='https://sunnishinez.neocities.org'><img src='https://sunnishinez.neocities.org/button.png' alt='sunnishinez button'></a>"
-            id="sunniezButton" />
+            </script>
+          </ul>
+        </nav>
+        <div id="suvenir-display">
+          <div id="button88">
+            <!--button-->
+            <img
+              src="https://sunnishinez.neocities.org/button.png"
+              alt="sunnishinez button"
+              onclick="copyButton()"
+              title="Click to copy!"
+            />
+            <input
+              type="text"
+              style="display: none"
+              value="<a href='https://sunnishinez.neocities.org'><img src='https://sunnishinez.neocities.org/button.png' alt='sunnishinez button'></a>"
+              id="sunniezButton"
+            />
+          </div>
+          <a href="https://sunnishinez.atabook.org">
+            <img
+              id="guestbook"
+              src="/archives/assets/guestbook-button.webp"
+              alt="Guestbook button"
+            />
+          </a>
         </div>
-        <a href="https://sunnishinez.atabook.org">
-          <img id="guestbook" src="/archives/assets/guestbook-button.webp" alt="Guestbook button">
-        </a>
-      </div>
-      <br />
-      <br />
-      <iframe width="150" height="450" style="border: none" src="https://dogspit.nekoweb.org/sidelink.html"
-        name="sidelink" loading="lazy"></iframe>
-      <br />
-      <a href="https://en.wikipedia.org/wiki/Ophiocordyceps_unilateralis"><img
-          src="/archives/graphics/shrom-guardian.png" height="250" width="200"
-          alt="Sunnishinez is guarded by a Ophiocordyceps unilateralis." loading="lazy"></a>
-    </aside>
+        <br />
+        <br />
+        <iframe
+          width="150"
+          height="450"
+          style="border: none"
+          src="https://dogspit.nekoweb.org/sidelink.html"
+          name="sidelink"
+          loading="lazy"
+        ></iframe>
+        <br />
+        <a href="https://en.wikipedia.org/wiki/Ophiocordyceps_unilateralis"
+          ><img
+            src="/archives/graphics/shrom-guardian.png"
+            height="250"
+            width="200"
+            alt="Sunnishinez is guarded by a Ophiocordyceps unilateralis."
+            loading="lazy"
+        /></a>
+      </aside>
 
-    <!--holds everything-->
-    <main>
-      <!--Pagebody-->
-      <div class="container">
-        <div id="info" class="bigcontainer">
-          <div id="intro" class="smallcontainer">
-            <div id="mainindex" class="main">
-              <!-- float thing-->
-              <img id="profile" src="/archives/graphics/menufloat.png" width="195"
-                alt="My oc holding a PvZ sunflower" />
-              <!-- Mucho sexo digo texto-->
-              <div id="text" style="width: 365px">
-                <h1>HI HI! Welcome to Sunnishinez!</h1>
-                <p>
-                  I'm Samy (or Sunniez), the webmaster or whatever lol<br />
-                  <br />I created this site with with love, tears and what
-                  not! (maybe blood sacrifice or something about zombies in my
-                  lawn). So please enjoy and feel free to navigate this
-                  eternal w.i.p of a site and maybe leave a comment on the
-                  guestbook and add my button !!! I'm really really proud of
-                  this :3<br />
-                  <br />
-                </p>
+      <!--holds everything-->
+      <main>
+        <!--Pagebody-->
+        <div class="container">
+          <div id="info" class="bigcontainer">
+            <div id="intro" class="smallcontainer">
+              <div id="mainindex" class="main">
+                <!-- float thing-->
+                <img
+                  id="profile"
+                  src="/archives/graphics/menufloat.png"
+                  width="195"
+                  alt="My oc holding a PvZ sunflower"
+                />
+                <!-- Mucho sexo digo texto-->
+                <div id="text" style="width: 365px">
+                  <h1>HI HI! Welcome to Sunnishinez!</h1>
+                  <p>
+                    I'm Samy (or Sunniez), the webmaster or whatever lol<br />
+                    <br />I created this site with with love, tears and what
+                    not! (maybe blood sacrifice or something about zombies in my
+                    lawn). So please enjoy and feel free to navigate this
+                    eternal w.i.p of a site and maybe leave a comment on the
+                    guestbook and add my button !!! I'm really really proud of
+                    this :3<br />
+                    <br />
+                  </p>
+                </div>
+              </div>
+              <div class="belt-buttons">
+                <div class="marquee">
+                  <div class="buttons">
+                    <a href="https://ocpdzim.neocities.org/">
+                      <img
+                        src="https://64.media.tumblr.com/39344dc99c6fae05a9aecf40cad12105/5e0f128ff52d87e8-f5/s100x200/bdef71b2dbccd7916720ff3b541d6937c2c0dce0.pnj"
+                        alt="Zim button"
+                        loading="lazy"
+                      />
+                    </a>
+                    <a href="https://evehibi.nekoweb.org/doodlering/"
+                      ><img
+                        src="https://evehibi.nekoweb.org/doodlering/button2.gif"
+                        alt="doodlering"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://roboticoperatingbuddy.neocities.org/"
+                      ><img
+                        src="https://roboticoperatingbuddy.neocities.org/images/mybutton.png"
+                        alt="robotic operating buddy button"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://petyou.neocities.org/">
+                      <img
+                        src="https://64.media.tumblr.com/735a50f7a6ac42fb17ca446610281b66/62b2544cad7da2ec-67/s100x200/369fe017c71bc544c426fc6b0b7b65c6c842ed2d.pnj"
+                        alt="pet-you web button"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://raining-starss.neocities.org/index.html"
+                      ><img
+                        src="https://raining-starss.neocities.org/raining-starss-button%20(1).gif"
+                        alt="Raining starts button"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://gifypet.neocities.org"
+                      ><img
+                        src="https://gifypet.neocities.org/images/badge.gif"
+                        alt="Gifypets"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://clownfred.zone"
+                      ><img
+                        src="https://clownfred.zone/!Media/cfredzonebutton2-green.gif"
+                        alt="clownfred.zone button"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://zombiigutz.neocities.org/"
+                      ><img
+                        src="https://i.imgur.com/2SyzQCR.gif"
+                        alt="Zombiigutz"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://zappu.neocities.org/"
+                      ><img
+                        src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/zap.gif"
+                        alt="zappu web button"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://beaus-silly-folder.nekoweb.org/"
+                      ><img
+                        src="https://file.garden/ZqzaaX6Iv3i3b03H/BSF_button.gif"
+                        alt="Beaus silly web button"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://mxbo.neocities.org"
+                      ><img
+                        src="https://i.imgur.com/6tHd1Mx.gif"
+                        alt="MXBO web button"
+                        loading="lazy"
+                    /></a>
+                    <iframe
+                      src="https://lavender-but-bread.neocities.org/buttons/piano-button.html"
+                      style="border: none"
+                      width="88"
+                      height="31"
+                    ></iframe>
+                    <a href="https://pysgodyn3.neocities.org/"
+                      ><img
+                        src="https://pysgodyn3.neocities.org/button.gif"
+                        alt="pysgodyn3 on neocities"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://feelingmachine.moe/"
+                      ><img
+                        src="https://feelingmachine.moe/FMbutton.gif"
+                        alt="pysgodyn3 on neocities"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://status.cafe"
+                      ><img
+                        src="https://status.cafe/assets/button.png"
+                        alt="Status Cafe"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://datoxicwaltz.neocities.org"
+                      ><img
+                        src="https://files.catbox.moe/4lmva0.gif"
+                        width="88px"
+                        height="31px"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://maddoxxing.neocities.org/" target="_blank"
+                      ><img
+                        src="https://files.catbox.moe/xpvvok.png"
+                        loading="lazy"
+                    /></a>
+                    <a
+                      href="https://connorthevgfan78.neocities.org/"
+                      target="_blank"
+                      title="ConnorTheVGFan78's Website!!"
+                      ><img
+                        alt="ConnorTheVGFan78"
+                        src="https://connorthevgfan78.neocities.org/stuff/buttons/CTVGF78-ButtonVer1.gif"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://flarom.neocities.org" target="_blank"
+                      ><img
+                        src="https://flarom.neocities.org/resources/buttons/lala.png"
+                        loading="lazy"
+                        style="border-radius: 5px; transition: all 0.2s"
+                        onmouseover="
+                          this.style.transform = 'translateY(-4px)';
+                          this.style.boxShadow = '0px 4px 0px #2A2229';
+                        "
+                        onmouseout="
+                          this.style.transform = 'initial';
+                          this.style.boxShadow = 'initial';
+                        "
+                    /></a>
+                    <a href="https://underkat.neocities.org/"
+                      ><img src="https://underkat.neocities.org/underkat.png"
+                    /></a>
+                    <a href="https://cowboy.nekoweb.org"
+                      ><img
+                        src="https://cowboy.nekoweb.org/BUTTON.gif"
+                        alt="Michael's Cowboy Heaven."
+                        width="88"
+                        height="31"
+                        loading="lazy"
+                      />
+                    </a>
+                    <a href="https://pinchimundo.neocities.org/"
+                      ><img
+                        src="https://files.catbox.moe/66jtcl.png"
+                        loading="lazy"
+                      />
+                    </a>
+                    <a href="https://juneberry.neocities.org/"
+                      ><img
+                        src="https://files.catbox.moe/31wnyw.png"
+                        loading="lazy"
+                      />
+                    </a>
+                    <a href="https://cult-master-status.neocities.org/"
+                      ><img
+                        src="https://files.catbox.moe/vpsu99.gif"
+                        loading="lazy"
+                      />
+                    </a>
+                    <a href="https://ninacti0n.art/"
+                      ><img
+                        src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/ninacti0ndotart.gif"
+                        loading="lazy"
+                      />
+                    </a>
+                    <a href="https://dears.nekoweb.org"
+                      ><img
+                        src="https://dears.nekoweb.org/sitebuttonv2b.gif"
+                        alt="dears"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://huroncelestial.neocities.org"
+                      ><img
+                        src="https://huroncelestial.neocities.org/BUTTON.gif"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://petrapixel.neocities.org/" target="_blank"
+                      ><img
+                        src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/assets/img/linkback.gif"
+                        alt="petrapixel"
+                        loading="lazy"
+                    /></a>
+                    <a
+                      href="https://what-meworry.neocities.org/"
+                      target="_blank"
+                      ><img
+                        src="https://i.imgur.com/m3NkvKq.png"
+                        alt="what-meworry"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://daisybells.neocities.org/"
+                      ><img
+                        src="https://daisybells.neocities.org/_Assets/homepage/siteLinks/daisybellsCentral.png"
+                        alt="daisy bells button"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://aoki553.nekoweb.org/" target="_blank"
+                      ><img
+                        src="https://aoki553.neocities.org/nekoweb/deco/aoki553button.gif"
+                        alt="aoki553"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://decahedron.neocities.org/" target="_blank"
+                      ><img
+                        src="https://decahedron.neocities.org/assets/button.gif"
+                        alt="decahedron"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://www.virtuagirl.net"
+                      ><img
+                        src="https://i.imgur.com/yaA0mNF.gif"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://mintywyvern.neocities.org" target="_blank"
+                      ><img
+                        src="https://files.catbox.moe/2sao4q.png"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://bishoujopalace.neocities.org/"
+                      ><img
+                        src="https://bishoujopalace.neocities.org/WG/ezgif.com-animated-gif-maker1.gif"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://mavisdeluna.art/" target="_blank"
+                      ><img
+                        src="https://i.imgur.com/RDDAR3n.gif"
+                        alt="The Moon Palace"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://luziekennel.nekoweb.org/"
+                      ><img
+                        src="https://luziekennel.nekoweb.org/graphics/link.gif"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://nomi.gay/" target="_blank"
+                      ><img
+                        src="https://file.garden/aMCkWckcsFdLNPpz/button.gif"
+                        alt="Nomi.gay"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://goooby.neocities.org/"
+                      ><img
+                        src="https://goooby.neocities.org/buttons/goobbutton3.gif"
+                        alt="Nomi.gay"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://kirbydogs.neocities.org/"
+                      ><img
+                        src="https://kirbydogs.neocities.org/location-img/buttons/KDP%20and%20Inflect%20Now!.png"
+                        title="Visit KDP, today!"
+                        width="88"
+                        loading="lazy"
+                    /></a>
+                    <a
+                      href="https://the-game-hoard.neocities.org/"
+                      target="_blank"
+                      ><img
+                        src="https://the-game-hoard.neocities.org/Button/PersonalButton/button-FINAL-UM_0001.png"
+                        alt="TheHoardsButton"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://paz01997.neocities.org/"
+                      ><img
+                        src="https://paz01997.neocities.org/pictures/buttonsads/pazbutton.gif"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://ruralrose.neocities.org/"
+                      ><img
+                        src="https://ruralrose.neocities.org/marshmellow%20theme/buttonnew.gif"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://melody-nomas.neocities.org/"
+                      ><img
+                        src="https://files.catbox.moe/znsxfv.png"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://vanillamilkshake.neocities.org"
+                      ><img
+                        src="https://files.catbox.moe/ij4w4u.png"
+                        width="88"
+                        height="31"
+                        loading="lazy"
+                    /></a>
+                    <a
+                      href="https://valentines-archive.neocities.org"
+                      target="_blank"
+                      ><img
+                        src="https://files.catbox.moe/8utnwr.jpg"
+                        width="88"
+                        height="31"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://kanandraw.neocities.org/"
+                      ><img
+                        src="https://kanandraw.neocities.org/stampimg/kananbutton.gif"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://bennizone.net/"
+                      ><img
+                        src="https://bennizone.net/graphix/sharpiebanner.gif"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://davemiller.neocities.org/" target="_blank"
+                      ><img
+                        src="https://file.garden/ZUFS5P2dI3BS8SLG/imgs/davemiller_button.gif"
+                        alt="button to davemiller's neocities page"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://yume-ring.neocities.org/" target="_blank"
+                      ><img
+                        src="https://i.ibb.co/KjBRBPy/yumering-88x31.png"
+                        alt="button to yume-ring"
+                        loading="lazy"
+                    /></a>
+                    <a
+                      href="https://testtubesterone.nekoweb.org/"
+                      target="_blank"
+                      ><img
+                        src="https://testtubesterone.nekoweb.org/testtubesterone.png"
+                        alt="button to testtubesterone"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://solaria.neocities.org/" target="_blank"
+                      ><img
+                        src="https://solaria.neocities.org/buttons/sites/solaria.png"
+                        alt="button to solaria"
+                        loading="lazy"
+                    /></a>
+                    <a
+                      href="https://jackisnotbright.neocities.org/"
+                      target="_blank"
+                      ><img
+                        src="https://jackisnotbright.neocities.org/revamp/NEWLINKBACK.gif"
+                        loading="lazy"
+                    /></a>
+                    <a
+                      href="https://web.archive.org/web/20250403224848/https://sekibanki.neocities.org/"
+                      ><img
+                        src="https://i.imgur.com/JGfPEnM.jpeg"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://novalite.rest/"
+                      ><img
+                        src="https://novalite.rest/siteImage/siteBtn.png"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://alliedalmond.nekoweb.org/"
+                      ><img
+                        src="https://i.ibb.co/f3tdLH2/almond.gif"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://jigsaw.w3.org/css-validator/check/referer"
+                      ><img
+                        style="border: 0; width: 88px; height: 31px"
+                        src="https://jigsaw.w3.org/css-validator/images/vcss"
+                        alt="Valid CSS!"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://welcometowelcomehome.wiki/"
+                      ><img
+                        src="https://welcometowelcomehome.neocities.org/WHwikibutton.png"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://sites.google.com/view/cantopenpage/"
+                      ><img
+                        src="https://scmnews5.wordpress.com/wp-content/uploads/2025/06/img_0745.gif?w=88"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://websitelink.neocities.org/"
+                      ><img
+                        src="https://websitelink.neocities.org/imgs/button58.gif"
+                        loading="lazy"
+                    /></a>
+                    <a href="https://cherrysplat.neocities.org/"
+                      ><img
+                        src="https://cherrysplat.neocities.org/buttons/cherrysplat-btn.gif"
+                        loading="lazy"
+                    /></a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="belt-buttons">
-              <div class="marquee">
-                <div class="buttons">
-                  <a href="https://ocpdzim.neocities.org/">
-                    <img
-                      src="https://64.media.tumblr.com/39344dc99c6fae05a9aecf40cad12105/5e0f128ff52d87e8-f5/s100x200/bdef71b2dbccd7916720ff3b541d6937c2c0dce0.pnj"
-                      alt="Zim button" loading="lazy">
-                  </a>
-                  <a href="https://evehibi.nekoweb.org/doodlering/"><img
-                      src="https://evehibi.nekoweb.org/doodlering/button2.gif" alt="doodlering" loading="lazy"></a>
-                  <a href="https://roboticoperatingbuddy.neocities.org/"><img
-                      src="https://roboticoperatingbuddy.neocities.org/images/mybutton.png"
-                      alt="robotic operating buddy button" loading="lazy"></a>
-                  <a href="https://petyou.neocities.org/">
-                    <img
-                      src="https://64.media.tumblr.com/735a50f7a6ac42fb17ca446610281b66/62b2544cad7da2ec-67/s100x200/369fe017c71bc544c426fc6b0b7b65c6c842ed2d.pnj"
-                      alt="pet-you web button" loading="lazy"></a>
-                  <a href="https://raining-starss.neocities.org/index.html"><img
-                      src="https://raining-starss.neocities.org/raining-starss-button%20(1).gif"
-                      alt="Raining starts button" loading="lazy"></a>
-                  <a href="https://gifypet.neocities.org"><img src="https://gifypet.neocities.org/images/badge.gif"
-                      alt="Gifypets" loading="lazy"></a>
-                  <a href="https://clownfred.zone"><img src="https://clownfred.zone/!Media/cfredzonebutton2-green.gif"
-                      alt="clownfred.zone button" loading="lazy"></a>
-                  <a href="https://zombiigutz.neocities.org/"><img src="https://i.imgur.com/2SyzQCR.gif"
-                      alt="Zombiigutz" loading="lazy"></a>
-                  <a href="https://zappu.neocities.org/"><img src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/zap.gif"
-                      alt="zappu web button" loading="lazy"></a>
-                  <a href="https://beaus-silly-folder.nekoweb.org/"><img
-                      src="https://file.garden/ZqzaaX6Iv3i3b03H/BSF_button.gif" alt="Beaus silly web button"
-                      loading="lazy"></a>
-                  <a href="https://mxbo.neocities.org"><img src="https://i.imgur.com/6tHd1Mx.gif" alt="MXBO web button"
-                      loading="lazy"></a>
-                  <iframe src="https://lavender-but-bread.neocities.org/buttons/piano-button.html" style="border: none"
-                    width="88" height="31"></iframe>
-                  <a href="https://pysgodyn3.neocities.org/"><img src="https://pysgodyn3.neocities.org/button.gif"
-                      alt="pysgodyn3 on neocities" loading="lazy"></a>
-                  <a href="https://feelingmachine.moe/"><img src="https://feelingmachine.moe/FMbutton.gif"
-                      alt="pysgodyn3 on neocities" loading="lazy"></a>
-                  <a href="https://status.cafe"><img src="https://status.cafe/assets/button.png" alt="Status Cafe"
-                      loading="lazy"></a>
-                  <a href="https://datoxicwaltz.neocities.org"><img src="https://files.catbox.moe/4lmva0.gif"
-                      width="88px" height="31px" loading="lazy"></a>
-                  <a href="https://maddoxxing.neocities.org/" target="_blank"><img
-                      src="https://files.catbox.moe/xpvvok.png" loading="lazy"></a>
-                  <a href="https://connorthevgfan78.neocities.org/" target="_blank"
-                    title="ConnorTheVGFan78's Website!!"><img alt="ConnorTheVGFan78"
-                      src="https://connorthevgfan78.neocities.org/stuff/buttons/CTVGF78-ButtonVer1.gif"
-                      loading="lazy"></a>
-                  <a href="https://flarom.neocities.org" target="_blank"><img
-                      src="https://flarom.neocities.org/resources/buttons/lala.png" loading="lazy"
-                      style="border-radius: 5px; transition: all 0.2s"
-                      onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0px 4px 0px #2A2229';"
-                      onmouseout="this.style.transform='initial'; this.style.boxShadow='initial';" /></a>
-                  <a href="https://underkat.neocities.org/"><img
-                      src="https://underkat.neocities.org/underkat.png" /></a>
-                  <a href="https://cowboy.nekoweb.org"><img src="https://cowboy.nekoweb.org/BUTTON.gif"
-                      alt="Michael's Cowboy Heaven." width="88" height="31" loading="lazy">
-                  </a>
-                  <a href="https://pinchimundo.neocities.org/"><img src="https://files.catbox.moe/66jtcl.png"
-                      loading="lazy">
-                  </a>
-                  <a href="https://juneberry.neocities.org/"><img src="https://files.catbox.moe/31wnyw.png"
-                      loading="lazy">
-                  </a>
-                  <a href="https://cult-master-status.neocities.org/"><img src="https://files.catbox.moe/vpsu99.gif"
-                      loading="lazy">
-                  </a>
-                  <a href="https://ninacti0n.art/"><img
-                      src="https://file.garden/aPcdyx6-Eg7wI_Wb/buttons/ninacti0ndotart.gif" loading="lazy">
-                  </a>
-                  <a href="https://dears.nekoweb.org"><img src="https://dears.nekoweb.org/sitebuttonv2b.gif" alt="dears"
-                      loading="lazy"></a>
-                  <a href="https://huroncelestial.neocities.org"><img
-                      src="https://huroncelestial.neocities.org/BUTTON.gif" loading="lazy"></a>
-                  <a href="https://petrapixel.neocities.org/" target="_blank"><img
-                      src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/assets/img/linkback.gif"
-                      alt="petrapixel" loading="lazy"></a>
-                  <a href="https://what-meworry.neocities.org/" target="_blank"><img
-                      src="https://i.imgur.com/m3NkvKq.png" alt="what-meworry" loading="lazy"></a>
-                  <a href="https://daisybells.neocities.org/"><img
-                      src="https://daisybells.neocities.org/_Assets/homepage/siteLinks/daisybellsCentral.png"
-                      alt="daisy bells button" loading="lazy"></a>
-                  <a href="https://aoki553.nekoweb.org/" target="_blank"><img
-                      src="https://aoki553.neocities.org/nekoweb/deco/aoki553button.gif" alt="aoki553"
-                      loading="lazy"></a>
-                  <a href="https://decahedron.neocities.org/" target="_blank"><img
-                      src="https://decahedron.neocities.org/assets/button.gif" alt="decahedron" loading="lazy"></a>
-                  <a href="https://www.virtuagirl.net"><img src="https://i.imgur.com/yaA0mNF.gif" loading="lazy"></a>
-                  <a href="https://mintywyvern.neocities.org" target="_blank"><img
-                      src="https://files.catbox.moe/2sao4q.png" loading="lazy"></a>
-                  <a href="https://bishoujopalace.neocities.org/"><img
-                      src="https://bishoujopalace.neocities.org/WG/ezgif.com-animated-gif-maker1.gif"
-                      loading="lazy"></a>
-                  <a href="https://mavisdeluna.art/" target="_blank"><img src="https://i.imgur.com/RDDAR3n.gif"
-                      alt="The Moon Palace" loading="lazy"></a>
-                  <a href="https://luziekennel.nekoweb.org/"><img
-                      src="https://luziekennel.nekoweb.org/graphics/link.gif" loading="lazy"></a>
-                  <a href="https://nomi.gay/" target="_blank"><img src="https://file.garden/aMCkWckcsFdLNPpz/button.gif"
-                      alt="Nomi.gay" loading="lazy"></a>
-                  <a href="https://goooby.neocities.org/"><img
-                      src="https://goooby.neocities.org/buttons/goobbutton3.gif" alt="Nomi.gay" loading="lazy"></a>
-                  <a href="https://kirbydogs.neocities.org/"><img
-                      src="https://kirbydogs.neocities.org/location-img/buttons/KDP%20and%20Inflect%20Now!.png"
-                      title="Visit KDP, today!" width="88" loading="lazy"></a>
-                  <a href="https://the-game-hoard.neocities.org/" target="_blank"><img
-                      src="https://the-game-hoard.neocities.org/Button/PersonalButton/button-FINAL-UM_0001.png"
-                      alt="TheHoardsButton" loading="lazy"></a>
-                  <a href="https://paz01997.neocities.org/"><img
-                      src="https://paz01997.neocities.org/pictures/buttonsads/pazbutton.gif" loading="lazy"></a>
-                  <a href="https://ruralrose.neocities.org/"><img
-                      src="https://ruralrose.neocities.org/marshmellow%20theme/buttonnew.gif" loading="lazy"></a>
-                  <a href="https://melody-nomas.neocities.org/"><img src="https://files.catbox.moe/znsxfv.png"
-                      loading="lazy"></a>
-                  <a href="https://vanillamilkshake.neocities.org"><img src="https://files.catbox.moe/ij4w4u.png"
-                      width="88" height="31" loading="lazy"></a>
-                  <a href="https://valentines-archive.neocities.org" target="_blank"><img
-                      src="https://files.catbox.moe/8utnwr.jpg" width="88" height="31" loading="lazy"></a>
-                  <a href="https://kanandraw.neocities.org/"><img
-                      src="https://kanandraw.neocities.org/stampimg/kananbutton.gif" loading="lazy"></a>
-                  <a href="https://bennizone.net/"><img src="https://bennizone.net/graphix/sharpiebanner.gif"
-                      loading="lazy"></a>
-                  <a href="https://davemiller.neocities.org/" target="_blank"><img
-                      src="https://file.garden/ZUFS5P2dI3BS8SLG/imgs/davemiller_button.gif"
-                      alt="button to davemiller's neocities page" loading="lazy"></a>
-                  <a href="https://yume-ring.neocities.org/" target="_blank"><img
-                      src="https://i.ibb.co/KjBRBPy/yumering-88x31.png" alt="button to yume-ring" loading="lazy"></a>
-                  <a href="https://testtubesterone.nekoweb.org/" target="_blank"><img
-                      src="https://testtubesterone.nekoweb.org/testtubesterone.png" alt="button to testtubesterone"
-                      loading="lazy"></a>
-                  <a href="https://solaria.neocities.org/" target="_blank"><img
-                      src="https://solaria.neocities.org/buttons/sites/solaria.png" alt="button to solaria"
-                      loading="lazy"></a>
-                  <a href="https://jackisnotbright.neocities.org/" target="_blank"><img
-                      src="https://jackisnotbright.neocities.org/revamp/NEWLINKBACK.gif" loading="lazy"></a>
-                  <a href="https://web.archive.org/web/20250403224848/https://sekibanki.neocities.org/"><img
-                      src="https://i.imgur.com/JGfPEnM.jpeg" loading="lazy"></a>
-                  <a href="https://novalite.rest/"><img src="https://novalite.rest/siteImage/siteBtn.png"
-                      loading="lazy"></a>
-                  <a href="https://alliedalmond.nekoweb.org/"><img src="https://i.ibb.co/f3tdLH2/almond.gif"
-                      loading="lazy"></a>
-                  <a href="https://jigsaw.w3.org/css-validator/check/referer"><img
-                      style="border: 0; width: 88px; height: 31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
-                      alt="Valid CSS!" loading="lazy"></a>
-                  <a href="https://welcometowelcomehome.wiki/"><IMG
-                      SRC="https://welcometowelcomehome.neocities.org/WHwikibutton.png" loading="lazy"></a>
-                  <a href="https://sites.google.com/view/cantopenpage/"><img
-                      src="https://scmnews5.wordpress.com/wp-content/uploads/2025/06/img_0745.gif?w=88"
-                      loading="lazy"></a>
-                  <a href="https://websitelink.neocities.org/"><img
-                      src="https://websitelink.neocities.org/imgs/button58.gif" loading="lazy"></a>
-                  <a href="https://cherrysplat.neocities.org/"><img
-                      src="https://cherrysplat.neocities.org/buttons/cherrysplat-btn.gif" loading="lazy"></a>
+            <div id="sideinfo" class="smallcontainer">
+              <div id="info-buttons">
+                <button id="logs-button" onclick="logsDisplay()"></button>
+                <button id="to-do-button" onclick="todoDisplay()"></button>
+              </div>
+              <div class="paper-note">
+                <div id="todo-list">
+                  <h2>To-Do:</h2>
+                  <ul>
+                    <li>
+                      Finish shrines layouts: X-files, selfship, ships and music
+                    </li>
+                    <li>My gf's page</li>
+                    <li>Friends page</li>
+                    <li><s>Style resources page</s></li>
+                    <li><s>Style photobook</s></li>
+                    <li><s>Style blog</s></li>
+                  </ul>
+                </div>
+                <div id="logs">
+                  <h2>Updates :</h2>
+                  <p>
+                    02/10/2026<br />› New blog entry! <br />
+                    › Testing the new
+                    <a href="/funniez/drawbox.html">drawbox!</a>
+                  </p>
+                  <p>
+                    02/06/2026<br />› styled resources page and added a couple
+                    more stuff <br />
+                    › New blog layout
+                  </p>
+                  <p>
+                    02/02/2026<br />› A bunch of stuff I don't remember AND
+                    stylized the photobook page :)
+                  </p>
+                  <p>
+                    12/30/2025<br />› Fixes on the fnaf shrine<br />› New
+                    widgets for the sapphic webring and new menu<br />› slight
+                    changes to "about me"<br />› Fixes on the fnaf shrine<br />›
+                    New art added to the gallery<br />› New stuff added to
+                    graphics
+                  </p>
+                  <p>
+                    11/06/2025<br />
+                    › im dying
+                  </p>
+                  <p>
+                    11/06/2025<br />
+                    › Made a diary for me!
+                  </p>
+                  <p>
+                    11/04/2025 <br />
+                    › Minimal display changes :0 <br />
+                    › Added about me, wayback machine, forse, blog entry,
+                    resources, site map, PvZ webring :)
+                  </p>
+                  <p>
+                    10/26/2025 <br />
+                    › New graphics collection display :)
+                  </p>
+                  <p>
+                    I forgot (October 2025) <br />
+                    › New gallery menu <br />
+                    › New tree of wisdom <br />
+                    › New artpage menu
+                  </p>
+                  <p>
+                    10/08/25 <br />
+                    › <b>NEW PAGE! FUNNIEZ, with incoming projects!</b> <br />
+                    › Fixed shrines and Gallery menu
+                  </p>
+                  <p>
+                    10/08/25 <br />
+                    › <b>NEW PAGE! FUNNIEZ, with incoming projects!</b> <br />
+                    › Fixed shrines and Gallery menu
+                  </p>
+                  <p>
+                    10/07/25 <br />
+                    › Testing chattable rn!!!!!! edit:
+                    <b>I don't think i will be using chattable anytime soon</b>
+                  </p>
+                  <p>
+                    10/06/25 <br />
+                    › Fixed the logs layout!!!!!! <br />› Replaced old music
+                    player with webdeck! <br />› Moved quizzes here until i make
+                    a new about me page.... and i forgot :(((((((
+                  </p>
+                  <p>
+                    10/05/25 <br />
+                    › Added that sunflower that says random things
+                  </p>
+                  <p>
+                    10/03/25 <br />
+                    › Added a poll ! <br />
+                    › New chatbox layout <br />
+                    › New click for virus button with autoplay music :3 <br />
+                    › Random message below the site's pet
+                  </p>
+                  <p>
+                    10/02/25 <br />
+                    › New main page ! <br />› New blog section :0 <br />›
+                    Gallery and Art page menu under maintenance, but added new
+                    art !! <br />› Created a webring for sapphics
+                  </p>
+                  <p>
+                    08/23/25 <br />
+                    › New shrines menu :3
+                  </p>
+                  <p>
+                    08/22/25 <br />
+                    › added radio thing <br />
+                    › new logs display <br />
+                    › added junkrat
+                  </p>
+                  <p>
+                    08/21/25 <br />
+                    › The pet is back :) <br />
+                    › splash page now makes a sound when pressing the button
+                  </p>
+                  <p>
+                    04/03/25 <br />
+                    › the dumbass gallery is shit again <br />
+                    › Moved webrings to the splash again <br />
+                    › Major changes in the mainpage <br />
+                    ›Winamp deleted, will be replaced soon :3
+                  </p>
+                  <p>
+                    02/04/25 <br />
+                    › Fixed the gallery menu (finally)
+                  </p>
+                  <details>
+                    <summary>From 2024</summary>
+                    <p>
+                      11/14/24 <br />
+                      › Combined the changelog and to-do list in a single div
+                      :). <br />› Credits/sources page now available (is not
+                      styled though).
+                    </p>
+                    <p>
+                      11/13/24 <br />
+                      › Fixed landing page and moved the webrings back to the
+                      main menu <br />› Added a fake ad bar. <br />
+                      › Upcoming things in the navbar <br />
+                      › Made the new button easier to copy. <br />
+                      › Changed the visitor counter <br />
+                      › New ghestbook button :3 <br />› Fixed files from the
+                      gallery.
+                    </p>
+                    <p>
+                      11/04/24 <br />
+                      › Deleted the "friends" and "Charlie" buttons to add them
+                      to the about me page later! Although I'm thinking about
+                      making a shrine for my gf :3 <br />
+                      › I'm doing more changes tomorrow.
+                    </p>
+                    <p>
+                      10/30/24 <br />› The "about me" name has been changed to
+                      "webmaster" and it's finally done! <br />› Moving
+                      "selfship" to the shrine section!
+                    </p>
+                    <p>
+                      10/22/24 <br />› New menu style in art page! Go check the
+                      gallery!
+                    </p>
+                    <p>
+                      10/21/24 <br />› New banner and changed the sunflower
+                      image! <br />
+                      › Little display changes.
+                    </p>
+                    <p>
+                      10/16/24 <br />› New about me page. <br />› Changes on the
+                      landing page. <br />› Art gallery finally fixed
+                    </p>
+                    <p>
+                      10/09/24 <br />› Another update on the main page...
+                      <br />›Phone view removed again.
+                    </p>
+                    <p>
+                      10/08/24 <br />› added more things to my art gallery
+                      <br />
+                      ›Moved collection to the sidebar
+                    </p>
+                    <p>
+                      10/02 <br />› BIG main page changes, includes: a "to do"
+                      list, pausable autplay, "of the week" thingy
+                    </p>
+                    <p>
+                      ???/2024 <br />
+                      › More display changes, in main page and about me. <br />›
+                      Guestbook added.
+                    </p>
+                    <p>
+                      09/26/24 <br />
+                      › Display and banner changes. <br />›Wip of The X files
+                      shrine
+                    </p>
+                    <p>
+                      09/25/24 <br />› Shrine page added!!! Some are still in
+                      the making but pvz is there. <br />› Changes on Error
+                      page. <br />
+                      ›Gify pet removed... It will come back, im making a Zen
+                      Garden.
+                    </p>
+                    <p>
+                      09/24/24 <br />› Changes in navigation, Gallery and
+                      Funniez is its own button (only gallery is completed)
+                      <br />› New background
+                    </p>
+                    <p>
+                      09/23/24 <br />› More display changes :P + pvz font
+                      replaced with comic sans 'cause is easier to read.
+                    </p>
+                    <p>
+                      09/22/24 <br />› phone display removed until i fix it.
+                    </p>
+                    <p>
+                      09/19/24 <br />› Display changes in the rest of pages.
+                    </p>
+                    <p>09/18/24 <br />› PHONE DISPLAY IN DEMO!!!!</p>
+                    <p>
+                      09/17/24 <br />› Display update! it may not look good on
+                      phone... also, "About me" page will look a little weird
+                      'cause I'm configuring the flexbox.
+                    </p>
+                    <p>
+                      09/16/24 <br />› I don't know how to place the text to the
+                      side please help <br />› nvm i fixed it.... kinda
+                    </p>
+                    <p>
+                      09/15/24 <br />› Font and layout modifications. <br />›
+                      Sidebars removed from the rest of sections, replaced with
+                      a "Go back?" button. <br />› Alt theme added :3
+                    </p>
+                    <p>
+                      09/14/24 <br />› Demo for lytebox <br />› Updates and
+                      "funny stuff" changed places.
+                    </p>
+                    <p>
+                      09/13/24 <br />› New songs added! <br />› "Funny stuff"
+                      now rebranded as "Funniez" and placed below gallery, more
+                      stuff coming soon.
+                    </p>
+                    <p>
+                      09/12/24 <br />› Funny stuff added <br />› Friends section
+                      demo now added. <br />› Charlie section still a wip.
+                      <br />› PVZ added ?!?! doesn't work on phone ppipii.
+                      <br />› Made buttons for the art section
+                    </p>
+                    <p>
+                      09/11/24 <br />› social media links moved to "about me".
+                    </p>
+                    <p>09/10/24 <br />› Changed padding and button hover</p>
+                    <p>
+                      09/09/24 <br />› webamp added! can't be moved around in
+                      mobile though. Also new pet added!
+                    </p>
+                    <p>
+                      09/08/24 <br />› About and Collection section - completed,
+                      may add more things
+                    </p>
+                    <p>09/07/24 <br />› Float image changed :3</p>
+                    <p>09/06/24 <br />› Selfship shrine completed</p>
+                    <p>09/03/24 <br />› Removed mask on float, aligned text</p>
+                    <p>
+                      09/01/24 <br />› Moved Art and collection to their own
+                      navigation section
+                    </p>
+                    <p>
+                      08/30/24 <br />› Layout changed to look PVZ themed <br />›
+                      Collection and art section created!
+                    </p>
+                    <p>08/24/24 <br />› Site created!</p>
+                  </details>
                 </div>
               </div>
             </div>
           </div>
-          <div id="sideinfo" class="smallcontainer">
-            <div id="info-buttons">
-              <button id="logs-button" onclick="logsDisplay()"></button>
-              <button id="to-do-button" onclick="todoDisplay()"></button>
-            </div>
-            <div class="paper-note">
-              <div id="todo-list">
-                <h2>To-Do:</h2>
-                <ul>
-                  <li>Finish shrines layouts: X-files, selfship, ships and music</li>
-                  <li>My gf's page</li>
-                  <li>Friends page</li>
-                  <li><s>Style resources page</s></li>
-                  <li><s>Style photobook</s></li>
-                  <li><s>Style blog</s></li>
-                </ul>
+          <div id="otro" class="bigcontainer">
+            <div class="small-otro">
+              <div id="whatsnew">
+                <div id="thumbnail"></div>
+                <div id="description">New photobook layout!</div>
+                <p id="newtitle">Photobook!</p>
+                <a href="/gallery/photobook.html">
+                  <img
+                    src="/archives/assets/govisit.png"
+                    id="visitbutton"
+                    alt="visit new page button"
+                  />
+                </a>
               </div>
-              <div id="logs">
-                <h2>Updates :</h2>
-                <p>02/10/2026<br>› New blog entry! <br> › Testing the new <a href="/funniez/drawbox.html">drawbox!</a>
-                </p>
-                <p>02/06/2026<br>› styled resources page and added a couple more stuff <br> › New blog layout</p>
-                <p>02/02/2026<br>› A bunch of stuff I don't remember AND stylized the photobook page :)</p>
-                <p>12/30/2025<br>› Fixes on the fnaf shrine<br>› New widgets for the sapphic webring and new menu<br>›
-                  slight changes to "about me"<br>› Fixes on the fnaf shrine<br>› New art added to the gallery<br>› New
-                  stuff added to graphics</p>
-                <p>
-                  11/06/2025<br />
-                  › im dying
-                </p>
-                <p>
-                  11/06/2025<br />
-                  › Made a diary for me!
-                </p>
-                <p>
-                  11/04/2025 <br />
-                  › Minimal display changes :0 <br />
-                  › Added about me, wayback machine, forse, blog entry,
-                  resources, site map, PvZ webring :)
-                </p>
-                <p>
-                  10/26/2025 <br />
-                  › New graphics collection display :)
-                </p>
-                <p>
-                  I forgot (October 2025) <br />
-                  › New gallery menu <br />
-                  › New tree of wisdom <br />
-                  › New artpage menu
-                </p>
-                <p>
-                  10/08/25 <br />
-                  › <b>NEW PAGE! FUNNIEZ, with incoming projects!</b> <br />
-                  › Fixed shrines and Gallery menu
-                </p>
-                <p>
-                  10/08/25 <br />
-                  › <b>NEW PAGE! FUNNIEZ, with incoming projects!</b> <br />
-                  › Fixed shrines and Gallery menu
-                </p>
-                <p>
-                  10/07/25 <br />
-                  › Testing chattable rn!!!!!! edit:
-                  <b>I don't think i will be using chattable anytime soon</b>
-                </p>
-                <p>
-                  10/06/25 <br />
-                  › Fixed the logs layout!!!!!! <br />› Replaced old music
-                  player with webdeck! <br />› Moved quizzes here until i make
-                  a new about me page.... and i forgot :(((((((
-                </p>
-                <p>
-                  10/05/25 <br />
-                  › Added that sunflower that says random things
-                </p>
-                <p>
-                  10/03/25 <br />
-                  › Added a poll ! <br />
-                  › New chatbox layout <br />
-                  › New click for virus button with autoplay music :3 <br />
-                  › Random message below the site's pet
-                </p>
-                <p>
-                  10/02/25 <br />
-                  › New main page ! <br />› New blog section :0 <br />›
-                  Gallery and Art page menu under maintenance, but added new
-                  art !! <br />› Created a webring for sapphics
-                </p>
-                <p>
-                  08/23/25 <br />
-                  › New shrines menu :3
-                </p>
-                <p>
-                  08/22/25 <br />
-                  › added radio thing <br />
-                  › new logs display <br />
-                  › added junkrat
-                </p>
-                <p>
-                  08/21/25 <br />
-                  › The pet is back :) <br />
-                  › splash page now makes a sound when pressing the button
-                </p>
-                <p>
-                  04/03/25 <br />
-                  › the dumbass gallery is shit again <br />
-                  › Moved webrings to the splash again <br />
-                  › Major changes in the mainpage <br />
-                  ›Winamp deleted, will be replaced soon :3
-                </p>
-                <p>
-                  02/04/25 <br />
-                  › Fixed the gallery menu (finally)
-                </p>
-                <details>
-                  <summary>From 2024</summary>
-                  <p>
-                    11/14/24 <br />
-                    › Combined the changelog and to-do list in a single div
-                    :). <br />› Credits/sources page now available (is not
-                    styled though).
-                  </p>
-                  <p>
-                    11/13/24 <br />
-                    › Fixed landing page and moved the webrings back to the
-                    main menu <br />› Added a fake ad bar. <br />
-                    › Upcoming things in the navbar <br />
-                    › Made the new button easier to copy. <br />
-                    › Changed the visitor counter <br />
-                    › New ghestbook button :3 <br />› Fixed files from the
-                    gallery.
-                  </p>
-                  <p>
-                    11/04/24 <br />
-                    › Deleted the "friends" and "Charlie" buttons to add them
-                    to the about me page later! Although I'm thinking about
-                    making a shrine for my gf :3 <br />
-                    › I'm doing more changes tomorrow.
-                  </p>
-                  <p>
-                    10/30/24 <br />› The "about me" name has been changed to
-                    "webmaster" and it's finally done! <br />› Moving
-                    "selfship" to the shrine section!
-                  </p>
-                  <p>
-                    10/22/24 <br />› New menu style in art page! Go check the
-                    gallery!
-                  </p>
-                  <p>
-                    10/21/24 <br />› New banner and changed the sunflower
-                    image! <br />
-                    › Little display changes.
-                  </p>
-                  <p>
-                    10/16/24 <br />› New about me page. <br />› Changes on the
-                    landing page. <br />› Art gallery finally fixed
-                  </p>
-                  <p>
-                    10/09/24 <br />› Another update on the main page...
-                    <br />›Phone view removed again.
-                  </p>
-                  <p>
-                    10/08/24 <br />› added more things to my art gallery
-                    <br />
-                    ›Moved collection to the sidebar
-                  </p>
-                  <p>
-                    10/02 <br />› BIG main page changes, includes: a "to do"
-                    list, pausable autplay, "of the week" thingy
-                  </p>
-                  <p>
-                    ???/2024 <br />
-                    › More display changes, in main page and about me. <br />›
-                    Guestbook added.
-                  </p>
-                  <p>
-                    09/26/24 <br />
-                    › Display and banner changes. <br />›Wip of The X files
-                    shrine
-                  </p>
-                  <p>
-                    09/25/24 <br />› Shrine page added!!! Some are still in
-                    the making but pvz is there. <br />› Changes on Error
-                    page. <br />
-                    ›Gify pet removed... It will come back, im making a Zen
-                    Garden.
-                  </p>
-                  <p>
-                    09/24/24 <br />› Changes in navigation, Gallery and
-                    Funniez is its own button (only gallery is completed)
-                    <br />› New background
-                  </p>
-                  <p>
-                    09/23/24 <br />› More display changes :P + pvz font
-                    replaced with comic sans 'cause is easier to read.
-                  </p>
-                  <p>
-                    09/22/24 <br />› phone display removed until i fix it.
-                  </p>
-                  <p>
-                    09/19/24 <br />› Display changes in the rest of pages.
-                  </p>
-                  <p>09/18/24 <br />› PHONE DISPLAY IN DEMO!!!!</p>
-                  <p>
-                    09/17/24 <br />› Display update! it may not look good on
-                    phone... also, "About me" page will look a little weird
-                    'cause I'm configuring the flexbox.
-                  </p>
-                  <p>
-                    09/16/24 <br />› I don't know how to place the text to the
-                    side please help <br />› nvm i fixed it.... kinda
-                  </p>
-                  <p>
-                    09/15/24 <br />› Font and layout modifications. <br />›
-                    Sidebars removed from the rest of sections, replaced with
-                    a "Go back?" button. <br />› Alt theme added :3
-                  </p>
-                  <p>
-                    09/14/24 <br />› Demo for lytebox <br />› Updates and
-                    "funny stuff" changed places.
-                  </p>
-                  <p>
-                    09/13/24 <br />› New songs added! <br />› "Funny stuff"
-                    now rebranded as "Funniez" and placed below gallery, more
-                    stuff coming soon.
-                  </p>
-                  <p>
-                    09/12/24 <br />› Funny stuff added <br />› Friends section
-                    demo now added. <br />› Charlie section still a wip.
-                    <br />› PVZ added ?!?! doesn't work on phone ppipii.
-                    <br />› Made buttons for the art section
-                  </p>
-                  <p>
-                    09/11/24 <br />› social media links moved to "about me".
-                  </p>
-                  <p>09/10/24 <br />› Changed padding and button hover</p>
-                  <p>
-                    09/09/24 <br />› webamp added! can't be moved around in
-                    mobile though. Also new pet added!
-                  </p>
-                  <p>
-                    09/08/24 <br />› About and Collection section - completed,
-                    may add more things
-                  </p>
-                  <p>09/07/24 <br />› Float image changed :3</p>
-                  <p>09/06/24 <br />› Selfship shrine completed</p>
-                  <p>09/03/24 <br />› Removed mask on float, aligned text</p>
-                  <p>
-                    09/01/24 <br />› Moved Art and collection to their own
-                    navigation section
-                  </p>
-                  <p>
-                    08/30/24 <br />› Layout changed to look PVZ themed <br />›
-                    Collection and art section created!
-                  </p>
-                  <p>08/24/24 <br />› Site created!</p>
-                </details>
+              <div id="otw" class="main">
+                <div class="tittlebox">pic of the week</div>
+                <img
+                  src="https://i.pinimg.com/736x/fe/f1/8f/fef18f31ec97c7fdfdc02b43fd63f001.jpg"
+                />
               </div>
-            </div>
-          </div>
-        </div>
-        <div id="otro" class="bigcontainer">
-          <div class="small-otro">
-            <div id="whatsnew">
-              <div id="thumbnail">
-              </div>
-              <div id="description">New photobook layout!</div>
-              <p id="newtitle">Photobook!</p>
-              <a href="/gallery/photobook.html">
-                <img src="/archives/assets/govisit.png" id="visitbutton" alt="visit new page button">
-              </a>
-            </div>
-            <div id="otw" class="main">
-              <div class="tittlebox">video of the week</div>
-              <iframe src="//www.youtube.com/embed/sv2FW5DeW74" width="270" height="240"></iframe>
-            </div>
-            <div id="poll">
-              <form method="post" action="https://poll.pollcode.com/34818732">
-                <div style="
+              <div id="poll">
+                <form method="post" action="https://poll.pollcode.com/34818732">
+                  <div
+                    style="
                       background-color: #eed1a7;
                       padding: 2px;
                       width: 160px;
                       font-family: Comic Sans MS;
                       font-size: small;
                       color: #000000;
-                    ">
-                  <div style="padding: 2px 0px 4px 2px">
-                    <strong>Whats your favorite music genre?</strong>
+                    "
+                  >
+                    <div style="padding: 2px 0px 4px 2px">
+                      <strong>Whats your favorite music genre?</strong>
+                    </div>
+                    <input
+                      type="radio"
+                      name="answer"
+                      value="1"
+                      id="answer348187321"
+                      style="float: left"
+                    />
+                    <label
+                      for="answer348187321"
+                      style="float: left; width: 135px"
+                      >Rock</label
+                    >
+                    <div style="clear: both; height: 2px"></div>
+                    <input
+                      type="radio"
+                      name="answer"
+                      value="2"
+                      id="answer348187322"
+                      style="float: left"
+                    />
+                    <label
+                      for="answer348187322"
+                      style="float: left; width: 135px"
+                      >Punk</label
+                    >
+                    <div style="clear: both; height: 2px"></div>
+                    <input
+                      type="radio"
+                      name="answer"
+                      value="3"
+                      id="answer348187323"
+                      style="float: left"
+                    />
+                    <label
+                      for="answer348187323"
+                      style="float: left; width: 135px"
+                      >Hip-hop</label
+                    >
+                    <div style="clear: both; height: 2px"></div>
+                    <input
+                      type="radio"
+                      name="answer"
+                      value="4"
+                      id="answer348187324"
+                      style="float: left"
+                    />
+                    <label
+                      for="answer348187324"
+                      style="float: left; width: 135px"
+                      >Metal</label
+                    >
+                    <div style="clear: both; height: 2px"></div>
+                    <input
+                      type="radio"
+                      name="answer"
+                      value="5"
+                      id="answer348187325"
+                      style="float: left"
+                    />
+                    <label
+                      for="answer348187325"
+                      style="float: left; width: 135px"
+                      >Rap</label
+                    >
+                    <div style="clear: both; height: 2px"></div>
+                    <input
+                      type="radio"
+                      name="answer"
+                      value="6"
+                      id="answer348187326"
+                      style="float: left"
+                    />
+                    <label
+                      for="answer348187326"
+                      style="float: left; width: 135px"
+                      >Pop</label
+                    >
+                    <div style="clear: both; height: 2px"></div>
+                    <input
+                      type="radio"
+                      name="answer"
+                      value="7"
+                      id="answer348187327"
+                      style="float: left"
+                    />
+                    <label
+                      for="answer348187327"
+                      style="float: left; width: 135px"
+                      >Indie</label
+                    >
+                    <div style="clear: both; height: 2px"></div>
+                    <input
+                      type="radio"
+                      name="answer"
+                      value="8"
+                      id="answer348187328"
+                      style="float: left"
+                    />
+                    <label
+                      for="answer348187328"
+                      style="float: left; width: 135px"
+                      >Electronic</label
+                    >
+                    <div style="clear: both; height: 2px"></div>
+                    <input
+                      type="radio"
+                      name="answer"
+                      value="9"
+                      id="answer348187329"
+                      style="float: left"
+                    />
+                    <label
+                      for="answer348187329"
+                      style="float: left; width: 135px"
+                      >PvZ ost /j</label
+                    >
+                    <div style="clear: both; height: 2px"></div>
+                    <div align="center" style="padding: 3px">
+                      <input type="submit" value=" Vote " />&nbsp;
+                      <input type="submit" name="view" value=" View " />
+                    </div>
+                    <div align="right" style="font-size: 10px">
+                      pollcode.com
+                      <a href="https://pollcode.com/">free polls</a>
+                    </div>
                   </div>
-                  <input type="radio" name="answer" value="1" id="answer348187321" style="float: left" />
-                  <label for="answer348187321" style="float: left; width: 135px">Rock</label>
-                  <div style="clear: both; height: 2px"></div>
-                  <input type="radio" name="answer" value="2" id="answer348187322" style="float: left" />
-                  <label for="answer348187322" style="float: left; width: 135px">Punk</label>
-                  <div style="clear: both; height: 2px"></div>
-                  <input type="radio" name="answer" value="3" id="answer348187323" style="float: left" />
-                  <label for="answer348187323" style="float: left; width: 135px">Hip-hop</label>
-                  <div style="clear: both; height: 2px"></div>
-                  <input type="radio" name="answer" value="4" id="answer348187324" style="float: left" />
-                  <label for="answer348187324" style="float: left; width: 135px">Metal</label>
-                  <div style="clear: both; height: 2px"></div>
-                  <input type="radio" name="answer" value="5" id="answer348187325" style="float: left" />
-                  <label for="answer348187325" style="float: left; width: 135px">Rap</label>
-                  <div style="clear: both; height: 2px"></div>
-                  <input type="radio" name="answer" value="6" id="answer348187326" style="float: left" />
-                  <label for="answer348187326" style="float: left; width: 135px">Pop</label>
-                  <div style="clear: both; height: 2px"></div>
-                  <input type="radio" name="answer" value="7" id="answer348187327" style="float: left" />
-                  <label for="answer348187327" style="float: left; width: 135px">Indie</label>
-                  <div style="clear: both; height: 2px"></div>
-                  <input type="radio" name="answer" value="8" id="answer348187328" style="float: left" />
-                  <label for="answer348187328" style="float: left; width: 135px">Electronic</label>
-                  <div style="clear: both; height: 2px"></div>
-                  <input type="radio" name="answer" value="9" id="answer348187329" style="float: left" />
-                  <label for="answer348187329" style="float: left; width: 135px">PvZ ost /j</label>
-                  <div style="clear: both; height: 2px"></div>
-                  <div align="center" style="padding: 3px">
-                    <input type="submit" value=" Vote " />&nbsp;
-                    <input type="submit" name="view" value=" View " />
-                  </div>
-                  <div align="right" style="font-size: 10px">
-                    pollcode.com
-                    <a href="https://pollcode.com/">free polls</a>
+                </form>
+              </div>
+            </div>
+            <div class="small-otro">
+              <div class="cbox">
+                <div id="cbox">
+                  <iframe
+                    src="https://www3.cbox.ws/box/?boxid=3540613&boxtag=DliOqF"
+                    width="220"
+                    height="327"
+                    allowtransparency="yes"
+                    allow="autoplay"
+                    frameborder="0"
+                    marginheight="0"
+                    marginwidth="0"
+                    scrolling="auto"
+                  ></iframe>
+                </div>
+              </div>
+              <div id="pet-message">
+                <div class="main" id="pet">
+                  <iframe
+                    width="308px"
+                    height="325px"
+                    src="https://gifypet.neocities.org/pet/pet.html?name=ElAnticr&dob=1725916581&gender=b&element=Earth&pet=flower.gif&map=night.gif&background=#FFDBA0&tablecolor=black&textcolor=black"
+                    frameborder="0"
+                    scrolling="no"
+                  ></iframe>
+                </div>
+                <div class="belt-buttons">
+                  <div class="marquee">
+                    <div id="socials">
+                      My socials! ->
+                      <a
+                        href="https://bsky.app/profile/sunnishinez.bsky.social"
+                      >
+                        <img
+                          src="/archives/assets/Bluesky.png"
+                          width="65"
+                          alt="Link to my Bluesky profile"
+                          class="social"
+                        />
+                      </a>
+                      <a href="https://spacehey.com/sunnishinez">
+                        <img
+                          src="/archives/assets/Spacehey.png"
+                          width="65"
+                          alt="Link to my Spacehey profile"
+                          class="social"
+                        />
+                      </a>
+                      <a
+                        href="https://forum.melonland.net/index.php?action=profile;u=3136"
+                      >
+                        <img
+                          src="/archives/assets/mlf.png"
+                          width="65"
+                          alt="Link to my Meloland Forum profile"
+                          class="social"
+                        />
+                      </a>
+                      <a href="https://sunnishinez.tumblr.com/">
+                        <img
+                          src="/archives/assets/tumblr.png"
+                          width="65"
+                          alt="Link to my Tumblr"
+                          class="social"
+                        />
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </form>
-            </div>
-          </div>
-          <div class="small-otro">
-            <div class="cbox">
-              <div id="cbox">
-                <iframe src="https://www3.cbox.ws/box/?boxid=3540613&boxtag=DliOqF" width="220" height="327"
-                  allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0"
-                  scrolling="auto"></iframe>
               </div>
-            </div>
-            <div id="pet-message">
-              <div class="main" id="pet">
-                <iframe width="308px" height="325px"
-                  src="https://gifypet.neocities.org/pet/pet.html?name=ElAnticr&dob=1725916581&gender=b&element=Earth&pet=flower.gif&map=night.gif&background=#FFDBA0&tablecolor=black&textcolor=black"
-                  frameborder="0" scrolling="no"></iframe>
-              </div>
-              <div class="belt-buttons">
-                <div class="marquee">
-                  <div id="socials">
-                    My socials! ->
-                    <a href="https://bsky.app/profile/sunnishinez.bsky.social">
-                      <img src="/archives/assets/Bluesky.png" width="65" alt="Link to my Bluesky profile"
-                        class="social">
-                    </a>
-                    <a href="https://spacehey.com/sunnishinez">
-                      <img src="/archives/assets/Spacehey.png" width="65" alt="Link to my Spacehey profile"
-                        class="social">
-                    </a>
-                    <a href="https://forum.melonland.net/index.php?action=profile;u=3136">
-                      <img src="/archives/assets/mlf.png" width="65" alt="Link to my Meloland Forum profile"
-                        class="social">
-                    </a>
-                    <a href="https://sunnishinez.tumblr.com/">
-                      <img src="/archives/assets/tumblr.png" width="65" alt="Link to my Tumblr" class="social">
-                    </a>
+              <div id="virus-quotes">
+                <input
+                  id="virus"
+                  type="button"
+                  onClick="MyWindow=window.open('https://sunnishinez.neocities.org/stuff/virus','MyWindow','width=600,height=300'); return false;"
+                />
+                <div id="quotestab">
+                  <div id="speechbubble">
+                    <p id="quote-display">Click on me to get a quote !</p>
                   </div>
+                  <img
+                    id="sunflower"
+                    src="/archives/graphics/sunflowerr.png"
+                    width="200px"
+                    loading="lazy"
+                  />
+                  <audio
+                    id="sun-sound"
+                    src="https://files.catbox.moe/wz1g09.mp3"
+                    preload="auto"
+                  ></audio>
+                  <script src="/archives/scripts/sunquotes.js"></script>
                 </div>
               </div>
             </div>
-            <div id="virus-quotes">
-              <input id="virus" type="button"
-                onClick="MyWindow=window.open('https://sunnishinez.neocities.org/stuff/virus','MyWindow','width=600,height=300'); return false;" />
-              <div id="quotestab">
-                <div id="speechbubble">
-                  <p id="quote-display">Click on me to get a quote !</p>
-                </div>
-                <img id="sunflower" src="/archives/graphics/sunflowerr.png" width="200px" loading="lazy">
-                <audio id="sun-sound" src="https://files.catbox.moe/wz1g09.mp3" preload="auto"></audio>
-                <script src="/archives/scripts/sunquotes.js"></script>
-              </div>
+            <div class="small-otror">
+              <iframe
+                src="/webdeck-player/webdeck.html"
+                height="255"
+                width="605"
+                loading="lazy"
+              ></iframe>
             </div>
-          </div>
-          <div class="small-otror">
-            <iframe src="/webdeck-player/webdeck.html" height="255" width="605" loading="lazy"></iframe>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    <!--barra derecha-->
-    <aside id="sidebar2">
-      <div id="counter-display">
-        <div id="fc2">
-          <script language="javascript" type="text/javascript"
-            src="//counter1.fc2.com/counter.php?id=40026971&main=1"></script>
-          <noscript>
-            <img src="//counter1.fc2.com/counter_img.php?id=40026971&main=1" />
-          </noscript>
-        </div>
-      </div>
-      <!--second sidebar-->
-      <div class="sidebar2">
-        <div class="tittlebox">Status</div>
-        <span id="swatchClock">@000</span>
-        <script defer src="https://melonking.net/scripts/swatchTime.js"></script>
-        <!--imood-->
-        <a href="https://www.imood.com/users/mothrot"> <span
-            style="font-family: ms gothic;font-size: 0.8em;">Feeling...</span>
-          <img src="https://moods.imood.com/display/uname-mothrot/trans-1/imood.gif"
-            alt="The current mood of mothrot at www.imood.com" border="0" />
-        </a>
-        <img src="/archives/assets/ratthing.png" width="80px">
-        <!--status cafe-->
-        <div class="statuscafe">
-          <div id="statuscafe">
-            <div id="statuscafe-username"></div>
-            <div id="statuscafe-content"></div>
+      <!--barra derecha-->
+      <aside id="sidebar2">
+        <div id="counter-display">
+          <div id="fc2">
+            <script
+              language="javascript"
+              type="text/javascript"
+              src="//counter1.fc2.com/counter.php?id=40026971&main=1"
+            ></script>
+            <noscript>
+              <img
+                src="//counter1.fc2.com/counter_img.php?id=40026971&main=1"
+              />
+            </noscript>
           </div>
-          <script src="https://status.cafe/current-status.js?name=sunfreak" defer></script>
         </div>
-        <!--music-->
-        <div class="minibox">
-          <span>Now playing <img src="/archives/graphics/icon_speaker.png" width="15"></span>
-          <iframe id="music-w"
-            src="https://petrapixel.neocities.org/widgets/lastfm?center=1&marquee=0&font-family=Comic Sans MS, Comic Sans, fantasy&font-size=14px&color=#00000&username=Mothrarot&swapPositions=0&delimiter=by&underline=0"
-            frameborder="0" title="Last.Fm Status" height="40" loading="lazy"></iframe>
-        </div>
-        <!--cliques-->
-        <div class="tittlebox">Cliques</div>
-        <div class="minibox" id="cliques">
-          <a href="https://pkmn.aquarel.nu/">
-            <img src="/archives/graphics/Keldeo.png" title="Keldeo <3" loading="lazy">
+        <!--second sidebar-->
+        <div class="sidebar2">
+          <div class="tittlebox">Status</div>
+          <span id="swatchClock">@000</span>
+          <script
+            defer
+            src="https://melonking.net/scripts/swatchTime.js"
+          ></script>
+          <!--imood-->
+          <a href="https://www.imood.com/users/mothrot">
+            <span style="font-family: ms gothic; font-size: 0.8em"
+              >Feeling...</span
+            >
+            <img
+              src="https://moods.imood.com/display/uname-mothrot/trans-1/imood.gif"
+              alt="The current mood of mothrot at www.imood.com"
+              border="0"
+            />
           </a>
-          <a href="https://lovesick.cafe/esoterica/angelnumbers">
-            <img src="https://i.ibb.co/sWFXS7s/tiny-999.png" title="Release" loading="lazy">
-          </a>
-          <a href="https://bungle.online/clique">
-            <img src="/archives/graphics/angel.png" alt="Angel resting upon a computer" loading="lazy">
-          </a>
-          <div id="text-cliques" style="font-size: 12px">
-            <img src="/archives/graphics/wing1.png" loading="lazy"> I am
-            <a href="https://macaque.neocities.org/trickyfox/"> angelic ♥</a>
-            <img src="/archives/graphics/wing2.png" loading="lazy">
-            <br />
-            <a href="https://macaque.neocities.org/trickyfox/">LINKED !</a>
-            <img src="/archives/graphics/linked.png" loading="lazy"> Mima Kirigoe
-            <br />
-            <a href="http://cliqued.wings.nu/">OTF <img src="/archives/graphics/red.png" loading="lazy">
+          <img src="/archives/assets/ratthing.png" width="80px" />
+          <!--status cafe-->
+          <div class="statuscafe">
+            <div id="statuscafe">
+              <div id="statuscafe-username"></div>
+              <div id="statuscafe-content"></div>
+            </div>
+            <script
+              src="https://status.cafe/current-status.js?name=sunfreak"
+              defer
+            ></script>
+          </div>
+          <!--music-->
+          <div class="minibox">
+            <span
+              >Now playing
+              <img src="/archives/graphics/icon_speaker.png" width="15"
+            /></span>
+            <iframe
+              id="music-w"
+              src="https://petrapixel.neocities.org/widgets/lastfm?center=1&marquee=0&font-family=Comic Sans MS, Comic Sans, fantasy&font-size=14px&color=#00000&username=Mothrarot&swapPositions=0&delimiter=by&underline=0"
+              frameborder="0"
+              title="Last.Fm Status"
+              height="40"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <!--cliques-->
+          <div class="tittlebox">Cliques</div>
+          <div class="minibox" id="cliques">
+            <a href="https://pkmn.aquarel.nu/">
+              <img
+                src="/archives/graphics/Keldeo.png"
+                title="Keldeo <3"
+                loading="lazy"
+              />
             </a>
-            Welcome Home! <br />
-            Gorillaz
-            <a href="http://cliqued.wings.nu/">
-              <img src="/archives/graphics/green.png" loading="lazy">
+            <a href="https://lovesick.cafe/esoterica/angelnumbers">
+              <img
+                src="https://i.ibb.co/sWFXS7s/tiny-999.png"
+                title="Release"
+                loading="lazy"
+              />
             </a>
-            <a href="https://www.youtube.com/watch?v=5qJp6xlKEug">Saturnz Barz</a>
+            <a href="https://bungle.online/clique">
+              <img
+                src="/archives/graphics/angel.png"
+                alt="Angel resting upon a computer"
+                loading="lazy"
+              />
+            </a>
+            <div id="text-cliques" style="font-size: 12px">
+              <img src="/archives/graphics/wing1.png" loading="lazy" /> I am
+              <a href="https://macaque.neocities.org/trickyfox/"> angelic ♥</a>
+              <img src="/archives/graphics/wing2.png" loading="lazy" />
+              <br />
+              <a href="https://macaque.neocities.org/trickyfox/">LINKED !</a>
+              <img src="/archives/graphics/linked.png" loading="lazy" /> Mima
+              Kirigoe
+              <br />
+              <a href="http://cliqued.wings.nu/"
+                >OTF <img src="/archives/graphics/red.png" loading="lazy" />
+              </a>
+              Welcome Home! <br />
+              Gorillaz
+              <a href="http://cliqued.wings.nu/">
+                <img src="/archives/graphics/green.png" loading="lazy" />
+              </a>
+              <a href="https://www.youtube.com/watch?v=5qJp6xlKEug"
+                >Saturnz Barz</a
+              >
+              <br />
+              <a href="http://cliqued.wings.nu/">Rock me!</a>
+              <img src="/archives/graphics/rockme.png" loading="lazy" />Los
+              Prisioneros
+              <br />
+              <a href="https://lazer-bunny.neocities.org/Cliques">My OTP</a>
+              <img
+                src="/archives/graphics/genmui.png"
+                alt="My OTP"
+                loading="lazy"
+              />Genmui
+              <br />
+              <a href="https://petrapixel.neocities.org/cliques">gore</a> //
+              BLOOD
+              <br />
+              <a href="https://petrapixel.neocities.org/cliques">love tropes</a>
+              // friends-to-lovers
+              <br />
+              <a href="https://samsolarsystem.neocities.org/cliques"
+                >Not my first language</a
+              >
+              // Spanish
+              <br />
+              <a href="https://samsolarsystem.neocities.org/cliques"
+                >Geek music</a
+              >
+              𝄞 Five More Nights
+            </div>
+            <a href="https://dust.kuchiki.net/" target="_blank">
+              <img
+                src="/archives/graphics/sagi.gif"
+                title="celestial divine // Sagittarius"
+                loading="lazy"
+              />
+            </a>
+            <a href="https://dust.kuchiki.net/" target="_blank">
+              <img
+                src="/archives/graphics/yuri.gif"
+                title="i love anime // YURI"
+                loading="lazy"
+              />
+            </a>
+            <a href="https://dust.kuchiki.net/" target="_blank">
+              <img
+                src="/archives/graphics/yaoi.gif"
+                title="i love anime // YAOI"
+                loading="lazy"
+              />
+            </a>
+            <a href="https://dust.kuchiki.net/" target="_blank">
+              <img
+                src="/archives/graphics/cats.gif"
+                title="catastic!!"
+                loading="lazy"
+              />
+            </a>
+            <a href="http://deathbusters.org/romantic/" target="_blank">
+              <img
+                src="/archives/graphics/hopeless.gif"
+                title="I am a Hopeless Romantic ♥"
+                loading="lazy"
+              />
+            </a>
             <br />
-            <a href="http://cliqued.wings.nu/">Rock me!</a>
-            <img src="/archives/graphics/rockme.png" loading="lazy">Los Prisioneros
+            <div id="YumeRing">
+              <script src="/archives/scripts/yume.js"></script>
+            </div>
             <br />
-            <a href="https://lazer-bunny.neocities.org/Cliques">My OTP</a>
-            <img src="/archives/graphics/genmui.png" alt="My OTP" loading="lazy">Genmui
-            <br />
-            <a href="https://petrapixel.neocities.org/cliques">gore</a> //
-            BLOOD
-            <br />
-            <a href="https://petrapixel.neocities.org/cliques">love tropes</a>
-            // friends-to-lovers
-            <br />
-            <a href="https://samsolarsystem.neocities.org/cliques">Not my first language</a>
-            // Spanish
-            <br />
-            <a href="https://samsolarsystem.neocities.org/cliques">Geek music</a>
-            𝄞 Five More Nights
           </div>
-          <a href="https://dust.kuchiki.net/" target="_blank">
-            <img src="/archives/graphics/sagi.gif" title="celestial divine // Sagittarius" loading="lazy">
-          </a>
-          <a href="https://dust.kuchiki.net/" target="_blank">
-            <img src="/archives/graphics/yuri.gif" title="i love anime // YURI" loading="lazy">
-          </a>
-          <a href="https://dust.kuchiki.net/" target="_blank">
-            <img src="/archives/graphics/yaoi.gif" title="i love anime // YAOI" loading="lazy">
-          </a>
-          <a href="https://dust.kuchiki.net/" target="_blank">
-            <img src="/archives/graphics/cats.gif" title="catastic!!" loading="lazy">
-          </a>
-          <a href="http://deathbusters.org/romantic/" target="_blank">
-            <img src="/archives/graphics/hopeless.gif" title="I am a Hopeless Romantic ♥" loading="lazy">
-          </a>
-          <br />
-          <div id="YumeRing">
-            <script src="/archives/scripts/yume.js"></script>
+          <div class="tittlebox">Fanlisting!</div>
+          <div class="minibox" id="fanlists">
+            <a href="https://162candles.com/fnaf/index.php">
+              <img src="/archives/graphics/fnaf.png" loading="lazy" />
+            </a>
+            <a href="https://decembergirl.net/xfiles/index.php">
+              <img src="/archives/graphics/xfiles.png" loading="lazy" />
+            </a>
+            <a href="https://fan.after-death.org/slayer">
+              <img src="/archives/graphics/mui.png" loading="lazy" />
+            </a>
+            <a href="https://fans.thislove.nu/mozilla">
+              <img
+                src="/archives/graphics/Mozilla_fanlisting.png"
+                loading="lazy"
+              />
+            </a>
+            <a href="https://mikh.net/rats/index.php">
+              <img src="/archives/graphics/rat.png" loading="lazy" />
+            </a>
+            <a href="https://www.ladyrose.buruma.net/gorillaz/index.php">
+              <img src="/archives/graphics/gorillaz.png" loading="lazy" />
+            </a>
+            <a href="https://precious-memory.net/nature/flowers/">
+              <img src="/archives/graphics/roses.gif" loading="lazy" />
+            </a>
+            <a href="https://theatregirl.net/christianity/index.php">
+              <img src="/archives/graphics/christianity.png" loading="lazy" />
+            </a>
+            <a href="https://theatregirl.net/fanfics/index.php">
+              <img src="/archives/graphics/fanfiction.png" loading="lazy" />
+            </a>
           </div>
-          <br />
         </div>
-        <div class="tittlebox">Fanlisting!</div>
-        <div class="minibox" id="fanlists">
-          <a href="https://162candles.com/fnaf/index.php">
-            <img src="/archives/graphics/fnaf.png" loading="lazy">
-          </a>
-          <a href="https://decembergirl.net/xfiles/index.php">
-            <img src="/archives/graphics/xfiles.png" loading="lazy">
-          </a>
-          <a href="https://fan.after-death.org/slayer">
-            <img src="/archives/graphics/mui.png" loading="lazy">
-          </a>
-          <a href="https://fans.thislove.nu/mozilla">
-            <img src="/archives/graphics/Mozilla_fanlisting.png" loading="lazy">
-          </a>
-          <a href="https://mikh.net/rats/index.php">
-            <img src="/archives/graphics/rat.png" loading="lazy">
-          </a>
-          <a href="https://www.ladyrose.buruma.net/gorillaz/index.php">
-            <img src="/archives/graphics/gorillaz.png" loading="lazy">
-          </a>
-          <a href="https://precious-memory.net/nature/flowers/">
-            <img src="/archives/graphics/roses.gif" loading="lazy">
-          </a>
-          <a href="https://theatregirl.net/christianity/index.php">
-            <img src="/archives/graphics/christianity.png" loading="lazy">
-          </a>
-          <a href="https://theatregirl.net/fanfics/index.php">
-            <img src="/archives/graphics/fanfiction.png" loading="lazy">
-          </a>
-        </div>
-      </div>
-      <div class="results" style="
+        <div
+          class="results"
+          style="
             width: 200px;
             background-color: #fff;
             color: #000;
@@ -817,39 +1330,51 @@
             padding: 10px;
             border: 1px solid;
             margin: 0 auto;
-            font-family: 'times';
-            font-size: '15px';
+            font-family: &quot;times&quot;;
+            font-size: &quot;15px&quot;;
             text-align: center;
-          ">
-        <p style="margin: 0">This page is protected by a</p>
-        <h1 class="title" style="margin: 0">BUTTERFLY</h1>
-        <img class="image" style="max-width: 160px; border: 1px solid" alt="BUTTERFLY"
-          src="https://i.ibb.co/wwhYvRp/butterfly.jpg" />
-        <p class="description">
-          The Large Blue butterfly is a species of carnivorous butterfly, and
-          went extinct in Britain in 1979. It has since been reintroduced with
-          new conservation methods.
-        </p>
-        <small>
-          <a href="https://hekate.neocities.org">Want your own? Visit hekate.neocities.org!</a>
-        </small>
-      </div>
-    </aside>
-  </div>
-
-  <footer>
-    <div id="mainpage-foot">
-      <div id="footer-text">
-        <a class="footerlink" href="https://neocities.org/site/sunnishinez">Site profile</a> |
-        <a class="footerlink" href="/sitemap.html"> Sitemap </a> |
-        <a class="footerlink" href="/credits.html">Credits</a> |
-        <a class="footerlink" href="mailto:freaky.sun.angel@proton.me?subject=Hello!&">E-mail</a>
-        <br>
-        Coded with love♡ by Samy/Sunniez since 2024 ! | This website is not
-        endorsed by or affiliated with EA or its licensors
-      </div>
+          "
+        >
+          <p style="margin: 0">This page is protected by a</p>
+          <h1 class="title" style="margin: 0">BUTTERFLY</h1>
+          <img
+            class="image"
+            style="max-width: 160px; border: 1px solid"
+            alt="BUTTERFLY"
+            src="https://i.ibb.co/wwhYvRp/butterfly.jpg"
+          />
+          <p class="description">
+            The Large Blue butterfly is a species of carnivorous butterfly, and
+            went extinct in Britain in 1979. It has since been reintroduced with
+            new conservation methods.
+          </p>
+          <small>
+            <a href="https://hekate.neocities.org"
+              >Want your own? Visit hekate.neocities.org!</a
+            >
+          </small>
+        </div>
+      </aside>
     </div>
-  </footer>
-</body>
 
+    <footer>
+      <div id="mainpage-foot">
+        <div id="footer-text">
+          <a class="footerlink" href="https://neocities.org/site/sunnishinez"
+            >Site profile</a
+          >
+          | <a class="footerlink" href="/sitemap.html"> Sitemap </a> |
+          <a class="footerlink" href="/credits.html">Credits</a> |
+          <a
+            class="footerlink"
+            href="mailto:freaky.sun.angel@proton.me?subject=Hello!&"
+            >E-mail</a
+          >
+          <br />
+          Coded with love♡ by Samy/Sunniez since 2024 ! | This website is not
+          endorsed by or affiliated with EA or its licensors
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
