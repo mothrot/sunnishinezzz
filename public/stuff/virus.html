@@ -8,19 +8,102 @@
   <meta name="robots" content="noindex">
   <style>
     body {
+      width: 100%;
+      min-height: 390px;
+      margin: 0px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .virus {
+      display: none;
+    }
+
+    #infected {
       background: url("/archives/assets/matrix.gif") repeat;
       background-size: cover;
       display: grid;
       justify-items: center;
     }
+
+    #idiot {
+      background: url('/archives/graphics/youareanidiot.gif');
+      background-size: cover;
+      height: 390px;
+    }
+
+    #congrats {
+      background-color: #e6e6e6;
+      height: 370px;
+      padding: 5px;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      border: #4E4BFD solid 5px;
+    }
+
+    #title {
+      font-size: 24px;
+      color: #ffffff;
+      text-align: center;
+      padding: 2px;
+      background: #4E4BFD;
+      background: linear-gradient(90deg, rgba(78, 75, 253, 1) 42%, rgba(230, 230, 230, 1) 87%);
+      width: 500px;
+      height: 30px;
+    }
+
+    button {
+      padding: 0px 10px 0px 10px;
+    }
   </style>
 
+  <script>
+    const IDs = ["infected", "idiot", "congrats"];
+    window.addEventListener("load", function () {
+      const randomNumber = Math.floor(Math.random() * IDs.length);
+      IDs.forEach((id, index) => {
+        if (index === randomNumber) {
+          document.getElementById(id).style.display = "block";
+          const audioId = id === "infected" ? "infect" : id === "idiot" ? "idiotAudio" : "congratulations";
+          document.getElementById(audioId).play();
+        } else {
+          document.getElementById(id).style.display = "none";
+        }
+      });
+    });
+  </script>
 </head>
 
 <body>
-  <img src="/archives/graphics/infectedpc.gif" width="70%" alt="your pc has been infected">
-  <img src="/archives/graphics/virus.png" width="50%">
-  <audio src="https://files.catbox.moe/pril1y.mp3" autoplay preload="metadata"></audio>
+  <div id="infected" class="virus">
+    <img src="/archives/graphics/infectedpc.gif" width="70%" alt="your pc has been infected">
+    <img src="/archives/graphics/virus.png" width="50%">
+    <audio id="infect" src="https://files.catbox.moe/pril1y.mp3" preload="metadata" loop></audio>
+  </div>
+
+  <div id="idiot" class="virus">
+
+    <audio id="idiotAudio" src="https://file.garden/aPcdyx6-Eg7wI_Wb/music/Youareanidiot.mp3" preload="metadata"
+      loop></audio>
+
+  </div>
+
+  <div id="congrats" class="virus">
+
+    <audio id="congratulations" src="https://file.garden/aPcdyx6-Eg7wI_Wb/music/Congratulations%2C%20You%20Won!.mp3"
+      preload="metadata" loop></audio>
+
+    <div id="title">CONGRATULATIONS!</div>
+    <br>
+    <br>
+    <img src="/archives/graphics/smiley.gif" width="125">
+    <br>
+    <b>THIS IS NOT A JOKE!<br>YOU ARE<br>THE 1000th VISITOR!</b>
+    <p>Claim your prize!</p>
+    <button onclick="alert('Congratulations! You get another 243253645 viruses.')">Ok</button> <button
+      onclick="alert('ERROR')">Cancel</button>
+
+  </div>
 </body>
 
 </html>
