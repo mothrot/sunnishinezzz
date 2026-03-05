@@ -17,28 +17,28 @@
 
     .virus {
       display: none;
+      height: 100vh;
     }
 
     #infected {
       background: url("/archives/assets/matrix.gif") repeat;
       background-size: cover;
-      display: grid;
-      justify-items: center;
+      text-align: center;
     }
 
     #idiot {
       background: url('/archives/graphics/youareanidiot.gif');
-      background-size: cover;
-      height: 390px;
+      background-size: 100% 100%;
+
     }
 
     #congrats {
       background-color: #e6e6e6;
-      height: 370px;
       padding: 5px;
       text-align: center;
       font-family: 'Arial', sans-serif;
       border: #4E4BFD solid 5px;
+      font-size: 1.3em;
     }
 
     #title {
@@ -48,15 +48,15 @@
       padding: 2px;
       background: #4E4BFD;
       background: linear-gradient(90deg, rgba(78, 75, 253, 1) 42%, rgba(230, 230, 230, 1) 87%);
-      width: 500px;
+      width: 100%;
       height: 30px;
     }
 
     button {
       padding: 0px 10px 0px 10px;
+      font-size: 0.8em;
     }
   </style>
-  //
 
   <script>
     const IDs = ["infected", "idiot", "congrats"];
@@ -77,9 +77,11 @@
 
 <body>
   <div id="infected" class="virus">
-    <img src="/archives/graphics/infectedpc.gif" width="70%" alt="your pc has been infected">
-    <img src="/archives/graphics/virus.png" width="50%">
-    <audio id="infect" src="https://files.catbox.moe/pril1y.mp3" preload="metadata" loop></audio>
+    <div id="align">
+      <img src="/archives/graphics/infectedpc.gif" width="70%" alt="your pc has been infected">
+      <img src="/archives/graphics/virus.png" width="50%">
+      <audio id="infect" src="https://files.catbox.moe/pril1y.mp3" preload="metadata" loop></audio>
+    </div>
   </div>
 
   <div id="idiot" class="virus">
@@ -97,7 +99,7 @@
     <div id="title">CONGRATULATIONS!</div>
     <br>
     <br>
-    <img src="/archives/graphics/smiley.gif" width="125">
+    <img src="/archives/graphics/smiley.gif" width="20%" alt="smiley face">
     <br>
     <b>THIS IS NOT A JOKE!<br>YOU ARE<br>THE 1000th VISITOR!</b>
     <p>Claim your prize!</p>
