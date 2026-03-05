@@ -34,6 +34,7 @@ let postsArray = [
 //[ "posts/2020-11-10-Special-Characters-Example.html", encodeURI( 'Spéci@l "Character\'s" Examp|e' ) ],
   ["posts/2025-11-01-How-to-export-on-IbisPaintX.html"],
   ["posts/2026-02-06-My-site-ideas.html"],
+  ["blog/posts/2026-01-01-I-dont-want-a-Blueycapsules-revival.html"]
 ];
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXX

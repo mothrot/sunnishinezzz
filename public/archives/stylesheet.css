@@ -101,6 +101,7 @@ header {
 main {
   display: flex;
   justify-content: center;
+  width: 65%;
 }
 
 aside {
@@ -114,6 +115,8 @@ aside {
 
 .wrap {
   display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .container {
@@ -147,10 +150,10 @@ aside {
   --bgimg: url('/archives/assets/day-frontyard.webp');
   --text: #1d1510;
   --border: #994008;
-  --bgocolor: #fce2a4;
+  --bgocolor: #F2CC90;
   --sidebord: medium outset #cc6530;
   --sidebg: #b05325;
-  --minibox: #fceaa4;
+  --minibox: #F2CC90;
   --header:  url('/archives/assets/header.webp') ;
 }
 
@@ -224,34 +227,31 @@ body#mainpage-body {
 /* START OF SIDEBAR 1 */
 /* navbar */
 nav#mainpage-nav {
-  width: fit-content;
-  height: fit-content;
+  width: 100%;
   background: url("/archives/assets/grave_navbar.png") no-repeat;
-  background-size: 100% 100%;;
-}
-ul {
-  width: fit-content;
-  height: fit-content;
   background-size: cover;
-  padding: 5px;
-  padding-top: 45px;
+}
+#navbar {
+  background-size: cover;
+  padding: 45px 5px 5px 5px;
   margin-top: 12px;
   list-style-type: none;
+  text-align: -webkit-center;
 }
 .navbtn a {
-  color: #02030b;
-  padding: 5px;
+ color: #02030b;
+  padding: 3px;
   display: block;
-  margin: 8px;
+  margin: 9px;
   border-radius: 4px;
-  font-size: 25px;
+  font-size: 1.8em;
   box-shadow: 1px 2px 2px #353742;
   border: 2px outset #9b9fc3;
   font-family: "DWARVESC";
   text-align: center;
   text-decoration: none;
   letter-spacing: -2px;
-  width: 140px;
+  width: 170px;
 }
 .navbtn :hover {
   border: 2px inset #9b9fc3;
@@ -299,12 +299,12 @@ ul {
 
 /* big containers */
 #info {
-  width: 92%;
+  width: 100%;
   flex-wrap: nowrap;
   justify-content: center;
 }
 #otro {
-  width: 94%;
+  width: 100%;
 }
 
 /* START OF WEBSITE INTRO AND BUTTONS */
@@ -315,10 +315,11 @@ ul {
   width: 570px;
   display: flex;
   align-items: center;
+  height: 77%;
 }
 
-#text {
-     width: 365px;
+.text-box {
+     width: 360px;
 }
 .belt-buttons {
   max-width: 580px;
@@ -419,7 +420,7 @@ ul {
 /* small containers despues de website info*/
 .small-otro {
   height: auto;
-  width: 920px;
+  width: 100%;
   margin: 2px;
   display: flex;
   flex-wrap: wrap;
@@ -479,6 +480,17 @@ ul {
   filter: brightness(120%);
 }
 
+#abouts{
+  width: 51%;
+  height: 280px;
+  display: flex;
+}
+
+#zombiehand{
+  position: sticky;
+  top: 0px;
+}
+
 
 #otw {
   width: 32%;
@@ -500,11 +512,11 @@ ul {
 
 /* cbox container display*/
 .cbox {
-  width: 237px;
+  width: 260px;
   background-image: url('/archives/assets/chatbox.png');
   background-repeat: no-repeat;
-  background-size: contain;
-  height: 380px;
+  background-size: 100% 100%;
+  height: 330px;
   position: relative;
 }
 /* cbox iframe*/
@@ -543,6 +555,11 @@ ul {
   border: transparent;
   background-color: transparent;
 }
+#virus:hover {
+ filter: brightness(130%) contrast(160%);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
 /* sunflower quotes */
 #quotestab {
   width: 313px;
@@ -555,6 +572,7 @@ ul {
   color: black;
   overflow: hidden;
   border: 5px ridge #994008;
+  margin: 5px;
 }
 #speechbubble {
   background: url('/archives/assets/speech_bubble.png') no-repeat;
@@ -615,14 +633,16 @@ ul {
   background-color: #b05325;
   border: 2px outset #b05325;
   border-radius: 5px;
-  padding: 2px;
-  margin: 5px;
+  padding: 2px 5px 2px 5px;
+  margin: 3px;
   max-width: 260px;
-  width: 150px;
-  height: 26px;
+  width: fit-content;
+  height: fit-content;
   font-family: "Cafeteria-Bold";
-  font-size: 25px;
+  font-size: 1.67em;
   color: #ffe376;
+  min-width: 100px;
+  min-height: 25px;
 }
 .minibox {
   width: 195px;
@@ -636,6 +656,7 @@ ul {
 }
 
 /* second sidebar contents */
+
 
 .statuscafe{
   position:relative;
@@ -673,6 +694,11 @@ ul {
 
 #music-w {
   width: 195px;
+}
+
+#cliques{
+  overflow: scroll;
+  height: 185px;
 }
 /* END OF SECOND SIDEBAR */
 

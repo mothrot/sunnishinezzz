@@ -10,8 +10,7 @@
 
   <style>
     body {
-      background: url('/archives/assets/funniez_bg.webp');
-      background-size: 99%;
+      background: black;
       overflow: hidden;
       margin: auto;
       width: 100%;
@@ -21,10 +20,10 @@
     }
 
     main {
+      background: url('/archives/assets/funniez_bg.webp') no-repeat;
       position: relative;
       width: 100%;
-      background: url('/archives/assets/funniez_bg.webp') no-repeat;
-      height: 672px;
+      height: 700px;
       background-size: cover;
       background-position: center;
       margin-top: 49px;
@@ -37,28 +36,36 @@
       display: flex;
       flex-direction: row;
       position: absolute;
-      top: -28px;
-      left: 148px;
+      top: -5px;
+      left: 310px;
     }
 
     #selection .selector {
-      perspective: 255px;
-      width: 233px;
+
+      width: 205px;
       transform: rotateX(0deg) rotateY(24deg);
-      margin-right: 40px;
       transform-style: preserve-3d;
     }
 
-    #selection img {
-      width: 318px;
-      height: 345px;
-      object-fit: cover;
+    .selector a {
+      perspective: 255px;
+    }
+
+    .selector img {
+      width: auto;
+      height: 80%;
+      object-fit: contain;
       transition: transform 0.5s, width 0.5s, height 0.5s, margin-top 0.5s;
       transform: rotateX(0deg) rotateY(12deg);
       transform-style: preserve-3d;
     }
 
-    #selection .selector:hover img {
+    .selector:hover {
+      margin-right: 55px;
+      margin-left: 20px;
+    }
+
+    .selector:hover img {
       transform: rotateX(0deg) rotateY(10deg);
       transform: rotateX(0deg) rotateY(0deg);
       transform-style: preserve-3d;
@@ -87,23 +94,25 @@
   <main>
     <div id="selection">
 
-      <div class="selector" onclick="window.open('/webring/sapphicring.html');">
-        <img src="/archives/assets/sapphicring.png" alt="Sapphic webring">
+      <div class="selector">
+        <a href="/webring/sapphicring.html"><img src="/archives/assets/sapphicring.png" alt="Sapphic webring"></a>
       </div>
 
 
-      <div class="selector" onclick="window.open('/funniez/wisdom-tree.html');">
-        <img src="/archives/assets/treeofwisdom.png" alt="Tree of wisdom">
+      <div class="selector">
+        <a href="/webring/sapphicring.html"><img src="/archives/assets/treeofwisdom.png" alt="Tree of wisdom"></a>
       </div>
 
 
-      <div class="selector" onclick="window.open('https://plantsvszombiez.neocities.org/');">
-        <img src="/archives/assets/pvzwebring.png" alt="Plants vs Zombies webring">
+      <div class="selector">
+        <a href="https://plantsvszombiez.neocities.org/"><img src="/archives/assets/pvzring.png"
+            alt="Plants vs Zombies webring"></a>
       </div>
 
 
-      <div class="selector" onclick="window.open('/funniez/waybackmachine');">
-        <img src="/archives/assets/waybackmachine.png" alt="Not a wayback machine">
+      <div class="selector">
+        <a href="/funniez/waybackmachine.html"><img src="/archives/assets/waybackmachine.png"
+            alt="Not a wayback machine"></a>
       </div>
 
     </div>
