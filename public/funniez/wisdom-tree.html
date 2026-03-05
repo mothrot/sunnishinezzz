@@ -15,32 +15,34 @@
       background-size: cover;
       position: relative;
       display: flex;
-      margin: auto;
+      margin: 0px;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
-      width: 1300px;
       overflow: hidden;
+      height: 100vh;
     }
 
     #tree {
-      height: 745px;
+      height: 101vh;
+      margin: 0px;
     }
 
     main {
       position: relative;
     }
 
-    .speechbubble {
+    #speechbubble {
       background: url('/archives/assets/speech_bubble.png') no-repeat;
       background-size: cover;
       position: absolute;
       width: 220px;
       height: 140px;
-      left: 670px;
-      top: 120px;
+      left: 55%;
+      top: 15%;
       padding: 5px;
       text-align: center;
+      transform: translate(0px, 0%);
+      font-size: 1.2em;
     }
 
     #outputDiv {
@@ -49,8 +51,9 @@
 
     #questionBox {
       position: absolute;
-      bottom: 200px;
-      right: 510px;
+      top: 70%;
+      left: 38%;
+      transform: translate(0px, 0%);
       width: 360px;
       height: 30px;
       max-height: 50px;
@@ -58,8 +61,9 @@
 
     #button {
       position: absolute;
-      top: 580px;
-      right: 590px;
+      top: 80%;
+      left: 43%;
+      transform: translate(0px, 0%);
     }
 
     #button:hover {
@@ -69,7 +73,8 @@
   </style>
 
   <script>
-    function GenerateAnswer() {
+    function generateAnswer() {
+
       responses = [
         'It is certain',
         'It is decidedly so',
@@ -93,20 +98,36 @@
       document.getElementById('outputDiv').innerHTML = response;
     }
 
+    function clearInput() {
+      document.getElementById("questionBox").value = "";
+    }
+
+    function validateInput() {
+      var x = document.getElementById("questionBox").value;
+      if (x == "") {
+        alert("input can't be empty");
+        return false;
+      } else {
+        generateAnswer();
+        clearInput();
+      }
+    }
 
   </script>
 
 </head>
 
 <body>
+  <iframe width="0" height="0" src="//www.youtube.com/embed/rYXHGo1wpL8?autoplay=1&loop=1&playlist=rYXHGo1wpL8"
+    frameborder="0" allowfullscreen></iframe>
 
   <main>
-    <div class="speechbubble">
+    <div id="speechbubble">
       <div id="outputDiv"> Ask me a question, and I will answer </div>
     </div>
     <img id="tree" src="/archives/assets/treeofwisdom_.png">
 
-    <img id="button" src="/archives/assets/att_b.png" onclick="GenerateAnswer()">
+    <img id="button" src="/archives/assets/att_b.png" onclick="validateInput()">
 
     <input type="text" id="questionBox" size=100 value=''>
 

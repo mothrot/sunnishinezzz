@@ -216,7 +216,6 @@
         <audio id="gravesound" src="https://file.garden/aPcdyx6-Eg7wI_Wb/music/gravebutton.ogg" preload="auto"></audio>
         <a class="enter" href="/mainpage.html"></a>
         <script>
-
           const btnHover = document.querySelectorAll('.enter');
           const hoverSound = document.getElementById('gravesound');
 
@@ -231,6 +230,12 @@
               hoverSound.currentTime = 0;
             });
           });
+
+
+          if (navigator.userAgent === "Screenjesus") {
+            location.replace("/stuff/thumbnail.html");
+          }
+
         </script>
       </div>
 

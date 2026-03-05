@@ -46,7 +46,6 @@ var currentPlaylist = "PvZ Ost";
  * You can also delete the themes that you don't want.
 */
 var myThemes = {
-    "VIOLET": "violet",
     "MINIMAL": "minimal",
 };
 
