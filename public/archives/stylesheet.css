@@ -57,6 +57,7 @@ h4 {
   font-family: "Comic sans";
   font-weight: bold;
 }
+
 p {
   font-family: "Comic sans";
   font-size: 14px;
@@ -67,15 +68,18 @@ a:link {
   color: inherit;
   text-decoration: none;
 }
+
 a:visited {
   color: inherit;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-decoration-style: solid;
 }
+
 a:active {
   color: lime;
   text-shadow: 1px 1px 3px #298203;
@@ -147,16 +151,15 @@ aside {
 }
 
 :root {
-  --bgimg: url('/archives/assets/day-frontyard.webp');
+  --bgimg: url("/archives/assets/day-frontyard.webp");
   --text: #1d1510;
   --border: #994008;
-  --bgocolor: #F2CC90;
+  --bgocolor: #f2cc90;
   --sidebord: medium outset #cc6530;
   --sidebg: #b05325;
-  --minibox: #F2CC90;
-  --header:  url('/archives/assets/header.webp') ;
+  --minibox: #f2cc90;
+  --header: url("/archives/assets/header.webp");
 }
-
 
 /* text or content box */
 .main {
@@ -177,20 +180,22 @@ aside {
 ::-webkit-scrollbar {
   width: 5px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #e8c054;
   -webkit-border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #d0a650;
 }
 
 .back {
-  background: transparent url("/archives/assets/BackButton.png")
-    no-repeat;
+  background: transparent url("/archives/assets/BackButton.png") no-repeat;
   border: none;
   width: 108px;
   height: 100px;
@@ -215,9 +220,11 @@ aside {
 html#mainpage-html {
   scrollbar-color: #e8c054 #ccdf9b05;
 }
+
 body#mainpage-body {
   background-image: var(--bgimg);
 }
+
 #mainpage-head {
   width: 800px;
   height: 187px;
@@ -231,6 +238,7 @@ nav#mainpage-nav {
   background: url("/archives/assets/grave_navbar.png") no-repeat;
   background-size: cover;
 }
+
 #navbar {
   background-size: cover;
   padding: 45px 5px 5px 5px;
@@ -238,8 +246,9 @@ nav#mainpage-nav {
   list-style-type: none;
   text-align: -webkit-center;
 }
+
 .navbtn a {
- color: #02030b;
+  color: #02030b;
   padding: 3px;
   display: block;
   margin: 9px;
@@ -253,6 +262,7 @@ nav#mainpage-nav {
   letter-spacing: -2px;
   width: 170px;
 }
+
 .navbtn :hover {
   border: 2px inset #9b9fc3;
   background-color: #43445d;
@@ -271,12 +281,14 @@ nav#mainpage-nav {
   position: relative;
   text-align: center;
 }
+
 #button88 {
   position: absolute;
   top: 18%;
   right: 27%;
 }
-#button88:hover{
+
+#button88:hover {
   filter: brightness(120%);
   cursor: pointer;
   transition: rotate 0.2s;
@@ -284,17 +296,17 @@ nav#mainpage-nav {
 }
 
 #guestbook {
- position: absolute;
+  position: absolute;
   top: 38%;
   right: 15%;
 }
 
-
-#guestbook:hover{
+#guestbook:hover {
   filter: brightness(120%);
   rotate: 3deg;
   transition: rotate 0.2s;
 }
+
 /* END OF SIDEBAR 1 */
 
 /* big containers */
@@ -303,6 +315,7 @@ nav#mainpage-nav {
   flex-wrap: nowrap;
   justify-content: center;
 }
+
 #otro {
   width: 100%;
 }
@@ -311,6 +324,7 @@ nav#mainpage-nav {
 #intro {
   width: 600px;
 }
+
 #mainindex {
   width: 570px;
   display: flex;
@@ -319,8 +333,9 @@ nav#mainpage-nav {
 }
 
 .text-box {
-     width: 360px;
+  width: 360px;
 }
+
 .belt-buttons {
   max-width: 580px;
   background-color: black;
@@ -332,37 +347,44 @@ nav#mainpage-nav {
   font-family: digital;
   color: white;
 }
+
 /* belt buttons */
 .marquee {
   overflow: hidden;
 }
+
 .buttons {
   display: inline-flex;
   white-space: nowrap;
   animation: marquee 50s linear infinite;
 }
+
 .buttons:hover {
   animation-play-state: paused;
 }
+
 @keyframes marquee {
   0% {
     transform: translateX(10%);
   }
+
   100% {
     transform: translateX(-95%);
   }
 }
 
-#socials{
+#socials {
   display: inline-flex;
-    white-space: nowrap;
-    animation: marquee 10s linear infinite;
-    width: 325px;
-    align-items: center;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+  width: 325px;
+  align-items: center;
 }
+
 #socials:hover {
   animation-play-state: paused;
 }
+
 /* END OF WEBSITE INTRO AND BUTTONS */
 
 /* START OF WEBSITE LOGS AND ABOUT */
@@ -370,6 +392,7 @@ nav#mainpage-nav {
   width: 32%;
   height: 373px;
 }
+
 #to-do-button {
   background: url("/archives/assets/to-do.png") no-repeat;
   width: 86px;
@@ -380,12 +403,14 @@ nav#mainpage-nav {
 #to-do-button:hover {
   filter: brightness(120%);
 }
+
 #logs-button {
   background: url("/archives/assets/logs-button.png") no-repeat;
   width: 86px;
   height: 28px;
   border: transparent;
 }
+
 #logs-button:hover {
   filter: brightness(120%);
 }
@@ -393,11 +418,17 @@ nav#mainpage-nav {
 .paper-note {
   width: 276px;
   height: 330px;
-  background-image: url('/archives/assets/paper.png');
+  background-image: url("/archives/assets/paper.png");
   background-size: 275px 330px;
   background-repeat: no-repeat;
   position: relative;
+  font-family: Comic sans;
 }
+
+.paper-note:hover {
+  filter: brightness(120%) contrast(100%);
+}
+
 #logs {
   width: 233px;
   overflow-y: scroll;
@@ -407,6 +438,7 @@ nav#mainpage-nav {
   right: 14px;
   scrollbar-color: #e8c054 #ccdf9b05;
 }
+
 #todo-list {
   height: 309px;
   max-height: 309px;
@@ -415,6 +447,7 @@ nav#mainpage-nav {
   scrollbar-color: #e8c054 #ccdf9b05;
   display: none;
 }
+
 /* END OF WEBSITE LOGS AND ABOUT */
 
 /* small containers despues de website info*/
@@ -430,7 +463,7 @@ nav#mainpage-nav {
 
 /* START OF OTRO FIRST ROW*/
 #whatsnew {
-  background-image: url('/archives/assets/whatsnew.png');
+  background-image: url("/archives/assets/whatsnew.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 400px;
@@ -450,6 +483,7 @@ nav#mainpage-nav {
   bottom: 52%;
   left: 35.9%;
 }
+
 #newtitle {
   font-family: DWARVESC;
   color: #cb9d3f;
@@ -459,6 +493,7 @@ nav#mainpage-nav {
   left: 36%;
   text-align: center;
 }
+
 #description {
   position: absolute;
   bottom: 21.4%;
@@ -470,33 +505,35 @@ nav#mainpage-nav {
   font-size: small;
   height: 60px;
 }
+
 #visitbutton {
   position: absolute;
   top: 84.5%;
   left: 36.7%;
   width: 27%;
 }
+
 #visitbutton:hover {
   filter: brightness(120%);
 }
 
-#abouts{
+#abouts {
   width: 51%;
   height: 280px;
   display: flex;
 }
 
-#zombiehand{
+#zombiehand {
   position: sticky;
   top: 0px;
 }
-
 
 #otw {
   width: 32%;
   height: 303px;
   padding: 0px;
 }
+
 #poll {
   border: 5px outset #994008;
   padding: 5px;
@@ -513,12 +550,13 @@ nav#mainpage-nav {
 /* cbox container display*/
 .cbox {
   width: 260px;
-  background-image: url('/archives/assets/chatbox.png');
+  background-image: url("/archives/assets/chatbox.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 330px;
   position: relative;
 }
+
 /* cbox iframe*/
 #cbox {
   position: absolute;
@@ -541,6 +579,7 @@ nav#mainpage-nav {
   height: 312px;
   overflow-y: hidden;
 }
+
 #scrollmessage {
   width: 325px;
 }
@@ -548,23 +587,25 @@ nav#mainpage-nav {
 /* virus and quotes */
 #virus {
   height: 51px;
-  background-image: url('/archives/assets/virusbutton.png');
+  background-image: url("/archives/assets/virusbutton.png");
   width: 98%;
   background-size: cover;
   background-repeat: repeat;
   border: transparent;
   background-color: transparent;
 }
+
 #virus:hover {
- filter: brightness(130%) contrast(160%);
+  filter: brightness(130%) contrast(160%);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
+
 /* sunflower quotes */
 #quotestab {
   width: 313px;
   height: 313px;
-  background: url('/archives/assets/zengarden.png') no-repeat;
+  background: url("/archives/assets/zengarden.png") no-repeat;
   background-size: cover;
   position: relative;
   font-family: Brianne;
@@ -574,8 +615,9 @@ nav#mainpage-nav {
   border: 5px ridge #994008;
   margin: 5px;
 }
+
 #speechbubble {
-  background: url('/archives/assets/speech_bubble.png') no-repeat;
+  background: url("/archives/assets/speech_bubble.png") no-repeat;
   background-size: cover;
   width: 201px;
   height: 128px;
@@ -586,17 +628,19 @@ nav#mainpage-nav {
   top: 5px;
   padding: 5px;
 }
+
 #sunflower {
   position: absolute;
   bottom: 2px;
   right: 145px;
 }
+
 /* END OF OTRO SECOND ROW*/
 
 /* START OF SECOND SIDEBAR */
 
 #counter-display {
-  background-image: url('/archives/assets/sun_count.png');
+  background-image: url("/archives/assets/sun_count.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -604,6 +648,7 @@ nav#mainpage-nav {
   height: 37px;
   margin: 0px;
 }
+
 #fc2 {
   left: 32%;
   position: relative;
@@ -626,6 +671,7 @@ nav#mainpage-nav {
   flex-direction: column;
   align-items: center;
 }
+
 .tittlebox {
   box-shadow: inset 0px 0px 3px 0px #271313;
   display: inline-grid;
@@ -644,6 +690,7 @@ nav#mainpage-nav {
   min-width: 100px;
   min-height: 25px;
 }
+
 .minibox {
   width: 195px;
   height: fit-content;
@@ -657,9 +704,22 @@ nav#mainpage-nav {
 
 /* second sidebar contents */
 
+#minirat {
+  background: url('/archives/assets/ratthing.png');
+  background-size: contain;
+  width: 80px;
+  height: 80px;
+  cursor: grab;
+  transition: background-image 0.3s ease-in-out;
+}
 
-.statuscafe{
-  position:relative;
+#minirat:hover {
+  background: url('/archives/graphics/ratthing_2.png');
+  background-size: contain;
+}
+
+.statuscafe {
+  position: relative;
 }
 
 #statuscafe {
@@ -675,9 +735,11 @@ nav#mainpage-nav {
   overflow-y: scroll;
   scrollbar-width: thin;
 }
+
 #statuscafe-username {
   margin-bottom: 0.5em;
 }
+
 #statuscafe-content {
   margin: 0 1em 0.5em 1em;
 }
@@ -696,20 +758,22 @@ nav#mainpage-nav {
   width: 195px;
 }
 
-#cliques{
+#cliques {
   overflow: scroll;
   height: 185px;
 }
+
 /* END OF SECOND SIDEBAR */
 
 /*FOOTER*/
 #mainpage-foot {
   width: 910px;
   height: 136px;
-  background: url('/archives/assets/footer.png') no-repeat;
+  background: url("/archives/assets/footer.png") no-repeat;
   background-size: cover;
   position: relative;
 }
+
 #footer-text {
   position: absolute;
   top: 70px;
@@ -725,6 +789,7 @@ a.footerlink:link {
   color: #ffe376;
   text-decoration: none;
 }
+
 a.footerlink:hover {
   text-shadow: inherit;
   text-decoration-line: underline;
@@ -732,6 +797,7 @@ a.footerlink:hover {
   text-decoration-style: wavy;
   text-decoration-thickness: 1px;
 }
+
 a.footerlink:visited {
   color: #ffe376;
   text-decoration: none;

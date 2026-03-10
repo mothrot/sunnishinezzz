@@ -41,11 +41,15 @@
       font-family: monospace;
       font-size: 1.1em;
       position: relative;
+      height: 99vh;
+      margin: 0px;
     }
 
     #sunniez-wrap {
       display: flex;
       gap: 20px;
+      position: absolute;
+      top: 5%;
     }
 
     main#window {
@@ -248,6 +252,7 @@
 
     #webamp {
       top: 100px;
+      left: 35px;
     }
 
     #goback {
@@ -294,6 +299,14 @@
       100% {
         transform: translate(0, -0px);
       }
+    }
+
+    #taskbar {
+      width: 100%;
+      height: 40px;
+      background-image: linear-gradient(to top, #738066, #f1ffe8);
+      bottom: -1%;
+      position: absolute;
     }
   </style>
 </head>
@@ -649,291 +662,292 @@
   </script>
 
   <!-- musica-->
-  <div id="winamp-container" style="width: 30px; height: 30px; position: absolute; top: 0%; left: 0%">
-    <script>
-      const Winamp = window.Webamp;
-      // All configuration options are optional.
-      const webamp = new Webamp({
-        // Optional.
-        initialTracks: [
-          {
-            metaData: {
-              artist: "Saraunholy",
-              title: "Wutiwant",
-            },
-            url: "https://files.catbox.moe/uw13pa.mp3",
+  <div id="winamp-container" style="width: 30px; height: 30px; position: absolute; top: 0%; left: 0%"> </div>
+  <script>
+    const Winamp = window.Webamp;
+    // All configuration options are optional.
+    const webamp = new Webamp({
+      // Optional.
+      initialTracks: [
+        {
+          metaData: {
+            artist: "Saraunholy",
+            title: "Wutiwant",
           },
-          {
-            metaData: {
-              artist: "Blake Robinson Synthetic Orchestra",
-              title: "An Unhealthy Obsession ft. Gloom Darkheart",
-            },
-            url: "https://files.catbox.moe/mghmz9.mp3",
+          url: "https://files.catbox.moe/uw13pa.mp3",
+        },
+        {
+          metaData: {
+            artist: "Blake Robinson Synthetic Orchestra",
+            title: "An Unhealthy Obsession ft. Gloom Darkheart",
           },
-          {
-            metaData: {
-              artist: "Gorillaz",
-              title: "Saturnz Barz ft. Popcaan",
-            },
-            url: "https://files.catbox.moe/lvkjei.mp3",
+          url: "https://files.catbox.moe/mghmz9.mp3",
+        },
+        {
+          metaData: {
+            artist: "Gorillaz",
+            title: "Saturnz Barz ft. Popcaan",
           },
-          {
-            metaData: {
-              artist: "Stephanie Mabey",
-              title: "The Zombie song",
-            },
-            url: "https://files.catbox.moe/bgam8l.mp3",
+          url: "https://files.catbox.moe/lvkjei.mp3",
+        },
+        {
+          metaData: {
+            artist: "Stephanie Mabey",
+            title: "The Zombie song",
           },
-          {
-            metaData: {
-              artist: "La Bouche",
-              title: "Be my lover",
-            },
-            url: "https://files.catbox.moe/l91tg9.mp3",
+          url: "https://files.catbox.moe/bgam8l.mp3",
+        },
+        {
+          metaData: {
+            artist: "La Bouche",
+            title: "Be my lover",
           },
-          {
-            metaData: {
-              artist: "Los Prisioneros",
-              title: "Con Suavidad",
-            },
-            url: "https://files.catbox.moe/v00a3i.mp3",
+          url: "https://files.catbox.moe/l91tg9.mp3",
+        },
+        {
+          metaData: {
+            artist: "Los Prisioneros",
+            title: "Con Suavidad",
           },
-          {
-            metaData: {
-              artist: "quierememuxo",
-              title: "Diversión Sonora - Ya Hay Verano",
-            },
-            url: "https://files.catbox.moe/yix4g3.mp3",
+          url: "https://files.catbox.moe/v00a3i.mp3",
+        },
+        {
+          metaData: {
+            artist: "quierememuxo",
+            title: "Diversión Sonora - Ya Hay Verano",
           },
-          {
-            metaData: {
-              artist: "The Cardigans",
-              title: "Step on me",
-            },
-            url: "https://files.catbox.moe/w3ca81.mp3",
+          url: "https://files.catbox.moe/yix4g3.mp3",
+        },
+        {
+          metaData: {
+            artist: "The Cardigans",
+            title: "Step on me",
           },
-          {
-            metaData: {
-              artist: "Ellise",
-              title: "911",
-            },
-            url: "https://files.catbox.moe/sqpx3w.mp3",
+          url: "https://files.catbox.moe/w3ca81.mp3",
+        },
+        {
+          metaData: {
+            artist: "Ellise",
+            title: "911",
           },
-          {
-            metaData: {
-              artist: "George Michael",
-              title: "Careless Whisper",
-            },
-            url: "https://files.catbox.moe/ff1s31.mp3",
+          url: "https://files.catbox.moe/sqpx3w.mp3",
+        },
+        {
+          metaData: {
+            artist: "George Michael",
+            title: "Careless Whisper",
           },
-          {
-            metaData: {
-              artist: "KryFuZe",
-              title: "Afton Family",
-            },
-            url: "https://files.catbox.moe/r6mupf.mp3",
+          url: "https://files.catbox.moe/ff1s31.mp3",
+        },
+        {
+          metaData: {
+            artist: "KryFuZe",
+            title: "Afton Family",
           },
-          {
-            metaData: {
-              artist: "aldn",
-              title: "Ican'tbeliveIletyougetaway",
-            },
-            url: "https://files.catbox.moe/kpuk3q.mp3",
+          url: "https://files.catbox.moe/r6mupf.mp3",
+        },
+        {
+          metaData: {
+            artist: "aldn",
+            title: "Ican'tbeliveIletyougetaway",
           },
-          {
-            metaData: {
-              artist: "Mitski",
-              title: "Crack Baby",
-            },
-            url: "https://files.catbox.moe/kpuk3q.mp3",
+          url: "https://files.catbox.moe/kpuk3q.mp3",
+        },
+        {
+          metaData: {
+            artist: "Mitski",
+            title: "Crack Baby",
           },
-          {
-            metaData: {
-              artist: "AC/DC",
-              title: "Highway to hell",
-            },
-            url: "https://files.catbox.moe/6ec1r1.mp3",
+          url: "https://files.catbox.moe/kpuk3q.mp3",
+        },
+        {
+          metaData: {
+            artist: "AC/DC",
+            title: "Highway to hell",
           },
-          {
-            metaData: {
-              artist: "Flex",
-              title: "Dejala ft. Duende",
-            },
-            url: "https://files.catbox.moe/rpsvmk.mp3",
+          url: "https://files.catbox.moe/6ec1r1.mp3",
+        },
+        {
+          metaData: {
+            artist: "Flex",
+            title: "Dejala ft. Duende",
           },
-          {
-            metaData: {
-              artist: "The cardigans",
-              title: "Step on me",
-            },
-            url: "https://files.catbox.moe/w3ca81.mp3",
+          url: "https://files.catbox.moe/rpsvmk.mp3",
+        },
+        {
+          metaData: {
+            artist: "The cardigans",
+            title: "Step on me",
           },
-          {
-            metaData: {
-              artist: "Freddie Dredd",
-              title: "Five nights ft. Danny Brown",
-            },
-            url: "https://files.catbox.moe/rr68pq.mp3",
+          url: "https://files.catbox.moe/w3ca81.mp3",
+        },
+        {
+          metaData: {
+            artist: "Freddie Dredd",
+            title: "Five nights ft. Danny Brown",
           },
-          {
-            metaData: {
-              artist: "Lay Bankz",
-              title: "Sloppy Seconds",
-            },
-            url: "https://files.catbox.moe/37yjsw.mp3",
+          url: "https://files.catbox.moe/rr68pq.mp3",
+        },
+        {
+          metaData: {
+            artist: "Lay Bankz",
+            title: "Sloppy Seconds",
           },
-          {
-            metaData: {
-              artist: "Zoé",
-              title: "Labios Rotos",
-            },
-            url: "https://files.catbox.moe/izz2hz.mp3",
+          url: "https://files.catbox.moe/37yjsw.mp3",
+        },
+        {
+          metaData: {
+            artist: "Zoé",
+            title: "Labios Rotos",
           },
-          {
-            metaData: {
-              artist: "Sevdaliza",
-              title: "Ride or die ft. Villano",
-            },
-            url: "https://files.catbox.moe/c5gb48.mp3",
+          url: "https://files.catbox.moe/izz2hz.mp3",
+        },
+        {
+          metaData: {
+            artist: "Sevdaliza",
+            title: "Ride or die ft. Villano",
           },
-          {
-            metaData: {
-              artist: "Los Prisioneros",
-              title: "We are Sudamerican rockers",
-            },
-            url: "https://files.catbox.moe/r1z3lc.mp3",
+          url: "https://files.catbox.moe/c5gb48.mp3",
+        },
+        {
+          metaData: {
+            artist: "Los Prisioneros",
+            title: "We are Sudamerican rockers",
           },
-          {
-            metaData: {
-              artist: "Los Prisioneros",
-              title: "SEXO",
-            },
-            url: "https://files.catbox.moe/piolr5.mp3",
+          url: "https://files.catbox.moe/r1z3lc.mp3",
+        },
+        {
+          metaData: {
+            artist: "Los Prisioneros",
+            title: "SEXO",
           },
-          {
-            metaData: {
-              artist: "Rio Romeo",
-              title: "Butch 4 Butch",
-            },
-            url: "https://files.catbox.moe/phs3k3.mp3",
+          url: "https://files.catbox.moe/piolr5.mp3",
+        },
+        {
+          metaData: {
+            artist: "Rio Romeo",
+            title: "Butch 4 Butch",
           },
-          {
-            metaData: {
-              artist: "Julio Jaramillo",
-              title: "Cuando llora mi guitarra",
-            },
-            url: "https://files.catbox.moe/42g7cp.mp3",
+          url: "https://files.catbox.moe/phs3k3.mp3",
+        },
+        {
+          metaData: {
+            artist: "Julio Jaramillo",
+            title: "Cuando llora mi guitarra",
           },
-          {
-            metaData: {
-              artist: "Luis Miguel",
-              title: "Ahora te puedes marchar",
-            },
-            url: "https://files.catbox.moe/z9u9jx.mp3",
+          url: "https://files.catbox.moe/42g7cp.mp3",
+        },
+        {
+          metaData: {
+            artist: "Luis Miguel",
+            title: "Ahora te puedes marchar",
           },
-          {
-            metaData: {
-              artist: "NBSPLV",
-              title: "The lost soul down",
-            },
-            url: "https://files.catbox.moe/ackth6.mp3",
+          url: "https://files.catbox.moe/z9u9jx.mp3",
+        },
+        {
+          metaData: {
+            artist: "NBSPLV",
+            title: "The lost soul down",
           },
-          {
-            metaData: {
-              artist: "Mc Bushpig",
-              title: "Eat my rotten meat",
-            },
-            url: "https://files.catbox.moe/qxcth0.mp3",
+          url: "https://files.catbox.moe/ackth6.mp3",
+        },
+        {
+          metaData: {
+            artist: "Mc Bushpig",
+            title: "Eat my rotten meat",
           },
-          {
-            metaData: {
-              artist: "Friend",
-              title: "Braces",
-            },
-            url: "https://files.catbox.moe/qwccif.mp3",
+          url: "https://files.catbox.moe/qxcth0.mp3",
+        },
+        {
+          metaData: {
+            artist: "Friend",
+            title: "Braces",
           },
-          {
-            metaData: {
-              artist: "Teddy Hyde",
-              title: "Sex with a ghost",
-            },
-            url: "https://files.catbox.moe/5jovr0.mp3",
+          url: "https://files.catbox.moe/qwccif.mp3",
+        },
+        {
+          metaData: {
+            artist: "Teddy Hyde",
+            title: "Sex with a ghost",
           },
-          {
-            metaData: {
-              artist: "Ghost and pals",
-              title: "Housewife Radio",
-            },
-            url: "https://files.catbox.moe/d5kzbc.mp3",
+          url: "https://files.catbox.moe/5jovr0.mp3",
+        },
+        {
+          metaData: {
+            artist: "Ghost and pals",
+            title: "Housewife Radio",
           },
-          {
-            metaData: {
-              artist: "Tiffany Garcia",
-              title: "Notice me Senpai",
-            },
-            url: "https://files.catbox.moe/b3zg0r.mp3",
+          url: "https://files.catbox.moe/d5kzbc.mp3",
+        },
+        {
+          metaData: {
+            artist: "Tiffany Garcia",
+            title: "Notice me Senpai",
           },
-          {
-            metaData: {
-              artist: "Miranda",
-              title: "Traición",
-            },
-            url: "https://files.catbox.moe/pqeiw7.mp3",
+          url: "https://files.catbox.moe/b3zg0r.mp3",
+        },
+        {
+          metaData: {
+            artist: "Miranda",
+            title: "Traición",
           },
-          {
-            metaData: {
-              artist: "Siouxxie Sixxsta",
-              title: "Succubus",
-            },
-            url: "https://files.catbox.moe/ar44qn.mp3",
+          url: "https://files.catbox.moe/pqeiw7.mp3",
+        },
+        {
+          metaData: {
+            artist: "Siouxxie Sixxsta",
+            title: "Succubus",
           },
-          {
-            metaData: {
-              artist: "Jawny",
-              title: "Trigger or love",
-            },
-            url: "https://files.catbox.moe/m4di53.mp3",
+          url: "https://files.catbox.moe/ar44qn.mp3",
+        },
+        {
+          metaData: {
+            artist: "Jawny",
+            title: "Trigger or love",
           },
-          {
-            metaData: {
-              artist: "The plot in you",
-              title: "Don't look away",
-            },
-            url: "https://files.catbox.moe/5ssp9x.mp3",
+          url: "https://files.catbox.moe/m4di53.mp3",
+        },
+        {
+          metaData: {
+            artist: "The plot in you",
+            title: "Don't look away",
           },
-          {
-            metaData: {
-              artist: "Knocked Loose",
-              title: "Blinding Faith",
-            },
-            url: "https://files.catbox.moe/nhxqw1.mp3",
+          url: "https://files.catbox.moe/5ssp9x.mp3",
+        },
+        {
+          metaData: {
+            artist: "Knocked Loose",
+            title: "Blinding Faith",
           },
-          {
-            metaData: {
-              artist: "Tyler, The Creator",
-              title: "St. Chroma",
-            },
-            url: "https://files.catbox.moe/1ltn0o.mp3",
+          url: "https://files.catbox.moe/nhxqw1.mp3",
+        },
+        {
+          metaData: {
+            artist: "Tyler, The Creator",
+            title: "St. Chroma",
           },
-          {
-            metaData: {
-              artist: "JAK3",
-              title: "My blood, my soul",
-            },
-            url: "https://files.catbox.moe/bml61o.mp3",
+          url: "https://files.catbox.moe/1ltn0o.mp3",
+        },
+        {
+          metaData: {
+            artist: "JAK3",
+            title: "My blood, my soul",
           },
-          {
-            metaData: {
-              artist: "Oscar",
-              title: "Homero me divierte",
-            },
-            url: "https://file.garden/aPcdyx6-Eg7wI_Wb/misc/homero%20me%20divierte.mp3",
+          url: "https://files.catbox.moe/bml61o.mp3",
+        },
+        {
+          metaData: {
+            artist: "Oscar",
+            title: "Homero me divierte",
           },
-        ],
-      });
-      webamp.renderWhenReady(document.getElementById("winamp-container"));
-    </script>
+          url: "https://file.garden/aPcdyx6-Eg7wI_Wb/misc/homero%20me%20divierte.mp3",
+        },
+      ],
+    });
+    webamp.renderWhenReady(document.getElementById("winamp-container"));
+  </script>
   </div>
+  <div id="taskbar"></div>
 </body>
 
 </html>
