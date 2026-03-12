@@ -181,11 +181,12 @@
       alert('MUICHIRO IN YANDERE SIMULATOR! | Creditos originales a @nikaidosei por el rig, solo lo comparto porque ya no esta disponible | Credits to @nikaidosei for the rigging, I just uploaded it myself because it is no longer avaible');
     }
 
+
     if (navigator.userAgent === "Screenjesus") {
-      location.replace("/stuff/thumbnail.html");
+      document.body.innerHTML = '<img src="/archives/graphics/site_thumbnail.jpg" style="width:100vw;height:100vh;object-fit:cover;">';
     }
 
-    const btnHover = document.querySelectorAll('.enter');
+    const btnHover = document.getElementById('enter');
     const hoverSound = document.getElementById('gravesound');
 
     btnHover.forEach(item => {
