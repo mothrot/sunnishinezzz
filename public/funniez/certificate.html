@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Certificate</title>
+
+    <style>
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #ffb4bf transparent;
+        }
+
+        @font-face {
+            font-family: porkys;
+            src: url('/archives/fonts/PORKYS.ttf');
+        }
+
+        body {
+            font-family: MS Gothic;
+            background: url('/archives/assets/hearts_bg.gif');
+            overflow-x: hidden;
+            font-size: 0.8em;
+        }
+
+        header {
+            text-align: center;
+            padding: 5px;
+            width: 100%;
+        }
+
+        header h1,
+        header h2 {
+            margin: 0;
+            text-shadow: 1px 1px black, -1px 1px black, -1px -1px black, 1px -1px black, 1px 1px 20px #ffb4bf, 1px 1px 20px #ffb4bf;
+            color: white;
+            font-family: porkys;
+            letter-spacing: 1px;
+            font-size: 2.4em;
+        }
+
+        main {
+            max-width: 800px;
+            width: 100%;
+            height: 740px;
+            margin: 0 auto;
+            background-color: #f5f5f5;
+            padding: 5px;
+            border-radius: 5px 5px 5px 5px;
+            box-shadow: 0 0 10px #ffb4bf, 0 0 20px #ffb4bf;
+            padding: 20px;
+            font-size: 1.2em;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .certi {
+            width: 250px;
+            height: 250px;
+            background-color: #ffb4bf;
+        }
+
+        h3 {
+            width: 55%;
+            font-family: MS Gothic;
+            font-size: 1.2em;
+            background-color: #ffb4bf;
+            color: white;
+            text-transform: capitalize;
+            font-weight: bold;
+            padding: 1px;
+        }
+
+        #text,
+        #controls {
+            width: 60%;
+            text-align: left;
+            height: fit-content;
+        }
+
+        #preview {
+            text-align: center;
+            width: 30%;
+            display: grid;
+            gap: 20px;
+            position: fixed;
+            right: 25%;
+            top: 30%;
+            justify-items: center;
+        }
+
+        #photo {
+            background: url('https://file.garden/aPcdyx6-Eg7wI_Wb/yurirun.png');
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+        }
+
+        #double{
+            display: none;
+            width: 330px;
+            height: 205px;
+        }
+
+        #secphoto{
+            width: 80px;
+            height: 100px;
+            margin: auto;
+            border-radius: 100px;
+            display: none;
+        }
+
+        #picsdiv{
+            gap: 10px;
+        }
+
+        #certitext {
+            text-align: center;
+        }
+
+        #nameone, #nametwo, #datew {
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Marriage Certificate</h1>
+        <h2>Generator!</h2>
+    </header>
+
+    <main>
+
+        <aside>
+            <div id="text">
+                <p>This generator is inspired on <a
+                        href="https://koinuko.pink/shipping/certificate/marry">koinuko.pink</a>,
+                    <a href="https://dokode.moe/gamelounge/marriage">dokode.moe</a> and <a
+                        href="https://web.archive.org/web/20210822193110/http://www.myfconline.com/">MYFC0's</a>
+                    marriage
+                    certificates generators! But I decided to add an extra template.<br>Just fill the inputs, add an
+                    image
+                    or two (depending on the template) and click submit, then you can take a screenshot of your
+                    certificate!
+                    <br>Reload the page if you want to make another :)
+                </p>
+            </div>
+
+            <div id="controls">
+                    <h3>Template</h3>
+                    <input type="radio" id="defaultinput" name="template">
+                    <label for="defaultinput">Default</label>
+
+                    <input type="radio" id="doubleinput"  checked="false" name="template">
+                    <label for="doubleinput">Double images</label>
+
+                    <h3>Theme</h3>
+                    <input type="radio" checked="checked" id="plain" name="theme">
+                    <label for="plain">Plain</label>
+                    <input type="radio" checked="false" id="classic" name="theme">
+                    <label for="classic">Classic</label>
+                    <input type="radio" checked="false" id="goth" name="theme">
+                    <label for="goth">Goth</label>
+                    <br>
+                    <input type="radio" checked="false" id="notebook" name="theme">
+                    <label for="notebook">Notebook</label>
+                    <input type="radio" checked="false" id="flowers" name="theme">
+                    <label for="flowers">Flowers</label>
+
+                    
+                <h3>Font</h3>
+                <input type="radio" checked="checked" id="msgothic" name="font">
+                <label for="msgothic">MS Gothic</label>
+
+                <input type="radio" checked="false" id="comicsans" name="font">
+                <label for="comicsans">Comic Sans</label>
+
+                <br>
+                <input type="radio" checked="false" id="georgia" name="font">
+                <label for="georgia">Georgia</label>
+
+                <input type="radio" checked="false" id="lucida" name="font">
+                <label for="lucida">Lucida Sans</label>
+
+
+                <h3>Decorations</h3>
+                <input type="radio" checked="checked" id="hearts" name="theme">
+                    <label for="hearts">Hearts</label>
+
+                <input type="radio" checked="false" id="bling" name="theme">
+                    <label for="bling">Bling</label>
+
+                    <input type="radio" checked="false" id="divo" name="theme">
+                    <label for="divo">Divorce</label>
+
+
+                <h3>Inputs</h3>
+                <span>Name 1:</span> <input type="text" name="name1" id="name1" value="">
+                <br><br>
+
+                <span>Name 2:</span> <input type="text" name="name2" id="name2" value="">
+                <br><br>
+
+                <span>Date:</span> <input type="text" name="date" id="date" value="">
+                <br><br>
+
+                <span>Image url</span> <input type="text" name="img" value="">
+                <br><br>
+
+                <div id="secimg" style="display: none;">
+                <span>Image 2:</span> <input type="text" name="img" value="">
+                <br><br>
+                </div>
+
+                <input type="button" id="submitBtn" name="button" value="Submit" onclick="imageUrl()">
+            </div>
+        </aside>
+
+        <div id="preview">
+            <h3>Preview</h3>
+            <div class="certi" id="default">
+                <span id="head">Certificate of Marriage</span>
+                <div id="picsdiv">
+                <div id="photo"></div>
+                <div id="secphoto"></div>
+                </div>
+                <p id="certitext">This document certifies that <span id="nameone">NAME ONE</span> and <span id="nametwo">NAME TWO</span> were united in marriage on <span id="datew">August/15/1975.</span></p>
+            </div>
+        </div>
+
+
+    </main>
+<script>
+ document.addEventListener("DOMContentLoaded", () => {
+
+    //templates
+    const defaultInput = document.getElementById("defaultinput");
+    const doubleInput = document.getElementById("doubleinput");
+
+    function defaultTemplate() {
+    document.getElementById("default").style.display = "block"
+    document.getElementById("double").style.display="none"
+    document.getElementById("secimg").style.display = "none"
+    }
+
+    function doubleTemplate() {
+	document.getElementById("default").style.display = "none"
+    document.getElementById("double").style.display="block"
+    document.getElementById("secimg").style.display = "block"
+    }
+
+    defaultInput.addEventListener("click", defaultTemplate);
+    doubleInput.addEventListener("click", doubleTemplate);
+
+    //text font
+
+    const text = document.getElementById("certitext");
+    const msgothic = document.getElementById("msgothic");
+    const georgia = document.getElementById("georgia");
+    const lucida = document.getElementById("lucida");
+    const comicsans = document.getElementById("comicsans");
+
+    function msgothicFont(){
+    text.style.font = "0.9em MS Gothic"
+    }
+
+    function comicSans(){
+    text.style.font = "0.9em Comic Sans MS"
+    }
+
+    function georgiaFont(){
+    text.style.font = "0.9em Georgia"
+    }
+
+    function lucidaFont(){
+    text.style.font = "0.9em Lucida Sans"
+    }
+
+    msgothic.addEventListener("click", msgothicFont);
+    comicsans.addEventListener("click", comicSans);
+    georgia.addEventListener("click", georgiaFont);
+    lucida.addEventListener("click", lucidaFont);
+
+    // Inputs
+
+    const submit = document.getElementsByName("button");
+
+    function changeNames() {
+    const submit = document.getElementById("submitBtn");
+        var name1 = document.getElementById("name1").value;
+        var name2 = document.getElementById("name2").value;
+        var date = document.getElementById("date").value;
+        document.getElementById("nameone").innerHTML = name1;
+        document.getElementById("nametwo").innerHTML = name2;
+        document.getElementById("datew").innerHTML = date;
+    }
+    if (submit.length > 0) {
+        submit[0].addEventListener("click", changeNames);
+    }
+ });
+</script>
+</body>
+
+</html>
