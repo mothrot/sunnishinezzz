@@ -1,22 +1,42 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        @font-face {
+            font-family: porkys;
+            src: url('/archives/fonts/PORKYS.TTF');
+        }
+
+        #title {
+            font-family: porkys;
+            font-size: 6.81em;
+            color: white;
+            position: absolute;
+            left: 39%;
+            top: 35%;
+            -webkit-text-stroke: 5px #752e04;
+            text-shadow: 5px 6px 9px black;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
         body {
             margin: 0;
             padding: 0;
-            background: url('/archives/graphics/site_thumbnail.jpg') no-repeat;
+            background: url('/archives/graphics/thumbnail.jpg') no-repeat;
             background-size: cover;
             height: 100vh;
+            position: relative;
         }
     </style>
 </head>
 
 <body>
-    <p></p>
+    <span id="title">Sunnishinez !</span>
 
 </body>
 
