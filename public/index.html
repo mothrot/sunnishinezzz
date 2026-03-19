@@ -186,20 +186,18 @@
       location.replace("/thumbnail.html");
     }
 
-    const btnHover = document.getElementById('enter');
-    const hoverSound = document.getElementById('gravesound');
 
-    btnHover.forEach(item => {
-      item.addEventListener('mouseenter', () => {
-        hoverSound.currentTime = 0; // 
-        hoverSound.play();
-      });
+    const graveButton = document.getElementById('enter');
+    const graveSound = document.getElementById('gravesound');
 
-      item.addEventListener('mouseleave', () => {
-        hoverSound.pause();
-        hoverSound.currentTime = 0;
-      });
+    graveButton.addEventListener('mouseover', function () {
+      graveSound.play();
     });
+    graveButton.addEventListener('mouseout', function () {
+      graveSound.pause();
+      graveSound.currentTime = 0;
+    });
+
   </script>
 
 </head>
@@ -456,11 +454,12 @@
           </div>
         </div>
         <a href="https://bsky.app/profile/sunnishinez.neocities.org"><img src="/archives/assets/Bluesky.png"
-            width="80"></a>
+            width="70"></a>
         <a href="https://forum.melonland.net/index.php?action=profile;u=3136"><img src="/archives/assets/mlf.png"
-            width="80"></a>
-        <a href="https://spacehey.com/sunnishinez"><img src="/archives/assets/Spacehey.png" width="80"></a>
-        <a href="https://www.tumblr.com/sunnishinez"><img src="/archives/assets/tumblr.png" width="80"></a>
+            width="70"></a>
+        <a href="https://spacehey.com/sunnishinez"><img src="/archives/assets/Spacehey.png" width="70"></a>
+        <a href="https://www.tumblr.com/sunnishinez"><img src="/archives/assets/tumblr.png" width="70"></a>
+        <a rel="me" href="https://mastodon.social/@sunniez"><img src="/archives/assets/mastodon.png" width="70"></a>
       </div>
     </div>
 
