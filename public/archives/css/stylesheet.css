@@ -357,6 +357,7 @@ nav#mainpage-nav {
   display: inline-flex;
   white-space: nowrap;
   animation: marquee 50s linear infinite;
+  height: 35px;
 }
 
 .buttons:hover {
