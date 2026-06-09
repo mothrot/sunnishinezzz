@@ -192,12 +192,13 @@
     const graveButton = document.getElementById('enter');
     const graveSound = document.getElementById('gravesound');
 
-    graveButton.addEventListener('mouseover', function () {
+    graveButton.addEventListener("mouseenter", () => {
+      graveSound.currentTime = 0;
       graveSound.play();
     });
-    graveButton.addEventListener('mouseout', function () {
+
+    graveButton.addEventListener("mouseleave", () => {
       graveSound.pause();
-      graveSound.currentTime = 0;
     });
 
   </script>
