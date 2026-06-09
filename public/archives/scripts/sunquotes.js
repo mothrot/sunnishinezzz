@@ -34,7 +34,7 @@ const clickSound = document.getElementById("sun-sound");
 
 let lastQuote = "";
 
-function displayRandomQuote() {
+function displayQuote() {
     let randomQuote;
     do {
         const randomIndex = Math.floor(Math.random() * quotes.length);
@@ -49,4 +49,4 @@ function displayRandomQuote() {
     quoteDisplay.innerText = randomQuote;
 }
 
-SunQuote.addEventListener("click", displayRandomQuote);
+SunQuote.addEventListener("click", displayQuote);

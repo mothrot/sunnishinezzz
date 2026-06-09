@@ -189,18 +189,18 @@
     }
 
 
-    const graveButton = document.getElementById('enter');
-    const graveSound = document.getElementById('gravesound');
-
-    graveButton.addEventListener("mouseenter", () => {
-      graveSound.currentTime = 0;
-      graveSound.play();
+    const btnHover = document.getElementById("enter");
+    const hoverSound = document.getElementById("gravesound");
+    btnHover.forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        hoverSound.currentTime = 0; //
+        hoverSound.play();
+      });
+      item.addEventListener("mouseleave", () => {
+        hoverSound.pause();
+        hoverSound.currentTime = 0;
+      });
     });
-
-    graveButton.addEventListener("mouseleave", () => {
-      graveSound.pause();
-    });
-
   </script>
 
   <script>
