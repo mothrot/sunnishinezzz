@@ -191,16 +191,17 @@
 
     const btnHover = document.getElementById("enter");
     const hoverSound = document.getElementById("gravesound");
-    btnHover.forEach((item) => {
-      item.addEventListener("mouseenter", () => {
-        hoverSound.currentTime = 0; //
-        hoverSound.play();
-      });
-      item.addEventListener("mouseleave", () => {
-        hoverSound.pause();
-        hoverSound.currentTime = 0;
-      });
+
+    btnHover.addEventListener("mouseenter", () => {
+      hoverSound.currentTime = 0;
+      hoverSound.play();
     });
+
+    btnHover.addEventListener("mouseleave", () => {
+      hoverSound.pause();
+      hoverSound.currentTime = 0;
+    });
+
   </script>
 
   <script>
