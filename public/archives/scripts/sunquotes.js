@@ -30,7 +30,7 @@
 
 const quoteDisplay = document.getElementById("quote-display");
 const SunQuote = document.getElementById("sunflower");
-const clickSound = document.getElementById("sun-sound");
+const clickSound = new Audio('https://file.garden/aPcdyx6-Eg7wI_Wb/music/sunsound.mp3');
 
 let lastQuote = "";
 
@@ -44,7 +44,6 @@ function displayQuote() {
 
     clickSound.currentTime = 0;
     clickSound.play();
-
     lastQuote = randomQuote;
     quoteDisplay.innerText = randomQuote;
 }
