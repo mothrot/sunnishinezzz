@@ -1,9 +1,13 @@
 // Webringu Webring Script by PetraPixel (https://petrapixel.neocities.org/coding/webringu)
-// Version: 1.0.1 (2025-07-12)
+// Version: 1.0.2 (2026-03-26)
 // Press Ctrl+S to download this file.
 
 document.addEventListener("DOMContentLoaded", function () {
-  const action = window.location.search.substr(1).replace("action=", "").replace(".html", "").toLowerCase();
+  const action = window.location.search
+    .substr(1)
+    .replace("action=", "")
+    .replace(".html", "")
+    .toLowerCase();
   if (action && document.referrer) doAction(action);
 
   const membersListEl = document.querySelector("#webringulist");
@@ -14,9 +18,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function doAction(action) {
-  const index = members.findIndex((member) => document.referrer.replace("http://", "https://").includes(member.url.replace("http://", "https://")));
+  const referrerSplit = document.referrer
+    .replace("http://", "")
+    .replace("https://", "")
+    .split("/");
+  const referrerCleaned = referrerSplit[0];
+
+  const index = members.findIndex((member) =>
+    member.url.includes(referrerCleaned),
+  );
   if (index == -1) {
-    console.error(document.referrer + " not found in webring member list.");
+    console.error(referrerCleaned + " not found in webring member list.");
     return;
   }
 
@@ -73,3 +85,4 @@ function createMembersList(el) {
   </table>`;
   el.innerHTML = output;
 }
+
