@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 
         const quotes = [
     "The site used to be named Freakysunshine, you can still access to it in the wayback machine!",
@@ -49,3 +50,4 @@ function displayQuote() {
 }
 
 SunQuote.addEventListener("click", displayQuote);
+});
