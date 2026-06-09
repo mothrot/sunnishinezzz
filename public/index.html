@@ -180,28 +180,31 @@
   </style>
 
   <script>
-    function Notmine() {
-      alert('MUICHIRO IN YANDERE SIMULATOR! | Creditos originales a @nikaidosei por el rig, solo lo comparto porque ya no esta disponible | Credits to @nikaidosei for the rigging, I just uploaded it myself because it is no longer avaible');
-    }
 
-    if (navigator.userAgent === "Screenjesus") {
-      location.replace("/thumbnail.html");
-    }
+    document.addEventListener("DOMContentLoaded", () => {
+
+      function Notmine() {
+        alert('MUICHIRO IN YANDERE SIMULATOR! | Creditos originales a @nikaidosei por el rig, solo lo comparto porque ya no esta disponible | Credits to @nikaidosei for the rigging, I just uploaded it myself because it is no longer avaible');
+      }
+
+      if (navigator.userAgent === "Screenjesus") {
+        location.replace("/thumbnail.html");
+      }
 
 
-    const btnHover = document.getElementById("enter");
-    const hoverSound = document.getElementById("gravesound");
+      const btnHover = document.getElementById("enter");
+      const hoverSound = document.getElementById("gravesound");
 
-    btnHover.addEventListener("mouseenter", () => {
-      hoverSound.currentTime = 0;
-      hoverSound.play();
+      btnHover.addEventListener("mouseenter", () => {
+        hoverSound.currentTime = 0;
+        hoverSound.play();
+      });
+
+      btnHover.addEventListener("mouseleave", () => {
+        hoverSound.pause();
+        hoverSound.currentTime = 0;
+      });
     });
-
-    btnHover.addEventListener("mouseleave", () => {
-      hoverSound.pause();
-      hoverSound.currentTime = 0;
-    });
-
   </script>
 
   <script>
